@@ -10,8 +10,7 @@ title: Muhammad Muntaza
 email: muhammad@muntaza.id
 description: > # this means to ignore newlines until "baseurl:"
   Website Pribadi Muhammad Muntaza, untuk menampung catatan harian
-  yang bersifat teknis dan catatan non teknis lainnya. Akun Github
-  <a href="https://github.com/muntaza">muntaza</a>
+  yang bersifat teknis dan catatan non teknis lainnya.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.muntaza.net" # the base hostname & protocol for your site
 #twitter_username: muntaza_id
