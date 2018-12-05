@@ -1,0 +1,97 @@
+---
+author: muntaza
+comments: true
+date: 2012-03-22 06:19:28+00:00
+layout: post
+link: https://muntaza.wordpress.com/2012/03/22/minix_3/
+slug: minix_3
+title: Minix 3 dengan Qemu diatas Slackware 13.37
+wordpress_id: 357
+categories:
+- kisah muhammad muntaza
+- linux
+- minix
+- programming
+---
+
+Bismillah 
+
+Setelah sebelumnya saya menulis tentang Minix 2, saat ini saya ingin menulis tentang proses instalasi Minix 3 dengan Mesin Virtual Qemu. langkah pertama adalah mendownload iso minix 3, dalam hal ini saya memilih versi 3.1.8, karena masih cukup sederhana, dibanding minix 3.2.0 yang baru rilis. 
+
+1. download iso minix 3.1.8
+[sourcecode languange="bash" wraplines="false"]
+bash-4.1$ wget -c http://www.minix3.org/iso/minix3_1_8_ide_r8165.iso.bz2
+.........
+
+[/sourcecode]
+
+2. extrack file bz2
+[sourcecode languange="bash" wraplines="false"]
+bash-4.1$ ls
+minix3_1_8_ide_r8165.iso.bz2
+bash-4.1$ bunzip2 minix3_1_8_ide_r8165.iso.bz2 
+bash-4.1$ ls
+minix3_1_8_ide_r8165.iso
+[/sourcecode]
+
+3. buat hardisk virtual ukuran 500M
+[sourcecode languange="bash" wraplines="false"]
+bash-4.1$ qemu-img create -f qcow2 minix3_1_8.hd 500M       
+Formatting 'minix3_1_8.hd', fmt=qcow2 size=524288000 encryption=off cluster_size=65536 
+[/sourcecode]
+keterangan perintah:
+qemu-img create (untuk membuat image hardirsk)
+-f qcow2 (type image hardisk)
+minix3_1_8.hd (nama file hardisk yang dibuat)
+500M (ukuran file virtual hardisk 500 MB)
+
+4. jalankan qemu untuk menginstall minix 3
+[sourcecode languange="bash" wraplines="false"]
+bash-4.1$ qemu-system-i386 -m 128 -cdrom minix3_1_8_ide_r8165.iso -boot d -monitor stdio minix3_1_8.hd 
+
+QEMU 1.0,1 monitor - type 'help' for more information
+(qemu)
+
+[/sourcecode]
+
+keterangan:
+-m 128 (memory untuk mesin virtual 128 MB)
+-cdrom minix3_1_8_ide_r8165.iso (cdrom menggunakan file iso ini)
+-boot d (urutan pertama booting pada cdrom)
+-monitor stdio (tampilkan command line dari qemu)
+minix3_1_8.hd (nama file virtual hardisk tempat minix akan di install)
+
+berikut ini gambar screen shoot dari minix 3.1.8 yang ada di tempat saya.
+
+[![](http://muntaza.files.wordpress.com/2012/03/minix3a.png?w=300)](http://muntaza.files.wordpress.com/2012/03/minix3a.png)
+
+untuk login, ketik root pada username, lalu tekan enter (tanpa password). hasil setelah login, seperti gambar diatas.
+
+selanjutnya, proses instalasi minix 3. ketik "setup" untuk memulai instalasi. silakan baca setiap pertanyaan dengan seksama, dan biasanya cuma tekan "enter" beberapa kali, kecuali ada pilihan "yes" atau "no" maka harus mengetik "yes" untuk melanjutkan. Tekan pula "Y" ketika diminta.
+
+setelah proses instalasi selesai, ketik "halt" lalu ketik "q" pada command line qemu untuk keluar dari qemu. contohnya:
+
+[sourcecode languange="bash" wraplines="false"]
+QEMU 1.0,1 monitor - type 'help' for more information
+(qemu) q
+bash-4.1$ 
+[/sourcecode]
+
+Baik. saat ini telah diluar qemu. kita jalankan qemu langsung dengan virtual hardisk yang telah terinstall minix 3.1.8 tadi.
+
+[sourcecode languange="bash" wraplines="false"]
+bash-4.1$ qemu-system-i386 -monitor stdio minix3_1_8.hd 
+QEMU 1.0,1 monitor - type 'help' for more information
+(qemu) 
+[/sourcecode]
+
+tampilan screen shoot seletah di install ke hardisk
+[![](http://muntaza.files.wordpress.com/2012/03/minix3_hd.png?w=300)](http://muntaza.files.wordpress.com/2012/03/minix3_hd.png)
+
+selesai. Walhamdulillah. Semoga Allah Rabbuna Jalla Wa 'Ala Memudahkan saya untuk tinggal di Banjarbaru
+
+ditulis oleh: Al faqir ilaa maghfirati rabbihi Abu Husnul Khatimah Muhammad Muntaza bin Hatta
+
+daftar pustaka:
+http://www.minix3.org/   (diakses tanggal 22 maret 2012)
+http://minix1.woodhull.com/  (diakses tanggal 22 maret 2012)

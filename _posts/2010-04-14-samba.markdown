@@ -1,0 +1,60 @@
+---
+author: muntaza
+comments: true
+date: 2010-04-14 03:33:47+00:00
+layout: post
+link: https://muntaza.wordpress.com/2010/04/14/samba/
+slug: samba
+title: samba
+wordpress_id: 164
+---
+
+file diff samba, dari /etc/samba.conf dengan file defaultnya agar samba bisa jalan untuk print dan sharing local tanpa password
+
+[sourcecode lenguange="bash"]
+34c34
+<    security = user
+---
+>    security = share
+41c41
+< ;   hosts allow = 192.168.1. 192.168.2. 127.
+---
+>    hosts allow = 192.168.1. 192.168.0. 127.
+53c53
+< ;   printcap name = lpstat
+---
+>    printcap name = cups
+58c58
+< ;   printing = cups
+---
+>    printing = cups
+187,188c187,188
+<    path = /var/spool/samba
+<    browseable = no
+---
+>    path = /tmp
+>    browseable = yes
+190c190,192
+<    guest ok = no
+---
+>    public = yes
+>    guest ok = yes
+>    use client driver = yes
+192a195
+>    create mode = 0700
+250,255c253,258
+< ;[public]
+< ;   path = /usr/somewhere/else/public
+< ;   public = yes
+< ;   only guest = yes
+< ;   writable = yes
+< ;   printable = no
+---
+> [public]
+>    path = /home/smb/share
+>    public = yes
+>    only guest = yes
+>    writable = yes
+>    printable = no
+
+[/sourcecode]
