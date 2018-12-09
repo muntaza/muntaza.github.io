@@ -36,7 +36,7 @@ permit keepenv :wheel
 persediaan#
 {% endhighlight %}
 
-Agar bila password benar, untuk rentang waktu tertentu, tambahkan keyword "persist"
+Agar bila password benar, untuk rentang waktu tertentu, tidak perlu mengetik password lagi, tambahkan keyword "persist"
 {% highlight bash %}
 
 persediaan$ doas cat /etc/doas.conf | grep -v \#
