@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Reset Windows 10 Password"
-date:   2018-12-06 11:26:56 +0800
+date:   2018-12-09 11:26:56 +0800
 categories: kisah
 ---
 
