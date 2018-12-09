@@ -18,10 +18,16 @@ Nah, sakalinya ada ai linknya he..he...
 Gambarnya:
 ![Gambar1](/assets/reset_windows_10.png)
 
+# SELURUH DATA AKAN DI HAPUS DENGAN CARA INI
+
 Reset ni hapus total datanya, pada saat menu login, tahan Shift, klik Restart, tahan Shift tarus sampai muncul menu troubleshoot nya, hanyar pilih reset hapus data.
 
 Laptop nya Husnul ni kada ada file penting pang jar, jadi kawa ja di reset total huh.............
 
 Lawas banar sakalinya ma reset ni, ma install linux mint 18.1 bisa kawa sawat 45 manit. Bila kada ingat password pulang si Husnul ni, abahnya install kan Linux Mint haja lagi.
 
+Sesudah Abah Husnul mengunggu sejam labih, kada tuntung jua sakalinya mareset password ni, jadi picik picikan power barandam dan Shutdown bapaksaan. Masukkan flashdisk Linux Mint 18.1, masuk bios, Pilih UEFI-USB.
 
+Bila masuk linux mint, pilih gambar CD nang ada tulisan "Install Linux Mint". Bisa jadi Linux User jua si Husnul ni pacangan.
+
+# Alhamdulillah
