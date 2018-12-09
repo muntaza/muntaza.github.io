@@ -6,14 +6,10 @@ permalink: /links/
 
 
 
-Twitter: [muntaza_id](https://twitter.com/muntaza_id)
+[Al Manshuroh Banjar](http://almanshurohbanjar.net/)
 
-Github: [muntaza](https://github.com/muntaza)
+[Majalah AsySyariah](https://asysyariah.com/)
 
-Stackoverflow: [muhammad-muntaza](https://stackoverflow.com/users/8084062/muhammad-muntaza)
+[Majalah Qonitah](https://qonitah.com/)
 
-SoloLearn: [muntaza](https://www.sololearn.com/Profile/1081806)
-
-Udemy: [muntaza](https://www.udemy.com/user/muhammad-muntaza/)
-
-Resume: [Muhammad_Muntaza.pdf](https://github.com/muntaza/Catatan-Muntaza/blob/master/Muhammad_Muntaza.pdf)
+[Forum Salafy](http://forumsalafy.net/)
