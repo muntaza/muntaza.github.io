@@ -7,9 +7,7 @@ categories: openbsd ssh
 
 # Bismillah,
 
-Langkah penting setelah Install OpenBSD pada VPS adalah menonaktifkan Authentication dengan password, sehingga tidak bisa di serang dengan serangan Brute Force Attack.
-
-Berikut sedikit catatan tentang Langkah-langkah tersebut.
+Setelah Instalasi OpenBSD, ada beberapa hal penting yang harus di lakukan, diantaranya adalah menonaktifkan login SSH dengan password, melainkan hanya menggunakan public key. Berikut ini diantara langkah-langkah tersebut.
 
 A.  Aktifkan doas
 
