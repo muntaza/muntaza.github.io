@@ -139,6 +139,7 @@ persediaan$ doas syspatch
 Contoh penggunaan syspatch
 
 {% highlight bash %}
+
 muhammad$ doas syspatch -c
 doas (muntaza@muhammad.muntaza.id) password:
 003_portsmash
