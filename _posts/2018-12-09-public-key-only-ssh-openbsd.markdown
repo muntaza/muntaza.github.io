@@ -136,6 +136,39 @@ persediaan$ doas syspatch
 {% endhighlight %}
 
 
+Contoh penggunaan syspatch
+
+{% highlight bash %}
+muhammad$ doas syspatch -c
+doas (muntaza@muhammad.muntaza.id) password:
+003_portsmash
+004_lockf
+005_perl
+006_uipc
+007_smtpd
+008_qcow2
+muhammad$
+muhammad$
+muhammad$
+muhammad$ doas syspatch
+Get/Verify syspatch64-003_portsma... 100% |*************| 15264 KB    00:07
+Installing patch 003_portsmash
+Get/Verify syspatch64-004_lockf.tgz 100% |**************|   658 KB    00:00
+Installing patch 004_lockf
+Get/Verify syspatch64-005_perl.tgz 100% |***************|  5319 KB    00:02
+Installing patch 005_perl
+Get/Verify syspatch64-006_uipc.tgz 100% |***************|   176 KB    00:00
+Installing patch 006_uipc
+Get/Verify syspatch64-007_smtpd.tgz 100% |**************|  6484       00:00
+Installing patch 007_smtpd
+Get/Verify syspatch64-008_qcow2.tgz 100% |**************| 95855       00:00
+Installing patch 008_qcow2
+Relinking to create unique kernel... done.
+muhammad$
+muhammad$
+
+{% endhighlight %}
+
 D.  Firewall dengan PF
 
 Firewall pada OpenBSD cukup untuk memfilter port-port yang di inginkan, berikut contoh penerapannya.
