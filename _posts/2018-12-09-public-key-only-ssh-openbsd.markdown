@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Login SSH Hanya dengan Public Key pada OpenBSD"
-date:   2018-12-09 11:26:56 +0800
+title:  "Langkah Penting Setelah Instalasi OpenBSD"
+date:   2018-12-09 12:26:56 +0800
 categories: openbsd ssh
 ---
 
