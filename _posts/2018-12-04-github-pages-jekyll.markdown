@@ -11,6 +11,3 @@ Hosting sudah sangat murah, lebih dari itu VPS pun juga tidak mahal, tapi ada ya
 
 Masih agak bingung dari mana memulai, he...he..
 
-##### Mulai
-
-# Start
