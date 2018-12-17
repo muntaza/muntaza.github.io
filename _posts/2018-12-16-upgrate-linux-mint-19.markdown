@@ -63,4 +63,6 @@ muntaza@E202SA:/media/muntaza/67cf12b2-b88f-4726-9f5d-61faa90cb86b/home/muntaza/
 
 Alhamdulillah, semua user name dan password yang tersimpan bisa kembali di gunakan, dengan master password lama.
 
+Alhamdulillah, serasa memiliki laptop baru, karena tampilan Linux Mint 19.0 sangat bagus.
+
 # Alhamdulillah
