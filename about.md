@@ -7,7 +7,7 @@ permalink: /about/
 
 Bismillah, saya tinggal di Provinsi Kalimantan Selatan, sehari-hari bekerja sebagai Pegawai Negeri Sipil di Lingkungan Pemerintah Daerah Kabupaten Balangan. Seorang Pengguna Linux sejak sekitar Tahun 2004, kemudian menggunakan OpenBSD sejak sekitar Tahun 2005 yaitu mulai OpenBSD versi 3.6
 
-Alhamdulillah, keahlian di bidang Sistem Opersi OpenBSD ini menghantarkan saya menjadi system administrator di Pemda tempat saya bekerja, yaitu Admin LPSE Kabupaten Balangan, dan Juga Software Developer di Badan Keuangan Daerah Kabupaten Balangan.
+Alhamdulillah, keahlian di bidang Sistem Opersi OpenBSD ini menghantarkan saya menjadi system administrator di Pemda tempat saya bekerja dan juga Software Developer di Badan Keuangan Daerah Kabupaten Balangan.
 
 Twitter: [muntaza_id](https://twitter.com/muntaza_id)
 
