@@ -37,5 +37,30 @@ $ sudo apt autoremove
 $ mintupgrade upgrade
 {% endhighlight %}
 
+Setelah beberapa kali gagal crash, lalu akhirnya selesai proses upgrade linux mint, Namun ternyata gagal booting ke Linux Mint 19.
+
+Lalu penulis booting ulang dengan flash disk Linux mint 18.1, mengcopy file iso Linux Mint 19.0 ke flash disk lain dengan perintah dd
+
+Booting ulang lagi dengan flash disk Linux Mint 19.0, install di partisi lain dan Alhamdulillah, berhasil di install. Ini screenshoot nya:
+
+![Gambar2](/assets/Linux_mint_desktop.png)
+
+Satu permasalah lagi, saya kehilangan password yang tersimpan di Linux Mint lama saya, setelah browsing di google, menemukan alamat ini:
+
+[Recover user names and passwords -Firefox Forum Support-](https://support.mozilla.org/en-US/questions/1189667)
+
+Maka langkah yang saya lakukan adalah mensetting firefox di Linux Mint 19 agar menggunakan master password, maka file key3.db menjadi file key4.db di folder firefox. Saya kemudian mengcopy tindih (replace) file key4.db dan file login.json dari folder firefox di Linux Mint 18.1 ke folder Firefox 19.0
+
+ini command nya:
+
+
+{% highlight bash %}
+muntaza@E202SA:/media/muntaza/67cf12b2-b88f-4726-9f5d-61faa90cb86b/home/muntaza/.mozilla$ cp firefox/mwad0hks.default/key4.db ~/.mozilla/firefox/39agvf3o.default/key4.db
+
+muntaza@E202SA:/media/muntaza/67cf12b2-b88f-4726-9f5d-61faa90cb86b/home/muntaza/.mozilla$ cp firefox/mwad0hks.default/logins.json ~/.mozilla/firefox/39agvf3o.default/
+
+{% endhighlight %}
+
+Alhamdulillah, semua user name dan password yang tersimpan bisa kembali di gunakan, dengan master password lama.
 
 # Alhamdulillah
