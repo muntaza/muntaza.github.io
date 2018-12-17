@@ -11,14 +11,13 @@ Hosting sudah sangat murah, lebih dari itu VPS pun juga tidak mahal, tapi ada ya
 
 Masih agak bingung dari mana memulai, he...he..
 
-1. Buat Repository dengan nama username.github.io
+Buat Repository dengan nama username.github.io
 
 ![Gambar1](/assets/github1.png)
 
-2. clone Repository baru tadi ke laptop
+Clone Repository baru tadi ke laptop
 
-
-
+{% highlight bash %}
 muntaza@E202SA:~/tmp$ git clone git@github.com:muntaza/muntaza.github.io.git
 Cloning into 'muntaza.github.io'...
 remote: Enumerating objects: 38, done.
@@ -27,32 +26,39 @@ remote: Compressing objects: 100% (25/25), done.
 remote: Total 297 (delta 19), reused 32 (delta 13), pack-reused 259
 Receiving objects: 100% (297/297), 1.02 MiB | 300.00 KiB/s, done.
 Resolving deltas: 100% (121/121), done.
+{% endhighlight %}
 
 
-3. Install jekyll di laptop
+Install jekyll di laptop
 
+{% highlight bash %}
 muntaza@E202SA:~/tmp$ sudo apt-get install jekyll
+{% endhighlight %}
 
-4. Buat project jekyll dengan nama web
+Buat project jekyll dengan nama web
 
+{% highlight bash %}
 muntaza@E202SA:~/tmp$ jekyll new web
 New jekyll site installed in /home/muntaza/tmp/web.
 muntaza@E202SA:~/tmp$ ls
 muntaza.github.io  web
+{% endhighlight %}
 
-5. copy isi folder web ke folder muntaza.github.io
+Copy isi folder web ke folder muntaza.github.io
 
-6. Masukkan file baru ke repository
+Masukkan file baru ke repository
 
+{% highlight bash %}
 muntaza@E202SA:~/tmp/muntaza.github.io$ git add --all
 muntaza@E202SA:~/tmp/muntaza.github.io$ git commit --all -m "OK"
 muntaza@E202SA:~/tmp/muntaza.github.io$ git push
+{% endhighlight %}
 
-7. Pengaturan Domain, buat alias pada domain untuk mengarah ke muntaza.github.io
+Pengaturan Domain, buat alias pada domain untuk mengarah ke muntaza.github.io
 
 ![Gambar2](/assets/domain1.png)
 
-8. Setting alias pada repository
+Setting alias pada repository
 
 ![Gambar3](/assets/github2.png)
 
