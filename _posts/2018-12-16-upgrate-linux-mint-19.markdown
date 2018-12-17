@@ -55,9 +55,9 @@ ini command nya:
 
 
 {% highlight bash %}
-muntaza@E202SA:/media/muntaza/67cf12b2-b88f-4726-9f5d-61faa90cb86b/home/muntaza/.mozilla$ cp firefox/mwad0hks.default/key4.db ~/.mozilla/firefox/39agvf3o.default/key4.db
+muntaza@E202SA:/media/muntaza/67cf12b2-b88f-4726-9f5d-61faa90cb86b/home/muntaza/.mozilla$ cp firefox/mwad0hks.default/key4.db ~/.mozilla/firefox/xxxgxf3x.default/key4.db
 
-muntaza@E202SA:/media/muntaza/67cf12b2-b88f-4726-9f5d-61faa90cb86b/home/muntaza/.mozilla$ cp firefox/mwad0hks.default/logins.json ~/.mozilla/firefox/39agvf3o.default/
+muntaza@E202SA:/media/muntaza/67cf12b2-b88f-4726-9f5d-61faa90cb86b/home/muntaza/.mozilla$ cp firefox/mwad0hks.default/logins.json ~/.mozilla/firefox/xxxgxf3x.default/
 
 {% endhighlight %}
 
