@@ -19,6 +19,8 @@ SoloLearn: [muntaza](https://www.sololearn.com/Profile/1081806)
 
 Udemy: [muntaza](https://www.udemy.com/user/muhammad-muntaza/)
 
+Linkedin: [muhammad-muntaza](https://www.linkedin.com/in/muhammad-muntaza/)
+
 Resume: [Muhammad_Muntaza.pdf](/assets/Muhammad_Muntaza.pdf)
 
 CV: [Muhammad Muntaza](https://stackoverflow.com/cv/muhammad_muntaza)
