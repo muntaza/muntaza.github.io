@@ -23,4 +23,3 @@ Semoga Allah mengumpulkan kami bersama orang-orang yang kami mencintai mereka ka
 
 Bahan Bacaan:
 1.   [upaya melanggengkan persahabatan](http://asysyariah.com/upaya-melanggengkan-persahabatan/)
-2.   [bahaya gibah](http://asysyariah.com/kekejian-berupa-memakan-bangkai-saudara-sendiri/)
