@@ -20,3 +20,6 @@ Bagi siapapun yang jatuh dalam perbuatan Ghibah apalagi Fitnah, maka selama masi
 Tulisan ini adalah teguran untuk diri saya pribadi, semoga Allah mengampuni kami, semoga Allah selalu menjaga kami dan orang-orang yang kami mencintai mereka karena Allah.
 
 Semoga Allah mengumpulkan kami bersama orang-orang yang kami mencintai mereka karena Allah di Jannatul Firdaus kelak. Aamiin
+
+[upaya melanggengkan persahabatan](http://asysyariah.com/upaya-melanggengkan-persahabatan/)
+[bahaya gibah](http://asysyariah.com/kekejian-berupa-memakan-bangkai-saudara-sendiri/)
