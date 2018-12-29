@@ -21,5 +21,6 @@ Tulisan ini adalah teguran untuk diri saya pribadi, semoga Allah mengampuni kami
 
 Semoga Allah mengumpulkan kami bersama orang-orang yang kami mencintai mereka karena Allah di Jannatul Firdaus kelak. Aamiin
 
-[upaya melanggengkan persahabatan](http://asysyariah.com/upaya-melanggengkan-persahabatan/)
-[bahaya gibah](http://asysyariah.com/kekejian-berupa-memakan-bangkai-saudara-sendiri/)
+Bahan Bacaan:
+1.   [upaya melanggengkan persahabatan](http://asysyariah.com/upaya-melanggengkan-persahabatan/)
+2.   [bahaya gibah](http://asysyariah.com/kekejian-berupa-memakan-bangkai-saudara-sendiri/)
