@@ -7,7 +7,7 @@ categories: kisah
 
 # Bismillah,
 
-Adalah hal yang baik, apabila kita selalu berbaik sangka pada orang lain. Banyak orang saat ini yang sangat suka berburuk sangka, hanya melihat dari kejauhan, tanpa validasi dan verifikasi, langsung menuduh orang lain dengan kejelekan yang tidak terkira.
+Adalah hal yang baik, apabila kita selalu berbaik sangka pada orang lain. Jangan sekali-kali kita berburuk sangka pada orang lain, hanya melihat dari kejauhan (atau tidak melihat sama sekali), tanpa validasi dan verifikasi, langsung menuduh orang lain dengan kejelekan yang tidak terkira.
 
 Janganlah suka mencari-cari aib dan kekurangan orang lain, ingat lah kekurangan diri kita sendiri. Lebih baik sibuk memperbaiki diri, daripada memeriksa kekurangan dan cacat pada orang lain.
 
