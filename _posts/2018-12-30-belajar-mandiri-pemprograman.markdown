@@ -120,11 +120,27 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    di ikuti tutorialnya, mudah dan menarik. Pakai SQLite aja untuk latihan.
 
 9.  Tambahan
-    -	[]()CVS
-    -	[]()Github
-    -	[]()Sed
-    -	[]()Awk
-    -	[]()
+    -	CVS
+
+	    cukup ketik "info cvs" di terminal, ikuti tutorialnya di situ. Saya menggunakan cvs
+	    ini untuk mengelola kode sumber saya yang terdapat data-data rahasia, semisal
+	    password dll, sehingga hanya tersimpan di cvs server saja.
+
+    -	[Github](https://guides.github.com/)
+
+	    Software Developer sebaiknya kenal juga dengan git dan github. Saya menyimpan data-data
+	    yang tidak sensitif di Github.
+
+    -	[Sed](http://www.grymoire.com/Unix/Sed.html)
+
+	    Powerfull sekali untuk mengedit file text.
+
+    -	[Awk](http://www.grymoire.com/Unix/Awk.html)
+
+    -   [Belajar TCP/IP](https://www.google.com/search?q=learn+tcp+ip)
+
+	    Software Developer seyogyanya paham Subnetting, Routing, dan hal lainnya
+	    terkait TCP/IP
 
 
 
