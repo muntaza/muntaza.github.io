@@ -84,8 +84,7 @@ menghasilkan Software Developer (Programmer) yang handal.
             dan di
 	    [sini](https://muntaza.wordpress.com/2016/08/17/openbsd-pf-firewall-untuk-terima-koneksi-hanya-dari-ip-indonesia/).
 
-
-5.  Linux
+6.  Linux
     -	[]()
     -	[]()
     -	[]()
@@ -93,21 +92,21 @@ menghasilkan Software Developer (Programmer) yang handal.
     -	[]()
 
 
-5.  Linux
+7.  Linux
     -	[]()
     -	[]()
     -	[]()
     -	[]()
     -	[]()
 
-5.  Linux
+8.  Linux
     -	[]()
     -	[]()
     -	[]()
     -	[]()
     -	[]()
 
-5.  Linux
+9.  Linux
     -	[]()
     -	[]()
     -	[]()
