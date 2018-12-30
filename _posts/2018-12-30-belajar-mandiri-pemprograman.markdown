@@ -58,11 +58,13 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Sangat bermanfaat untuk latihan sejauh mana penguasaan terhadap materi yang ada.
 
 3.  Bahasa Assembly
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
+    -	[Programming from the Ground Up](http://savannah.nongnu.org/projects/pgubook/)
+
+	Iya, betul, Bahasa Assembly. Setelah Belajar Bahasa C, kita putar balik ke bahasa yang
+	lebih rendah, yaitu bahasa Assembly. Dengan belajar Bahasa ini, akan lebih mudah
+	paham apa itu pointer di bahasa C dan hal lainnya. Sehingga, bisa mengulang
+	kembali (revisit) materi bahasa C yang di rasa kurang paham, setelah belajar
+	Bahasa Assembly.
 
 4.  Linux
     -	[]()
