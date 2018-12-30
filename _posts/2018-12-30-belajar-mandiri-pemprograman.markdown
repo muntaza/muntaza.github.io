@@ -78,9 +78,11 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Kekuatan Utama OpenBSD adalah sebagai Firewall. Fitur penting yang tersedia
 	    di OpenBSD PF, kalau di setting dengan baik, diantaranya; mampu membendung Reverse
 	    telnet, anti DDOS, anti Sync attack. Saya menulis tentang PF ini di
-	    [sini](),
-	    di [sini]()
-	    dan di []().
+	    [sini](https://muntaza.wordpress.com/2011/04/28/openbsd-pf-sebagai-firewall-oleh-muhammad-muntaza-bin-hatta/),
+	    di [sini](https://muntaza.wordpress.com/2011/10/11/pantau-log-ip-yang-melakukan-abuse-di-pf-openbsd/),
+	    di [sini](https://muntaza.wordpress.com/2014/12/20/openbsd-pf-firewall-for-small-office-web-server/),
+            dan di
+	    [sini](https://muntaza.wordpress.com/2016/08/17/openbsd-pf-firewall-untuk-terima-koneksi-hanya-dari-ip-indonesia/).
 
 
 5.  Linux
