@@ -66,7 +66,32 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    kembali (revisit) materi bahasa C yang di rasa kurang paham, setelah belajar
 	    Bahasa Assembly.
 
-4.  Linux
+4.  OpenBSD
+    -	[OpenBSD Frequently Asked Questions](https://www.openbsd.org/faq/)
+
+	    OpenBSD adalah salah satu sistem Unix-like (semisal Unix) yang focus pada security.
+	    OpenBSD ini banyak di gunakan sebagai Firewall untuk Infrastruktur Internet. Saya pribadi
+	    memilih OpenBSD sebagai server untuk aplikasi-aplikasi yang saya develop.
+
+    -	[OpenBSD PF - User's Guide](https://www.openbsd.org/faq/pf/index.html)
+
+	    Kekuatan Utama OpenBSD adalah sebagai Firewall. Fitur penting yang tersedia
+	    di OpenBSD PF, kalau di setting dengan baik, diantaranya; mampu membendung Reverse
+	    telnet, anti DDOS, anti Sync attack. Saya menulis tentang PF ini di
+	    [sini](),
+	    di [sini]()
+	    dan di []().
+
+
+5.  Linux
+    -	[]()
+    -	[]()
+    -	[]()
+    -	[]()
+    -	[]()
+
+
+5.  Linux
     -	[]()
     -	[]()
     -	[]()
@@ -80,6 +105,19 @@ menghasilkan Software Developer (Programmer) yang handal.
     -	[]()
     -	[]()
 
+5.  Linux
+    -	[]()
+    -	[]()
+    -	[]()
+    -	[]()
+    -	[]()
+
+5.  Linux
+    -	[]()
+    -	[]()
+    -	[]()
+    -	[]()
+    -	[]()
 
 
 # Alhamdulillah
