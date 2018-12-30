@@ -109,11 +109,15 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    untuk laporan-laporan yang saya Query dari Database Postgresql.
 
 8.  Python
-    -	[]()Python tut
-    -	[]()Django
-    -	[]()
-    -	[]()
-    -	[]()
+    -	[Python Tutorial](https://docs.python.org/3/tutorial/)
+
+	    Banyak tutorial Python tersedia di internet, tapi ini adalah tutorial resmi dari website
+	    python.org yang saya gunakan untuk mempelajari bahasa Python. Langsung ke sumber nya.
+
+    -	[Django Tutorial](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
+
+	    Framework yang saya gunakan untuk membangun aplikasi-aplikasi berbasis Web. Silahkan
+	    di ikuti tutorialnya, mudah dan menarik. Pakai SQLite aja untuk latihan.
 
 9.  Tambahan
     -	[]()CVS
@@ -122,12 +126,6 @@ menghasilkan Software Developer (Programmer) yang handal.
     -	[]()Awk
     -	[]()
 
-5.  Linux
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
 
 
 # Alhamdulillah
