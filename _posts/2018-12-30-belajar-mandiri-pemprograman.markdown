@@ -29,7 +29,10 @@ menghasilkan Software Developer (Programmer) yang handal.
 
 	    Tutorial Favorite saya, sering saya praktek kan waktu dulu. Melatih kesabaran
 	    kita untuk compile kernel, compile ini dan itu sampai bisa booting linux mini nya.
-	    Toturial ini sangat berkesan bagi saya.
+	    Toturial ini sangat berkesan bagi saya. Bahkan saking senang nya membuat distro
+	    mini ini, saya menulis kan catatan nya di
+	    [sini](https://muntaza.wordpress.com/2009/09/07/compile-kernel-linux-2-6-30/) dan di
+	    [sini](https://muntaza.wordpress.com/2009/09/07/membuat-distro-mini-pada-flash-disk/).
 
     -	[]()
     -	[]()
