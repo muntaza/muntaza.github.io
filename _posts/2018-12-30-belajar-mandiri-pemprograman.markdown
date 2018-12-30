@@ -86,9 +86,20 @@ menghasilkan Software Developer (Programmer) yang handal.
 
 6.  SQL
     -	[Postgresql SQL Tutorial](https://www.postgresql.org/docs/11/tutorial.html)
+
+	    Postgresql adalah Database server yang saya pilih untuk Development dan Deployment Aplikasi
+	    yang saya bangun. Ini adalah Tutorial Dasar SQL. Saya belajar SQL dari sini.
+
     -	[Contoh-contoh Kesalahan Saat Menulis SQL](https://blog.jooq.org/2013/07/30/10-common-mistakes-java-developers-make-when-writing-sql/)
+
+	    Menarik melihat trik-trik SQL yang bisa di manfaatkan untuk percepatan Query.
+
     -	[SQL Window Functions](https://blog.jooq.org/2013/11/03/probably-the-coolest-sql-feature-window-functions/)
 
+	    Fitur Window Functions ini sangat luar biasa. Saya menuliskan catatan saya di
+	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_saldo.md)
+	    dan di
+	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_persediaan.md).
 
 7.  PHP
     -	[]()reporting tool
