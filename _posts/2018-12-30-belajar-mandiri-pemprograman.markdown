@@ -84,33 +84,31 @@ menghasilkan Software Developer (Programmer) yang handal.
             dan di
 	    [sini](https://muntaza.wordpress.com/2016/08/17/openbsd-pf-firewall-untuk-terima-koneksi-hanya-dari-ip-indonesia/).
 
-6.  Linux
-    -	[]()
+6.  SQL
+    -	[Postgresql SQL Tutorial](https://www.postgresql.org/docs/11/tutorial.html)
+    -	[Contoh-contoh Kesalahan Saat Menulis SQL](https://blog.jooq.org/2013/07/30/10-common-mistakes-java-developers-make-when-writing-sql/)
+    -	[SQL Window Functions](https://blog.jooq.org/2013/11/03/probably-the-coolest-sql-feature-window-functions/)
+
+
+7.  PHP
+    -	[]()reporting tool
     -	[]()
     -	[]()
     -	[]()
     -	[]()
 
-
-7.  Linux
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
-
-8.  Linux
-    -	[]()
-    -	[]()
+8.  Python
+    -	[]()Python tut
+    -	[]()Django
     -	[]()
     -	[]()
     -	[]()
 
-9.  Linux
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
+9.  Tambahan
+    -	[]()CVS
+    -	[]()Github
+    -	[]()Sed
+    -	[]()Awk
     -	[]()
 
 5.  Linux
