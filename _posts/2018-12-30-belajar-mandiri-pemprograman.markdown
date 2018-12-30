@@ -102,11 +102,11 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_persediaan.md).
 
 7.  PHP
-    -	[]()reporting tool
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
+    -	[Reportico](http://www.reportico.org/site2/index.php)
+
+	    Ini adalah Aplikasi Reporting Tool yang di bangun dengan PHP. Mudah di konfigurasi
+	    untuk terkoneksi dengan Postgresql. Aplikasi inilah yang saya gunakan sebagai Framework
+	    untuk laporan-laporan yang saya Query dari Database Postgresql.
 
 8.  Python
     -	[]()Python tut
