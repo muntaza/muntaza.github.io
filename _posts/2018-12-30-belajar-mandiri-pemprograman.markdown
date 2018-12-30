@@ -34,31 +34,44 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    [sini](https://muntaza.wordpress.com/2009/09/07/compile-kernel-linux-2-6-30/) dan di
 	    [sini](https://muntaza.wordpress.com/2009/09/07/membuat-distro-mini-pada-flash-disk/).
 
+    -	[Belajar Vim](https://www.google.com/search?q=learn+vim)
+
+	    Ini satu hal yang sangat penting bagi seorang Software Developer, yaitu menguasai Vim,
+	    lho kok Vim? iya, Vim, karena bagi saya pribadi, tidak ada text editor yang
+	    lebih memadai untuk di gunakan di dunia Unix-like, semisal Vim. saya menyarankan
+	    untuk menggunakan vimtutor yang tersedia di distro-distro Linux yang ada, karena
+	    itu yang paling mudah menurut saya. Sedangkan link "Belajar Vim", saya arahkan ke
+	    hasil pencarian di Google. Saran saya, kuasai dulu Vim, sebelum belajar Bahasa
+	    Pemprograman.
+
+2.  Bahasa C
+    -	[C Programming Tutorial](http://markburgess.org/CTutorial/CTutorial.html)
+
+	    Bahasa C adalah Bahasa Pemprograman yang seyogyanya di kuasai oleh seorang Software
+	    Developer. Karena Bahasa ini merupakan pondasi dari sebagian Bahasa Pemprograman
+	    Tingkat tinggi lainnya. Pada tutorial ini, saya belajar dan praktek dasar-dasar
+	    Pemprograman Bahasa C
+
+    -	[C Programming](http://www.eskimo.com/~scs/cclass/cclass.html)
+
+	    Pada tutorial Bahasa C ini, materi singkat dan padat, disertai contoh soal dan jawabannya.
+	    Sangat bermanfaat untuk latihan sejauh mana penguasaan terhadap materi yang ada.
+
+3.  Bahasa Assembly
+    -	[]()
+    -	[]()
+    -	[]()
     -	[]()
     -	[]()
 
-2.  Linux
+4.  Linux
     -	[]()
     -	[]()
     -	[]()
     -	[]()
     -	[]()
 
-2.  Linux
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
-
-2.  Linux
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
-    -	[]()
-
-2.  Linux
+5.  Linux
     -	[]()
     -	[]()
     -	[]()
