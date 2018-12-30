@@ -143,5 +143,14 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    terkait TCP/IP
 
 
+Sekian dari saya, link-link yang saya anggap bermanfaat untuk di pelajari bila berminat
+menjadi seorang Software Developer. Mungkin ada yang berbeda pendapat, bahwa list yang saya
+buat ini terlalu condong ke Unix-like Operating System. Namun, daftar ini adalah pendapat saya pribadi.
+
+Kemudian, sebagai refensi tambahan, berikut links Lainnya:
+
+1.  [Teach Yourself Programming in Ten Years](http://norvig.com/21-days.html)
+2.  [Teach Yourself Computer Science](https://teachyourselfcs.com/)
+
 
 # Alhamdulillah
