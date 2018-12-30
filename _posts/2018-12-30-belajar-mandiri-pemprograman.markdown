@@ -14,7 +14,11 @@ pengetahuan yang tinggi, walaupun oleh seorang yang belajar Autodidak, bisa saja
 menghasilkan Software Developer (Programmer) yang handal.
 
 1.  Linux
-    -	[]()
+    -	[Linux Tutorial](https://www.tldp.org/LDP/gs/node5.html)
+	Ini adalah tutorial yang saya gunakan untuk belajar Command Line di Linux
+	sekitar tahun 2005. Update terakhir tutorial ini sekitar tahun 1998, namun
+	saya menilainya masih cukup relevan untuk di gunakan di tahun 2018, 20 (dua puluh)
+	tahun kemudian.
     -	[]()
     -	[]()
     -	[]()
