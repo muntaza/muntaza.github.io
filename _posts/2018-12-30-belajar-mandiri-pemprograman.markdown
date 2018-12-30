@@ -22,7 +22,15 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    tahun kemudian.
 
     -	[Introduction to Linux](https://www.tldp.org/LDP/intro-linux/html/intro-linux.html)
-    -	[]()
+
+	    Sangat bagus untuk mengenal dunia Linux dan Command Line nya.
+
+    -	[Pocket Linux Guide](https://www.tldp.org/LDP/Pocket-Linux-Guide/html/Pocket-Linux-Guide.html)
+
+	    Tutorial Favorite saya, sering saya praktek kan waktu dulu. Melatih kesabaran
+	    kita untuk compile kernel, compile ini dan itu sampai bisa booting linux mini nya.
+	    Toturial ini sangat berkesan bagi saya.
+
     -	[]()
     -	[]()
 
