@@ -104,7 +104,7 @@ menghasilkan Software Developer (Programmer) yang handal.
     	[Database Design Tips](http://www.wisecoders.com/wisecoders_tips.html) dan
     	[20 Database Design Best Practices](http://codebalance.blogspot.com/2011/07/20-database-design-best-practices.html)
 
-	    Desaign Database dengan benar, agar menghasilkan aplikasi / Software yang handal
+	    Design Database dengan benar, agar menghasilkan aplikasi / Software yang handal
 
 6.  PHP
     -	[Reportico](http://www.reportico.org/site2/index.php)
