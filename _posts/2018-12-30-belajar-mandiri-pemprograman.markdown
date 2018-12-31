@@ -143,11 +143,11 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Software Developer sebaiknya kenal juga dengan git dan github. Saya menyimpan data-data
 	    yang tidak sensitif di Github.
 
-    -	[Sed](http://www.grymoire.com/Unix/Sed.html)
+    -	[Sed](http://www.grymoire.com/Unix/Sed.html) dan
+    	[Awk](http://www.grymoire.com/Unix/Awk.html)
 
 	    Powerfull sekali untuk mengedit file text.
 
-    -	[Awk](http://www.grymoire.com/Unix/Awk.html)
 
 
 
