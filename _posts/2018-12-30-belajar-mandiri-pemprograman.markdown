@@ -57,7 +57,7 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Sangat bermanfaat untuk latihan sejauh mana penguasaan terhadap materi yang ada.
 
 3.  Bahasa Assembly
-    -	[Programming from the Ground Up](http://savannah.nongnu.org/projects/pgubook/)
+    -	[Programming from the Ground Up](http://download.savannah.gnu.org/releases/pgubook/)
 
 	    Iya, betul, Bahasa Assembly. Setelah Belajar Bahasa C, kita putar balik ke bahasa yang
 	    lebih rendah, yaitu bahasa Assembly. Dengan belajar Bahasa ini, akan lebih mudah
