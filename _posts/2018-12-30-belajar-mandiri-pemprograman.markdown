@@ -34,14 +34,13 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    [sini](https://muntaza.wordpress.com/2009/09/07/compile-kernel-linux-2-6-30/) dan di
 	    [sini](https://muntaza.wordpress.com/2009/09/07/membuat-distro-mini-pada-flash-disk/).
 
-    -	[Belajar Vim](https://www.google.com/search?q=learn+vim)
+    -	[Belajar Vim](http://www2.geog.ucl.ac.uk/~plewis/teaching/unix/vimtutor)
 
 	    Ini satu hal yang sangat penting bagi seorang Software Developer, yaitu menguasai Vim,
 	    lho kok Vim? iya, Vim, karena bagi saya pribadi, tidak ada text editor yang
 	    lebih memadai untuk di gunakan di dunia Unix-like, semisal Vim. saya menyarankan
-	    untuk menggunakan vimtutor yang tersedia di distro-distro Linux yang ada, karena
-	    itu yang paling mudah menurut saya. Sedangkan link "Belajar Vim", saya arahkan ke
-	    hasil pencarian di Google. Saran saya, kuasai dulu Vim, sebelum belajar Bahasa
+	    untuk menggunakan "vimtutor" yang tersedia di distro-distro Linux yang ada, karena
+	    itu yang paling mudah menurut saya. Kuasai dulu Vim, sebelum belajar Bahasa
 	    Pemprograman.
 
 2.  Bahasa C
@@ -110,14 +109,14 @@ menghasilkan Software Developer (Programmer) yang handal.
     -	[Ten Common Database Design Mistakes](https://www.red-gate.com/simple-talk/sql/database-administration/ten-common-database-design-mistakes/)
 
 
-7.  PHP
+6.  PHP
     -	[Reportico](http://www.reportico.org/site2/index.php)
 
 	    Ini adalah Aplikasi Reporting Tool yang di bangun dengan PHP. Mudah di konfigurasi
 	    untuk terkoneksi dengan Postgresql. Aplikasi inilah yang saya gunakan sebagai Framework
 	    untuk laporan-laporan yang saya Query dari Database Postgresql.
 
-8.  Python
+7.  Python
     -	[Python Tutorial](https://docs.python.org/3/tutorial/)
 
 	    Banyak tutorial Python tersedia di internet, tapi ini adalah tutorial resmi dari website
@@ -129,7 +128,7 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    di ikuti tutorialnya, mudah dan menarik. Pakai SQLite aja untuk latihan.
 
 
-9.  User Interface Design
+8.  User Interface Design
 
 10. Tambahan
     -	CVS
