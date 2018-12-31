@@ -21,11 +21,11 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    saya menilainya masih cukup relevan untuk di gunakan di tahun 2018, 20 (dua puluh)
 	    tahun kemudian.
 
-    -	[Introduction to Linux](https://www.tldp.org/LDP/intro-linux/html/intro-linux.html)
+    -	[Introduction to Linux](https://www.tldp.org/LDP/intro-linux/html/index.html)
 
 	    Sangat bagus untuk mengenal dunia Linux dan Command Line nya.
 
-    -	[Pocket Linux Guide](https://www.tldp.org/LDP/Pocket-Linux-Guide/html/Pocket-Linux-Guide.html)
+    -	[Pocket Linux Guide](https://www.tldp.org/LDP/Pocket-Linux-Guide/html/index.html)
 
 	    Tutorial Favorite saya, sering saya praktek kan waktu dulu. Melatih kesabaran
 	    kita untuk compile kernel, compile ini dan itu sampai bisa booting linux mini nya.
@@ -102,8 +102,12 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_persediaan.md).
 
     -	[13 Blog Articles on Database Design Best Practices and Tips](https://www.vertabelo.com/blog/notes-from-the-lab/13-blog-articles-with-database-design-tips-and-best-practices)
-    -	[]()
-    -	[]()
+
+	    Database Design adalah topik penting bagi seorang Sotfware Developer.
+
+    -	[Database Design Best Practices](https://conceptainc.com/blog/10-database-design-best-practices/)
+
+    -	[Ten Common Database Design Mistakes](https://www.red-gate.com/simple-talk/sql/database-administration/ten-common-database-design-mistakes/)
 
 
 7.  PHP
@@ -150,7 +154,7 @@ menghasilkan Software Developer (Programmer) yang handal.
 
 
 
-    -   [Belajar TCP/IP](https://www.google.com/search?q=learn+tcp+ip)
+    -   [Understanding IP Addressing](http://pages.di.unipi.it/ricci/501302.pdf)
 
 	    Software Developer seyogyanya paham Subnetting, Routing, dan hal lainnya
 	    terkait TCP/IP
