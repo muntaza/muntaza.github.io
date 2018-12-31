@@ -141,7 +141,8 @@ menghasilkan Software Developer (Programmer) yang handal.
     -	[Sed](http://www.grymoire.com/Unix/Sed.html) dan
     	[Awk](https://www.tutorialspoint.com/awk/index.htm)
 
-	    Powerfull sekali untuk mengedit file text.
+	    Powerfull sekali untuk mengedit file text. Tambahan untuk cut dan paste di
+	    [sini](https://www.ibm.com/developerworks/community/blogs/d8afe7b8-2725-4205-ae02-d5bf2da88fe1/entry/Cutting_and_Pasting_in_the_Unix_and_Linux_shells?lang=en).
 
 
     -   [Understanding IP Addressing](http://pages.di.unipi.it/ricci/501302.pdf)
