@@ -130,9 +130,6 @@ menghasilkan Software Developer (Programmer) yang handal.
 
 
 9.  User Interface Design
-    -	[]()
-    -	[]()
-    -	[]()
 
 10.  Tambahan
     -	CVS
