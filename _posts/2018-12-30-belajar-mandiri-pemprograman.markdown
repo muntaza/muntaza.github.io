@@ -131,7 +131,7 @@ menghasilkan Software Developer (Programmer) yang handal.
 
 9.  User Interface Design
 
-10.  Tambahan
+10. Tambahan
     -	CVS
 
 	    cukup ketik "info cvs" di terminal, ikuti tutorialnya di situ. Saya menggunakan cvs
