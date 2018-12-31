@@ -139,7 +139,7 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    yang tidak sensitif di Github.
 
     -	[Sed](http://www.grymoire.com/Unix/Sed.html) dan
-    	[Awk](http://www.grymoire.com/Unix/Awk.html)
+    	[Awk](https://www.tutorialspoint.com/awk/index.htm)
 
 	    Powerfull sekali untuk mengedit file text.
 
