@@ -101,7 +101,7 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    dan di
 	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_persediaan.md).
 
-    -	[]()
+    -	[13 Blog Articles on Database Design Best Practices and Tips](https://www.vertabelo.com/blog/notes-from-the-lab/13-blog-articles-with-database-design-tips-and-best-practices)
     -	[]()
     -	[]()
 
