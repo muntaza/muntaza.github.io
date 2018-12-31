@@ -101,6 +101,11 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    dan di
 	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_persediaan.md).
 
+    -	[]()
+    -	[]()
+    -	[]()
+
+
 7.  PHP
     -	[Reportico](http://www.reportico.org/site2/index.php)
 
@@ -119,7 +124,13 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Framework yang saya gunakan untuk membangun aplikasi-aplikasi berbasis Web. Silahkan
 	    di ikuti tutorialnya, mudah dan menarik. Pakai SQLite aja untuk latihan.
 
-9.  Tambahan
+
+9.  User Interface Design
+    -	[]()
+    -	[]()
+    -	[]()
+
+10.  Tambahan
     -	CVS
 
 	    cukup ketik "info cvs" di terminal, ikuti tutorialnya di situ. Saya menggunakan cvs
@@ -137,6 +148,8 @@ menghasilkan Software Developer (Programmer) yang handal.
 
     -	[Awk](http://www.grymoire.com/Unix/Awk.html)
 
+
+
     -   [Belajar TCP/IP](https://www.google.com/search?q=learn+tcp+ip)
 
 	    Software Developer seyogyanya paham Subnetting, Routing, dan hal lainnya
@@ -151,6 +164,7 @@ Kemudian, sebagai refensi tambahan, berikut links Lainnya:
 
 1.  [Teach Yourself Programming in Ten Years](http://norvig.com/21-days.html)
 2.  [Teach Yourself Computer Science](https://teachyourselfcs.com/)
+3.  [OpenBSD Books](https://www.openbsd.org/books.html)
 
 
 # Alhamdulillah
