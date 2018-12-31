@@ -149,13 +149,12 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Powerfull sekali untuk mengedit file text.
 
 
-
-
     -   [Understanding IP Addressing](http://pages.di.unipi.it/ricci/501302.pdf)
 
 	    Software Developer seyogyanya paham Subnetting, Routing, dan hal lainnya
 	    terkait TCP/IP
 
+    -	[Linux Network Administrators Guide](https://www.tldp.org/LDP/nag2/index.html)
 
 Sekian dari saya, link-link yang saya anggap bermanfaat untuk di pelajari bila berminat
 menjadi seorang Software Developer. Mungkin ada yang berbeda pendapat, bahwa list yang saya
