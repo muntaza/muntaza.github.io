@@ -100,14 +100,11 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    dan di
 	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_persediaan.md).
 
-    -	[13 Blog Articles on Database Design Best Practices and Tips](https://www.vertabelo.com/blog/notes-from-the-lab/13-blog-articles-with-database-design-tips-and-best-practices)
+    -	[Database Best Practices](http://wiki.c2.com/?DatabaseBestPractices),
+    	[Database Design Tips](http://www.wisecoders.com/wisecoders_tips.html) dan
+    	[20 Database Design Best Practices](http://codebalance.blogspot.com/2011/07/20-database-design-best-practices.html)
 
-	    Database Design adalah topik penting bagi seorang Sotfware Developer.
-
-    -	[Database Design Best Practices](https://conceptainc.com/blog/10-database-design-best-practices/)
-
-    -	[Ten Common Database Design Mistakes](https://www.red-gate.com/simple-talk/sql/database-administration/ten-common-database-design-mistakes/)
-
+	    Desaign Database dengan benar, agar menghasilkan aplikasi / Software yang handal
 
 6.  PHP
     -	[Reportico](http://www.reportico.org/site2/index.php)
@@ -128,14 +125,13 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    di ikuti tutorialnya, mudah dan menarik. Pakai SQLite aja untuk latihan.
 
 
-8.  User Interface Design
-
-10. Tambahan
+9. Tambahan
     -	CVS
 
 	    cukup ketik "info cvs" di terminal, ikuti tutorialnya di situ. Saya menggunakan cvs
 	    ini untuk mengelola kode sumber saya yang terdapat data-data rahasia, semisal
-	    password dll, sehingga hanya tersimpan di cvs server saja.
+	    password dll, sehingga hanya tersimpan di cvs server saja. Ini sedikit catatan
+	    saya mengenai cvs di [sini](https://muntaza.wordpress.com/2010/04/22/bekerja-dengan-cvs/).
 
     -	[Github](https://guides.github.com/)
 
@@ -149,11 +145,21 @@ menghasilkan Software Developer (Programmer) yang handal.
 
 
     -   [Understanding IP Addressing](http://pages.di.unipi.it/ricci/501302.pdf)
+	dan
+    	[Linux Network Administrators Guide](https://www.tldp.org/LDP/nag2/index.html)
 
 	    Software Developer seyogyanya paham Subnetting, Routing, dan hal lainnya
 	    terkait TCP/IP
 
-    -	[Linux Network Administrators Guide](https://www.tldp.org/LDP/nag2/index.html)
+    -	[Principles of user interface design](https://en.wikipedia.org/wiki/Principles_of_user_interface_design)
+	dan [Principles of User Interface Design](http://bokardo.com/principles-of-user-interface-design/)
+
+	    User Interface atau Interaksi Manusia Komputer harus di perhatikan dengan seksama
+	    Sehingga aplikasi yang baik adalah yang paling mudah di gunakan.
+
+    -	[Unix Design Philosophy](http://wiki.c2.com/?UnixDesignPhilosophy)
+
+	    Prinsip-prinsip dalam pembuatan software.
 
 Sekian dari saya, link-link yang saya anggap bermanfaat untuk di pelajari bila berminat
 menjadi seorang Software Developer. Mungkin ada yang berbeda pendapat, bahwa list yang saya
