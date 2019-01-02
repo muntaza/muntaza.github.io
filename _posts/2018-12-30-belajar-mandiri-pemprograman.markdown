@@ -119,6 +119,13 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Banyak tutorial Python tersedia di internet, tapi ini adalah tutorial resmi dari website
 	    python.org yang saya gunakan untuk mempelajari bahasa Python. Langsung ke sumber nya.
 
+    -	[Project Euler](https://projecteuler.net/archives)
+
+	    Latihan algoritma, mengasah skill dan mental problem solving, sangat bermanfaat.
+	    Bermanfaat untuk mengasah, sejauh mana pengetahuan kita terhadap suatu bahasa pemprograman.
+	    Saya biasa menyelesaikan nya dengan Bahasa C, kemudian saat ini lebih senang menjawabnya
+	    dengan Bahasa Python.
+
     -	[Django Tutorial](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
 
 	    Framework yang saya gunakan untuk membangun aplikasi-aplikasi berbasis Web. Silahkan
