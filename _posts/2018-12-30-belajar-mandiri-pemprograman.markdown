@@ -129,6 +129,8 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Adapun soal diatas nomor 50 sudah cukup sulit sehingga akan banyak waktu tersita untuk menjawabnya,
 	    sehingga tidak saya sarankan menjawab soal diatas nomor 50. My Friend key: 1432634_gaUc6rZOBd2f8zwL5MP2xeJ0C6X9bt8y
 
+	    ![project_euler](https://projecteuler.net/profile/muntaza.png)
+
     -	[Django Tutorial](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
 
 	    Framework yang saya gunakan untuk membangun aplikasi-aplikasi berbasis Web. Silahkan
