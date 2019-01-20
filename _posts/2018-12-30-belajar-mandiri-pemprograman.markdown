@@ -124,8 +124,8 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Latihan algoritma, mengasah skill dan mental problem solving, sangat bermanfaat.
 	    Bermanfaat untuk mengasah, sejauh mana pengetahuan kita terhadap suatu bahasa pemprograman.
 	    Saya biasa menyelesaikan nya
-	    dengan Bahasa Python. Coba selesaikan beberapa soal yang dianggap mudah antara nomor 1 sampai nomor 50.
-	    Kalau bisa menjawab 12 soal saja sudah bagus menurut saya.
+	    dengan Bahasa Python. Coba selesaikan beberapa soal yang dianggap mudah antara nomor 1 sampai nomor 120.
+	    Kalau bisa menjawab 20 soal saja sudah bagus menurut saya.
 
 
     -	[Django Tutorial](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
