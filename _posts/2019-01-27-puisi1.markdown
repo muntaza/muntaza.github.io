@@ -8,12 +8,22 @@ categories: puisi
 # Bismillah,
 
 
-- test
-- lataih
+- Hidup ini singkat akan berlalu dengan cepat
+- Aku telah melihat banyak orang dimasukkan ke liang lahat
+- Berharap aku juga sigap siap setiap saat
+- Saat ajal itu datang yang tak di percepat juga tak di perlambat
+
+- Juice mangga terlalu manis terasa
+- Mungkin banyak campuran gula
+- Semoga bisa berusaha sedikit janji dan kata
+- Takut menjadi PHP dan pendusta
+
+- Waktu berjalan tanpa terasa
+- Usia pun mulai menuju tua
+- Bila waktu berpisah dengan dunia tiba
+- Semoga aku tidak di kenang sebagai pendusta
 
 
-- test
-- lataih
 
 
 
