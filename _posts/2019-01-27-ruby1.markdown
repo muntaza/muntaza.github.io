@@ -84,6 +84,7 @@ sq(*p)
 
 Ini, menurut saya, fitur Ruby juga, karena di bahasa lain, jumlah argumen
 biasanya harus di definisikan jumlahnya, misal
+{% highlight ruby %}
 sq(a, b, c)
 {% endhighlight %}
 
