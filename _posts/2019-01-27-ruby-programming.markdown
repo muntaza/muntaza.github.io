@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ruby Programming"
-date:   2018-12-03 11:26:56 +0800
+date:   2019-01-27 11:26:56 +0800
 categories: ruby programming
 ---
 
