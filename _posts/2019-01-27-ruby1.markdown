@@ -12,7 +12,7 @@ categories: ruby programming
 Ini adalah kesan yang saya ingin sampaikan setelah mempelajari Bahasa
 Pemprogramman Ruby, di aplikasi Sololearn yang ada di HP Android saya.
 
-saya membahas 2 contoh program saja, yang memperlihatkan kebelihan ruby
+saya membahas 2 contoh program saja, yang memperlihatkan kelebihan ruby
 ini di bandingkan bahasa yang lain, saya akan kasih komentar pada program
 ini semampu saya.
 
