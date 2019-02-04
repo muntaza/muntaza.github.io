@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Judul"
-date:   2018-12-09 12:26:56 +0800
+date:   2019-12-09 12:26:56 +0800
 categories: ssh
 ---
 
@@ -15,3 +15,5 @@ persediaan$ cd /etc/examples/
 
 
 {% endhighlight %}
+
+# Alhamdulillah
