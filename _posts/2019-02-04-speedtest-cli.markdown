@@ -1,14 +1,21 @@
 ---
 layout: post
-title:  "Judul"
-date:   2018-12-09 12:26:56 +0800
-categories: ssh
+title:  "Cek kecepatan download dengan speedtest-cli"
+date:   2019-02-04 12:26:56 +0800
+categories: speedtest
 ---
 
 # Bismillah,
 
+Sebagaimana telah maklum, bahwa koneksi kita kecepatannya kadang turun naik, nah, biasanya
+di desktop, kita akan menggunakan browser untuk mengecek kecepatan koneksi ini. Hasil test
+dari browser seperti gambar di bawah ini.
 
 ![Gambar1](/assets/speedtest1.png)
+
+Saya pribadi lebih suka aplikasi berbasis command line, di sini yang di gunakan adalah
+speedtest-cli. Di Linux Mint saya, sudah saya install speedtest-cli dengan perintah apt.
+Di bawah ini contoh hasil pengecekan kecepatan dengan command line.
 
 {% highlight bash %}
 
@@ -40,3 +47,9 @@ muntaza@E202SA:~$
 
 
 {% endhighlight %}
+
+Dari hasil di atas, terlihat bahwa pengecekan dengan speedtest-cli cukup akurat
+menurut saya, tidak jauh beda dari pengecekan dengan web browser.
+
+
+# Alhamdulillah
