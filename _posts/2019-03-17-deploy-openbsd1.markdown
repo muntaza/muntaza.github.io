@@ -7,14 +7,6 @@ categories: openbsd
 
 # Bismillah,
 
-Catatan
-
-{% highlight bash %}
-persediaan$ cd /etc/examples/
-
-
-
-{% endhighlight %}
 
 
 
