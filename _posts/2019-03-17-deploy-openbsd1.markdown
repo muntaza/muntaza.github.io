@@ -36,7 +36,7 @@ known fix for it exists, include that as well.
 
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add rsync
-doas (muntaza@persediaan.banjarbarukota.go.id) password:
+doas (muntaza@persediaan.example.com) password:
 quirks-3.16 signed on 2018-10-12T15:26:25Z
 quirks-3.16: ok
 Ambiguous: choose package for rsync
@@ -190,10 +190,10 @@ See rcctl(8) for details.
 
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add php-gd php-pdo_pgsql php-pgsql php-apache
-doas (muntaza@persediaan.banjarbarukota.go.id) password:
+doas (muntaza@persediaan.example.com) password:
 doas: Authorization failed
 persediaan$ doas /usr/sbin/pkg_add php-gd php-pdo_pgsql php-pgsql php-apache
-doas (muntaza@persediaan.banjarbarukota.go.id) password:
+doas (muntaza@persediaan.example.com) password:
 quirks-3.16 signed on 2018-10-12T15:26:25Z
 Ambiguous: choose package for php-gd
 a       0: <None>
@@ -429,7 +429,7 @@ persediaan$
 persediaan$ cat httpd.conf
 # $OpenBSD: httpd.conf,v 1.20 2018/06/13 15:08:24 reyk Exp $
 
-server "persediaan.banjarbarukota.go.id" {
+server "persediaan.example.com" {
         listen on * port 80
         location "/.well-known/acme-challenge/*" {
                 root "/acme"
@@ -440,11 +440,11 @@ server "persediaan.banjarbarukota.go.id" {
 #       }
 }
 
-#server "persediaan.banjarbarukota.go.id" {
+#server "persediaan.example.com" {
 #       listen on * tls port 443
 #       tls {
-#               certificate "/etc/ssl/persediaan.banjarbarukota.go.id.fullchain.pem"
-#               key "/etc/ssl/private/persediaan.banjarbarukota.go.id.key"
+#               certificate "/etc/ssl/persediaan.example.com.fullchain.pem"
+#               key "/etc/ssl/private/persediaan.example.com.key"
 #       }
 #       location "/pub/*" {
 #               directory auto index
@@ -474,10 +474,10 @@ authority letsencrypt-staging {
         account key "/etc/acme/letsencrypt-staging-privkey.pem"
 }
 
-domain persediaan.banjarbarukota.go.id {
-        domain key "/etc/ssl/private/persediaan.banjarbarukota.go.id.key"
-        domain certificate "/etc/ssl/persediaan.banjarbarukota.go.id.crt"
-        domain full chain certificate "/etc/ssl/persediaan.banjarbarukota.go.id.fullchain.pem"
+domain persediaan.example.com {
+        domain key "/etc/ssl/private/persediaan.example.com.key"
+        domain certificate "/etc/ssl/persediaan.example.com.crt"
+        domain full chain certificate "/etc/ssl/persediaan.example.com.fullchain.pem"
         sign with letsencrypt
 }
 persediaan$ doas rcctl -f restart httpd
@@ -487,21 +487,21 @@ persediaan$
 {% endhighlight %}
 
 {% highlight bash %}
-persediaan$ doas acme-client -vAD persediaan.banjarbarukota.go.id
+persediaan$ doas acme-client -vAD persediaan.example.com
 acme-client: /etc/acme/letsencrypt-privkey.pem: generated RSA account key
-acme-client: /etc/ssl/private/persediaan.banjarbarukota.go.id.key: generated RSA domain key
+acme-client: /etc/ssl/private/persediaan.example.com.key: generated RSA domain key
 acme-client: https://acme-v01.api.letsencrypt.org/directory: directories
 acme-client: acme-v01.api.letsencrypt.org: DNS: 203.217.134.29
 acme-client: https://acme-v01.api.letsencrypt.org/acme/new-reg: new-reg
-acme-client: https://acme-v01.api.letsencrypt.org/acme/new-authz: req-auth: persediaan.banjarbarukota.go.id
+acme-client: https://acme-v01.api.letsencrypt.org/acme/new-authz: req-auth: persediaan.example.com
 acme-client: /var/www/acme/BWW8Gm5ZECoaUWlrt7Slkti0U-qKlL0TUG85Vgvhf04: created
 acme-client: https://acme-v01.api.letsencrypt.org/acme/challenge/HETrIsgLknrL1h5omy61fYH6ivP3ak0pdtu84kkmGnc/12195442253: challenge
 acme-client: https://acme-v01.api.letsencrypt.org/acme/challenge/HETrIsgLknrL1h5omy61fYH6ivP3ak0pdtu84kkmGnc/12195442253: status
 acme-client: https://acme-v01.api.letsencrypt.org/acme/new-cert: certificate
 acme-client: http://cert.int-x3.letsencrypt.org/: full chain
 acme-client: cert.int-x3.letsencrypt.org: DNS: 103.5.215.55
-acme-client: /etc/ssl/persediaan.banjarbarukota.go.id.crt: created
-acme-client: /etc/ssl/persediaan.banjarbarukota.go.id.fullchain.pem: created
+acme-client: /etc/ssl/persediaan.example.com.crt: created
+acme-client: /etc/ssl/persediaan.example.com.fullchain.pem: created
 {% endhighlight %}
 
 
@@ -512,7 +512,7 @@ acme-client: /etc/ssl/persediaan.banjarbarukota.go.id.fullchain.pem: created
 persediaan$ cat /etc/httpd.conf
 # $OpenBSD: httpd.conf,v 1.20 2018/06/13 15:08:24 reyk Exp $
 
-server "persediaan.banjarbarukota.go.id" {
+server "persediaan.example.com" {
         listen on * port 80
         location "/.well-known/acme-challenge/*" {
                 root "/acme"
@@ -523,11 +523,11 @@ server "persediaan.banjarbarukota.go.id" {
         }
 }
 
-server "persediaan.banjarbarukota.go.id" {
+server "persediaan.example.com" {
         listen on * tls port 443
         tls {
-                certificate "/etc/ssl/persediaan.banjarbarukota.go.id.fullchain.pem"
-                key "/etc/ssl/private/persediaan.banjarbarukota.go.id.key"
+                certificate "/etc/ssl/persediaan.example.com.fullchain.pem"
+                key "/etc/ssl/private/persediaan.example.com.key"
         }
         location "/pub/*" {
                 directory auto index
@@ -623,23 +623,23 @@ persediaan$ diff httpd-ssl.conf httpd-ssl.conf_asli
 <
 <
 <
-< WSGIDaemonProcess persediaan_banjarbaru python-path=/home/django/persediaan_banjarbaru:/usr/local/lib/python2.7/site-packages
-< WSGIProcessGroup persediaan_banjarbaru
+< WSGIDaemonProcess persediaan_example python-path=/home/django/persediaan_example:/usr/local/lib/python2.7/site-packages
+< WSGIProcessGroup persediaan_example
 <
-< WSGIScriptAlias /persediaan_banjarbaru /home/django/persediaan_banjarbaru/persediaan_banjarbaru/wsgi.py process-group=persediaan_banjarbaru
+< WSGIScriptAlias /persediaan_example /home/django/persediaan_example/persediaan_example/wsgi.py process-group=persediaan_example
 <
-< Alias /robots.txt /home/django/persediaan_banjarbaru/static/robots.txt
-< Alias /favicon.ico /home/django/persediaan_banjarbaru/static/favicon.ico
+< Alias /robots.txt /home/django/persediaan_example/static/robots.txt
+< Alias /favicon.ico /home/django/persediaan_example/static/favicon.ico
 <
 <
 < #static pada https
-< Alias /static_persediaan_banjarbaru /home/django/persediaan_banjarbaru/static/
+< Alias /static_persediaan_example /home/django/persediaan_example/static/
 <
-< <Directory /home/django/persediaan_banjarbaru/static>
+< <Directory /home/django/persediaan_example/static>
 < Require all granted
 < </Directory>
 <
-< <Directory /home/django/persediaan_banjarbaru/persediaan_banjarbaru>
+< <Directory /home/django/persediaan_example/persediaan_example>
 < <Files wsgi.py>
 < Require all granted
 < </Files>
@@ -652,15 +652,15 @@ persediaan$ diff httpd-ssl.conf httpd-ssl.conf_asli
 <
 <
 179c144
-< SSLCertificateFile "/etc/ssl/persediaan.banjarbarukota.go.id.crt"
+< SSLCertificateFile "/etc/ssl/persediaan.example.com.crt"
 ---
 > SSLCertificateFile "/etc/apache2/server.crt"
 189c154
-< SSLCertificateKeyFile "/etc/ssl/private/persediaan.banjarbarukota.go.id.key"
+< SSLCertificateKeyFile "/etc/ssl/private/persediaan.example.com.key"
 ---
 > SSLCertificateKeyFile "/etc/apache2/server.key"
 210c175
-< SSLCACertificateFile "/etc/ssl/persediaan.banjarbarukota.go.id.fullchain.pem"
+< SSLCACertificateFile "/etc/ssl/persediaan.example.com.fullchain.pem"
 ---
 > #SSLCACertificateFile "/etc/apache2/ssl.crt/ca-bundle.crt"
 235c200
@@ -678,7 +678,7 @@ persediaan$
 
 
 {% highlight bash %}
-persediaan$ cvs co persediaan_banjarbaru
+persediaan$ cvs co persediaan_example
 {% endhighlight %}
 
 
@@ -727,8 +727,8 @@ template1=#
 
 
 {% highlight bash %}
-persediaan$ psql -U _postgresql persediaan_banjarbaru < persediaan_banjarbaru_2019-02-24.sql
-persediaan$ createdb -U _postgresql persediaan_banjarbaru -O persediaan_banjarbaru
+persediaan$ psql -U _postgresql persediaan_example < persediaan_example_2019-02-24.sql
+persediaan$ createdb -U _postgresql persediaan_example -O persediaan_example
 persediaan$ psql -U _postgresql template1 < globals.sql
 persediaan$ id
 uid=503(_postgresql) gid=503(_postgresql) groups=503(_postgresql)
@@ -741,13 +741,13 @@ persediaan$
 
 
 {% highlight bash %}
-persediaan$ doas chown -R www:www laporan_persediaan_banjarbaru
+persediaan$ doas chown -R www:www laporan_persediaan_example
 persediaan$ cat /home/muntaza/bin/chmod_min.sh
-chown -R muntaza:www /var/www/htdocs/laporan_persediaan_banjarbaru/projects_persediaan_banjarbaru/
-chmod -R ugo-w  /var/www/htdocs/laporan_persediaan_banjarbaru/projects_persediaan_banjarbaru/
+chown -R muntaza:www /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
+chmod -R ugo-w  /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
 persediaan$ cat /home/muntaza/bin/chmod_plus.sh
-chown -R muntaza:www /var/www/htdocs/laporan_persediaan_banjarbaru/projects_persediaan_banjarbaru/
-chmod -R g+w  /var/www/htdocs/laporan_persediaan_banjarbaru/projects_persediaan_banjarbaru/
+chown -R muntaza:www /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
+chmod -R g+w  /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
 persediaan$ doas sh /home/muntaza/bin/chmod_plus.sh
 persediaan$ doas sh /home/muntaza/bin/chmod_min.sh
 persediaan$
@@ -762,7 +762,7 @@ isi pada file settings.py
 
 {% highlight bash %}
 persediaan$ doas rcctl restart apache2
-doas (muntaza@persediaan.banjarbarukota.go.id) password:
+doas (muntaza@persediaan.example.com) password:
 apache2(ok)
 apache2(ok)
 persediaan$ python manage.py check --deploy
@@ -771,19 +771,19 @@ System check identified no issues (0 silenced).
 
 
 {% highlight bash %}
-persediaan$ cvs diff -r 1.6 -r 1.9 persediaan_banjarbaru/settings.py
-Index: persediaan_banjarbaru/settings.py
+persediaan$ cvs diff -r 1.6 -r 1.9 persediaan_example/settings.py
+Index: persediaan_example/settings.py
 ===================================================================
-RCS file: /home/muntaza/data/cvsroot/persediaan_banjarbaru/persediaan_banjarbaru/settings.py,v
+RCS file: /home/muntaza/data/cvsroot/persediaan_example/persediaan_example/settings.py,v
 retrieving revision 1.6
 retrieving revision 1.9
 diff -u -p -r1.6 -r1.9
---- persediaan_banjarbaru/settings.py   24 Feb 2019 04:15:00 -0000      1.6
-+++ persediaan_banjarbaru/settings.py   24 Feb 2019 22:50:48 -0000      1.9
+--- persediaan_example/settings.py   24 Feb 2019 04:15:00 -0000      1.6
++++ persediaan_example/settings.py   24 Feb 2019 22:50:48 -0000      1.9
 @@ -140,3 +140,16 @@ THOUSAND_SEPARATOR = '.'
  # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
- STATIC_URL = '/static_persediaan_banjarbaru/'
+ STATIC_URL = '/static_persediaan_example/'
 +
 +
 +
@@ -804,33 +804,33 @@ persediaan$
 
 
 {% highlight bash %}
-persediaan$ psql -U _postgresql persediaan_banjarbaru_2019
+persediaan$ psql -U _postgresql persediaan_example_2019
 psql (10.5)
 Type "help" for help.
 
-persediaan_banjarbaru_2019=# select * from persediaan
+persediaan_example_2019=# select * from persediaan
 persediaan         persediaan_id_seq
-persediaan_banjarbaru_2019=# select * from persediaan;
+persediaan_example_2019=# select * from persediaan;
  id | tanggal_kadaluarsa | jumlah | harga | id_barang | id_transaksi
 ----+--------------------+--------+-------+-----------+--------------
 (0 rows)
 
-persediaan_banjarbaru_2019=# select * from keluar ;
+persediaan_example_2019=# select * from keluar ;
  id_transaksi | id_jenis_keluar | id_pegawai
 --------------+-----------------+------------
 (0 rows)
 
-persediaan_banjarbaru_2019=# select * from masuk ;
+persediaan_example_2019=# select * from masuk ;
  id_transaksi | id_asal_usul | id_pihak_ketiga
 --------------+--------------+-----------------
 (0 rows)
 
-persediaan_banjarbaru_2019=# select * from transaksi;
+persediaan_example_2019=# select * from transaksi;
  id | tanggal | keterangan | id_jenis_transaksi | id_sub_skpd
 ----+---------+------------+--------------------+-------------
 (0 rows)
 
-persediaan_banjarbaru_2019=# \q
+persediaan_example_2019=# \q
 persediaan$
 {% endhighlight %}
 
@@ -839,14 +839,14 @@ pindah kepemilikan table dan view di dalam database baru ke user baru
 
 
 {% highlight bash %}
-REASSIGN OWNED BY persediaan_banjarbaru TO persediaan_banjarbaru_2019
+REASSIGN OWNED BY persediaan_example TO persediaan_example_2019
 {% endhighlight %}
 
 
 
 
 {% highlight bash %}
-persediaan$ doas openssl genrsa -out /etc/ssl/private/banjarbarukota.key 2048
+persediaan$ doas openssl genrsa -out /etc/ssl/private/examplekota.key 2048
 Generating RSA private key, 2048 bit long modulus
 .........................................+++
 .............................................................................+++
@@ -854,8 +854,8 @@ e is 65537 (0x10001)
 persediaan$
 persediaan$
 persediaan$
-persediaan$ doas openssl req -new -key /etc/ssl/private/banjarbarukota.key \
->              -out /etc/ssl/private/banjarbarukota.csr
+persediaan$ doas openssl req -new -key /etc/ssl/private/examplekota.key \
+>              -out /etc/ssl/private/examplekota.csr
 You are about to be asked to enter information that will be incorporated
 into your certificate request.
 What you are about to enter is what is called a Distinguished Name or a DN.
@@ -868,7 +868,7 @@ State or Province Name (full name) []:Kalimantan Selatan
 Locality Name (eg, city) []:Banjarbaru
 Organization Name (eg, company) []:Pemda Kota Banjarbaru
 Organizational Unit Name (eg, section) []:Pemda Kota Banjarbaru
-Common Name (eg, fully qualified host name) []:persediaan.banjarbarukota.go.id
+Common Name (eg, fully qualified host name) []:persediaan.example.com
 Email Address []:m.muntaza@gmail.com
 
 Please enter the following 'extra' attributes
@@ -881,7 +881,7 @@ persediaan$
 cek isi:
 
 {% highlight bash %}
-persediaan$  openssl req -in banjarbarukota.csr  -noout -text
+persediaan$  openssl req -in examplekota.csr  -noout -text
 {% endhighlight %}
 
 
@@ -1157,23 +1157,23 @@ persediaan$ diff httpd-ssl.conf_asli httpd-ssl.conf
 >
 >
 >
-> WSGIDaemonProcess persediaan_banjarbaru python-path=/home/django/persediaan_banjarbaru:/usr/local/lib/python2.7/site-packages
-> WSGIProcessGroup persediaan_banjarbaru
+> WSGIDaemonProcess persediaan_example python-path=/home/django/persediaan_example:/usr/local/lib/python2.7/site-packages
+> WSGIProcessGroup persediaan_example
 >
-> WSGIScriptAlias /persediaan_banjarbaru /home/django/persediaan_banjarbaru/persediaan_banjarbaru/wsgi.py process-group=persediaan_banjarbaru
+> WSGIScriptAlias /persediaan_example /home/django/persediaan_example/persediaan_example/wsgi.py process-group=persediaan_example
 >
-> Alias /robots.txt /home/django/persediaan_banjarbaru/static/robots.txt
-> Alias /favicon.ico /home/django/persediaan_banjarbaru/static/favicon.ico
+> Alias /robots.txt /home/django/persediaan_example/static/robots.txt
+> Alias /favicon.ico /home/django/persediaan_example/static/favicon.ico
 >
 >
 > #static pada https
-> Alias /static_persediaan_banjarbaru /home/django/persediaan_banjarbaru/static/
+> Alias /static_persediaan_example /home/django/persediaan_example/static/
 >
-> <Directory /home/django/persediaan_banjarbaru/static>
+> <Directory /home/django/persediaan_example/static>
 > Require all granted
 > </Directory>
 >
-> <Directory /home/django/persediaan_banjarbaru/persediaan_banjarbaru>
+> <Directory /home/django/persediaan_example/persediaan_example>
 > <Files wsgi.py>
 > Require all granted
 > </Files>
@@ -1185,23 +1185,23 @@ persediaan$ diff httpd-ssl.conf_asli httpd-ssl.conf
 >
 > # 2019
 >
-> WSGIDaemonProcess persediaan_banjarbaru_2019 python-path=/home/django/persediaan_banjarbaru_2019:/usr/local/lib/python2.7/site-packages
-> WSGIProcessGroup persediaan_banjarbaru_2019
+> WSGIDaemonProcess persediaan_example_2019 python-path=/home/django/persediaan_example_2019:/usr/local/lib/python2.7/site-packages
+> WSGIProcessGroup persediaan_example_2019
 >
-> WSGIScriptAlias /persediaan_banjarbaru_2019 /home/django/persediaan_banjarbaru_2019/persediaan_banjarbaru_2019/wsgi.py process-group=persediaan_banjarbaru_2019
+> WSGIScriptAlias /persediaan_example_2019 /home/django/persediaan_example_2019/persediaan_example_2019/wsgi.py process-group=persediaan_example_2019
 >
-> Alias /robots.txt /home/django/persediaan_banjarbaru_2019/static/robots.txt
-> Alias /favicon.ico /home/django/persediaan_banjarbaru_2019/static/favicon.ico
+> Alias /robots.txt /home/django/persediaan_example_2019/static/robots.txt
+> Alias /favicon.ico /home/django/persediaan_example_2019/static/favicon.ico
 >
 >
 > #static pada https
-> Alias /static_persediaan_banjarbaru_2019 /home/django/persediaan_banjarbaru_2019/static/
+> Alias /static_persediaan_example_2019 /home/django/persediaan_example_2019/static/
 >
-> <Directory /home/django/persediaan_banjarbaru_2019/static>
+> <Directory /home/django/persediaan_example_2019/static>
 > Require all granted
 > </Directory>
 >
-> <Directory /home/django/persediaan_banjarbaru_2019/persediaan_banjarbaru_2019>
+> <Directory /home/django/persediaan_example_2019/persediaan_example_2019>
 > <Files wsgi.py>
 > Require all granted
 > </Files>
@@ -1213,17 +1213,17 @@ persediaan$ diff httpd-ssl.conf_asli httpd-ssl.conf
 144c209
 < SSLCertificateFile "/etc/apache2/server.crt"
 ---
-> SSLCertificateFile "/etc/ssl/persediaan_banjarbarukota_go_id.crt"
+> SSLCertificateFile "/etc/ssl/persediaan_example.com.crt"
 154c219,220
 < SSLCertificateKeyFile "/etc/apache2/server.key"
 ---
-> #SSLCertificateKeyFile "/etc/ssl/private/persediaan.banjarbarukota.go.id.key"
-> SSLCertificateKeyFile "/etc/ssl/private/banjarbarukota.key"
+> #SSLCertificateKeyFile "/etc/ssl/private/persediaan.example.com.key"
+> SSLCertificateKeyFile "/etc/ssl/private/examplekota.key"
 175c241,242
 < #SSLCACertificateFile "/etc/apache2/ssl.crt/ca-bundle.crt"
 ---
-> #SSLCACertificateFile "/etc/ssl/persediaan.banjarbarukota.go.id.fullchain.pem"
-> SSLCACertificateFile "/etc/ssl/persediaan_banjarbarukota_go_id.ca-bundle"
+> #SSLCACertificateFile "/etc/ssl/persediaan.example.com.fullchain.pem"
+> SSLCACertificateFile "/etc/ssl/persediaan_example.com.ca-bundle"
 200c267
 < #   file (containing login information for SRP user accounts).
 ---
@@ -1252,27 +1252,27 @@ persediaan$ pwd
 persediaan$ id
 uid=503(_postgresql) gid=503(_postgresql) groups=503(_postgresql)
 persediaan$ crontab -l
-10      0       *       *       *       /var/postgresql/back_up_persediaan_banjarbaru/back_up_persediaan_banjarbaru.sh
-20      0       *       *       *       /var/postgresql/back_up_persediaan_banjarbaru_2019/back_up_persediaan_banjarbaru_2019.sh
-persediaan$ cat back_up_persediaan_banjarbaru/back_up_persediaan_banjarbaru.sh
+10      0       *       *       *       /var/postgresql/back_up_persediaan_example/back_up_persediaan_example.sh
+20      0       *       *       *       /var/postgresql/back_up_persediaan_example_2019/back_up_persediaan_example_2019.sh
+persediaan$ cat back_up_persediaan_example/back_up_persediaan_example.sh
 #!/bin/ksh
 
-# Back_up sql database persediaan_banjarbaru
+# Back_up sql database persediaan_example
 
-file=persediaan_banjarbaru_`date +%F_%H_%M`.sql
+file=persediaan_example_`date +%F_%H_%M`.sql
 
-pg_dump -U _postgresql persediaan_banjarbaru > ~/back_up_persediaan_banjarbaru/$file
-bzip2 ~/back_up_persediaan_banjarbaru/$file
+pg_dump -U _postgresql persediaan_example > ~/back_up_persediaan_example/$file
+bzip2 ~/back_up_persediaan_example/$file
 persediaan$
-persediaan$ cat back_up_persediaan_banjarbaru_2019/back_up_persediaan_banjarbaru_2019.sh
+persediaan$ cat back_up_persediaan_example_2019/back_up_persediaan_example_2019.sh
 #!/bin/ksh
 
-# Back_up sql database persediaan_banjarbaru_2019
+# Back_up sql database persediaan_example_2019
 
-file=persediaan_banjarbaru_2019_`date +%F_%H_%M`.sql
+file=persediaan_example_2019_`date +%F_%H_%M`.sql
 
-pg_dump -U _postgresql persediaan_banjarbaru_2019 > ~/back_up_persediaan_banjarbaru_2019/$file
-bzip2 ~/back_up_persediaan_banjarbaru_2019/$file
+pg_dump -U _postgresql persediaan_example_2019 > ~/back_up_persediaan_example_2019/$file
+bzip2 ~/back_up_persediaan_example_2019/$file
 persediaan$
 {% endhighlight %}
 
@@ -1283,21 +1283,21 @@ persediaan$
 
 {% highlight bash %}
 persediaan$ crontab -l
-0       */2     *       *       *       sh /home/muntaza/bin/chmod_banjarbaru_min.sh
-persediaan$ cat /home/muntaza/bin/chmod_banjarbaru_plus.sh
-chown -R muntaza:www /var/www/htdocs/laporan_persediaan_banjarbaru/projects_persediaan_banjarbaru/
-chmod -R ug+w  /var/www/htdocs/laporan_persediaan_banjarbaru/projects_persediaan_banjarbaru/
+0       */2     *       *       *       sh /home/muntaza/bin/chmod_example_min.sh
+persediaan$ cat /home/muntaza/bin/chmod_example_plus.sh
+chown -R muntaza:www /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
+chmod -R ug+w  /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
 
 
-chown -R muntaza:www /var/www/htdocs/laporan_persediaan_banjarbaru_2019/projects_persediaan_banjarbaru_2019/
-chmod -R ug+w  /var/www/htdocs/laporan_persediaan_banjarbaru_2019/projects_persediaan_banjarbaru_2019/
-persediaan$ cat /home/muntaza/bin/chmod_banjarbaru_min.sh
-chown -R muntaza:www /var/www/htdocs/laporan_persediaan_banjarbaru/projects_persediaan_banjarbaru/
-chmod -R ugo-w  /var/www/htdocs/laporan_persediaan_banjarbaru/projects_persediaan_banjarbaru/
+chown -R muntaza:www /var/www/htdocs/laporan_persediaan_example_2019/projects_persediaan_example_2019/
+chmod -R ug+w  /var/www/htdocs/laporan_persediaan_example_2019/projects_persediaan_example_2019/
+persediaan$ cat /home/muntaza/bin/chmod_example_min.sh
+chown -R muntaza:www /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
+chmod -R ugo-w  /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
 
 
-chown -R muntaza:www /var/www/htdocs/laporan_persediaan_banjarbaru_2019/projects_persediaan_banjarbaru_2019/
-chmod -R ugo-w  /var/www/htdocs/laporan_persediaan_banjarbaru_2019/projects_persediaan_banjarbaru_2019/
+chown -R muntaza:www /var/www/htdocs/laporan_persediaan_example_2019/projects_persediaan_example_2019/
+chmod -R ugo-w  /var/www/htdocs/laporan_persediaan_example_2019/projects_persediaan_example_2019/
 persediaan$
 {% endhighlight %}
 
@@ -1354,21 +1354,21 @@ HOME=/var/log
 
 {% highlight bash %}
 persediaan$ crontab -l
-#10      0       *       *       *       /var/postgresql/back_up_persediaan_banjarbaru/back_up_persediaan_banjarbaru.sh
-20      0       *       *       *       /var/postgresql/back_up_persediaan_banjarbaru_2019/back_up_persediaan_banjarbaru_2019.sh
+#10      0       *       *       *       /var/postgresql/back_up_persediaan_example/back_up_persediaan_example.sh
+20      0       *       *       *       /var/postgresql/back_up_persediaan_example_2019/back_up_persediaan_example_2019.sh
 persediaan$
 
 
 
-persediaan$ cat /var/postgresql/back_up_persediaan_banjarbaru_2019/back_up_persediaan_banjarbaru_2019.sh
+persediaan$ cat /var/postgresql/back_up_persediaan_example_2019/back_up_persediaan_example_2019.sh
 #!/bin/ksh
 
-# Back_up sql database persediaan_banjarbaru_2019
+# Back_up sql database persediaan_example_2019
 
-file=persediaan_banjarbaru_2019_`date +%F_%H_%M`.sql
+file=persediaan_example_2019_`date +%F_%H_%M`.sql
 
-pg_dump -U _postgresql persediaan_banjarbaru_2019 > ~/back_up_persediaan_banjarbaru_2019/$file
-bzip2 ~/back_up_persediaan_banjarbaru_2019/$file
+pg_dump -U _postgresql persediaan_example_2019 > ~/back_up_persediaan_example_2019/$file
+bzip2 ~/back_up_persediaan_example_2019/$file
 persediaan$
 {% endhighlight %}
 
