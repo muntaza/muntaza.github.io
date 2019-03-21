@@ -478,6 +478,8 @@ httpd(ok)
 persediaan$
 {% endhighlight %}
 
+
+
 {% highlight bash %}
 persediaan$ doas acme-client -vAD persediaan.example.com
 acme-client: /etc/acme/letsencrypt-privkey.pem: generated RSA account key
@@ -984,6 +986,7 @@ persediaan$ doas rcctl set ntpd flags -s
 persediaan$ cat /etc/rc.conf.local
 ntpd_flags=-s
 pkg_scripts=postgresql apache2
+{% endhighlight %}
 
 
 {% highlight bash %}
@@ -1083,8 +1086,6 @@ persediaan$ diff httpd2.conf httpd2.conf_asli
 persediaan$
 {% endhighlight %}
 
-{% highlight bash %}
-{% endhighlight %}
 
 
 
