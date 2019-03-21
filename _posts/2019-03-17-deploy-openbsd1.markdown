@@ -859,9 +859,9 @@ If you enter '.', the field will be left blank.
 -----
 Country Name (2 letter code) []:ID
 State or Province Name (full name) []:Kalimantan Selatan
-Locality Name (eg, city) []:Banjarbaru
-Organization Name (eg, company) []:Pemda Kota Banjarbaru
-Organizational Unit Name (eg, section) []:Pemda Kota Banjarbaru
+Locality Name (eg, city) []:Example
+Organization Name (eg, company) []:Pemda Kota Example
+Organizational Unit Name (eg, section) []:Pemda Kota Example
 Common Name (eg, fully qualified host name) []:persediaan.example.com
 Email Address []:m.muntaza@gmail.com
 
