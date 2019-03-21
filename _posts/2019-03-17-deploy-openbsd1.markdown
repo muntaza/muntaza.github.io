@@ -604,7 +604,7 @@ persediaan$ diff httpd-ssl.conf httpd-ssl.conf_asli
 > # SSLCipherSuite HIGH:MEDIUM:!SSLv3:!kRSA
 > # SSLProxyCipherSuite HIGH:MEDIUM:!SSLv3:!kRSA
 89c89
-< ServerName persediaan.banjabarukota.go.id:443
+< ServerName persediaan.example.com:443
 < ServerAdmin muhammad@muntaza.id
 ---
 > ServerName www.example.com:443
@@ -1135,7 +1135,7 @@ persediaan$ diff httpd-ssl.conf_asli httpd-ssl.conf
 < ServerName www.example.com:443
 < ServerAdmin you@example.com
 ---
-> ServerName persediaan.banjabarukota.go.id:443
+> ServerName persediaan.example.com:443
 > ServerAdmin muhammad@muntaza.id
 133a134,198
 >
