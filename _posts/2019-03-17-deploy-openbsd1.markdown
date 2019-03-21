@@ -973,11 +973,11 @@ persediaan$ cat ip_safe
 
 
 #Default Gateway
-45.64.99.129
+xx.xx.xx.xxx
 
 
 #openbsd.muntaza.id
-45.64.99.182
+xx.xx.xx.xxx
 {% endhighlight %}
 
 
@@ -1339,7 +1339,7 @@ HOME=/var/log
 */15    *       *       *       *       /usr/sbin/rdate 2.id.pool.ntp.org > /dev/null 2> /dev/null
 
 #ping gateway every 5 minute
-*/5     *       *       *       *       /sbin/ping -c3 45.64.99.129 > /dev/null
+*/5     *       *       *       *       /sbin/ping -c3 xx.xx.xx.xxx > /dev/null
 {% endhighlight %}
 
 
