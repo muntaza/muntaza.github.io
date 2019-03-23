@@ -33,7 +33,6 @@ known fix for it exists, include that as well.
 Setelah berhasil login, kita mulai proses instalasi paket-paket yang di butuhkan untuk deploying OpenPersediaan ini, paket pertama yang di install pada contoh ini adalah rsync, karena paket ini berfungsi untuk mendownload hasil backup postgresql.
 
 
-
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add rsync
 doas (muntaza@persediaan.example.com) password:
@@ -49,6 +48,9 @@ The following new rcscripts were installed: /etc/rc.d/rsyncd
 See rcctl(8) for details.
 persediaan$
 {% endhighlight %}
+
+
+Install syspatch terbaru, dan cek syspatch yang terinstall
 
 {% highlight bash %}
 persediaan$ syspatch -l
@@ -68,6 +70,7 @@ persediaan$ syspatch -l
 persediaan$
 {% endhighlight %}
 
+Di sini saya menginstall vim, saya pilih yang mendukung python2, yaitu varian vim no.9, sehingga python2 nya sekalian terinstall. Saya pun melakukan soft link dengan perintah ln ke python2.
 
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add vim
@@ -109,6 +112,9 @@ persediaan$ doas ln -sf /usr/local/bin/python2.7-config /usr/local/bin/python-co
 persediaan$ doas ln -sf /usr/local/bin/pydoc2.7  /usr/local/bin/pydoc
 {% endhighlight %}
 
+
+Untuk Menginstall Django, saya menggunakan py-pip. paket py-pip ini telah tertinggal versi nya di repo OpenBSD 6.4 ini, he... he..., oleh karena itu pip ini akan kita update setelah ini, in syaa Allah.
+
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add py-pip
 quirks-3.16 signed on 2018-10-12T15:26:25Z
@@ -123,6 +129,7 @@ persediaan$
 {% endhighlight %}
 
 
+Tahap upgrade pip, cukup mudah bukan?
 
 {% highlight bash %}
 persediaan$ doas pip install --upgrade pip
@@ -137,6 +144,7 @@ Successfully installed pip-19.0.1
 persediaan$
 {% endhighlight %}
 
+Validasi versi pip sekarang, meningkat jauh dari versi 9.0.3 ke versi 19.0.1. Perhatikan bahwa karena python2 akan berakhir di 2020, maka setiap kali menjalankan pip ini akan di beri warning terkait python2 ini, dan disarankan untuk mulai beralih ke python3.
 
 {% highlight bash %}
 persediaan$ pip --version
@@ -145,6 +153,7 @@ persediaan$
 {% endhighlight %}
 
 
+Proses instalasi Django, versi yang kita gunakan di tulis saat instalasi. Kalau ada update dari Django, tinggal ketik command yang sama dengan menuliskan versi yang terbaru, pip akan mendelete versi lama dan menginstall versi baru.
 
 {% highlight bash %}
 persediaan$ doas pip install Django==1.11.18
