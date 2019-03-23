@@ -625,7 +625,7 @@ persediaan$
 {% endhighlight %}
 
 
-Ini setting ssl, pada file httpd-ssl.conf, disini saya menggunakan SSLCipherSuite yang hanya mengaktifkan TLS v1.2, sehingga client harus update browser nya, baik Firefox atau Chrome ke versi terbaru yang mendukung TLS v1.2. SSL v2, SSL v3, TLS v1.1 sangat tidak di sarankan di gunakan.
+Ini setting ssl, pada file httpd-ssl.conf, disini saya menggunakan SSLCipherSuite yang hanya mengaktifkan TLS v1.2, sehingga client harus update browser nya, baik Firefox atau Chrome ke versi terbaru yang mendukung TLS v1.2. Adapun SSL v2, SSL v3, TLS v1.1 sangat tidak di sarankan di gunakan. Lihat di [sini](https://www.globalsign.com/en/blog/disable-tls-10-and-all-ssl-versions/) terkait hal tersebut.
 
 Kemudian saya setting agar meload module wsgi_module, dan setting di bawahnya adalah konfigurasi untuk deploying django.
 
