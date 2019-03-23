@@ -916,7 +916,7 @@ Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains
 {% endhighlight %}
 
 
-Masih berlanjut rekan-rekan, saatnya beralih ke Firewall. OpenBSD datang dengan PF Firewall. Pada setting kali ini, saya memilih untuk hanya menerima koneksi dari IP Publik yang berasal dari Indonesia, oleh karena ini saya menggunakan list/daftar IP Publik dari [www.ipdeny.com/](http://www.ipdeny.com/)
+Masih berlanjut rekan-rekan, saatnya beralih ke Firewall. OpenBSD datang dengan PF Firewall. Pada setting kali ini, saya memilih untuk hanya menerima koneksi dari IP Publik yang berasal dari Indonesia, oleh karena ini saya menggunakan list/daftar IP Publik dari [www.ipdeny.com](http://www.ipdeny.com/)
 
 {% highlight bash %}
 persediaan$ wget -c http://www.ipdeny.com/ipblocks/data/countries/Copyrights.txt
@@ -1405,7 +1405,6 @@ persediaan$ crontab -l
 persediaan$
 
 
-Menampilkan lagi isi file untuk membackup Postgresql dengan pg_dump
 
 persediaan$ cat /var/postgresql/back_up_persediaan_example_2019/back_up_persediaan_example_2019.sh
 #!/bin/ksh
