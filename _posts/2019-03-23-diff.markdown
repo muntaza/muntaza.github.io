@@ -1,0 +1,93 @@
+---
+layout: post
+title:  "Membaca file .diff"
+date:   2019-12-09 12:26:56 +0800
+categories: ssh
+---
+
+# Bismillah,
+
+Catatan
+
+{% highlight diff %}
+
+Index: sk_penghapusan_gedung.sql
+===================================================================
+RCS file: /home/muntaza/data/cvsroot/catatan/refactoring_2017/laporan_skpd/lampiran_sk_penghapusan/lampiran_sk_penghapusan_peralatan_mesin/sk_penghapusan_gedung.sql,v
+retrieving revision 1.1
+retrieving revision 1.2
+diff -u -p -r1.1 -r1.2
+--- sk_penghapusan_gedung.sql	19 Mar 2019 08:05:19 -0000	1.1
++++ sk_penghapusan_gedung.sql	19 Mar 2019 08:09:30 -0000	1.2
+@@ -1,8 +1,8 @@
+-DROP VIEW IF EXISTS view_gedung_bangunan_kabupaten;
++DROP VIEW IF EXISTS view_sk_penghapusan_gedung_bangunan_kabupaten;
+
+
+
+-CREATE VIEW view_gedung_bangunan_kabupaten AS
++CREATE VIEW view_sk_penghapusan_gedung_bangunan_kabupaten AS
+
+ SELECT
+ gedung_bangunan.id_sub_skpd,
+@@ -52,6 +52,11 @@ view_tanah_tanpa_harga_kabupaten.id_tana
+ string_agg(asal_usul.asal_usul, ' : ') asal_usul,
+ SUM(harga_gedung_bangunan.harga_bertambah) - SUM(harga_gedung_bangunan.harga_berkurang) harga,
+
++penghapusan_gedung_bangunan.id_sk_penghapusan,
++sk_penghapusan.nomor_sk_penghapusan,
++sk_penghapusan.tanggal_sk_penghapusan,
++tahun_berkurang_gedung_bangunan.tahun_berkurang as tahun_penghapusan,
++
+ gedung_bangunan.keterangan
+
+
+@@ -59,11 +64,16 @@ FROM
+ gedung_bangunan as gedung_bangunan, harga_gedung_bangunan as harga_gedung_bangunan, kode_barang,
+ mutasi_berkurang, asal_usul, keadaan_barang, satuan_barang, golongan_barang,
+ status_tingkat, status_beton,
+-sub_skpd, skpd, lokasi_bidang, kabupaten, provinsi, view_tanah_tanpa_harga_kabupaten
++sub_skpd, skpd, lokasi_bidang, kabupaten, provinsi, view_tanah_tanpa_harga_kabupaten,
++tahun_berkurang_gedung_bangunan, penghapusan_gedung_bangunan, sk_penghapusan
+
+
+ WHERE
+ 1 = 1  AND
++gedung_bangunan.id = tahun_berkurang_gedung_bangunan.id_gedung_bangunan AND
++gedung_bangunan.id = penghapusan_gedung_bangunan.id_gedung_bangunan AND
++penghapusan_gedung_bangunan.id_sk_penghapusan = sk_penghapusan.id AND
++
+ harga_gedung_bangunan.id_gedung_bangunan = gedung_bangunan.id AND
+ harga_gedung_bangunan.id_asal_usul = asal_usul.id AND
+
+@@ -117,6 +127,12 @@ gedung_bangunan.nomor_dokumen_gedung,
+ view_tanah_tanpa_harga_kabupaten.status_tanah,
+ luas_tanah,
+ nomor_kode_tanah,
++
++id_sk_penghapusan,
++nomor_sk_penghapusan,
++tanggal_sk_penghapusan,
++tahun_penghapusan,
++
+ gedung_bangunan.keterangan
+
+
+@@ -127,8 +143,8 @@ ORDER BY id_skpd, kode_barang;
+
+
+
+-GRANT ALL PRIVILEGES ON view_gedung_bangunan_kabupaten TO lap_kabupaten;
+-REVOKE INSERT, UPDATE, DELETE ON view_gedung_bangunan_kabupaten FROM lap_kabupaten;
++GRANT ALL PRIVILEGES ON view_sk_penghapusan_gedung_bangunan_kabupaten TO lap_kabupaten;
++REVOKE INSERT, UPDATE, DELETE ON view_sk_penghapusan_gedung_bangunan_kabupaten FROM lap_kabupaten;
+
+
+
+
+
+{% endhighlight %}
+
+
+
+# Alhamdulillah
