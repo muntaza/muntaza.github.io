@@ -823,7 +823,7 @@ persediaan$ python manage.py check --deploy
 System check identified no issues (0 silenced).
 {% endhighlight %}
 
-
+Nah, disini ada beberapa langkah yang tidak tercatat, yaitu pembuatan database 2019. Pada server yang berjalan ini, ada 2 database yang jalan, yaitu persediaan_example dan persediaan_example_2019. Saya melakukan restore dengan perintah psql isi database persediaan_example ke database persediaan_example_2019. Kemudian, isi table persediaan, table transaksi, table masuk dan table keluar saya kosongkan, seperti terlihat pada tampilan di bawah ini.
 
 {% highlight bash %}
 persediaan$ psql -U _postgresql persediaan_example_2019
@@ -859,12 +859,14 @@ persediaan$
 
 pindah kepemilikan table dan view di dalam database baru ke user baru
 
+Setelah restore isi database persediaan_example ke database persediaan_example_2019, kepemilikan table tetap milik persediaan_example, maka saya menggunakan perintah REASSIGN OWNED BY seperti di bawah ini untuk memindah kepemilikan semua table di database persediaan_example_2019 ke user persediaan_example_2019.
 
 {% highlight bash %}
 REASSIGN OWNED BY persediaan_example TO persediaan_example_2019
 {% endhighlight %}
 
 
+Beralih ke SSL kembali, he... he..., saya membuat private key, lalu membuat file .csr yang akan di paste ke penyedia jasa/penjual sertifikat ssl.
 
 
 {% highlight bash %}
@@ -900,16 +902,14 @@ persediaan$
 {% endhighlight %}
 
 
-cek isi:
+Untuk memastikan isi file .csr, bisa di cek dengan perintah berikut:
 
 {% highlight bash %}
 persediaan$  openssl req -in examplekota.csr  -noout -text
 {% endhighlight %}
 
 
-
-enable hsts
-
+Setelah proses pembelian sertifikat selesai, saya beli di Comodo positive ssl, cukup murah harganya, kurang dari Rp200.000 per tahun, maka saya mengaktifkan HSTS, cukup edit file httpd-ssl.conf dan tambahkan baris di bawah ini.
 
 {% highlight bash %}
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
