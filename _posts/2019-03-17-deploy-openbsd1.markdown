@@ -30,6 +30,7 @@ known fix for it exists, include that as well.
 {% endhighlight %}
 
 
+Setelah berhasil login, kita mulai proses instalasi paket-paket yang di butuhkan untuk deploying OpenPersediaan ini, paket pertama yang di install pada contoh ini adalah rsync, karena paket ini berfungsi untuk mendownload hasil backup postgresql.
 
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add rsync
