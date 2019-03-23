@@ -165,6 +165,7 @@ Installing collected packages: pytz, Django
 Successfully installed Django-1.11.18 pytz-2018.9
 {% endhighlight %}
 
+Verifikasi versi Django yang terinstall
 
 {% highlight bash %}
 persediaan$ django-admin --version
@@ -172,6 +173,7 @@ persediaan$ django-admin --version
 persediaan$
 {% endhighlight %}
 
+Proses instalasi apache2, inilah web server yang kita gunakan untuk deploy django dan php reportico 4.6 sebagai report engine aplikasi OpenPersediaan.
 
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add apache-httpd
@@ -194,6 +196,9 @@ See rcctl(8) for details.
 {% endhighlight %}
 
 
+Sempat salah ketik password sodara-sodara, he...he..., tetap saya tampilkan error Authentication failed, bila salah mengetikkan password ketika menjalankan perintah doas.
+
+Di sini saya menginstall php beserta add-on nya, yaitu php-gd, php-pgsql dan php-pdo_pgsql. Adapun paket php-apache2, paket ini baru ada di OpenBSD 6.4, hanya berisi script untuk aktivasi php di apache2.
 
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add php-gd php-pdo_pgsql php-pgsql php-apache
@@ -251,6 +256,7 @@ persediaan$
 {% endhighlight %}
 
 
+Instalasi Postgresql, versi yang ada di OpenBSD 6.4 adalah 10.5
 
 
 {% highlight bash %}
@@ -267,6 +273,8 @@ persediaan$
 {% endhighlight %}
 
 
+Mod_wsgi berguna sebagai penghubung antara python dan apache2. Di sini saya menampilkan isi file /etc/installurl, file ini berisi alamat repo OpenBSD untuk proses instalasi paket dan lainnya, yang mana sebelumnya menggunakan PKG_PATH di file .profile untuk mengarahkan repo instalasi paket.
+
 {% highlight bash %}
 persediaan$ cat /etc/installurl
 https://cloudflare.cdn.openbsd.org/pub/OpenBSD
@@ -279,6 +287,7 @@ persediaan$
 
 
 
+Instalasi Psycopg2, aplikasi penghubung Python ke Postgresql. Menggunakan pip sebagai installer.
 
 {% highlight bash %}
 persediaan$ doas pip install psycopg2
@@ -292,6 +301,7 @@ persediaan$
 {% endhighlight %}
 
 
+menampilkan paket paket yang terinstall melalui pip.
 
 {% highlight bash %}
 persediaan$ pip list
