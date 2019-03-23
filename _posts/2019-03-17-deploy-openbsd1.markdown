@@ -916,7 +916,7 @@ Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains
 {% endhighlight %}
 
 
-Masih berlanjut rekan-rekan, saatnya beralih ke Firewall. OpenBSD datang dengan PF Firewall. Pada setting kali ini, saya memilih untuk hanya menerima koneksi dari IP Publik yang berasal dari Indonesia, oleh karena ini saya menggunakan list/daftar IP Publik dari [www.ipdeny.com](www.ipdeny.com)
+Masih berlanjut rekan-rekan, saatnya beralih ke Firewall. OpenBSD datang dengan PF Firewall. Pada setting kali ini, saya memilih untuk hanya menerima koneksi dari IP Publik yang berasal dari Indonesia, oleh karena ini saya menggunakan list/daftar IP Publik dari [www.ipdeny.com/](http://www.ipdeny.com/)
 
 {% highlight bash %}
 persediaan$ wget -c http://www.ipdeny.com/ipblocks/data/countries/Copyrights.txt
@@ -946,6 +946,15 @@ id.zone                    100%[=======================================>]  38.09
 persediaan$
 {% endhighlight %}
 
+
+Nah, inilah file pf.conf, tempat konfigurasi firewall kita:
+
+0. Firewall tidak memfilter interface lo
+1. External interface adalah vio0
+2. Port yang terbuka hanya port 22 dan port 443
+3. Block semua koneksi masuk dari luar secara default.
+4. Cegah serangan reverse telnet dengan mengizinkan server koneksi ke daftar IP Publik yang kita definisikan di file ip_safe. Tentang reverse telnet ini bisa di lihat di [sini](https://www.techrepublic.com/article/protect-your-network-from-this-telnet-vulnerability/)
+5.
 
 {% highlight bash %}
 persediaan$ cat pf.conf
