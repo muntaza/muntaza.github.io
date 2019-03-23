@@ -7,7 +7,9 @@ categories: diff
 
 # Bismillah,
 
-Catatan
+Membaca file diff setelah melakukan commit pada CVS repo, membuat kita yakin akan perubahan yang kita lakukan. Berikut ini contoh file diff yang saya review setelah perubahan pada file sql. Tampilan file di beriri extention .diff, sehingga saat di buka dengan vim akan menampilkan warna merah untuk baris yang di hapus, dan warna hijau untuk baris yang di tambahkan.
+
+Semoga Bermanfaat
 
 {% highlight diff %}
 
@@ -87,7 +89,3 @@ diff -u -p -r1.1 -r1.2
 
 
 {% endhighlight %}
-
-
-
-# Alhamdulillah
