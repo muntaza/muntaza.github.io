@@ -9,9 +9,7 @@ categories: openbsd
 
 
 Setelah instalasi OpenBSD pada VPS, perlu langkah-langkah penting yang telah saya jelaskan pada tulisan
-
 [ini](https://www.muntaza.net/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html).
-
 Hal terpenting, adalah mengaktifkan Public Key Only Authentication.
 
 
