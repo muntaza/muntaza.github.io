@@ -625,9 +625,9 @@ persediaan$
 {% endhighlight %}
 
 
--- untuk mendisable signature apache2
+Ini setting ssl, pada file httpd-ssl.conf, disini saya menggunakan SSLCipherSuite yang hanya mengaktifkan TLS v1.2, sehingga client harus update browser nya, baik Firefox atau Chrome ke versi terbaru yang mendukung TLS v1.2. SSL v2, SSL v3, TLS v1.1 sangat tidak di sarankan di gunakan.
 
-
+Kemudian saya setting agar meload module wsgi_module, dan setting di bawahnya adalah konfigurasi untuk deploying django.
 
 {% highlight bash %}
 persediaan$ diff httpd-ssl.conf httpd-ssl.conf_asli
@@ -700,6 +700,7 @@ persediaan$ diff httpd-ssl.conf httpd-ssl.conf_asli
 235c200
 {% endhighlight %}
 
+Membuat folder django di folder /home, setting kepemilikan folder django ke user muntaza dan group www
 
 {% highlight bash %}
 persediaan$ doas mkdir django
@@ -710,12 +711,14 @@ persediaan$
 {% endhighlight %}
 
 
+Check out file program dari repository CVS.
 
 {% highlight bash %}
 persediaan$ cvs co persediaan_example
 {% endhighlight %}
 
 
+Mendisable md5 login untuk user local _postgresql, bila user _postgresql ini login ke system, bisa masuk ke server tanpa password. File yang di edit adalah pg_hba.conf, saya rubah local auth dari md5 menjadi peer. Koneksi dari user local ini ke file unix domain socket. Kenapa tanpa password untuk super admin database? karena saya mau mensetting backup database tiap tengah malam dengan cron menggunakan perintah pg_dump.
 
 {% highlight bash %}
 persediaan$ doas su _postgresql
