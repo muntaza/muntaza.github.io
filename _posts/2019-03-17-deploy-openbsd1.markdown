@@ -739,6 +739,7 @@ persediaan$
 {% endhighlight %}
 
 
+Testing menggunakan peer authentication. Saat saya menjadi user _postgresql, saya bisa langsung login ke server Postrgesql tanpa password.
 
 {% highlight bash %}
 persediaan$ id
