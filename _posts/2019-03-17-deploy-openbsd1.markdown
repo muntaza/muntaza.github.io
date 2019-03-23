@@ -9,7 +9,7 @@ categories: openbsd
 
 Pada Masa yang lalu, di tahun 2008, lebih dari 10 tahun yang lalu, saya pernah menulis toturial di wordpress terkait instalasi OpenBSD versi 4.2. Artikel tersebut bisa di lihat di [sini](https://muntaza.wordpress.com/2008/03/16/menginstall-openbsd-42/). Pada saat tulisan tersebut di buat, Instalasi OpenBSD masih harus membuat iso sendiri, he... he...
 
-Saat ini, di tahun 2019, Alhamdulillah, sudah sangat mudah sekali menginstall OpenBSD. OpenBSD yang saya install pada tutorial kali ini adalah versi 6.4. Sebagaimana tulisan 10 tahun yang lalu, saya berharap tulisan saya kali ini bermanfaat dan bisa di ambil faedahnya untuk saya sendiri atau orang lain di masa mendatang.
+Saat ini, di tahun 2019, Alhamdulillah, sudah sangat mudah sekali menginstall OpenBSD. OpenBSD yang saya jelaskan pada tutorial kali ini adalah versi 6.4. Sebagaimana tulisan 10 tahun yang lalu, saya berharap tulisan saya kali ini bermanfaat dan bisa di ambil faedahnya untuk saya sendiri atau orang lain di masa mendatang.
 
 Setelah instalasi OpenBSD pada VPS, perlu langkah-langkah penting yang telah saya jelaskan pada tulisan
 [ini](https://www.muntaza.net/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html).
