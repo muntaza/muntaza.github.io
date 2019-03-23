@@ -954,7 +954,11 @@ Nah, inilah file pf.conf, tempat konfigurasi firewall kita:
 2. Port yang terbuka hanya port 22 dan port 443
 3. Block semua koneksi masuk dari luar secara default.
 4. Cegah serangan reverse telnet dengan mengizinkan server koneksi ke daftar IP Publik yang kita definisikan di file ip_safe. Tentang reverse telnet ini bisa di lihat di [sini](https://www.techrepublic.com/article/protect-your-network-from-this-telnet-vulnerability/)
-5.
+5. Izinkan akses ke port 22 dan 443, lindungi dari :
+    - DOS, yaitu dengan masukkan IP yang teranggap melakukan DOS ke table abusive_hosts, block koneksi dari table abusive_hosts selama 5 menit.
+    - Syn Flood Attack. Tentang Syn Flood Attack, lihat di [sini](https://www.incapsula.com/ddos/attack-glossary/syn-flood.html)
+6. Izinkan koneksi dari SSL Lab, untuk memverifikasi setting ssl di Server.
+
 
 {% highlight bash %}
 persediaan$ cat pf.conf
@@ -997,6 +1001,7 @@ block return out log proto {tcp udp} user _pbuild
 {% endhighlight %}
 
 
+Ini isi file ip_safe:
 
 
 {% highlight bash %}
@@ -1020,6 +1025,8 @@ xx.xx.xx.xxx
 {% endhighlight %}
 
 
+Mengaktifkan ntpd dengan flags "-s", agar saat server booting, jam di cocokkan dengan jam di ntp server.
+
 {% highlight bash %}
 persediaan$ doas rcctl set ntpd flags -s
 persediaan$ cat /etc/rc.conf.local
@@ -1027,6 +1034,8 @@ ntpd_flags=-s
 pkg_scripts=postgresql apache2
 {% endhighlight %}
 
+
+Setting Ntpd server. IP 2.id.pool.ntp.org sudah masuk daftar ip_safe, sehingga server bisa koneksi ke sana.
 
 {% highlight bash %}
 persediaan$ cat /etc/ntpd.conf
@@ -1040,6 +1049,7 @@ persediaan$
 {% endhighlight %}
 
 
+Hasil diff terakhir file httpd2.conf:
 
 
 {% highlight bash %}
@@ -1126,6 +1136,8 @@ persediaan$
 {% endhighlight %}
 
 
+
+Hasil diff file httpd-ssl.conf terakhir:
 
 
 {% highlight bash %}
@@ -1276,6 +1288,7 @@ persediaan$
 {% endhighlight %}
 
 
+Crontab pada user _postgresql, dan isi script untuk backup database dengan pg_dump. Backup dilakukan tiap tengah malam, setelah server Apache2 di nonaktifkan.
 
 
 {% highlight bash %}
@@ -1310,7 +1323,7 @@ persediaan$
 
 
 
-
+Crontab agar direktory projects di Reportico read-only.
 
 
 {% highlight bash %}
@@ -1338,7 +1351,7 @@ persediaan$
 
 
 
-
+Root Crontab. Kosongkan table abusive_hosts tiap 5 menit, sehingga IP yang terduga melakuan DOS akan di bebaskan tiap 5 menit. Server Apache di non aktifkan jam 0.0, agar bisa di proses backup jam 0.20, server Apache2 akan nyala lagi jam 0.40. Tiap 5 menit ping ke Gateway, dalam rangka menjaga koneksi, dan tiap 15 menit memperbaharui jam dengan perintah rdate. Hal ini sebagai jaga-jaga seandainya ntpd tidak berfungsi sebagaimana mestinya.
 
 
 
@@ -1383,6 +1396,7 @@ HOME=/var/log
 
 
 
+Menampilkan lagi isi crontab user _postgresql.
 
 {% highlight bash %}
 persediaan$ crontab -l
@@ -1391,6 +1405,7 @@ persediaan$ crontab -l
 persediaan$
 
 
+Menampilkan lagi isi file untuk membackup Postgresql dengan pg_dump
 
 persediaan$ cat /var/postgresql/back_up_persediaan_example_2019/back_up_persediaan_example_2019.sh
 #!/bin/ksh
@@ -1405,5 +1420,8 @@ persediaan$
 {% endhighlight %}
 
 
+Telah sampai pada bagian akhir dari tulisan ini. Saya usahakan pembahasan sesederhana mungkin. Terlihat bahwa susunan penulisan ini tidak teraktur dengan baik, sering melompat-lompat pembahasannya, tidak lain hal ini adalah karena apa yang saya tulis ini saya hasilkan dari copy paste langsung dari server VPS yang saya gunakan, dengan seminimal mungkin editan dari saya (keluali hal yang saya anggap perlu di edit).
+
+Semoga tulisan ini bermanfaat.
 
 # Alhamdulillah
