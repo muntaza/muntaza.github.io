@@ -567,7 +567,7 @@ server "persediaan.example.com" {
 persediaan$
 {% endhighlight %}
 
-Restart OpenBSD Httpd, lalu test koneksi ke webserver.
+Restart OpenBSD Httpd, lalu test koneksi ke webserver. Bila telah berhasil koneksi ke post 443 (https) berarti sertifikat ssl sudah terinstall dengan  benar.
 
 {% highlight bash %}
 persediaan$ doas rcctl -f restart httpd
@@ -576,8 +576,9 @@ httpd(ok)
 {% endhighlight %}
 
 
-Saya mengaktifkan postgresql
+Saya mengaktifkan Postgresql dan Apache2 dengan program rcctl. Sebenarnya saya bisa langsung mengedit file rc.conf.local saja. Namun, disini saya contohkan dengan rcctl, karena dengan rcctl ini saya biasa merestart, menstop aplikasi server di OpenBSD. Perhatikan isi file rc.conf.local, sangat sederhana, itulah sebabnya saya memilih OpenBSD, karena menurut saya, inilah System Operasi paling mudah yang ada.
 
+Perhatikan bahwa saya mendisable OpenBSD Httpd web server setelah mengaktifkan Apache2.
 
 {% highlight bash %}
 persediaan$ doas rcctl set postgresql status on
@@ -586,6 +587,9 @@ persediaan$ doas rcctl set httpd status off
 persediaan$ cat /etc/rc.conf.local
 pkg_scripts=postgresql apache2
 {% endhighlight %}
+
+
+Saatnya konfigurasi Apache2, file yang di edit adalah httpd2.conf di direktori /etc/apache2. Disini saya mendisable post 80, mengaktifkan modul socache_shmcb_module, dan mengaktifkan ssl.
 
 
 {% highlight bash %}
@@ -611,6 +615,7 @@ persediaan$ diff httpd2.conf httpd2.conf_asli
 persediaan$
 {% endhighlight %}
 
+Sebagai tambahan lain pada file httpd2.conf ini, saya menonaktifkan ServerSignature, sehingga kalau Web server ini di scan, ia tidak menampilkan versi Apache2 yang di gunakan, versi Python, PHP yang di gunakan. Kenapa begitu? Karena kadang ada bug di salah satu versi Apache2, yang bisa di serang dengan teknik Denial of Service, contoh [CVE-2019-0190](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-0190), suatu bug yang ada di versi 2.4.37 dan telah di perbaiki di versi 2.4.38. Sehingga adalah lebih baik untuk tidak menampilkan versi Apache2 yang kita gunakan.
 
 {% highlight bash %}
 persediaan$ tail -2 /etc/apache2/httpd2.conf
