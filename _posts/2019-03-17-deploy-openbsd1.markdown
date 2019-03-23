@@ -916,6 +916,8 @@ Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains
 {% endhighlight %}
 
 
+Masih berlanjut rekan-rekan, saatnya beralih ke Firewall. OpenBSD datang dengan PF Firewall. Pada setting kali ini, saya memilih untuk hanya menerima koneksi dari IP Publik yang berasal dari Indonesia, oleh karena ini saya menggunakan list/daftar IP Publik dari [www.ipdeny.com](www.ipdeny.com)
+
 {% highlight bash %}
 persediaan$ wget -c http://www.ipdeny.com/ipblocks/data/countries/Copyrights.txt
 --2019-03-09 23:08:33--  http://www.ipdeny.com/ipblocks/data/countries/Copyrights.txt
