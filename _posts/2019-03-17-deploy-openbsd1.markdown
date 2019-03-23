@@ -762,50 +762,22 @@ Type "help" for help.
 template1=#
 {% endhighlight %}
 
-
+Pembuatan Database persediaan_example, restore hasil backup postgresql, karena saya memindah aplikasi dari server lama ke server baru, maka restore pertama adalah restore global, kemudian restore database.
 
 {% highlight bash %}
-persediaan$ psql -U _postgresql persediaan_example < persediaan_example_2019-02-24.sql
-persediaan$ createdb -U _postgresql persediaan_example -O persediaan_example
-persediaan$ psql -U _postgresql template1 < globals.sql
 persediaan$ id
 uid=503(_postgresql) gid=503(_postgresql) groups=503(_postgresql)
+persediaan$ createdb -U _postgresql persediaan_example -O persediaan_example
+persediaan$ psql -U _postgresql template1 < globals.sql
+persediaan$ psql -U _postgresql persediaan_example < persediaan_example_2019-02-24.sql
 persediaan$ exit
 persediaan$
 {% endhighlight %}
 
 
 
+Beralih ke security pada Django, pada file settings.py ini, saya aktifkan fitur-fitur security nya seperti terlihat di bawah.
 
-
-{% highlight bash %}
-persediaan$ doas chown -R www:www laporan_persediaan_example
-persediaan$ cat /home/muntaza/bin/chmod_min.sh
-chown -R muntaza:www /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
-chmod -R ugo-w  /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
-persediaan$ cat /home/muntaza/bin/chmod_plus.sh
-chown -R muntaza:www /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
-chmod -R g+w  /var/www/htdocs/laporan_persediaan_example/projects_persediaan_example/
-persediaan$ doas sh /home/muntaza/bin/chmod_plus.sh
-persediaan$ doas sh /home/muntaza/bin/chmod_min.sh
-persediaan$
-{% endhighlight %}
-
-
-
-security fitur pada Django
-
-isi pada file settings.py
-
-
-{% highlight bash %}
-persediaan$ doas rcctl restart apache2
-doas (muntaza@persediaan.example.com) password:
-apache2(ok)
-apache2(ok)
-persediaan$ python manage.py check --deploy
-System check identified no issues (0 silenced).
-{% endhighlight %}
 
 
 {% highlight bash %}
@@ -838,6 +810,18 @@ diff -u -p -r1.6 -r1.9
 persediaan$
 {% endhighlight %}
 
+
+Agar setting security tadi jalan, saya merestart web server Apache2. Saya pun melakukan pengecekan dengan manage.py, dan terlihat bahwa sudah tidak ada masalah dalam hal deploy ini.
+
+
+{% highlight bash %}
+persediaan$ doas rcctl restart apache2
+doas (muntaza@persediaan.example.com) password:
+apache2(ok)
+apache2(ok)
+persediaan$ python manage.py check --deploy
+System check identified no issues (0 silenced).
+{% endhighlight %}
 
 
 
