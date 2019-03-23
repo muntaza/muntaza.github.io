@@ -346,7 +346,7 @@ openup    100%[=====================>]  11.18K  --.-KB/s    in 0s
 persediaan$
 {% endhighlight %}
 
-
+Menjalankan openup, terlihat bahwa openup mengupgrade php-5.6.38 ke php-5.6.39
 
 {% highlight bash %}
 persediaan$ doas sh openup
@@ -373,7 +373,7 @@ You should also run rm -f /etc/php-5.6/php-5.6.sample/*
 persediaan$
 {% endhighlight %}
 
-
+Proses konfigurasi Postgresql server. OpenBSD telah menyediakan user _postgresql untuk mengadministrasi Postgresql server. Saya pindah dulu ke user _postgresql sebelum melakukan initdb.
 
 
 
@@ -419,6 +419,7 @@ Success. You can now start the database server using:
 persediaan$
 {% endhighlight %}
 
+Setelah initdb selesai, saya kembali ke user muntaza.
 
 {% highlight bash %}
 persediaan$ exit
@@ -428,6 +429,7 @@ persediaan$
 {% endhighlight %}
 
 
+Proses mengaktifkan php dan modul-modulnya.
 
 {% highlight bash %}
 persediaan$ cd /etc/php-5.6.sample/
@@ -444,7 +446,7 @@ persediaan$
 {% endhighlight %}
 
 
-
+Ini setting untuk mendapatkan sertifikat ssl gratis dari let's enscript. Kita disable dulu ssl pada file httpd.conf. Fili ini adalah file konfigurasi web server httpd bawaan dari OpenBSD, bukan web server Apache2.
 
 
 {% highlight bash %}
@@ -478,7 +480,7 @@ server "persediaan.example.com" {
 #}
 {% endhighlight %}
 
-
+Setting acme-client.conf, mendefinisikan posisi file-file sertifikat ssl.
 
 
 {% highlight bash %}
@@ -509,6 +511,7 @@ persediaan$
 {% endhighlight %}
 
 
+OpenBSD Httpd server kita restart, sehingga bisa di akses dari luar untuk verifikasi sertifikat ssl, kita lalu menjalankan program acme-client seperti contoh di bawah ini.
 
 {% highlight bash %}
 persediaan$ doas acme-client -vAD persediaan.example.com
@@ -529,7 +532,7 @@ acme-client: /etc/ssl/persediaan.example.com.fullchain.pem: created
 {% endhighlight %}
 
 
-
+Setelah file sertifikat ssl kita dapatkan, di sini saya mencoba mengaktifkan ssl pada OpenBSD Httpd web server, untuk memastikan bahwa file sertifikat dari Let's Enscript ini berfungsi. File ini hanya sementara saja, saya nanti akan memperlihatkan cara membuat file .csr untuk pesan sertifikat berbayar dari Comodo.
 
 
 {% highlight bash %}
@@ -564,6 +567,7 @@ server "persediaan.example.com" {
 persediaan$
 {% endhighlight %}
 
+Restart OpenBSD Httpd, lalu test koneksi ke webserver.
 
 {% highlight bash %}
 persediaan$ doas rcctl -f restart httpd
@@ -572,6 +576,7 @@ httpd(ok)
 {% endhighlight %}
 
 
+Saya mengaktifkan postgresql
 
 
 {% highlight bash %}
