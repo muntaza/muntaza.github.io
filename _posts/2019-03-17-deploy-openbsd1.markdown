@@ -446,7 +446,7 @@ persediaan$
 {% endhighlight %}
 
 
-Ini setting untuk mendapatkan sertifikat ssl gratis dari let's enscript. Kita disable dulu ssl pada file httpd.conf. Fili ini adalah file konfigurasi web server httpd bawaan dari OpenBSD, bukan web server Apache2.
+Ini setting untuk mendapatkan sertifikat ssl gratis dari let's enscript. Kita disable dulu ssl pada file httpd.conf. File ini adalah file konfigurasi web server httpd bawaan dari OpenBSD, bukan web server Apache2.
 
 
 {% highlight bash %}
