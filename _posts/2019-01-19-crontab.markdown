@@ -8,6 +8,16 @@ categories: openbsd crontab
 # Bismillah,
 
 
+Crontab untuk memperpanjang sertifikat gratis dari Let's Enscript. Langkah-langkahnya adalah sebagai berikut:
+
+1. Non Aktfikan Apache2
+2. Aktifkan OpenBSD Htppd
+3. Jalankan acme-client untuk memperbaharui sertifikat
+4. Non Aktifkan OpenBSD Httpd
+5. Aktikan Apache2
+
+Semoga Bermanfaat.
+
 {% highlight bash %}
 
 muhammad$ doas crontab -l
@@ -35,15 +45,17 @@ HOME=/var/log
 1       0       *       *       *       rcctl stop apache2
 
 # SSL certificate
-5       0       *       *       *       rcctl restart -f httpd
+5       0       *       *       *       rcctl -f restart httpd
 7       0       *       *       *       acme-client muhammad.muntaza.id && rcctl reload -f httpd
 10      0       *       *       *       rcctl stop httpd
 
 #start apache2
 40      0       *       *       *       rcctl restart apache2
-40      1       *       *       *       rcctl restart apache2
 muhammad$
 muhammad$
+
+
+
 muhammad$ cat /etc/httpd.conf
 # $OpenBSD: httpd.conf,v 1.20 2018/06/13 15:08:24 reyk Exp $
 
@@ -75,9 +87,6 @@ server "muhammad.muntaza.id" {
 muhammad$ cat /etc/rc.conf.local
 pkg_scripts=postgresql apache2
 muhammad$
-
-
-
 
 
 
