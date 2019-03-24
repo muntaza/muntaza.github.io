@@ -589,7 +589,7 @@ pkg_scripts=postgresql apache2
 {% endhighlight %}
 
 
-Saatnya konfigurasi Apache2, file yang di edit adalah httpd2.conf di direktori /etc/apache2. Disini saya mendisable post 80, mengaktifkan modul socache_shmcb_module, dan mengaktifkan ssl.
+Saatnya konfigurasi Apache2, file yang di edit adalah httpd2.conf di direktori /etc/apache2. Disini saya mendisable port 80, mengaktifkan modul socache_shmcb_module, dan mengaktifkan ssl.
 
 
 {% highlight bash %}
@@ -857,7 +857,7 @@ persediaan$
 {% endhighlight %}
 
 
-pindah kepemilikan table dan view di dalam database baru ke user baru
+Nah, saya akan pindah kan kepemilikan table dan view di dalam database baru ke user baru.
 
 Setelah restore isi database persediaan_example ke database persediaan_example_2019, kepemilikan table tetap milik persediaan_example, maka saya menggunakan perintah REASSIGN OWNED BY seperti di bawah ini untuk memindah kepemilikan semua table di database persediaan_example_2019 ke user persediaan_example_2019.
 
@@ -1288,7 +1288,7 @@ persediaan$
 {% endhighlight %}
 
 
-Crontab pada user _postgresql, dan isi script untuk backup database dengan pg_dump. Backup dilakukan tiap tengah malam, setelah server Apache2 di nonaktifkan.
+Crontab pada user _postgresql, dan isi script untuk backup database dengan pg_dump. Backup dilakukan tiap tengah malam, jam 0.20, setelah server Apache2 di nonaktifkan.
 
 
 {% highlight bash %}
@@ -1323,7 +1323,7 @@ persediaan$
 
 
 
-Crontab agar direktory projects di Reportico read-only.
+Crontab user muntaza, agar direktory projects di Reportico read-only.
 
 
 {% highlight bash %}
@@ -1351,7 +1351,11 @@ persediaan$
 
 
 
-Root Crontab. Kosongkan table abusive_hosts tiap 5 menit, sehingga IP yang terduga melakuan DOS akan di bebaskan tiap 5 menit. Server Apache di non aktifkan jam 0.0, agar bisa di proses backup jam 0.20, server Apache2 akan nyala lagi jam 0.40. Tiap 5 menit ping ke Gateway, dalam rangka menjaga koneksi, dan tiap 15 menit memperbaharui jam dengan perintah rdate. Hal ini sebagai jaga-jaga seandainya ntpd tidak berfungsi sebagaimana mestinya.
+Crontab pada user root. rinciannya sebagai berikut:
+1. Kosongkan table abusive_hosts tiap 5 menit, sehingga IP yang terduga melakuan DOS akan di bebaskan tiap 5 menit.
+2. Server Apache di non aktifkan jam 0.0, agar bisa di proses backup jam 0.20, server Apache2 akan nyala lagi jam 0.40, dan di restart lagi jam 1.40
+3. Tiap 5 menit ping ke Gateway, dalam rangka menjaga koneksi, dan
+4. tiap 15 menit memperbaharui jam dengan perintah rdate. Hal ini sebagai jaga-jaga seandainya ntpd tidak berfungsi sebagaimana mestinya.
 
 
 
