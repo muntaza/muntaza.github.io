@@ -15,6 +15,8 @@ Setelah instalasi OpenBSD pada VPS, perlu langkah-langkah penting yang telah say
 [ini](https://www.muntaza.net/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html).
 Hal terpenting, adalah mengaktifkan Public Key Only Authentication.
 
+Aplikasi yang akan di deploy adalah aplikasi OpenPersediaan, silahkan ke [sini](https://github.com/muntaza/Open_Persediaan) untuk
+mengetahui apa itu OpenPersediaan.
 
 {% highlight bash %}
 Last login: Sun Feb  3 16:55:34 2019 from 114.4.217.242
