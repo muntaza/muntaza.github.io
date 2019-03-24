@@ -711,7 +711,7 @@ persediaan$
 {% endhighlight %}
 
 
-Check out file program dari repository CVS.
+Check out file program dari repository CVS. Contoh aplikasi OpenPersediaan versi demo bisa di lihat di [sini](https://github.com/muntaza/Open_Persediaan/tree/master/persediaan5)
 
 {% highlight bash %}
 persediaan$ cvs co persediaan_example
