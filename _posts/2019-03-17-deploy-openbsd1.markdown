@@ -567,7 +567,7 @@ server "persediaan.example.com" {
 persediaan$
 {% endhighlight %}
 
-Restart OpenBSD Httpd, lalu test koneksi ke webserver. Bila telah berhasil koneksi ke post 443 (https) berarti sertifikat ssl sudah terinstall dengan  benar.
+Restart OpenBSD Httpd, lalu test koneksi ke webserver. Bila telah berhasil koneksi ke port 443 (https) berarti sertifikat ssl sudah terinstall dengan  benar.
 
 {% highlight bash %}
 persediaan$ doas rcctl -f restart httpd
