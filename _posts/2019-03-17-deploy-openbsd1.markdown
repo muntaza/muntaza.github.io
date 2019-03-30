@@ -1290,7 +1290,7 @@ persediaan$
 {% endhighlight %}
 
 
-Crontab pada user _postgresql, dan isi script untuk backup database dengan [pg_dump](https://www.postgresql.org/docs/10/app-pgdump.html). Backup dilakukan tiap tengah malam, jam 0.20, setelah server Apache2 di nonaktifkan.
+Crontab pada user _postgresql, dan isi script untuk backup database dengan pg_dump. Backup dilakukan tiap tengah malam, jam 0.20, setelah server Apache2 di nonaktifkan.
 
 
 {% highlight bash %}
