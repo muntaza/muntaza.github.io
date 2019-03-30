@@ -9,7 +9,7 @@ categories: openbsd
 
 Pada Masa yang lalu, di tahun 2008, lebih dari 10 tahun yang lalu, saya pernah menulis toturial di wordpress terkait instalasi OpenBSD versi 4.2. Artikel tersebut bisa di lihat di [sini](https://muntaza.wordpress.com/2008/03/16/menginstall-openbsd-42/). Pada saat tulisan tersebut di buat, Instalasi OpenBSD masih harus membuat iso sendiri, he... he...
 
-Saat ini, di tahun 2019, Alhamdulillah, sudah sangat mudah sekali menginstall OpenBSD. OpenBSD yang saya jelaskan pada tutorial kali ini adalah versi 6.4. Sebagaimana tulisan 10 tahun yang lalu, saya berharap tulisan saya kali ini bermanfaat dan bisa di ambil faedahnya untuk saya sendiri atau orang lain di masa mendatang.
+Saat ini, di tahun 2019, Alhamdulillah, sudah sangat mudah sekali menginstall [OpenBSD](https://www.openbsd.org/faq/index.html). OpenBSD yang saya jelaskan pada tutorial kali ini adalah versi 6.4. Sebagaimana tulisan 10 tahun yang lalu, saya berharap tulisan saya kali ini bermanfaat dan bisa di ambil faedahnya untuk saya sendiri atau orang lain di masa mendatang.
 
 Setelah instalasi OpenBSD pada VPS, perlu langkah-langkah penting yang telah saya jelaskan pada tulisan
 [ini](https://www.muntaza.net/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html).
@@ -33,7 +33,7 @@ known fix for it exists, include that as well.
 {% endhighlight %}
 
 
-Setelah berhasil login, kita mulai proses instalasi paket-paket yang di butuhkan untuk deploying OpenPersediaan ini, paket pertama yang di install pada contoh ini adalah rsync, karena paket ini berfungsi untuk mendownload hasil backup postgresql.
+Setelah berhasil login, kita mulai proses instalasi paket-paket yang di butuhkan untuk deploying OpenPersediaan ini, paket pertama yang di install pada contoh ini adalah rsync, karena paket ini berfungsi untuk mendownload hasil backup [Postgresql](https://www.postgresql.org/).
 
 
 {% highlight bash %}
@@ -53,7 +53,7 @@ persediaan$
 {% endhighlight %}
 
 
-Install syspatch terbaru, dan cek syspatch yang terinstall
+Install [syspatch](https://man.openbsd.org/syspatch) terbaru, dan cek syspatch yang terinstall
 
 {% highlight bash %}
 persediaan$ syspatch -l
@@ -73,7 +73,7 @@ persediaan$ syspatch -l
 persediaan$
 {% endhighlight %}
 
-Di sini saya menginstall vim, saya pilih yang mendukung python2, yaitu varian vim no.9, sehingga python2 nya sekalian terinstall. Saya pun melakukan soft link dengan perintah ln ke python2.
+Di sini saya menginstall [vim](https://www.linux.com/learn/vim-101-beginners-guide-vim), saya pilih yang mendukung [python2](https://www.python.org/), yaitu varian vim no.9, sehingga python2 nya sekalian terinstall. Saya pun melakukan soft link dengan perintah ln ke python2.
 
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add vim
@@ -116,7 +116,7 @@ persediaan$ doas ln -sf /usr/local/bin/pydoc2.7  /usr/local/bin/pydoc
 {% endhighlight %}
 
 
-Untuk Menginstall Django, saya menggunakan py-pip. paket py-pip ini telah tertinggal versi nya di repo OpenBSD 6.4 ini, he... he..., oleh karena itu pip ini akan kita update setelah ini, in syaa Allah.
+Untuk Menginstall [Django](https://www.djangoproject.com/), saya menggunakan [py-pip](https://pypi.org/project/pip/). paket py-pip ini telah tertinggal versi nya di repo OpenBSD 6.4 ini, he... he..., oleh karena itu pip ini akan kita update setelah ini, in syaa Allah.
 
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add py-pip
@@ -178,7 +178,7 @@ persediaan$ django-admin --version
 persediaan$
 {% endhighlight %}
 
-Proses instalasi apache2, inilah web server yang kita gunakan untuk deploy django dan php reportico 4.6 sebagai report engine aplikasi OpenPersediaan.
+Proses instalasi [apache2](https://httpd.apache.org/), inilah web server yang kita gunakan untuk deploy django dan [php](https://www.php.net/) [reportico 4.6](http://www.reportico.org/site2/index.php) sebagai report engine aplikasi [OpenPersediaan](https://github.com/muntaza/Open_Persediaan).
 
 {% highlight bash %}
 persediaan$ doas /usr/sbin/pkg_add apache-httpd
@@ -201,7 +201,7 @@ See rcctl(8) for details.
 {% endhighlight %}
 
 
-Sempat salah ketik password sodara-sodara, he...he..., tetap saya tampilkan error Authentication failed, bila salah mengetikkan password ketika menjalankan perintah doas.
+Sempat salah ketik password sodara-sodara, he...he..., tetap saya tampilkan error Authentication failed, bila salah mengetikkan password ketika menjalankan perintah [doas](https://man.openbsd.org/doas).
 
 Di sini saya menginstall php beserta add-on nya, yaitu php-gd, php-pgsql dan php-pdo_pgsql. Adapun paket php-apache2, paket ini baru ada di OpenBSD 6.4, hanya berisi script untuk aktivasi php di apache2.
 
@@ -278,7 +278,7 @@ persediaan$
 {% endhighlight %}
 
 
-Mod_wsgi berguna sebagai penghubung antara python dan apache2. Di sini saya menampilkan isi file /etc/installurl, file ini berisi alamat repo OpenBSD untuk proses instalasi paket dan lainnya, yang mana sebelumnya menggunakan PKG_PATH di file .profile untuk mengarahkan repo instalasi paket.
+[Mod_wsgi](https://pypi.org/project/mod_wsgi/) berguna sebagai penghubung antara python dan apache2. Di sini saya menampilkan isi file [/etc/installurl](https://man.openbsd.org/installurl.5), file ini berisi alamat repo OpenBSD untuk proses instalasi paket dan lainnya, yang mana sebelumnya menggunakan PKG_PATH di file .profile untuk mengarahkan repo instalasi paket.
 
 {% highlight bash %}
 persediaan$ cat /etc/installurl
@@ -292,7 +292,7 @@ persediaan$
 
 
 
-Instalasi Psycopg2, aplikasi penghubung Python ke Postgresql. Menggunakan pip sebagai installer.
+Instalasi [Psycopg2](http://initd.org/psycopg/docs/index.html), aplikasi penghubung Python ke Postgresql. Menggunakan pip sebagai installer.
 
 {% highlight bash %}
 persediaan$ doas pip install psycopg2
@@ -448,7 +448,7 @@ persediaan$
 {% endhighlight %}
 
 
-Ini setting untuk mendapatkan sertifikat ssl gratis dari let's enscript. Kita disable dulu ssl pada file httpd.conf. File ini adalah file konfigurasi web server httpd bawaan dari OpenBSD, bukan web server Apache2.
+Ini setting untuk mendapatkan sertifikat ssl gratis dari [let's enscript](https://letsencrypt.org/how-it-works/). Kita disable dulu ssl pada file httpd.conf. File ini adalah file konfigurasi web server httpd bawaan dari OpenBSD, bukan web server Apache2.
 
 
 {% highlight bash %}
@@ -955,7 +955,7 @@ Nah, inilah file pf.conf, tempat konfigurasi firewall kita:
 1. External interface adalah vio0
 2. Port yang terbuka hanya port 22 dan port 443
 3. Block semua koneksi masuk dari luar secara default.
-4. Cegah serangan reverse telnet dengan mengizinkan server koneksi ke daftar IP Publik yang kita definisikan di file ip_safe. Tentang reverse telnet ini bisa di lihat di [sini](https://www.techrepublic.com/article/protect-your-network-from-this-telnet-vulnerability/)
+4. Cegah serangan reverse telnet dengan mengizinkan server koneksi ke daftar IP Publik yang kita definisikan di file ip_safe. Tentang reverse telnet ini bisa di lihat di [sini](https://en.wikipedia.org/wiki/Reverse_connection)
 5. Izinkan akses ke port 22 dan 443, lindungi dari :
     - DOS, yaitu dengan masukkan IP yang teranggap melakukan DOS ke table abusive_hosts, block koneksi dari table abusive_hosts selama 5 menit.
     - Syn Flood Attack. Tentang Syn Flood Attack, lihat di [sini](https://www.incapsula.com/ddos/attack-glossary/syn-flood.html)
@@ -1037,7 +1037,7 @@ pkg_scripts=postgresql apache2
 {% endhighlight %}
 
 
-Setting Ntpd server. IP 2.id.pool.ntp.org sudah masuk daftar ip_safe, sehingga server bisa koneksi ke sana.
+Setting Ntpd server. IP [2.id.pool.ntp.org](https://www.pool.ntp.org/zone/id) sudah masuk daftar ip_safe, sehingga server bisa koneksi ke sana.
 
 {% highlight bash %}
 persediaan$ cat /etc/ntpd.conf
@@ -1290,7 +1290,7 @@ persediaan$
 {% endhighlight %}
 
 
-Crontab pada user _postgresql, dan isi script untuk backup database dengan pg_dump. Backup dilakukan tiap tengah malam, jam 0.20, setelah server Apache2 di nonaktifkan.
+Crontab pada user _postgresql, dan isi script untuk backup database dengan [pg_dump](https://www.postgresql.org/docs/10/app-pgdump.html). Backup dilakukan tiap tengah malam, jam 0.20, setelah server Apache2 di nonaktifkan.
 
 
 {% highlight bash %}
@@ -1325,7 +1325,7 @@ persediaan$
 
 
 
-Crontab user muntaza, agar direktory projects di Reportico read-only.
+[Crontab](https://man.openbsd.org/crontab.5) user muntaza, agar direktory projects di Reportico read-only.
 
 
 {% highlight bash %}
@@ -1425,7 +1425,7 @@ persediaan$
 {% endhighlight %}
 
 
-Telah sampai pada bagian akhir dari tulisan ini. Saya usahakan pembahasan sesederhana mungkin. Terlihat bahwa susunan penulisan ini tidak teraktur dengan baik, sering melompat-lompat pembahasannya, tidak lain hal ini adalah karena apa yang saya tulis ini saya hasilkan dari copy paste langsung dari server VPS yang saya gunakan, dengan seminimal mungkin editan dari saya (keluali hal yang saya anggap perlu di edit).
+Telah sampai pada bagian akhir dari tulisan ini. Saya usahakan pembahasan sesederhana mungkin. Terlihat bahwa susunan penulisan ini tidak teratur dengan baik, sering melompat-lompat pembahasannya, tidak lain hal ini adalah karena apa yang saya tulis ini saya hasilkan dari copy paste langsung dari server VPS yang saya gunakan, dengan seminimal mungkin editan dari saya (kecuali hal yang saya anggap perlu di edit).
 
 Semoga tulisan ini bermanfaat.
 
