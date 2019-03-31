@@ -64,7 +64,7 @@ Setting alias pada repository
 
 
 
-## UPDATE 31 Maret 2019
+# UPDATE 31 Maret 2019
 website pindah alamat ke [https://www.muntaza.id](https://www.muntaza.id)
 
 # Alhamdulillah
