@@ -63,6 +63,10 @@ Setting alias pada repository
 ![Gambar3](/assets/github2.png)
 
 
+
+## UPDATE 31 Maret 2019
+website pindah alamat ke [https://www.muntaza.id](https://www.muntaza.id)
+
 # Alhamdulillah
 
 
