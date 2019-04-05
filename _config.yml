@@ -16,6 +16,7 @@ url: "https://www.muntaza.id" # the base hostname & protocol for your site
 #twitter_username: muntaza_id
 #github_username:  muntaza
 
+theme: jekyll-theme-architect
 
 # Build settings
 markdown: kramdown
