@@ -212,4 +212,54 @@ persediaan$
 {% endhighlight %}
 
 
+E. Jaga waktu dan Koneksi di VPS
+
+Server OpenBSD yang jalan di Virtual Machine, perlu di jaga koneksinya dengan melakukan ping ke default gateway tiap 5 (lima) menit, dan perlu mencocokkan jam nya dengan rdate tiap 15 (lima belas) menit. Perhatikan crontab di bawah ini.
+
+
+{% highlight bash %}
+#
+SHELL=/bin/sh
+PATH=/bin:/sbin:/usr/bin:/usr/sbin
+HOME=/var/log
+#
+#minute	hour	mday	month	wday	command
+#
+# rotate log files every hour, if necessary
+0	*	*	*	*	/usr/bin/newsyslog
+# send log file notifications, if necessary
+#1-59	*	*	*	*	/usr/bin/newsyslog -m
+#
+# do daily/weekly/monthly maintenance
+30	1	*	*	*	/bin/sh /etc/daily
+30	3	*	*	6	/bin/sh /etc/weekly
+30	5	1	*	*	/bin/sh /etc/monthly
+#0	*	*	*	*	sleep $((RANDOM \% 2048)) && /usr/libexec/spamd-setup
+
+
+#time and connections
+*/15    *       *       *       *       /usr/sbin/rdate id.pool.ntp.org > /dev/null 2> /dev/null
+*/5     *       *       *       *       /sbin/ping -c3 45.64.99.129 > /dev/null
+
+{% endhighlight %}
+
+
+Bisa jadi terdapat suatu pertanyaan, bukankan OpenNTPD sudah aktif by default? bahkan saya setting dengan flags=-s agar langsung mencocokkan jam dengan server tiap booting, seperti tertera di file /etc/rc.conf.local berikut:
+
+{% highlight bash %}
+$ cat /etc/rc.conf.local
+ntpd_flags=-s
+{% endhighlight %}
+
+Jawabannya adalah, terdapatnya beberapa bug pada OpenBSD yang jalan di VM yang di jelaskan di [sini](https://openbsd.amsterdam/known.html)
+
+F. Penutup
+
+Hal yang cukup penting, editlah file /etc/hosts, dan masukkan ip dan nama domain lengkap server ini, yang mana hal ini bermanfaat untuk masa yang akan datang, insyaAllah.
+
+
+
 Selesai sudah langkah penting untuk mengamankan server OpenBSD. Semoga bermanfaat
+
+
+Abu Muhammad Muhammad Muntaza bin Hatta
