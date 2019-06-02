@@ -622,10 +622,11 @@ Updating / installing...
 {% endhighlight %}
 
 
-11. SPSE v43
+## 11. SPSE v43
 
-A. Buat folder, setting agar file spse4 bisa di eksekusi
+# A. Buat folder, setting agar file spse4 bisa di eksekusi
 
+{% highlight bash %}
 [muntaza@lpse ~]$ sudo mkdir /home/appserv
 [muntaza@lpse ~]$ cd /home/appserv/
 
@@ -639,9 +640,11 @@ README.md  framework  spse4.original  webapp
 [muntaza@lpse spselat]$ sudo cp spse4.original spse4
 [muntaza@lpse spselat]$ sudo chmod +x spse4
 [muntaza@lpse spselat]$
+{% endhighlight %}
 
-B. Konfigurasi SPSE v4.3
+# B. Konfigurasi SPSE v4.3
 
+{% highlight bash %}
 [muntaza@lpse spselat]$ cd webapp/conf/
 [muntaza@lpse conf]$ sudo cp application.conf.lat application.conf
 [muntaza@lpse conf]$ sudo vi application.conf
@@ -660,12 +663,14 @@ B. Konfigurasi SPSE v4.3
 - ---
 > http.port=9009
 > sikap.url=https://latihan-lpse.lkpp.go.id/sikap
+{% endhighlight %}
 
 
-12. Setting Apache HTTPD
+## 12. Setting Apache HTTPD
 
-## Aktifkan httpd dan cek modul evasive, security dan ssl sudah aktif
+Aktifkan httpd dan cek modul evasive, security dan ssl sudah aktif
 
+{% highlight bash %}
 [muntaza@lpse ~]$ sudo systemctl restart httpd
 [muntaza@lpse ~]$ sudo systemctl enable httpd
 Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
@@ -697,8 +702,11 @@ Hint: Some lines were ellipsized, use -l to show in full.
  security2_module (shared)
  evasive20_module (shared)
 [muntaza@lpse ~]$
+{% endhighlight %}
 
-## file konfigurasi spse.conf
+File konfigurasi spse.conf
+
+{% highlight bash %}
 [muntaza@lpse ~]$ ls
 curl-7.28.1         dblat.zip     modsecurity-apache_2.6.5         setting_selinux.sh  spselat_asli.tgz
 curl-7.28.1.tar.gz  jdk1.8.0.tgz  modsecurity-apache_2.6.5.tar.gz  spse.conf
@@ -712,10 +720,11 @@ conf  conf.d  conf.modules.d  logs  modsecurity.d  modules  run
 [muntaza@lpse conf]$ pwd
 /etc/httpd/conf
 [muntaza@lpse conf]$
+{% endhighlight %}
 
-## -- isi file spse.conf :
+Isi file spse.conf :
 
-#---
+{% highlight bash %}
 Alias /file_latihan /home/file_latihan
 Alias /file_prod /home/file_prod
 
@@ -823,11 +832,12 @@ SecReadStateLimit 15
 SecRule RESPONSE_STATUS "@streq 408" "phase:5,t:none,nolog,pass,setvar:ip.slow_dos_counter=+1,expirevar:ip.slow_dos_counter=60"
 SecRule IP:SLOW_DOS_COUNTER "@gt 15" "phase:1,t:none,log,drop,msg:'Client Connection Dropped due to high # of slow DoS alerts'"
 
-#---
+{% endhighlight %}
 
 
-## disable port 80
+Disable port 80
 
+{% highlight bash %}
 [muntaza@lpse conf]$ ls
 httpd.conf  magic
 [muntaza@lpse conf]$ sudo cp httpd.conf httpd.conf_asli
@@ -838,9 +848,11 @@ httpd.conf  magic
 - ---
 > Listen 80
 [muntaza@lpse conf]$
+{% endhighlight %}
 
-## setting SSL
+Setting SSL
 
+{% highlight bash %}
 [muntaza@lpse conf]$ pwd
 /etc/httpd/conf
 [muntaza@lpse conf]$ cd ../conf.d/
@@ -848,9 +860,11 @@ httpd.conf  magic
 README  autoindex.conf  mod_evasive.conf  mod_security.conf  spse.conf  ssl.conf  userdir.conf  welcome.conf
 [muntaza@lpse conf.d]$ sudo cp ssl.conf ssl.conf_asli
 [muntaza@lpse conf.d]$ sudo vi ssl.conf
+{% endhighlight %}
 
-## tambahkan 7 baris ini di bawah tulisan <VirtualHost _default_:443>
+Tambahkan 7 baris ini di bawah tulisan <VirtualHost _default_:443>
 
+{% highlight bash %}
 <VirtualHost _default_:443>
  LogLevel warn
  CustomLog /var/log/httpd/access.log combined
@@ -859,11 +873,12 @@ README  autoindex.conf  mod_evasive.conf  mod_security.conf  spse.conf  ssl.conf
  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript application/x-httpd-php
  SetInputFilter DEFLATE
  SetOutputFilter DEFLATE
+{% endhighlight %}
 
-## sehingga menjadi seperti di atas
+sehingga menjadi seperti di atas
 
 
-13. Mulai SPSE v4.3
+## 13. Mulai SPSE v4.3
 
 [muntaza@lpse spselat]$ sudo sh spse4 stop
 [sudo] password for muntaza:
