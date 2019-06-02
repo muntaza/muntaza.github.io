@@ -406,6 +406,7 @@ Initializing database ... OK
 Pastikan bahwa Postgresql hanya aktif untuk localhost dan koneksi dari Localhost
 menggunakan metode md5
 
+{% highlight bash %}
 [muntaza@lpse ~]$ sudo su postgres
 bash-4.2$ cd
 bash-4.2$ ls
@@ -430,9 +431,11 @@ bash-4.2$ diff 10/data/pg_hba.conf 10/data/pg_hba.conf_asli
 - ---
 > host    all             all             ::1/128                 ident
 bash-4.2$
+{% endhighlight %}
 
-## restart service postgresql
+restart service postgresql
 
+{% highlight bash %}
 bash-4.2$ exit
 exit
 [muntaza@lpse ~]$ id
@@ -467,13 +470,14 @@ Sep 30 02:28:45 lpse.muntaza.id postmaster[9520]: 2018-09-30 02:28:45.882 UTC [9
 Sep 30 02:28:45 lpse.muntaza.id systemd[1]: Started PostgreSQL 10 database server.
 Hint: Some lines were ellipsized, use -l to show in full.
 [muntaza@lpse ~]$
+{% endhighlight %}
 
 
-C. Buat user epns
+# C. Buat user epns
 
-## Password user epns jangan epns, tapi suatu password yang bersifat rahasia, di contoh ini,
-## passwordnya adalah "inirahasia" dan setting ini nanti di sesuaikan saat konfigurasi SPSE,
-## jadi tidak masalah apapun password epns, yang penting di sesuaikan konfigurasi SPSE nya
+Password user epns jangan epns, tapi suatu password yang bersifat rahasia, di contoh ini,
+passwordnya adalah "inirahasia" dan setting ini nanti di sesuaikan saat konfigurasi SPSE,
+jadi tidak masalah apapun password epns, yang penting di sesuaikan konfigurasi SPSE nya
 
 [muntaza@lpse ~]$ cd
 [muntaza@lpse ~]$ pwd
