@@ -187,26 +187,26 @@ CentOS Linux release 7.5.1804 (Core)
 
 nah, sudah di versi 7.5
 
-3. Setting firewall dengan Firewalld
+## 3. Setting firewall dengan Firewalld
 
 
 Kenapa firewall di aktifkan, ibarat sebuah rumah, maka agar udara masuk,
 kita perlu membuka jendela, yang dilindungi dengan jeruji besi,
 tidak harus membuka pintu depan setiap saat.
 
-A. Instalasi firewalld
+# A. Instalasi firewalld
 
 {% highlight bash %}
 [muntaza@lpse ssh]$ sudo yum install firewalld
 {% endhighlight %}
 
-B. Reboot system
+# B. Reboot system
 
 {% highlight bash %}
 [muntaza@lpse ~]$ sudo /sbin/reboot
 {% endhighlight %}
 
-C. Disable iptables dan aktifkan firewalld
+# C. Disable iptables dan aktifkan firewalld
 
 {% highlight bash %}
 [muntaza@lpse ~]$ sudo systemctl status iptables
@@ -235,7 +235,7 @@ Sep 30 01:28:54 lpse.muntaza.id systemd[1]: Started firewalld - dynamic firewall
 {% endhighlight %}
 
 
-D. Buka port https untuk koneksi dari luar
+# D. Buka port https untuk koneksi dari luar
 
 {% highlight bash %}
 [muntaza@lpse ~]$ sudo firewall-cmd --list-services
@@ -298,7 +298,7 @@ port 80 tidak akan aktif, kita hanya menjalankan service di port 443 saja
 
 
 
-4. SElinux
+## 4. SElinux
 
 SElinux kita aktifkan, SElinux ini fitur bukan bug, malah meningkatkan
 keamanan server kita kalau SElinux ini aktif.
@@ -320,7 +320,7 @@ SELINUX=enforcing
 SELINUXTYPE=targeted
 {% endhighlight %}
 
-A. Instalasi paket-paket pendukung SElinux
+# A. Instalasi paket-paket pendukung SElinux
 
 {% highlight bash %}
 [muntaza@lpse ~]$ sudo yum install policycoreutils policycoreutils-python selinux-policy selinux-policy-targeted libselinux-utils setroubleshoot-server setools setools-console mcstrans
@@ -328,7 +328,7 @@ A. Instalasi paket-paket pendukung SElinux
 [muntaza@lpse ~]$ sudo /sbin/reboot
 {% endhighlight %}
 
-B. Cek status SElinux
+# B. Cek status SElinux
 {% highlight bash %}
 [muntaza@lpse ~]$ sestatus
 SELinux status:                 enabled
@@ -345,7 +345,7 @@ Max kernel policy version:      31
 
 Terlihat bahwa SElinux sudah aktif
 
-C. Setting SElinux agar SPSE v4.3 bisa berjalan
+# C. Setting SElinux agar SPSE v4.3 bisa berjalan
 
 {% highlight bash %}
 [muntaza@lpse ~]$ cat setting_selinux.sh
@@ -369,7 +369,7 @@ named_tcp_bind_http_port --> on
 [muntaza@lpse ~]$
 {% endhighlight %}
 
-5. setting file /etc/resolv.conf
+## 5. setting file /etc/resolv.conf
 
 {% highlight bash %}
 [muntaza@lpse ~]$ cat /etc/resolv.conf
@@ -379,9 +379,9 @@ nameserver 8.8.8.8
 [muntaza@lpse ~]$
 {% endhighlight %}
 
-6. Postgresql 10
+## 6. Postgresql 10
 
-A. Instalasi Postgresql 10
+# A. Instalasi Postgresql 10
 
 {% highlight bash %}
 [muntaza@lpse ~]$ sudo yum install https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm
@@ -392,7 +392,7 @@ A. Instalasi Postgresql 10
 Disamping menginstall postgresql, penulis menginstall vim karena lupa, dan menginstall juga unzip
 
 
-B. Setting Postgresql 10
+# B. Setting Postgresql 10
 
 Buat Cluster Database:
 
