@@ -1090,6 +1090,7 @@ coba restart httpd
 ## 16. Install AIDE
 
 security cek, disini di contohkan AIDE
+{% highlight bash %}
 [muntaza@lpse ~]$ sudo yum install aide
 
 initialisasi aide, lalu copy ke tempat lain
@@ -1098,31 +1099,39 @@ initialisasi aide, lalu copy ke tempat lain
 
 AIDE, version 0.15.1
 
-### AIDE database at /var/lib/aide/aide.db.new.gz initialized.
+AIDE database at /var/lib/aide/aide.db.new.gz initialized.
 
 [root@lpse muntaza]# exit
 exit
 [muntaza@lpse ~]$ sudo cp /var/lib/aide/aide.db.new.gz .
 [muntaza@lpse ~]$ sudo chown muntaza aide.db.new.gz
 [muntaza@lpse ~]$
+{% endhighlight %}
 
 
-## copy ke tempat lain
+Copy ke tempat lain
+
+{% highlight bash %}
 muntaza@E202SA ~ $ scp muntaza@lpse.muntaza.id:/home/muntaza/aide*  .
 aide.db.new.gz                                                                          100% 2122KB 303.1KB/s   00:07
+{% endhighlight %}
 
-## testing check
+Testing check
+
+{% highlight bash %}
 [muntaza@lpse ~]$ sudo cp /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
 [muntaza@lpse ~]$ sudo aide --check
 
 AIDE, version 0.15.1
 
-### All files match AIDE database. Looks okay!
+All files match AIDE database. Looks okay!
 
 [muntaza@lpse ~]$
+{% endhighlight %}
 
-## testing buat file baru di /root/
+Testing buat file baru di /root/
 
+{% highlight bash %}
 [muntaza@lpse ~]$ sudo touch /root/.coba
 [muntaza@lpse ~]$ sudo aide --check
 AIDE 0.15.1 found differences between database and filesystem!!
@@ -1141,13 +1150,14 @@ Added files:
 
 added: /root/.coba
 [muntaza@lpse ~]$
+{% endhighlight %}
 
-# Terlihat kalau pembuatan file .coba tertangkap oleh AIDE (senyum)
+Terlihat kalau pembuatan file .coba tertangkap oleh AIDE (senyum)
 
 
-17. CHKrootkit
+## 17. CHKrootkit
 
-## Untuk scan root kit di server
+Untuk scan root kit di server
 
 [muntaza@lpse ~]$ mkdir chkrootkit
 [muntaza@lpse ~]$ cd chkrootkit/
