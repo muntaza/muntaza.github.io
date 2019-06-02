@@ -1310,7 +1310,9 @@ Semoga bermanfaat.
 # Alhamdulillah
 
 Abu Muhammad Muhammad Muntaza bin Hatta
+
 Admin LPSE Kabupaten Balangan - KALSEL (s.d 2018)
+
 muhammad@muntaza.id
 
 
