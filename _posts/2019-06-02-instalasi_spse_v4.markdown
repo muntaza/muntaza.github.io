@@ -585,24 +585,28 @@ jdk1.8.0
 
 ## 9. Curl dan Mod Security
 
-A. Curl
+# A. Curl
+{% highlight bash %}
 [muntaza@lpse ~]$ tar -xzf curl-7.28.1.tar.gz
 [muntaza@lpse ~]$ cd curl-7.28.1
 [muntaza@lpse curl-7.28.1]$ ./configure --with-apxs=/usr/bin/apxs
 [muntaza@lpse curl-7.28.1]$ make
 [muntaza@lpse curl-7.28.1]$ sudo make install
+{% endhighlight %}
 
 
 
-B. Mod Security
+# B. Mod Security
+{% highlight bash %}
 [muntaza@lpse ~]$ tar -xzf modsecurity-apache_2.6.5.tar.gz
 [muntaza@lpse ~]$ cd modsecurity-apache_2.6.5
 [muntaza@lpse modsecurity-apache_2.6.5]$ ./configure --with-apxs=/usr/bin/apxs
 [muntaza@lpse modsecurity-apache_2.6.5]$ make
 [muntaza@lpse modsecurity-apache_2.6.5]$ sudo make install
+{% endhighlight %}
 
 
-10. Mod Evasive
+## 10. Mod Evasive
 
 ## Ada di EPEL repository, dan repo ini untuk Fedora
 ## sehingga kualitas untuk paket ini agak meragukan,
