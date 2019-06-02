@@ -15,14 +15,14 @@ ditujukan kepada Admin System LPSE.
 
 1. CentOS 7.1 yang di gunakan
 
-    lihat versi yang ada saat ini:
+	lihat versi yang ada saat ini:
 
-    {% highlight bash %}
-    [muntaza@lpse ~]$ cat /etc/redhat-release
-    CentOS Linux release 7.1.1503 (Core)
-    [muntaza@lpse ~]$ uname -a
-    Linux lpse.muntaza.id 3.10.0-229.1.2.el7.x86_64 #1 SMP Fri Mar 27 03:04:26 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
-    {% endhighlight %}
+	{% highlight bash %}
+	[muntaza@lpse ~]$ cat /etc/redhat-release
+	CentOS Linux release 7.1.1503 (Core)
+	[muntaza@lpse ~]$ uname -a
+	Linux lpse.muntaza.id 3.10.0-229.1.2.el7.x86_64 #1 SMP Fri Mar 27 03:04:26 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+	{% endhighlight %}
 
 2. Bahan instalsi berupa Java1.8.0, curl-7.28.1.tar.gz, modsecurity-apache_2.6.5.tar.gz, file dblat.zip,
 Anda bisa menghubungi Admin LKPP untuk mendapatkannya. Penulis memperoleh nya saat bimtek Admin System
