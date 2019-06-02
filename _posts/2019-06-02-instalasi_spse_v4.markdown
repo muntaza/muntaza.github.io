@@ -1087,12 +1087,12 @@ coba restart httpd
 {% endhighlight %}
 
 
-16. Install AIDE
+## 16. Install AIDE
 
-## security cek, disini di contohkan AIDE
+security cek, disini di contohkan AIDE
 [muntaza@lpse ~]$ sudo yum install aide
 
-## initialisasi aide, lalu copy ke tempat lain
+initialisasi aide, lalu copy ke tempat lain
 [muntaza@lpse ~]$ sudo su
 [root@lpse muntaza]# aide --init
 
