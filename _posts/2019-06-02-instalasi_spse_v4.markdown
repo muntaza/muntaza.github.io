@@ -875,11 +875,12 @@ Tambahkan 7 baris ini di bawah tulisan <VirtualHost _default_:443>
  SetOutputFilter DEFLATE
 {% endhighlight %}
 
-sehingga menjadi seperti di atas
+Sehingga menjadi seperti di atas
 
 
 ## 13. Mulai SPSE v4.3
 
+{% highlight bash %}
 [muntaza@lpse spselat]$ sudo sh spse4 stop
 [sudo] password for muntaza:
 Stop SPSE 4 ... /home/appserv/spselat
@@ -893,14 +894,15 @@ Harap Dilakukan Backup Database SPSE
 Starting SPSE 4 ... /home/appserv/spselat
 Using JAVA_HOME: /usr/local/src/jdk1.8.0
 SPSE 4 started
+{% endhighlight %}
 
-## cek log
+Cek log
 
 [muntaza@lpse logs]$ pwd
 /home/appserv/spselat/webapp/logs
 [muntaza@lpse logs]$ sudo tail -f spse4.3.log
 
-## buat folder file_latihan
+Buat folder file_latihan
 
 [muntaza@lpse spselat]$ sudo mkdir -p /home/file/file_latihan
 
