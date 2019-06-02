@@ -1159,6 +1159,7 @@ Terlihat kalau pembuatan file .coba tertangkap oleh AIDE (senyum)
 
 Untuk scan root kit di server
 
+{% highlight bash %}
 [muntaza@lpse ~]$ mkdir chkrootkit
 [muntaza@lpse ~]$ cd chkrootkit/
 [muntaza@lpse chkrootkit]$ wget -c ftp://ftp.pangeia.com.br/pub/seg/pac/chkrootkit.tar.gz
@@ -1202,19 +1203,22 @@ cc  -o check_wtmpx check_wtmpx.c
 cc -static  -o strings-static strings.c
 cc  -o chkutmp chkutmp.c
 [muntaza@lpse chkrootkit-0.52]$
+{% endhighlight %}
 
-## test jalankan
+Test jalankan
+
+{% highlight bash %}
 [muntaza@lpse chkrootkit-0.52]$ sudo ./chkrootkit
+{% endhighlight %}
 
 
-18.Firewall Tambahan
+## 18.Firewall Tambahan
 
-## Firewall ini adalah dengan menggunakan System Operasi OpenBSD dan
-## Firewall PF, dengan fitur Synproxy, Anti DOS, dan Hanya menerima koneksi
-## dari IP Indonesia. ini adalah contoh script pf.conf:
+Firewall ini adalah dengan menggunakan System Operasi OpenBSD dan
+Firewall PF, dengan fitur Synproxy, Anti DOS, dan Hanya menerima koneksi
+dari IP Indonesia. ini adalah contoh script pf.conf:
 
-#--
-
+{% highlight bash %}
 #       $Id: pf.conf_gateway,v 1.9 2015/01/05 05:37:27 muntaza Exp $
 #       $OpenBSD: pf.conf,v 1.53 2014/01/25 10:28:36 dtucker Exp $
 
@@ -1275,28 +1279,28 @@ block in quick from urpf-failed to any  # use with care
 # By default, do not permit remote connections to X11
 block return in on ! lo0 proto tcp to port 6000:6010
 
-#--
+{% endhighlight %}
 
-## Penjelasan lebih lanjut terkait OpenBSD PF ini ada di blog penulis yang penulis cantumkan
-## di bagian paling bawah daftar pustaka
+Penjelasan lebih lanjut terkait OpenBSD PF ini ada di blog penulis yang penulis cantumkan
+di bagian paling bawah daftar pustaka
 
 
-19. Hal-hal yang masih belum di selesaikan
+## 19. Hal-hal yang masih belum di selesaikan
 
-## Karena terbatasnya waktu, maka ada beberapa hal yang belum penulis
-## tuntaskan, yaitu:
+Karena terbatasnya waktu, maka ada beberapa hal yang belum penulis
+tuntaskan, yaitu:
 
 A. Setting cron agar menjalankan AIDE dan CHKrootKIT tiap jam 00.00
 B. Back up database tiap jam 01.00
 C. Instalasi Mail Server untuk mengirimkan hasil cron pengecekan AIDE dan CHKrootKIT
-ke Alamat email administrator (percuma ada AIDE tapi admin tidak dapat
-alert tiap ada gejala mencurigakan)
+    ke Alamat email administrator (percuma ada AIDE tapi admin tidak dapat
+    alert tiap ada gejala mencurigakan)
 D. Membuka port untuk Cloud LPSE
 E. etc.
 
-## Dan masih ada hal-hal lain yang kurang, dan penulis tidak bisa berjanji
-## untuk menyelesaikan toturial ini, sehingga di harapkan admin system lain
-## yang punya waktu dan kesempatan untuk menyempurnakannya.
+Dan masih ada hal-hal lain yang kurang, dan penulis tidak bisa berjanji
+untuk menyelesaikan toturial ini, sehingga di harapkan admin system lain
+yang punya waktu dan kesempatan untuk menyempurnakannya.
 
 
 Sementara sampai di sini dulu kawan-kawan para System Admin LPSE.
@@ -1305,29 +1309,26 @@ Semoga bermanfaat.
 
 # Alhamdulillah
 
-Muhammad Muntaza
-Admin LPSE Kabupaten Balangan - KALSEL
-gpg --keyserver http://keys.gnupg.net  --recv-key C618BBE52188BDF7
+Abu Muhammad Muhammad Muntaza bin Hatta
+Admin LPSE Kabupaten Balangan - KALSEL (s.d 2018)
 muhammad@muntaza.id
 
 
 
 
 Daftar Pustaka
-https://info.timlpse.lomboktengahkab.go.id/?p=6157      (diakses 29 September 2018)
-http://kloxo.web.id/?p=44  (diakses 28 September 2018)
-https://www.digitalocean.com/community/tutorials/how-to-protect-against-dos-and-ddos-with-mod_evasive-for-apache-on-centos-7
-https://www.digitalocean.com/community/tutorials/an-introduction-to-selinux-on-centos-7-part-1-basic-concepts
-https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-apache-for-centos-7
-https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-centos7
-https://www.tecmint.com/check-integrity-of-file-and-directory-using-aide-in-linux/
-http://www.chkrootkit.org
-https://linoxide.com/linux-how-to/install-chkrootkit-linux/
-
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/index
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/index
-https://www.cyberciti.biz/tips/linux-security.html
-https://www.tldp.org/LDP/solrhe/Securing-Optimizing-Linux-The-Ultimate-Solution-v2.0.pdf
-https://www.tecmint.com/linux-server-hardening-security-tips/
-
-https://muntaza.wordpress.com/2016/08/17/openbsd-pf-firewall-untuk-terima-koneksi-hanya-dari-ip-indonesia/
+-  https://info.timlpse.lomboktengahkab.go.id/?p=6157
+-  http://kloxo.web.id/?p=44
+-  https://www.digitalocean.com/community/tutorials/how-to-protect-against-dos-and-ddos-with-mod_evasive-for-apache-on-centos-7
+-  https://www.digitalocean.com/community/tutorials/an-introduction-to-selinux-on-centos-7-part-1-basic-concepts
+-  https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-apache-for-centos-7
+-  https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-centos7
+-  https://www.tecmint.com/check-integrity-of-file-and-directory-using-aide-in-linux/
+-  http://www.chkrootkit.org
+-  https://linoxide.com/linux-how-to/install-chkrootkit-linux/
+-  https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/index
+-  https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/index
+-  https://www.cyberciti.biz/tips/linux-security.html
+-  https://www.tldp.org/LDP/solrhe/Securing-Optimizing-Linux-The-Ultimate-Solution-v2.0.pdf
+-  https://www.tecmint.com/linux-server-hardening-security-tips/
+-  https://muntaza.wordpress.com/2016/08/17/openbsd-pf-firewall-untuk-terima-koneksi-hanya-dari-ip-indonesia/
