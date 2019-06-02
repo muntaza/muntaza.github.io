@@ -10,10 +10,10 @@ categories: centos7
 Instalasi SPSE v4.3 dengan Menggunakan CentOS 7
 
 Asumsi:
-0. Hanya untuk di Virtual Machine, bukan di server utama dan tulisan ini hanya
+- Hanya untuk di Virtual Machine, bukan di server utama dan tulisan ini hanya
 ditujukan kepada Admin System LPSE.
 
-1. CentOS 7.1 yang di gunakan
+- CentOS 7.1 yang di gunakan
 
 	lihat versi yang ada saat ini:
 
@@ -24,11 +24,11 @@ ditujukan kepada Admin System LPSE.
 	Linux lpse.muntaza.id 3.10.0-229.1.2.el7.x86_64 #1 SMP Fri Mar 27 03:04:26 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
 	{% endhighlight %}
 
-2. Bahan instalsi berupa Java1.8.0, curl-7.28.1.tar.gz, modsecurity-apache_2.6.5.tar.gz, file dblat.zip,
+- Bahan instalsi berupa Java1.8.0, curl-7.28.1.tar.gz, modsecurity-apache_2.6.5.tar.gz, file dblat.zip,
 Anda bisa menghubungi Admin LKPP untuk mendapatkannya. Penulis memperoleh nya saat bimtek Admin System
 16 Mei 2017 di LKPP Jakarta
 
-3. Bahan instalasi berupa SPSE v4.3 latihan, Anda bisa menghubungi Admin LKPP untuk mendapatkannya.
+- Bahan instalasi berupa SPSE v4.3 latihan, Anda bisa menghubungi Admin LKPP untuk mendapatkannya.
 Penulis memperolehnya saat bimtek Admin System 27 September 2018 Banjarmasin
 
 Langkah-langkah:
