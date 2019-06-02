@@ -972,16 +972,19 @@ sh /root/setting_selinux.sh
 
 Testing hasilnya dengan reboot
 
+{% highlight bash %}
 [muntaza@lpse ~]$ sudo /sbin/reboot
+{% endhighlight %}
 
-## Alhamdulillah, kembali berhasil
+Alhamdulillah, kembali berhasil
 
-15. Perbaharui sertifikat SSL
+## 15. Perbaharui sertifikat SSL
 
-## Karena sertifikat SSL yang ada adalah bawaan dari Mod SSL, kita harus buat baru
-## agar dapat di gunakan untuk membeli sertifikat asli dari Penyedia Jasa/Penjual
-## Sertifikat SSL seperti Comodo.
+Karena sertifikat SSL yang ada adalah bawaan dari Mod SSL, kita harus buat baru
+agar dapat di gunakan untuk membeli sertifikat asli dari Penyedia Jasa/Penjual
+Sertifikat SSL seperti Comodo.
 
+{% highlight bash %}
 [muntaza@lpse ~]$ sudo su
 [root@lpse muntaza]# cd /etc/ssl
 [root@lpse ssl]# ls
@@ -1018,6 +1021,7 @@ to be sent with your certificate request
 A challenge password []:
 An optional company name []:
 [root@lpse ssl]#
+{% endhighlight %}
 
 ## Isikan dengan benar pada proses pembuatan file .csr diatas, karena
 ## contoh yang ada hanya ilustrasi
