@@ -608,16 +608,18 @@ jdk1.8.0
 
 ## 10. Mod Evasive
 
-## Ada di EPEL repository, dan repo ini untuk Fedora
-## sehingga kualitas untuk paket ini agak meragukan,
-## konsultasi kan dengan Admin LKPP tentang paket ini
+Ada di EPEL repository, dan repo ini untuk Fedora
+sehingga kualitas untuk paket ini agak meragukan,
+konsultasi kan dengan Admin LKPP tentang paket ini
 
+{% highlight bash %}
 [muntaza@lpse ~]$ sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/m/mod_evasive-1.10.1-22.el7.x86_64.rpm
 Retrieving https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/m/mod_evasive-1.10.1-22.el7.x86_64.rpm
 warning: /var/tmp/rpm-tmp.SalqCq: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
 Preparing...                          ################################# [100%]
 Updating / installing...
    1:mod_evasive-1.10.1-22.el7        ################################# [100%]
+{% endhighlight %}
 
 
 11. SPSE v43
