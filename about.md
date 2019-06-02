@@ -20,6 +20,8 @@ Udemy: [muntaza](https://www.udemy.com/user/muhammad-muntaza/)
 
 Linkedin: [muhammad-muntaza](https://www.linkedin.com/in/muhammad-muntaza/)
 
-Resume: [Muhammad_Muntaza.pdf](/assets/Muhammad_Muntaza.pdf)
+Resume1: [Muhammad_Muntaza.pdf](/assets/Muhammad_Muntaza.pdf)
+
+Resume2: [Muhammad_Muntaza](/assets/Profile.pdf)
 
 CV: [Muhammad Muntaza](https://stackoverflow.com/cv/muhammad_muntaza)
