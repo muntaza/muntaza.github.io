@@ -1290,13 +1290,13 @@ di bagian paling bawah daftar pustaka
 Karena terbatasnya waktu, maka ada beberapa hal yang belum penulis
 tuntaskan, yaitu:
 
-A. Setting cron agar menjalankan AIDE dan CHKrootKIT tiap jam 00.00
-B. Back up database tiap jam 01.00
-C. Instalasi Mail Server untuk mengirimkan hasil cron pengecekan AIDE dan CHKrootKIT
+- Setting cron agar menjalankan AIDE dan CHKrootKIT tiap jam 00.00
+- Back up database tiap jam 01.00
+- Instalasi Mail Server untuk mengirimkan hasil cron pengecekan AIDE dan CHKrootKIT
     ke Alamat email administrator (percuma ada AIDE tapi admin tidak dapat
     alert tiap ada gejala mencurigakan)
-D. Membuka port untuk Cloud LPSE
-E. etc.
+- Membuka port untuk Cloud LPSE
+- etc.
 
 Dan masih ada hal-hal lain yang kurang, dan penulis tidak bisa berjanji
 untuk menyelesaikan toturial ini, sehingga di harapkan admin system lain
