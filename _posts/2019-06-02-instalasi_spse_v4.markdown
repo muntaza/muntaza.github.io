@@ -479,6 +479,7 @@ Password user epns jangan epns, tapi suatu password yang bersifat rahasia, di co
 passwordnya adalah "inirahasia" dan setting ini nanti di sesuaikan saat konfigurasi SPSE,
 jadi tidak masalah apapun password epns, yang penting di sesuaikan konfigurasi SPSE nya
 
+{% highlight bash %}
 [muntaza@lpse ~]$ cd
 [muntaza@lpse ~]$ pwd
 /home/muntaza
@@ -501,11 +502,13 @@ bash-4.2$
 bash-4.2$ exit
 exit
 [muntaza@lpse ~]$
+{% endhighlight %}
 
 
-D. Restore
+# D. Restore
 
-## untuk merestore data, copy file sql nya dan sekalian copy juga bahan-bahan lainnya
+Untuk merestore data, copy file sql nya dan sekalian copy juga bahan-bahan lainnya
+{% highlight bash %}
 openbsd$ scp *
 curl-7.28.1.tar.gz                      jdk1.8.0.tgz                            spse.conf
 dblat.zip                               modsecurity-apache_2.6.5.tar.gz         spselat_asli.tgz
@@ -517,9 +520,11 @@ modsecurity-apache_2.6.5.tar.gz                                                 
 spse.conf                                                                               100% 4473     1.5MB/s   00:00
 spselat_asli.tgz                                                                        100%  160MB   6.2MB/s   00:25
 openbsd$
+{% endhighlight %}
 
-## Restore database
+Restore database
 
+{% highlight bash %}
 [muntaza@lpse ~]$ ls
 curl-7.28.1.tar.gz  jdk1.8.0.tgz                     setting_selinux.sh  spselat_asli.tgz
 dblat.zip           modsecurity-apache_2.6.5.tar.gz  spse.conf
@@ -538,8 +543,11 @@ bash-4.2$ exit
 exit
 [muntaza@lpse tmp]$ id
 uid=1000(muntaza) gid=1000(muntaza) groups=1000(muntaza),10(wheel) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+{% endhighlight %}
 
-## Test koneksi
+Test koneksi
+
+{% highlight bash %}
 [muntaza@lpse ~]$ id
 uid=1000(muntaza) gid=1000(muntaza) groups=1000(muntaza),10(wheel) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
 [muntaza@lpse ~]$ psql -U epns epns_lat -h localhost
@@ -550,11 +558,13 @@ Type "help" for help.
 epns_lat=>
 epns_lat=> \q
 [muntaza@lpse ~]$
+{% endhighlight %}
 
 
-7. Java
-## Ekstrak file java1.8.0
+## 7. Java
+Ekstrak file java1.8.0
 
+{% highlight bash %}
 [muntaza@lpse src]$ cd /usr/local/src/
 [muntaza@lpse src]$ sudo tar -xzf /home/muntaza/jdk1.8.0.tgz
 [muntaza@lpse src]$ ls
@@ -563,14 +573,17 @@ jdk1.8.0_copy
 [muntaza@lpse src]$
 [muntaza@lpse src]$ ls
 jdk1.8.0
+{% endhighlight %}
 
 
-8. Apache HTTPD, Mod SSL dan Tools Development
+## 8. Apache HTTPD, Mod SSL dan Tools Development
 
+{% highlight bash %}
 [muntaza@lpse src]$ sudo yum install httpd httpd-devel gcc-c++ mod_evasive mod_security pcre-devel libxml2-devel
 [muntaza@lpse ~]$ sudo yum install mod_ssl
+{% endhighlight %}
 
-9. Curl dan Mod Security
+## 9. Curl dan Mod Security
 
 A. Curl
 [muntaza@lpse ~]$ tar -xzf curl-7.28.1.tar.gz
