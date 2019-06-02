@@ -1023,20 +1023,23 @@ An optional company name []:
 [root@lpse ssl]#
 {% endhighlight %}
 
-## Isikan dengan benar pada proses pembuatan file .csr diatas, karena
-## contoh yang ada hanya ilustrasi
+Isikan dengan benar pada proses pembuatan file .csr diatas, karena
+contoh yang ada hanya ilustrasi
 
+{% highlight bash %}
 [root@lpse ssl]# ls private/
 lpse.muntaza.id.csr  server.key
 [root@lpse ssl]#
+{% endhighlight %}
 
-## seleteh file .csr jadi, maka file ini di gunakan untuk copy paste
-## saat ini membeli sertifikat asli. Penulis menyarankan beli Comodo saja
-## karena Positive SSL dari Comodo harganya hanya Rp99.000 untuk 1 (satu) tahun
+Seleteh file .csr jadi, maka file ini di gunakan untuk copy paste
+saat ini membeli sertifikat asli. Penulis menyarankan beli Comodo saja
+karena Positive SSL dari Comodo harganya hanya Rp99.000 untuk 1 (satu) tahun
 
-## karena ini hanya latihan, penulis menggunakan tanda tangan sendiri pada proses
-## penerbitan file .crt
+Karena ini hanya latihan, penulis menggunakan tanda tangan sendiri pada proses
+penerbitan file .crt
 
+{% highlight bash %}
 [root@lpse ssl]# ls private/
 lpse.muntaza.id.csr  server.key
 [root@lpse ssl]# openssl x509 -sha256 -req -days 3650 \
@@ -1044,10 +1047,12 @@ lpse.muntaza.id.csr  server.key
 > -signkey /etc/ssl/private/server.key \
 > -out /etc/ssl/server.crt
 Signature ok
+{% endhighlight %}
 
-## Nah sudah selesai di tanda tangani he...he..., segera kita rubah file
-## konfigurasi ssl.conf
+Nah sudah selesai di tanda tangani he...he..., segera kita rubah file
+konfigurasi ssl.conf
 
+{% highlight bash %}
 [muntaza@lpse ~]$ cd /etc/httpd/conf.d/
 [muntaza@lpse conf.d]$ ls
 README          mod_evasive.conf   spse.conf  ssl.conf_asli  welcome.conf
@@ -1071,12 +1076,15 @@ autoindex.conf  mod_security.conf  ssl.conf   userdir.conf
 < SSLCertificateKeyFile /etc/ssl/private/server.key
 - ---
 > SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+{% endhighlight %}
 
 
-## Yah sudah aktif, sudah di ganti key default dengan key sementara
-## coba restart httpd
+Yah sudah aktif, sudah di ganti key default dengan key sementara
+coba restart httpd
 
+{% highlight bash %}
 [muntaza@lpse conf.d]$ sudo systemctl restart httpd
+{% endhighlight %}
 
 
 16. Install AIDE
