@@ -898,12 +898,15 @@ SPSE 4 started
 
 Cek log
 
+{% highlight bash %}
 [muntaza@lpse logs]$ pwd
 /home/appserv/spselat/webapp/logs
 [muntaza@lpse logs]$ sudo tail -f spse4.3.log
+{% endhighlight %}
 
 Buat folder file_latihan
 
+{% highlight bash %}
 [muntaza@lpse spselat]$ sudo mkdir -p /home/file/file_latihan
 
 [muntaza@lpse spselat]$ sudo sh spse4 restart
@@ -914,14 +917,16 @@ Using JAVA_HOME: /usr/local/src/jdk1.8.0
 SPSE 4 started
 [muntaza@lpse spselat]$ sudo systemctl restart httpd
 [muntaza@lpse spselat]$
+{% endhighlight %}
 
 
-14. cek hasil nya di https://lpse.muntaza.id/eproc43lat
+## 14. cek hasil nya di https://lpse.muntaza.id/eproc43lat
 
-## Alhamdulillah berhasil
+Alhamdulillah berhasil
 
-## Aktifkan tiap booting
+Aktifkan tiap booting
 
+{% highlight bash %}
 [muntaza@lpse ~]$ cd /home/appserv/
 [muntaza@lpse appserv]$ ls
 spselat
@@ -934,9 +939,11 @@ README.md  framework  spse4  spse4.original  webapp
 [root@lpse spselat]#
 [root@lpse spselat]# echo "/home/appserv/spselat/spse4 restart" >> /etc/rc.local
 [root@lpse spselat]#
+{% endhighlight %}
 
-## Aktifkan Konfigurasi SElinux
+Aktifkan Konfigurasi SElinux
 
+{% highlight bash %}
 [muntaza@lpse ~]$ sudo cp setting_selinux.sh /root/
 [muntaza@lpse ~]$ sudo su
 [root@lpse muntaza]# cd
@@ -960,9 +967,10 @@ touch /var/lock/subsys/local
 /home/appserv/spselat/spse4 restart
 sh /root/setting_selinux.sh
 [muntaza@lpse ~]$
+{% endhighlight %}
 
 
-## Testing hasilnya dengan reboot
+Testing hasilnya dengan reboot
 
 [muntaza@lpse ~]$ sudo /sbin/reboot
 
