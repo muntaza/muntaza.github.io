@@ -17,7 +17,7 @@ ditujukan kepada Admin System LPSE.
 
 	lihat versi yang ada saat ini:
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ cat /etc/redhat-release
 CentOS Linux release 7.1.1503 (Core)
 [muntaza@lpse ~]$ uname -a
@@ -34,7 +34,7 @@ Penulis memperolehnya saat bimtek Admin System 27 September 2018 Banjarmasin
 Langkah-langkah:
 
 ## 0. Pembuatan User biasa
-{% highlight bash %}
+{% highlight text %}
 [root@lpse ssh]# useradd muntaza
 [root@lpse ssh]# passwd muntaza
 
@@ -58,7 +58,7 @@ uid=1000(muntaza) gid=1000(muntaza) groups=1000(muntaza),10(wheel)
 
 # A. Buat key pair dari host yang akan melakukan koneksi
 
-{% highlight bash %}
+{% highlight text %}
 openbsd$ ssh-keygen -t rsa
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/muntaza/.ssh/id_rsa):
@@ -86,7 +86,7 @@ Saat pembuatan kunci ini, password di biarkan kosong
 
 # B. Buat direktory .ssh di VM
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ mkdir .ssh
 [muntaza@lpse ~]$ ls -la
 total 28
@@ -106,7 +106,7 @@ drwx------ 2 muntaza muntaza 4096 Sep 30 00:52 .ssh/
 
 # C. Copy Public key ke server VM
 
-{% highlight bash %}
+{% highlight text %}
 openbsd$ scp .ssh/id_rsa.pub muntaza@lpse.muntaza.id:/home/muntaza/.ssh/authorized_keys
 muntaza@lpse.muntaza.id's password:
 id_rsa.pub                                                      100%  408   181.7KB/s   00:00
@@ -120,7 +120,7 @@ Terlihat kalau koneksi sudah berhasil dengan public key
 
 # D. Non aktifkan Authentication lain selain public key
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ cd /etc/ssh/
 [muntaza@lpse ssh]$ sudo vi sshd_config
 {% endhighlight %}
@@ -128,7 +128,7 @@ Terlihat kalau koneksi sudah berhasil dengan public key
 
 Setting pada file /etc/ssh/sshd_config, pastikan bahwa Autentikasi lainnya di disable
 
-{% highlight bash %}
+{% highlight text %}
 PermitRootLogin no
 PasswordAuthentication no
 ChallengeResponseAuthentication no
@@ -137,13 +137,13 @@ GSSAPIAuthentication no
 
 Restart sshd
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ssh]$ sudo systemctl restart sshd
 {% endhighlight %}
 
 cek koneksi dari host atau server lain
 
-{% highlight bash %}
+{% highlight text %}
 openbsd$ ssh muntaza@lpse.muntaza.id
 Last login: Sun Sep 30 00:57:58 2018 from 45.64.99.182
 [muntaza@lpse ~]$
@@ -163,7 +163,7 @@ dan menampilkan error bahwa hanya Authentication publickey yang diterima.
 
 ## 2. Update OS ke versi terakhir
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ssh]$ sudo yum update
 
 Transaction Summary
@@ -178,7 +178,7 @@ Is this ok [y/d/N]:
 
 Weh 238 MB, lumayan juga besarnya (senyum)
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ssh]$ cat /etc/redhat-release
 CentOS Linux release 7.5.1804 (Core)
 [muntaza@lpse ssh]$
@@ -196,19 +196,19 @@ tidak harus membuka pintu depan setiap saat.
 
 # A. Instalasi firewalld
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ssh]$ sudo yum install firewalld
 {% endhighlight %}
 
 # B. Reboot system
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo /sbin/reboot
 {% endhighlight %}
 
 # C. Disable iptables dan aktifkan firewalld
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo systemctl status iptables
 [sudo] password for muntaza:
 iptables.service - IPv4 firewall with iptables
@@ -237,7 +237,7 @@ Sep 30 01:28:54 lpse.muntaza.id systemd[1]: Started firewalld - dynamic firewall
 
 # D. Buka port https untuk koneksi dari luar
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo firewall-cmd --list-services
 ssh dhcpv6-client
 [muntaza@lpse ~]$ sudo firewall-cmd --list-all
@@ -303,7 +303,7 @@ port 80 tidak akan aktif, kita hanya menjalankan service di port 443 saja
 SElinux kita aktifkan, SElinux ini fitur bukan bug, malah meningkatkan
 keamanan server kita kalau SElinux ini aktif.
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo vi /etc/sysconfig/selinux
 [muntaza@lpse ~]$ cat /etc/sysconfig/selinux
 
@@ -322,14 +322,14 @@ SELINUXTYPE=targeted
 
 # A. Instalasi paket-paket pendukung SElinux
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo yum install policycoreutils policycoreutils-python selinux-policy selinux-policy-targeted libselinux-utils setroubleshoot-server setools setools-console mcstrans
 
 [muntaza@lpse ~]$ sudo /sbin/reboot
 {% endhighlight %}
 
 # B. Cek status SElinux
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sestatus
 SELinux status:                 enabled
 SELinuxfs mount:                /sys/fs/selinux
@@ -347,7 +347,7 @@ Terlihat bahwa SElinux sudah aktif
 
 # C. Setting SElinux agar SPSE v4.3 bisa berjalan
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ cat setting_selinux.sh
 setsebool httpd_anon_write 1
 setsebool httpd_builtin_scripting 1
@@ -371,7 +371,7 @@ named_tcp_bind_http_port --> on
 
 ## 5. setting file /etc/resolv.conf
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ cat /etc/resolv.conf
 nameserver 27.50.20.21
 nameserver 27.50.30.21
@@ -383,7 +383,7 @@ nameserver 8.8.8.8
 
 # A. Instalasi Postgresql 10
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo yum install https://download.postgresql.org/pub/repos/yum/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm
 
 [muntaza@lpse ~]$ sudo yum install postgresql10 postgresql10-server postgresql10-contrib vim unzip
@@ -396,7 +396,7 @@ Disamping menginstall postgresql, penulis menginstall vim karena lupa, dan mengi
 
 Buat Cluster Database:
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo /usr/pgsql-10/bin/postgresql-10-setup initdb
 Initializing database ... OK
 
@@ -406,7 +406,7 @@ Initializing database ... OK
 Pastikan bahwa Postgresql hanya aktif untuk localhost dan koneksi dari Localhost
 menggunakan metode md5
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo su postgres
 bash-4.2$ cd
 bash-4.2$ ls
@@ -435,7 +435,7 @@ bash-4.2$
 
 restart service postgresql
 
-{% highlight bash %}
+{% highlight text %}
 bash-4.2$ exit
 exit
 [muntaza@lpse ~]$ id
@@ -479,7 +479,7 @@ Password user epns jangan epns, tapi suatu password yang bersifat rahasia, di co
 passwordnya adalah "inirahasia" dan setting ini nanti di sesuaikan saat konfigurasi SPSE,
 jadi tidak masalah apapun password epns, yang penting di sesuaikan konfigurasi SPSE nya
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ cd
 [muntaza@lpse ~]$ pwd
 /home/muntaza
@@ -508,7 +508,7 @@ exit
 # D. Restore
 
 Untuk merestore data, copy file sql nya dan sekalian copy juga bahan-bahan lainnya
-{% highlight bash %}
+{% highlight text %}
 openbsd$ scp *
 curl-7.28.1.tar.gz                      jdk1.8.0.tgz                            spse.conf
 dblat.zip                               modsecurity-apache_2.6.5.tar.gz         spselat_asli.tgz
@@ -524,7 +524,7 @@ openbsd$
 
 Restore database
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ ls
 curl-7.28.1.tar.gz  jdk1.8.0.tgz                     setting_selinux.sh  spselat_asli.tgz
 dblat.zip           modsecurity-apache_2.6.5.tar.gz  spse.conf
@@ -547,7 +547,7 @@ uid=1000(muntaza) gid=1000(muntaza) groups=1000(muntaza),10(wheel) context=uncon
 
 Test koneksi
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ id
 uid=1000(muntaza) gid=1000(muntaza) groups=1000(muntaza),10(wheel) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
 [muntaza@lpse ~]$ psql -U epns epns_lat -h localhost
@@ -564,7 +564,7 @@ epns_lat=> \q
 ## 7. Java
 Ekstrak file java1.8.0
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse src]$ cd /usr/local/src/
 [muntaza@lpse src]$ sudo tar -xzf /home/muntaza/jdk1.8.0.tgz
 [muntaza@lpse src]$ ls
@@ -578,7 +578,7 @@ jdk1.8.0
 
 ## 8. Apache HTTPD, Mod SSL dan Tools Development
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse src]$ sudo yum install httpd httpd-devel gcc-c++ mod_evasive mod_security pcre-devel libxml2-devel
 [muntaza@lpse ~]$ sudo yum install mod_ssl
 {% endhighlight %}
@@ -586,7 +586,7 @@ jdk1.8.0
 ## 9. Curl dan Mod Security
 
 # A. Curl
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ tar -xzf curl-7.28.1.tar.gz
 [muntaza@lpse ~]$ cd curl-7.28.1
 [muntaza@lpse curl-7.28.1]$ ./configure --with-apxs=/usr/bin/apxs
@@ -597,7 +597,7 @@ jdk1.8.0
 
 
 # B. Mod Security
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ tar -xzf modsecurity-apache_2.6.5.tar.gz
 [muntaza@lpse ~]$ cd modsecurity-apache_2.6.5
 [muntaza@lpse modsecurity-apache_2.6.5]$ ./configure --with-apxs=/usr/bin/apxs
@@ -612,7 +612,7 @@ Ada di EPEL repository, dan repo ini untuk Fedora
 sehingga kualitas untuk paket ini agak meragukan,
 konsultasi kan dengan Admin LKPP tentang paket ini
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo rpm -ivh https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/m/mod_evasive-1.10.1-22.el7.x86_64.rpm
 Retrieving https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/m/mod_evasive-1.10.1-22.el7.x86_64.rpm
 warning: /var/tmp/rpm-tmp.SalqCq: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
@@ -626,7 +626,7 @@ Updating / installing...
 
 # A. Buat folder, setting agar file spse4 bisa di eksekusi
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo mkdir /home/appserv
 [muntaza@lpse ~]$ cd /home/appserv/
 
@@ -644,7 +644,7 @@ README.md  framework  spse4.original  webapp
 
 # B. Konfigurasi SPSE v4.3
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse spselat]$ cd webapp/conf/
 [muntaza@lpse conf]$ sudo cp application.conf.lat application.conf
 [muntaza@lpse conf]$ sudo vi application.conf
@@ -670,7 +670,7 @@ README.md  framework  spse4.original  webapp
 
 Aktifkan httpd dan cek modul evasive, security dan ssl sudah aktif
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo systemctl restart httpd
 [muntaza@lpse ~]$ sudo systemctl enable httpd
 Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
@@ -706,7 +706,7 @@ Hint: Some lines were ellipsized, use -l to show in full.
 
 File konfigurasi spse.conf
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ ls
 curl-7.28.1         dblat.zip     modsecurity-apache_2.6.5         setting_selinux.sh  spselat_asli.tgz
 curl-7.28.1.tar.gz  jdk1.8.0.tgz  modsecurity-apache_2.6.5.tar.gz  spse.conf
@@ -724,7 +724,7 @@ conf  conf.d  conf.modules.d  logs  modsecurity.d  modules  run
 
 Isi file spse.conf :
 
-{% highlight bash %}
+{% highlight text %}
 Alias /file_latihan /home/file_latihan
 Alias /file_prod /home/file_prod
 
@@ -837,7 +837,7 @@ SecRule IP:SLOW_DOS_COUNTER "@gt 15" "phase:1,t:none,log,drop,msg:'Client Connec
 
 Disable port 80
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse conf]$ ls
 httpd.conf  magic
 [muntaza@lpse conf]$ sudo cp httpd.conf httpd.conf_asli
@@ -852,7 +852,7 @@ httpd.conf  magic
 
 Setting SSL
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse conf]$ pwd
 /etc/httpd/conf
 [muntaza@lpse conf]$ cd ../conf.d/
@@ -864,7 +864,7 @@ README  autoindex.conf  mod_evasive.conf  mod_security.conf  spse.conf  ssl.conf
 
 Tambahkan 7 baris ini di bawah tulisan <VirtualHost _default_:443>
 
-{% highlight bash %}
+{% highlight text %}
 <VirtualHost _default_:443>
  LogLevel warn
  CustomLog /var/log/httpd/access.log combined
@@ -880,7 +880,7 @@ Sehingga menjadi seperti di atas
 
 ## 13. Mulai SPSE v4.3
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse spselat]$ sudo sh spse4 stop
 [sudo] password for muntaza:
 Stop SPSE 4 ... /home/appserv/spselat
@@ -898,7 +898,7 @@ SPSE 4 started
 
 Cek log
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse logs]$ pwd
 /home/appserv/spselat/webapp/logs
 [muntaza@lpse logs]$ sudo tail -f spse4.3.log
@@ -906,7 +906,7 @@ Cek log
 
 Buat folder file_latihan
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse spselat]$ sudo mkdir -p /home/file/file_latihan
 
 [muntaza@lpse spselat]$ sudo sh spse4 restart
@@ -926,7 +926,7 @@ Alhamdulillah berhasil
 
 Aktifkan tiap booting
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ cd /home/appserv/
 [muntaza@lpse appserv]$ ls
 spselat
@@ -943,7 +943,7 @@ README.md  framework  spse4  spse4.original  webapp
 
 Aktifkan Konfigurasi SElinux
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo cp setting_selinux.sh /root/
 [muntaza@lpse ~]$ sudo su
 [root@lpse muntaza]# cd
@@ -972,7 +972,7 @@ sh /root/setting_selinux.sh
 
 Testing hasilnya dengan reboot
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo /sbin/reboot
 {% endhighlight %}
 
@@ -984,7 +984,7 @@ Karena sertifikat SSL yang ada adalah bawaan dari Mod SSL, kita harus buat baru
 agar dapat di gunakan untuk membeli sertifikat asli dari Penyedia Jasa/Penjual
 Sertifikat SSL seperti Comodo.
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo su
 [root@lpse muntaza]# cd /etc/ssl
 [root@lpse ssl]# ls
@@ -1026,7 +1026,7 @@ An optional company name []:
 Isikan dengan benar pada proses pembuatan file .csr diatas, karena
 contoh yang ada hanya ilustrasi
 
-{% highlight bash %}
+{% highlight text %}
 [root@lpse ssl]# ls private/
 lpse.muntaza.id.csr  server.key
 [root@lpse ssl]#
@@ -1039,7 +1039,7 @@ karena Positive SSL dari Comodo harganya hanya Rp99.000 untuk 1 (satu) tahun
 Karena ini hanya latihan, penulis menggunakan tanda tangan sendiri pada proses
 penerbitan file .crt
 
-{% highlight bash %}
+{% highlight text %}
 [root@lpse ssl]# ls private/
 lpse.muntaza.id.csr  server.key
 [root@lpse ssl]# openssl x509 -sha256 -req -days 3650 \
@@ -1052,7 +1052,7 @@ Signature ok
 Nah sudah selesai di tanda tangani he...he..., segera kita rubah file
 konfigurasi ssl.conf
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ cd /etc/httpd/conf.d/
 [muntaza@lpse conf.d]$ ls
 README          mod_evasive.conf   spse.conf  ssl.conf_asli  welcome.conf
@@ -1082,7 +1082,7 @@ autoindex.conf  mod_security.conf  ssl.conf   userdir.conf
 Yah sudah aktif, sudah di ganti key default dengan key sementara
 coba restart httpd
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse conf.d]$ sudo systemctl restart httpd
 {% endhighlight %}
 
@@ -1090,7 +1090,7 @@ coba restart httpd
 ## 16. Install AIDE
 
 security cek, disini di contohkan AIDE
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo yum install aide
 
 initialisasi aide, lalu copy ke tempat lain
@@ -1111,14 +1111,14 @@ exit
 
 Copy ke tempat lain
 
-{% highlight bash %}
+{% highlight text %}
 muntaza@E202SA ~ $ scp muntaza@lpse.muntaza.id:/home/muntaza/aide*  .
 aide.db.new.gz                                                                          100% 2122KB 303.1KB/s   00:07
 {% endhighlight %}
 
 Testing check
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo cp /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
 [muntaza@lpse ~]$ sudo aide --check
 
@@ -1131,7 +1131,7 @@ All files match AIDE database. Looks okay!
 
 Testing buat file baru di /root/
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ sudo touch /root/.coba
 [muntaza@lpse ~]$ sudo aide --check
 AIDE 0.15.1 found differences between database and filesystem!!
@@ -1159,7 +1159,7 @@ Terlihat kalau pembuatan file .coba tertangkap oleh AIDE (senyum)
 
 Untuk scan root kit di server
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse ~]$ mkdir chkrootkit
 [muntaza@lpse ~]$ cd chkrootkit/
 [muntaza@lpse chkrootkit]$ wget -c ftp://ftp.pangeia.com.br/pub/seg/pac/chkrootkit.tar.gz
@@ -1207,7 +1207,7 @@ cc  -o chkutmp chkutmp.c
 
 Test jalankan
 
-{% highlight bash %}
+{% highlight text %}
 [muntaza@lpse chkrootkit-0.52]$ sudo ./chkrootkit
 {% endhighlight %}
 
@@ -1218,7 +1218,7 @@ Firewall ini adalah dengan menggunakan System Operasi OpenBSD dan
 Firewall PF, dengan fitur Synproxy, Anti DOS, dan Hanya menerima koneksi
 dari IP Indonesia. ini adalah contoh script pf.conf:
 
-{% highlight bash %}
+{% highlight text %}
 #       $Id: pf.conf_gateway,v 1.9 2015/01/05 05:37:27 muntaza Exp $
 #       $OpenBSD: pf.conf,v 1.53 2014/01/25 10:28:36 dtucker Exp $
 
