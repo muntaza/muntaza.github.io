@@ -21,7 +21,7 @@ thinkpad$
 
 {% endhighlight %}
 
-![Gambar1](/assets/speedtest1.png)
+![Gambar1](/assets/reportico_error1.png)
 
 Saya pribadi lebih suka aplikasi berbasis command line, di sini yang di gunakan adalah
 speedtest-cli. Di Linux Mint saya, sudah saya install speedtest-cli dengan perintah apt.
