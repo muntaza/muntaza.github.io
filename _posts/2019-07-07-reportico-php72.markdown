@@ -21,45 +21,16 @@ thinkpad$
 
 {% endhighlight %}
 
+Namun, masalah muncul saat saya mencoba Reportico 4.6, yaitu error numeric value,
+seperti gambar di bawah ini:
+
 ![Gambar1](/assets/reportico_error1.png)
 
-Saya pribadi lebih suka aplikasi berbasis command line, di sini yang di gunakan adalah
-speedtest-cli. Di Linux Mint saya, sudah saya install speedtest-cli dengan perintah apt.
-Di bawah ini contoh hasil pengecekan kecepatan dengan command line.
+Kemudian saya mencoba mencari solusinya di google dan menemukan
+link [ini](http://www.reportico.org/forum/d/52152-a-non-well-formed-numeric-value-encountered)
+yang berhasil saya terapkan dan membuat Reportico 4.6 bisa jalan dengan
+baik di PHP7.2
 
-{% highlight bash %}
-
-muntaza@E202SA:~$ speedtest-cli
-Retrieving speedtest.net configuration...
-Testing from Telkomsel (114.125.174.166)...
-Retrieving speedtest.net server list...
-Selecting best server based on ping...
-Hosted by My Republic Indonesia (Jakarta) [0.65 km]: 75.313 ms
-Testing download speed..........................................
-Download: 15.49 Mbit/s
-Testing upload speed............................................
-Upload: 4.49 Mbit/s
-muntaza@E202SA:~$
-
-
-muntaza@E202SA:~$
-muntaza@E202SA:~$ speedtest-cli
-Retrieving speedtest.net configuration...
-Testing from Telkomsel (114.125.174.166)...
-Retrieving speedtest.net server list...
-Selecting best server based on ping...
-Hosted by MYMATRIX (Jakarta) [0.65 km]: 73.489 ms
-Testing download speed..........................................
-Download: 19.24 Mbit/s
-Testing upload speed...........................................
-Upload: 4.23 Mbit/s
-muntaza@E202SA:~$
-
-
-{% endhighlight %}
-
-Dari hasil di atas, terlihat bahwa pengecekan dengan speedtest-cli cukup akurat
-menurut saya, tidak jauh beda dari pengecekan dengan web browser.
 
 
 # Alhamdulillah
