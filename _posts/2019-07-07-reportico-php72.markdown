@@ -7,9 +7,19 @@ categories: php7
 
 # Bismillah,
 
-Sebagaimana telah maklum, bahwa koneksi kita kecepatannya kadang turun naik, nah, biasanya
-di desktop, kita akan menggunakan browser untuk mengecek kecepatan koneksi ini. Hasil test
-dari browser seperti gambar di bawah ini.
+OpenBSD 6.5 datang dengan PHP7, yang saya pilih untuk server kami adalah php7.2
+
+{% highlight text %}
+
+thinkpad$ pkg_info | grep php
+php-7.2.18          server-side HTML-embedded scripting language
+php-apache-7.2.18   php module for Apache httpd
+php-gd-7.2.18       image manipulation extensions for php
+php-pdo_pgsql-7.2.18 PDO pgsql database access extensions for php
+php-pgsql-7.2.18    pgsql database access extensions for php
+thinkpad$
+
+{% endhighlight %}
 
 ![Gambar1](/assets/speedtest1.png)
 
