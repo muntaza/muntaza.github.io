@@ -23,3 +23,9 @@ Linkedin: [muhammad-muntaza](https://www.linkedin.com/in/muhammad-muntaza/)
 Resume: [Muhammad Muntaza](/assets/Muhammad_Muntaza.pdf) dan [Muhammad Muntaza](/assets/Profile.pdf)
 
 CV: [Muhammad Muntaza](https://stackoverflow.com/cv/muhammad_muntaza)
+
+List of my application:
+- <a href="https://aset.balangankab.go.id/aset.html">OpenAset Balangan</a><br>
+- <a href="https://aset.balangankab.go.id/persediaan.html">OpenPersediaan Balangan</a><br>
+- <a href="https://persediaan.banjarbarukota.go.id/">OpenPersediaan Banjarbaru</a><br>
+
