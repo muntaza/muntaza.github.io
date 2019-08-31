@@ -144,11 +144,28 @@ Tolak koneksi remote ke port 6000 sampai 6010
 block return out log proto {tcp udp} user _pbuild
 {% endhighlight %}
 
-User _pbuild tidak perlu koneksi internet. Baris ini sebenarnya tidak diperlukan, karena firewall ini sudah di setting untuk default deny, yaitu semua di block kecuali yang di izinkan
+User _pbuild tidak perlu koneksi internet. Baris ini sebenarnya tidak diperlukan, karena firewall ini sudah di setting untuk default deny, yaitu semua di block kecuali yang di izinkan.
 
 
-# Alhamdulillah
+Kemudian, table abusive_hosts ini perlu di clear setiap 1 (satu) jam sekali, yang mana saya menggunakan cron untuk keperluan itu.
 
-Sekian penjelasan singkat ini, semoga bermanfaat
+{% highlight text %}
+0       *       *       *       *       /bin/sh /home/muntaza/bin/flush.sh
+{% endhighlight %}
+
+Adapun isi file flush.sh adalah sebagai berikut:
+
+{% highlight text %}
+/sbin/pfctl -t abusive_hosts -T show >> /home/muntaza/daftar
+/sbin/pfctl -t abusive_hosts -T flush 1>> /home/muntaza/daftar \
+     2>> /home/muntaza/daftar
+{% endhighlight %}
+
+Maknanya, masukkan daftar yang ada saat ini di table abusive_hosts ke file /home/muntaza/daftar, lalu hapus isi daftar abusive_hosts.
+
+Sekian Penjelasan tentang contoh implementasi OpenBSD Packet Filter ini, semoga bermanfaat.
+
 
 Muhammad Muntaza
+
+# Alhamdulillah
