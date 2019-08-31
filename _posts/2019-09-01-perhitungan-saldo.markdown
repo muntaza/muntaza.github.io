@@ -8,7 +8,6 @@ categories: postgresql
 # Bismillah,
 
 
-{% highlight text %}
 
 
 
