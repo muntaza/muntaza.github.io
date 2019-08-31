@@ -82,7 +82,7 @@ Posisi file php berada di direktori /var/www/pub. Program PHP-FPM dan OpenBDS-ht
         connection max request body 537919488
 {% endhighlight %}
 
-Koneksi dan transfer data dari server, maksimal sekitar 513 MB
+Jumlah data yang bisa di transfer dari server dalam satu koneksi, maksimal sekitar 513 MB
 
 
 {% highlight text %}
