@@ -12,7 +12,7 @@ Web applications development with OpenBSD-httpd web server, Apache httpd2 web se
 
 WhatsApp : +62 816 20 6441
 
-My OpenBSD Tutorial:
+My OpenBSD Tutorials:
 - [Deploy OpenPersediaan pada OpenBSD di Cloud](https://www.muntaza.id/openbsd/2019/03/17/deploy-openbsd1.html)
 - [Langkah Penting Setelah Instalasi OpenBSD](https://www.muntaza.id/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html)
 - [PF Firewall : Contoh implementasi](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html)
