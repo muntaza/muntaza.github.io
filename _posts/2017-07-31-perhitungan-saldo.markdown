@@ -414,9 +414,10 @@ pada field id_jenis_transaksi, bila bernilai 1
 maka akan tampil 'masuk', dan selain 1 akan
 tampil 'keluar'.
 
+# Alhamdulillah
 
 Ini yang dapat saya sampaikan sebagai Pendahuluan Tulisan
-tentang Window Functions ini, dan Insya Allah, akan
+tentang Window Functions ini, dan InsyaAllah, akan
 saya lanjutkan pembahasan ini pada tulisan yang berjudul
 
 
@@ -430,7 +431,6 @@ Muhammad Muntaza bin Hatta
 
 
 
-# Alhamdulillah
 
 
 
