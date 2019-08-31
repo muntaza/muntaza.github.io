@@ -436,3 +436,4 @@ Muhammad Muntaza bin Hatta
 
 Daftar Pustaka
 - [Calculating Stock with FIFO Method in SQL](https://callmeranjeet.wordpress.com/2014/09/01/calculating-stock-with-fifo-method-in-sql/)
+- [PostgreSQL Window Function](https://www.postgresql.org/docs/9.2/tutorial-window.html)
