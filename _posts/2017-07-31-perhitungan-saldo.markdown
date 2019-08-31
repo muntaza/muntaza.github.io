@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Algoritma Perhitungan Saldo Tabungan dengan Window Functions pada PostgreSQL"
-date:   2019-09-01 12:26:56 +0800
+date:   2017-07-31 12:26:56 +0800
 categories: postgresql
 ---
 
