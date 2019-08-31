@@ -73,6 +73,12 @@ Nama Web Server yang digunakan
 Port 4443 dengan TLS di aktifkan
 
 {% highlight text %}
+        root "/pub"
+{% endhighlight %}
+
+Posisi file php berada di direktori /var/www/pub. Program PHP-FPM dan OpenBDS-httpd web server berjalan dengan kondisi di chroot ke direktori /var/www.
+
+{% highlight text %}
         connection max request body 537919488
 {% endhighlight %}
 
@@ -132,6 +138,9 @@ httpd_flags=
 pkg_scripts=php56_fpm
 {% endhighlight %}
 
+Sekian penjelasan saya terkait OpenBSD-httpd Web Server ini, semoga bermanfaat.
 
+
+Muhammad Muntaza bin Hatta
 
 # Alhamdulillah
