@@ -81,7 +81,7 @@ Jangan filter interface lo untuk akses network local. Biasanya lo ini diberi ala
 block return
 {% endhighlight %}
 
-Secara default, block semua koneksi keluar dan masuk
+Secara default, block semua koneksi keluar dan masuk, termasuk icmp, sehingga server tidak terkena serangan [PoD](https://en.wikipedia.org/wiki/Ping_of_death)
 
 {% highlight text %}
 table <ip_safe> persist file "/etc/ip_safe"
@@ -120,7 +120,12 @@ pass in on $ext_if inet proto tcp from <ip_indonesia> to $ext_if \
     (max-src-conn 100, max-src-conn-rate 15/5, overload <abusive_hosts> flush)
 {% endhighlight %}
 
-Izinkan akses ke port yang telah di definisikan di atas 'hanya' dari IP yang berasal dari Indonesia, gunakan fungsi Synproxy, dan kalau ada IP yang melakukan DOS, maka masukkan IP itu ke daftar abusive_hosts dan putuskan koneksinya.
+Izinkan akses ke port yang telah di definisikan di atas 'hanya' dari IP yang berasal dari Indonesia, gunakan fungsi Synproxy, dan kalau ada IP yang mencoba melakukan [DOS](https://en.wikipedia.org/wiki/Denial-of-service_attack), maka masukkan IP itu ke daftar abusive_hosts serta putuskan koneksinya.
+
+Serangan yang di cegah dengan konfigurasi ini:
+- [Syn Flood](https://www.imperva.com/learn/application-security/syn-flood/)
+- [Reverse Telnet](https://en.wikipedia.org/wiki/Reverse_connection)
+
 
 {% highlight text %}
 pass in on $ext_if inet proto tcp from 64.41.200.0/24 to $ext_if \
