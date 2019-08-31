@@ -147,7 +147,7 @@ block return out log proto {tcp udp} user _pbuild
 User _pbuild tidak perlu koneksi internet. Baris ini sebenarnya tidak diperlukan, karena firewall ini sudah di setting untuk default deny, yaitu semua di block kecuali yang di izinkan.
 
 
-Kemudian, table abusive_hosts ini perlu di clear setiap 1 (satu) jam sekali, yang mana saya menggunakan cron untuk keperluan itu.
+Kemudian, table abusive_hosts diatas perlu di clear setiap 1 (satu) jam sekali, yang mana saya menggunakan cron untuk keperluan itu.
 
 {% highlight text %}
 0       *       *       *       *       /bin/sh /home/muntaza/bin/flush.sh
@@ -163,9 +163,8 @@ Adapun isi file flush.sh adalah sebagai berikut:
 
 Maknanya, masukkan daftar yang ada saat ini di table abusive_hosts ke file /home/muntaza/daftar, lalu hapus isi daftar abusive_hosts.
 
+# Alhamdulillah
+
 Sekian Penjelasan tentang contoh implementasi OpenBSD Packet Filter ini, semoga bermanfaat.
 
-
 Muhammad Muntaza
-
-# Alhamdulillah
