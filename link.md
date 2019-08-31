@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Link Penting
-permalink: /links/
+title: Salafy
+permalink: /salafy/
 ---
 
 
