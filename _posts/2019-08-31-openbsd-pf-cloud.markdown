@@ -7,7 +7,7 @@ categories: openbsd
 
 # Bismillah,
 
-Catatan
+![network diagram](/assets/pf1.png)
 
 {% highlight text %}
 #       $OpenBSD: pf.conf,v 1.55 2017/12/03 20:40:04 sthen Exp $
