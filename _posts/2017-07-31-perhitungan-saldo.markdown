@@ -434,5 +434,5 @@ Muhammad Muntaza bin Hatta
 
 
 
-daftar pustaka
-https://callmeranjeet.wordpress.com/2014/09/01/calculating-stock-with-fifo-method-in-sql/
+Daftar Pustaka
+- [Calculating Stock with FIFO Method in SQL](https://callmeranjeet.wordpress.com/2014/09/01/calculating-stock-with-fifo-method-in-sql/)
