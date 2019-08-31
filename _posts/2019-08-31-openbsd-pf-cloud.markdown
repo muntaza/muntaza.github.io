@@ -57,6 +57,7 @@ block return out log proto {tcp udp} user _pbuild
 
 {% endhighlight %}
 
+Baiklah, saya coba memulai menjelaskannya:
 
 {% highlight text %}
 ext_if=vio0
