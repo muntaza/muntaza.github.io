@@ -120,18 +120,17 @@ Block file-file sensitif yang mengandung 'password' atau konfigurasi PHP
 yang tidak boleh di download oleh user.
 
 {% highlight text %}
+        location "*.php*" {
+                fastcgi socket "/run/php-fpm.sock"
+        }
 {% endhighlight %}
 
-
-{% highlight text %}
-{% endhighlight %}
-
+File *.php akan di layani oleh program PHP-FPM. Jalankan service PHP-FPM dan aktifkan saat booting dengan cara mengedit file /etc/rc.conf.local atau dengan perintah rcctl. Berikut ini isi file /etc/rc.conf.local saya:
 
 {% highlight text %}
 httpd_flags=
 pkg_scripts=php56_fpm
 {% endhighlight %}
-
 
 
 
