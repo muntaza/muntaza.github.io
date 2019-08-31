@@ -7,6 +7,7 @@ permalink: /about/
 
 Bismillah, saya tinggal di Provinsi Kalimantan Selatan, bekerja sebagai Pegawai Negeri Sipil di Lingkungan Pemerintah Daerah Provinsi Kalimantan Selatan. Seorang Pengguna Linux sejak sekitar Tahun 2004, kemudian menggunakan OpenBSD sejak sekitar Tahun 2005 yaitu mulai OpenBSD versi 3.6
 
+WhatsApp: +62 816 20 6441
 
 Twitter: [muntaza_id](https://twitter.com/muntaza_id)
 
