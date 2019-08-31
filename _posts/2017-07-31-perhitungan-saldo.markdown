@@ -377,8 +377,8 @@ Password:
 {% endhighlight %}
 
 
-file db_saldo.sql dapat di download di sini
-https://github.com/muntaza/Open_Persediaan/blob/master/db_saldo.sql
+file db_saldo.sql dapat di download di
+[sini](https://github.com/muntaza/Open_Persediaan/blob/master/db_saldo.sql)
 
 
 sebagai tambahan pengetahun, disini dikenalkan
