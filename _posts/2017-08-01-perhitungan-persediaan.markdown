@@ -718,6 +718,8 @@ Contoh Implementasi di Aplikasi OpenPersediaan:
 - [Langkah I](https://github.com/muntaza/Open_Persediaan/blob/master/sql1_persediaan/persediaan_barang_sql/persediaan_barang_awayan.sql)
 - [Langkah II](https://github.com/muntaza/Open_Persediaan/blob/master/sql1_persediaan/persediaan_barang_sql2/persediaan_barang2_awayan.sql)
 - [Langkah III](https://github.com/muntaza/Open_Persediaan/blob/master/sql1_persediaan/persediaan_barang3_sql/persediaan_barang3_awayan.sql)
+- [Langkah IV](https://github.com/muntaza/Open_Persediaan/blob/master/sql1_persediaan/persediaan_rinci_sql/persediaan_barang4_awayan.sql)
+- [Langkah V](https://github.com/muntaza/Open_Persediaan/blob/master/sql1_persediaan/persediaan_rekap_sql/persediaan_barang5_awayan.sql)
 
 
 # Alhamdulillah
