@@ -419,13 +419,10 @@ tampil 'keluar'.
 Ini yang dapat saya sampaikan sebagai Pendahuluan Tulisan
 tentang Window Functions ini, dan InsyaAllah, akan
 saya lanjutkan pembahasan ini pada tulisan yang berjudul
+[Algoritma Perhitungan Persediaan menggunakan Metode FIFO dengan Window Functions pada PostgreSQL](https://www.muntaza.id/postgresql/2017/08/01/perhitungan-persediaan.html)
 
 
-Algoritma Perhitungan Persediaan menggunakan Metode FIFO dengan Window Functions pada PostgreSQL
 
-https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_persediaan.md
-
-Tertanda
 
 Muhammad Muntaza bin Hatta
 
