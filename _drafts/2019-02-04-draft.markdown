@@ -9,7 +9,7 @@ categories: ssh
 
 Catatan
 
-{% highlight bash %}
+{% highlight text %}
 persediaan$ cd /etc/examples/
 
 
