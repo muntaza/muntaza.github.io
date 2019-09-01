@@ -714,6 +714,11 @@ Password:
 dump database dapat di download di
 [sini](https://github.com/muntaza/Open_Persediaan/blob/master/db_persediaan.sql)
 
+Contoh Implementasi di Aplikasi OpenPersediaan:
+- [Langkah I](https://github.com/muntaza/Open_Persediaan/blob/master/sql1_persediaan/persediaan_barang_sql/persediaan_barang_awayan.sql)
+- [Langkah II](https://github.com/muntaza/Open_Persediaan/blob/master/sql1_persediaan/persediaan_barang_sql2/persediaan_barang2_awayan.sql)
+- [Langkah III](https://github.com/muntaza/Open_Persediaan/blob/master/sql1_persediaan/persediaan_barang3_sql/persediaan_barang3_awayan.sql)
+
 
 # Alhamdulillah
 
