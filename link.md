@@ -5,7 +5,7 @@ permalink: /salafy/
 ---
 
 
-Bismillah, Link Website Salafy Indonesia:
+Bismillah, ini adalah diantara link website Salafy Indonesia:
 
 - [Majalah AsySyariah](https://asysyariah.com/)
 - [Majalah Qonitah](https://qonitah.com/)
