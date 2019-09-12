@@ -11,3 +11,4 @@ Bismillah, ini adalah diantara link website Salafy Indonesia:
 - [Majalah Qonitah](https://qonitah.com/)
 - [Forum Salafy](http://forumsalafy.net/)
 - [Radio Islam Indonesia](http://radioislam.or.id/)
+- [Salafy.or.id](https://salafy.or.id/)
