@@ -206,7 +206,8 @@ Satu diantara dua tempat yang di lihat oleh program <a href="https://man.openbsd
 file <a href="https://man.openbsd.org/installurl">installurl(5)</a>
 (<code>/etc/installurl</code>) atau variable sistem <code>PKG_PATH</code>.
 Menggunakan file (<code>/etc/installurl</code>) lebih dianjurkan dan telah di setting secara default
-saat proses instalasi sistem operasi.
+saat proses instalasi sistem operasi. PERHATIKAN, gunakan salah satu saja,
+kalau setting mirror ini pada dua tempat sekaligus, maka akan terjadi error.
 
 
 
@@ -221,9 +222,13 @@ tiap mirror dapat di pisahkan dengan tanda "titik dua":
 <pre class="cmdbox">
 # <b>export PKG_PATH=scp://user@company-build-server/usr/ports/packages/%a/all:https://trusted-public-server/%m:installpath</b>
 </pre>
-
+<!--
 While the default should work well for most people, a list of alternate
 locations can be found on the <a href="https://www.openbsd.org/ftp.html">pilihan mirror</a>.
+-->
+Saat proses install sistem operasi, sudah di pilihkan sebuah mirror, namun bila diperlukan,
+kamu bisa menggunakan mirror lain yang tersedia di halaman
+<a href="https://www.openbsd.org/ftp.html">pilihan mirror</a>.
 
 <h2 id="PkgFind">Finding Packages</h2>
 
