@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang=en id=faq>
+
+<!-- If you make edits to any FAQ documents, please start each sentence
+     on a new line, and try to keep the general formatting consistent
+     with the rest of the pages -->
+
+<title>OpenBSD PF: Getting Started</title>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../../openbsd.css">
+<link rel="canonical" href="https://www.openbsd.org/faq/pf/config.html">
+
+<!--
+Copyright (c) 2003, Nick Holland <nick@openbsd.org>
+Copyright (c) 2003, 2004, Joel Knight <enabled@myrealbox.com>
+
+Permission to use, copy, modify, and distribute this documentation for
+any purpose with or without fee is hereby granted, provided that the
+above copyright notice and this permission notice appear in all copies.
+
+THE DOCUMENTATION IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+WARRANTIES WITH REGARD TO THIS DOCUMENTATION INCLUDING ALL IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS DOCUMENTATION
+-->
+
+<h2 id=OpenBSD>
+<a href="../index.html">
+<i>Open</i><b>BSD</b></a>
+PF - Getting Started
+<small>
+<a href="index.html">[Contents]</a>
+</small>
+</h2>
+<hr>
+
+<ul>
+  <li><a href="#activate" >Activation</a>
+  <li><a href="#config"   >Configuration</a>
+  <li><a href="#control"  >Control</a>
+</ul>
+
+<hr>
+
+<h2 id="activate">Activation</h2>
+
+PF is enabled by default.
+If you wish to disable it on boot, use the
+<a href="https://man.openbsd.org/rcctl">rcctl(8)</a> tool to do so:
+
+<pre class="cmdbox">
+# <b>rcctl disable pf</b>
+</pre>
+
+Reboot your system to have it take effect.
+
+<p>
+You can also manually activate and deactivate PF by using the
+<a href="https://man.openbsd.org/pfctl">pfctl(8)</a> program:
+
+<pre class="cmdbox">
+# <b>pfctl -e</b>
+# <b>pfctl -d</b>
+</pre>
+
+These would enable and disable PF.
+Note that it doesn't actually load a ruleset, however.
+The ruleset must be loaded separately, either before or after PF is enabled.
+
+<h2 id="config">Configuration</h2>
+
+PF reads its configuration rules from
+<a href="https://man.openbsd.org/pf.conf">pf.conf(5)</a> at boot time, as
+loaded by the <a href="https://man.openbsd.org/rc">rc scripts</a>.
+Note that while <a href="https://man.openbsd.org/pf.conf">pf.conf(5)</a>
+is the default and is loaded by the system rc scripts, it is just a text file
+loaded and interpreted by <a href="https://man.openbsd.org/pfctl">pfctl(8)</a>
+and inserted into <a href="https://man.openbsd.org/pf">pf(4)</a>.
+For some applications, other rulesets may be loaded from other files after boot.
+
+<p>
+The <code>pf.conf</code> file has multiple parts:
+
+<ul>
+  <li><b><a href="macros.html">Macros:</a></b> User-defined variables that
+  can hold IP addresses, interface names, etc.
+  <li><b><a href="tables.html">Tables:</a></b> A structure used to hold lists
+  of IP addresses.
+  <li><b><a href="options.html">Options:</a></b> Various options to control
+  how PF works.
+  <li><b><a href="filter.html">Filter Rules:</a></b> Allows the selective
+  filtering or blocking of packets as they pass through any of the interfaces.
+  Filter rules can be given parameters to specify
+  <a href="nat.html">network address translation</a> and
+  <a href="rdr.html">packet redirection</a>.
+</ul>
+
+Blank lines are ignored, and lines beginning with <code>#</code> are treated
+as comments.
+
+<h2 id="control">Control</h2>
+
+After boot, PF operation can be managed using the
+<a href="https://man.openbsd.org/pfctl">pfctl(8)</a> program.
+Some example commands are:
+
+<pre class="cmdbox">
+# <b>pfctl -f  /etc/pf.conf</b>	Load the pf.conf file
+# <b>pfctl -nf /etc/pf.conf</b>	Parse the file, but don't load it
+# <b>pfctl -sr</b>			Show the current ruleset
+# <b>pfctl -ss</b>			Show the current state table
+# <b>pfctl -si</b>			Show filter stats and counters
+# <b>pfctl -sa</b>			Show EVERYTHING it can show
+</pre>
+
+For a complete list of commands, please see the
+<a href="https://man.openbsd.org/pfctl">man page</a>.

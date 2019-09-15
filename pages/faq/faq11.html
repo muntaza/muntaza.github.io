@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang=en id=faq>
+
+<!-- If you make edits to any FAQ documents, please start each sentence
+     on a new line, and try to keep the general formatting consistent
+     with the rest of the pages -->
+
+<title>OpenBSD FAQ: The X Window System</title>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../openbsd.css">
+<link rel="canonical" href="https://www.openbsd.org/faq/faq11.html">
+
+<h2 id=OpenBSD>
+<a href="index.html">
+<i>Open</i><b>BSD</b></a>
+FAQ - The X Window System
+<small>
+<a href="index.html">[FAQ Index]</a>
+</small>
+</h2>
+<hr>
+
+<ul>
+<li><a href="#Intro"        >Introduction to X</a>
+<li><a href="#ConfigX"      >Configuring X</a>
+<li><a href="#StartingX"    >Starting X</a>
+<li><a href="#CustomizingX" >Customizing X</a>
+</ul>
+
+<hr>
+
+<h2 id="Intro">Introduction to X</h2>
+
+The X Window System (sometimes just called "X") is the environment which
+provides graphics services to OpenBSD and other Unix-like systems.
+By itself, X provides very little, since one also must have a window manager
+to present a user interface.
+OpenBSD ships with the <a href="https://man.openbsd.org/cwm">cwm(1)</a>,
+<a href="https://man.openbsd.org/fvwm">fvwm(1)</a> and
+<a href="https://man.openbsd.org/twm">twm(1)</a> window managers, although
+many others are available as <a href="faq15.html">packages</a>.
+
+<p>
+It is possible to run X clients on a system without any graphical support.
+For example, one could have an application (the X client) running on an
+ARM system, displaying its output on an amd64's graphical display (the X
+server).
+Since X is a well-defined, cross-platform protocol, it is even possible
+to have an X application running on, for example, a Linux machine use an
+OpenBSD machine for its display.
+The client and server can also be running on the same machine, and for
+most of this section, that will be the assumption.
+
+<h2 id="ConfigX">Configuring X</h2>
+
+For the majority of hardware on the most common platforms, X requires no
+configuration at all.
+
+<p>
+The details of manual X configuration vary considerably from platform
+to platform.
+In all cases, there will be instructions and other platform-specific
+information in <code>/usr/X11R6/README</code> on the installed system.
+
+<h2 id="StartingX">Starting X</h2>
+
+The recommended way to run X is with the
+<a href="https://man.openbsd.org/xenodm">xenodm(1)</a> display manager.
+It offers some important security benefits over the traditional
+<a href="https://man.openbsd.org/startx">startx(1)</a> command.
+
+<p>
+If <a href="https://man.openbsd.org/xenodm">xenodm(1)</a> wasn't enabled
+during installation, it can be done so later like any other system daemon:
+
+<pre class="cmdbox">
+# <b>rcctl enable xenodm</b>
+# <b>rcctl start xenodm</b>
+</pre>
+
+On some platforms, you will need to disable the console
+<a href="https://man.openbsd.org/getty">getty(8)</a> to use it.
+This is not needed on amd64, i386 or macppc.
+
+<h2 id="CustomizingX">Customizing X</h2>
+
+OpenBSD's default X environment is fully functional, but you may wish to
+customize it.
+When an X session is started, shell scripts in the user's home directory can be
+used to start as many programs as desired.
+Most of the programs in these scripts should run in the background, but the
+last one (typically the window manager) should run in the foreground.
+When the window manager exits, the script will also exit, and X will return
+to the <a href="https://man.openbsd.org/xenodm">xenodm(1)</a> login prompt.
+
+<p>
+After the user logs in from
+<a href="https://man.openbsd.org/xenodm">xenodm(1)</a>, the
+<code>/etc/X11/xenodm/Xsession</code> script checks whether there is a
+<code>$HOME/.xsession</code> script.
+In the simplest case, the user's <code>~/.xsession</code> script will contain
+only one line specifying the preferred window manager to launch.
+It can contain any number of other commands, however:
+
+<pre class="cmdbox">
+export ENV=$HOME/.kshrc
+xsetroot -solid grey &
+xterm -bg black -fg white +sb &
+cwm
+</pre>
+
+Note that the window manager <a href="https://man.openbsd.org/cwm">cwm(1)</a>
+is <i>not</i> being run in the background.
+This means that X will stay running until it exits.
