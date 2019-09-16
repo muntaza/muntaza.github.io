@@ -33,7 +33,7 @@ begin
 		write('Banyak kolom matriks ke-', k, ' : ');
 		readln(n[k]);
 	end;
-	if (n[1] &lt;&gt; m[2]) then
+	if (n[1] <> m[2]) then
 		writeln('Tidak bisa dikalikan!')
 	else begin
 		writeln('Matriks pertama : ');
@@ -70,7 +70,7 @@ begin
 					M3[i,j] := M3[i,j] + (M1[i,l] * M2[l,j]);
 					gotoxy(x,y);
 					write(M1[i,l], ' . ',  M2[l,j]);
-					if l &lt; n[1] then begin
+					if l < n[1] then begin
 						write(' + ');
 					end;
 					x := x + 12;
@@ -88,7 +88,7 @@ begin
 				for l := 1 to n[1] do begin;
 					gotoxy(x,y);
 					write(M1[i,l] * M2[l,j]);
-					if l &lt; n[1] then begin
+					if l < n[1] then begin
 						write(' + ');
 					end;
 					x := x + 12;
