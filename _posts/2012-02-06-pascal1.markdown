@@ -2,7 +2,7 @@
 layout: post
 title:  "Perkalian Matriks dengan Bahasa Pascal"
 date:   2012-02-06 12:26:56 +0800
-categories: ssh
+categories: pascal
 ---
 
 # Bismillah,
