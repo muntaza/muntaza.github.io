@@ -2,7 +2,7 @@
 layout: post
 title:  "Konfigurasi PF Firewall pada OpenBSD 4.8"
 date:   2011-04-28 12:26:56 +0800
-categories: ssh
+categories: openbsd
 ---
 
 # Bismillah,
