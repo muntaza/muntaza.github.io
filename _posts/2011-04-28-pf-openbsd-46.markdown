@@ -10,7 +10,7 @@ categories: openbsd
 
 
 
-Ini adalah satu tulisan saya yang sangat penting, karena ini adalah Konfigurasi OpenBSD PF yang saya tulis untuk memaksimalkan keamanan webserver di internet. setiap baris code akan saya beri komentar, Insya ALLAH.
+Ini adalah satu tulisan saya yang sangat penting, karena ini adalah Konfigurasi OpenBSD PF yang saya tulis untuk memaksimalkan keamanan webserver di internet.
 
 Apa yang akan anda pelajari:
 1. Konfigurasi PF pada OpenBSD tingkat lanjut
