@@ -13,6 +13,14 @@ ketika itu pada OpenBSD 3.6
 Secara teknis, saat ini tidak di coba lagi dan postingan ini
 hanya sebagai kenang-kenangan.
 
+Terdapat beberapa tutorial lain yang membahas tentang email client
+bernama Mutt ini, tentunya lebih detail dan up to date, diantaranya:
+
+1. [Using gmail with mutt](https://smalldata.tech/blog/2016/09/10/gmail-with-mutt)
+2. [The Homely Mutt](http://stevelosh.com/blog/2012/10/the-homely-mutt/)
+
+Mungkin di masa yang akan datang, aku mempertimbangkan lagi email
+client yang satu ini, he...he...
 
 {% highlight text %}
 -----BEGIN PGP SIGNED MESSAGE-----
