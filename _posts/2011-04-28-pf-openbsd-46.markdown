@@ -7,10 +7,14 @@ categories: openbsd
 
 # Bismillah,
 
+Tutorial ini membahas PF pada OpenBSD 4.6 dan versi di bawahnya, karena
+pada OpenBSD 4.7, terdapat perubahan signifikan sebagaimana di cantumkan
+di [sini](https://home.nuug.no/~peter/pf/newest/newsyntax.html), namun saya
+harapkan tulisan ini masih bisa di ambil manfaatnya, karena PF yang
+di porting ke varian lain "BSD" ada yang masih menggunakan PF engine
+versi OpenBSD 4.6
 
 
-
-Ini adalah satu tulisan saya yang sangat penting, karena ini adalah Konfigurasi OpenBSD PF yang saya tulis untuk memaksimalkan keamanan webserver di internet.
 
 Apa yang akan anda pelajari:
 1. Konfigurasi PF pada OpenBSD tingkat lanjut
