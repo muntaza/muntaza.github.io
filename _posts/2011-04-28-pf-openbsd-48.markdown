@@ -1,19 +1,14 @@
 ---
 layout: post
-title:  "Judul"
+title:  "Konfigurasi PF Firewall pada OpenBSD 4.8"
 date:   2019-12-09 12:26:56 +0800
 categories: ssh
 ---
 
 # Bismillah,
 
-Catatan
-
-{% highlight text %}
-{% endhighlight %}
 
 
-Bismillah,
 
 Ini adalah satu tulisan saya yang sangat penting, karena ini adalah Konfigurasi OpenBSD PF yang saya tulis untuk memaksimalkan keamanan webserver di internet. setiap baris code akan saya beri komentar, Insya ALLAH.
 
