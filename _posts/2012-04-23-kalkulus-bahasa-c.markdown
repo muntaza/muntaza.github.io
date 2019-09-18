@@ -15,8 +15,8 @@ Nah, ini adalah program dalam Bahasa C yang di tujukan untuk mencari turunan dar
 /* Copyright 2012 @ Muhammad Muntaza bin Hatta *
  * Lisensi: GPL v3                             *
  * Program mencari Turunan suatu Fungsi        *
- * web: www.muntaza.id                  *
- * email: muhammad@muntaza.id                 */
+ * web: www.muntaza.id                         *
+ * email: muhammad@muntaza.id                  */
 
 
 #include <stdio.h>
@@ -42,8 +42,8 @@ Dan ini adalah source code untuk mencari anti turunan suatu fungsi:
 /* Copyright 2012 @ Muhammad Muntaza bin Hatta *
  * Lisensi: GPL v3                             *
  * Program mencari Anti Turunan suatu Fungsi   *
- * web: www.muntaza.id                  *
- * email: muhammad@muntaza.id                 */
+ * web: www.muntaza.id                         *
+ * email: muhammad@muntaza.id                  */
 
 
 #include <stdio.h>
