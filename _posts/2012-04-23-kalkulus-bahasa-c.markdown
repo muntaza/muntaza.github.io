@@ -9,7 +9,7 @@ categories: kalkulus
 
 Sambil belajar Kalkulus, seorang mahasiswa jurusan IT belajar juga Pemprograman, nah agar keduanya bisa berjalan beriringan, maka kita praktek kan ilmu yang kita pelajari yaitu Bahasa C untuk menyelesaikan soal dari Mata kuliah Kalkulus. Namun, kepada adik-adit mahasiswa IT, tetap hitung soal yang diberikan dosen mata kuliah Kalkulus secara manual ya... itu melatih kejujuran kalian,..... he...he...
 
-ini adalah program dalam Bahasa C yang di tujukan untuk mencari turunan dari suatu fungsi dan anti turunannya. Berikut ini source dari program untuk mencari turunan
+Nah, ini adalah program dalam Bahasa C yang di tujukan untuk mencari turunan dari suatu fungsi dan anti turunannya. Berikut ini source dari program untuk mencari turunan:
 
 {% highlight c %}
 /* Copyright 2012 @ Muhammad Muntaza bin Hatta *
@@ -36,7 +36,8 @@ int main() {
 
 {% endhighlight %}
 
-Dibawah ini adalah source code untuk mencari anti turunan suatu fungsi
+Dan ini adalah source code untuk mencari anti turunan suatu fungsi:
+
 {% highlight c %}
 /* Copyright 2012 @ Muhammad Muntaza bin Hatta *
  * Lisensi: GPL v3                             *
