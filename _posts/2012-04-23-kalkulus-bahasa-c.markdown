@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Kalkulus dengan Bahasa C"
-date:   2019-12-09 12:26:56 +0800
+date:   2012-04-23 12:26:56 +0800
 categories: kalkulus
 ---
 
