@@ -6,6 +6,8 @@ categories: linux
 ---
 
 # Bismillah,
+{% highlight text %}
+{% endhighlight %}
 
 Ini adalah catatan ringkas, sebagai pengingat bagi diri saya pribadi khususnya,
 proses deploy aplikasi [OpenAset](https://github.com/muntaza/Open-Aset) di
@@ -18,8 +20,6 @@ Catatan ini saya buat lebih ringkas dari tulisan saya
 di sini saya tidak menampilkan output dari perintah yang saya jalankan, kecuali
 sebagian kecilnya saja.
 
-{% highlight text %}
-{% endhighlight %}
 
 Versi Linux Mint yang di gunakan:
 
@@ -29,21 +29,35 @@ DESCRIPTION="Linux Mint 19 Tara"
 GRUB_TITLE=Linux Mint 19 MATE
 {% endhighlight %}
 
+Ganti vim default di sistem dengan vim yang lebih lengkap fitur nya.
+
+{% highlight text %}
 $ sudo apt remove vim-tiny
 $ sudo apt install vim
+{% endhighlight %}
+
+Install CVS, inilah yang saya gunakan untuk mendevelop aplikasi ini. Saya mengenal
+Git juga, blog saya ini di bangun dengan
+[jekyll]() yang di hosting di [Github Pages]() sebagaimana saya
+[kisahkan](),
+namun karena CVS adalah pengelola source code yang pertama saya kenal,
+jadi sulit berpindah dari cinta pertama, he...he...
+
+
 $ sudo apt install cvs
 $ sudo apt install openssh-server
 $ sudo systemctl restart sshd
 
 
-sudo apt install postgresql-10
-sudo apt install python-pip
+$ sudo apt install postgresql-10
+$ sudo apt install postgresql-server-dev-10
+$ sudo apt install python-pip
 
-sudo pip install --upgrade pip
+$ sudo pip install --upgrade pip
 $ pip2 --version
 pip 19.2.3 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
 
-sudo pip2 install Django==1.11.24
+$ sudo pip2 install Django==1.11.24
 $ django-admin --version
 1.11.24
 
@@ -62,7 +76,6 @@ sudo apt install php7.2-xml
 sudo apt install php7.2-gd
 
 
-sudo apt install postgresql-server-dev-10
 sudo pip2 install setuptools
 sudo pip2 install psycopg2-binary
 
