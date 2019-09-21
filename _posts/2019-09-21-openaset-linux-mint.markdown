@@ -121,16 +121,25 @@ $ sudo apt install apache2 libapache2-mod-wsgi
 Mod-wsgi ini sebagai driver yang menghubungkan Python dengan
 Apache Web Server.
 
+Install PHP7.2 dan modul pendukungnya:
 
-
+{% highlight text %}
 sudo apt install php7.2
 sudo apt install php7.2-pgsql
 sudo apt install php7.2-xml
 sudo apt install php7.2-gd
+{% endhighlight %}
 
+Termasuk di dalamnya mod-php, yang merupakan driver yang
+menghubungkan PHP ke Apache Web server.
 
+Install [Psycopg2]()
+yang merupakan driver penghubung Python ke Database PostgreSQL:
+
+{% highlight text %}
 sudo pip2 install setuptools
 sudo pip2 install psycopg2-binary
+{% endhighlight %}
 
 
    64  sudo mkdir django
