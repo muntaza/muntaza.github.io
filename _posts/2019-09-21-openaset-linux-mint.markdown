@@ -259,12 +259,13 @@ psql -U postgres kabupaten < kabupaten_2019-09-21_00_10.sql
 sudo systemctl restart apache2
 
 
-PHP sudah di enable, cek setting pgsql dengan script phpinfo
+PHP sudah di enable, cek setting pgsql dengan script phpinfo.php
 
-$ cat phpinfo.php
+{% highlight php %}
 <?php
 phpinfo();
 ?>
+{% endhighlight %}
 
 ambil archive laporan dari server, dan untar di /var/www/html
 selesai.
