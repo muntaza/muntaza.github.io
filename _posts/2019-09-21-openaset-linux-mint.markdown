@@ -38,8 +38,9 @@ $ sudo apt install vim
 
 Install CVS, inilah yang saya gunakan untuk mendevelop aplikasi ini. Saya mengenal
 Git juga, blog saya ini di bangun dengan
-[jekyll]() yang di hosting di [Github Pages]() sebagaimana saya
-[kisahkan](),
+[jekyll](https://jekyllrb.com/) yang di hosting di [Github Pages](https://pages.github.com/) sebagaimana saya
+[kisahkan](https://www.muntaza.id/kisah/2018/12/04/github-pages-jekyll.html),
+yang mana tentunya menggunakan git untuk menampilkan postingan blog,
 namun karena CVS adalah pengelola source code yang pertama saya kenal,
 jadi sulit berpindah dari cinta pertama, he...he...
 
