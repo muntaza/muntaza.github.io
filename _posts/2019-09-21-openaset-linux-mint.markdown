@@ -258,8 +258,20 @@ psql -U postgres kabupaten < kabupaten_2019-09-21_00_10.sql
 
 sudo systemctl restart apache2
 
+Saat instalasi PHP, modul mod-php sudah otomatis di aktifkan di
+Linux Mint ini, untuk melihatnya, bisa di cek yaitu:
 
-PHP sudah di enable, cek setting pgsql dengan script phpinfo.php
+{% highlight text %}
+$ pwd
+/etc/apache2/mods-enabled
+$ ls| grep php
+php7.2.conf
+php7.2.load
+{% endhighlight %}
+
+Saya buat script phpinfo.php yang berguna untuk menvalidasi
+setting PHP, dan juga memastikan bahwa Modul php-pgsql dan
+php-pdo-pgsql sudah aktif. Ini isi script nya:
 
 {% highlight php %}
 <?php
@@ -267,6 +279,10 @@ phpinfo();
 ?>
 {% endhighlight %}
 
-ambil archive laporan dari server, dan untar di /var/www/html
-selesai.
+Setelah PHP sudah di validasi, tinggal
+ambil archive laporan dari server, dan untar di folder /var/www/html.
+
+Selesai sudah proses deploy OpenAset di Linux Mint ini. Semoga
+bermanfaat.
+
 # Alhamdulillah
