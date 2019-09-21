@@ -36,17 +36,20 @@ $ sudo apt remove vim-tiny
 $ sudo apt install vim
 {% endhighlight %}
 
-Install CVS, inilah yang saya gunakan untuk mendevelop aplikasi ini. Saya mengenal
-Git juga, blog saya ini di bangun dengan
-[jekyll](https://jekyllrb.com/) yang di hosting di [Github Pages](https://pages.github.com/) sebagaimana saya
-[kisahkan](https://www.muntaza.id/kisah/2018/12/04/github-pages-jekyll.html),
-yang mana tentunya menggunakan git untuk menampilkan postingan blog,
-namun karena CVS adalah pengelola source code yang pertama saya kenal,
-jadi sulit berpindah dari cinta pertama, he...he...
+Install CVS, inilah yang saya gunakan untuk mendevelop aplikasi ini:
 
 {% highlight text %}
 $ sudo apt install cvs
 {% endhighlight %}
+
+Saya mengenal
+Git juga, blog saya ini di bangun dengan
+[jekyll](https://jekyllrb.com/) yang di hosting di
+[Github Pages](https://pages.github.com/) sebagaimana saya
+[kisahkan](https://www.muntaza.id/kisah/2018/12/04/github-pages-jekyll.html),
+yang mana tentunya menggunakan git untuk menampilkan postingan blog,
+namun karena CVS adalah pengelola source code yang pertama saya kenal,
+jadi sulit berpindah dari cinta pertama, he...he...
 
 Install [OpenSSH](https://www.openssh.com/) server dan jalankan:
 
@@ -62,6 +65,11 @@ $ sudo apt install postgresql-10
 $ sudo apt install postgresql-server-dev-10
 {% endhighlight %}
 
+Sepertinya server PostgreSQL langsung jalan setelah terinstall,
+nah, inilah salah satu kelemahan Linux Mint ini menurut saya,
+karena seharusnya, admin lah yang menjalankan suatu server, bukan
+otomatis setelah di install langsung jalan, he...he...
+
 Install [Python pip](https://pypi.org/project/pip/), program ini untuk menginstall
 Aplikasi python lainnya:
 
@@ -73,7 +81,7 @@ pip 19.2.3 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
 {% endhighlight %}
 
 [Python](https://www.python.org/) versi 2 akan [berakhir](https://www.python.org/doc/sunset-python-2/) masa aktif
-nya pada 1 Januari 2020, oleh karena ini, saya merencanakan menggunakan
+nya pada 1 Januari 2020, oleh karena ini, saya merencanakan, insyaAllah, menggunakan
 python versi 3 pada [OpenBSD 6.6](https://www.openbsd.org/66.html).
 
 
@@ -104,6 +112,11 @@ Install [apache-httpd2](https://httpd.apache.org/) dan
 {% highlight text %}
 $ sudo apt install apache2 libapache2-mod-wsgi
 {% endhighlight %}
+
+Mod-wsgi ini sebagai driver yang menghubungkan Python dengan
+Apache Web Server.
+
+
 
 sudo apt install php7.2
 sudo apt install php7.2-pgsql
