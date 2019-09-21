@@ -48,7 +48,7 @@ jadi sulit berpindah dari cinta pertama, he...he...
 $ sudo apt install cvs
 {% endhighlight %}
 
-Install OpenSSH server dan jalankan:
+Install [OpenSSH](https://www.openssh.com/) server dan jalankan:
 
 {% highlight text %}
 $ sudo apt install openssh-server
@@ -75,7 +75,6 @@ pip 19.2.3 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
 Python versi 2 akan [berakhir](https://www.python.org/doc/sunset-python-2/) masa aktif
 nya pada 1 Januari 2020, oleh karena ini, saya merencanakan menggunakan
 python versi 3 pada [OpenBSD 6.6](https://www.openbsd.org/66.html).
-
 
 
 Install [Django](https://www.djangoproject.com/):
