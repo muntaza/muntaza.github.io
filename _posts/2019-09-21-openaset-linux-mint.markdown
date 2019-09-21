@@ -44,10 +44,16 @@ yang mana tentunya menggunakan git untuk menampilkan postingan blog,
 namun karena CVS adalah pengelola source code yang pertama saya kenal,
 jadi sulit berpindah dari cinta pertama, he...he...
 
-
+{% highlight text %}
 $ sudo apt install cvs
+{% endhighlight %}
+
+Install OpenSSH server dan jalankan:
+
+{% highlight text %}
 $ sudo apt install openssh-server
 $ sudo systemctl restart sshd
+{% endhighlight %}
 
 
 $ sudo apt install postgresql-10
