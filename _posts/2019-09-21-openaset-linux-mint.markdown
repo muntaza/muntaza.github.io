@@ -96,13 +96,18 @@ $ django-admin --version
 
 Buat ssh publik key,
 upload ke server cvs, untuk mengambil
-aplikasi OpenAset nantinya.
+aplikasi OpenAset nantinya:
 
 {% highlight text %}
 $ ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/muntaza/.ssh/id_rsa):
 {% endhighlight %}
+
+Bahkan pernah saya
+[tegaskan](https://www.muntaza.id/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html) bahwa
+seharusnya, koneksi ke ssh hanya bisa dengan publik key saja,
+dan menonaktifkan metode authentication lainnya.
 
 
 Install [apache-httpd2](https://httpd.apache.org/) dan
