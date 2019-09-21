@@ -159,6 +159,7 @@ ssl.
 Adapun langkahnya, yaitu dengan menambahkan baris dibawah ini pada file
 [/etc/httpd.conf](https://man.openbsd.org/httpd.conf):
 
+{% highlight text %}
 server "openaset.muntaza.net" {
         listen on 103.56.207.72 port 80
         root "/htdocs/openaset.muntaza.net"
@@ -170,16 +171,19 @@ server "openaset.muntaza.net" {
                 block return 302 "https://$HTTP_HOST$REQUEST_URI"
         }
 }
+{% endhighlight %}
 
+Menambahkan juga baris dibawah ini pada file
+[etc/acme-client.conf](https://man.openbsd.org/acme-client.conf):
 
-etc/acme-client.conf
-
+{% highlight text %}
 domain openaset.muntaza.net {
         domain key "/etc/ssl/private/openaset.muntaza.net.key"
         domain certificate "/etc/ssl/openaset.muntaza.net.crt"
         domain full chain certificate "/etc/ssl/openaset.muntaza.net.fullchain.pem"
         sign with letsencrypt
 }
+{% endhighlight %}
 
 
 muhammad$ doas acme-client -vAD openaset.muntaza.net
