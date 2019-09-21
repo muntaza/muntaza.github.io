@@ -72,7 +72,7 @@ $ pip2 --version
 pip 19.2.3 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
 {% endhighlight %}
 
-Python versi 2 akan [berakhir](https://www.python.org/doc/sunset-python-2/) masa aktif
+[Python](https://www.python.org/) versi 2 akan [berakhir](https://www.python.org/doc/sunset-python-2/) masa aktif
 nya pada 1 Januari 2020, oleh karena ini, saya merencanakan menggunakan
 python versi 3 pada [OpenBSD 6.6](https://www.openbsd.org/66.html).
 
@@ -86,7 +86,8 @@ $ django-admin --version
 {% endhighlight %}
 
 
-Buat ssh publik key, upload ke server cvs, untuk mengambil
+Buat ssh publik key,
+upload ke server cvs, untuk mengambil
 aplikasi OpenAset nantinya.
 
 {% highlight text %}
@@ -96,7 +97,13 @@ Enter file in which to save the key (/home/muntaza/.ssh/id_rsa):
 {% endhighlight %}
 
 
+Install [apache-httpd2](https://httpd.apache.org/) dan
+[mod-wsqi](https://modwsgi.readthedocs.io/en/develop/):
+
+
+{% highlight text %}
 $ sudo apt install apache2 libapache2-mod-wsgi
+{% endhighlight %}
 
 sudo apt install php7.2
 sudo apt install php7.2-pgsql
