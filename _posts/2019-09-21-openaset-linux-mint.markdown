@@ -55,18 +55,30 @@ $ sudo apt install openssh-server
 $ sudo systemctl restart sshd
 {% endhighlight %}
 
+Install PostgreSQL versi 10:
 
+{% highlight text %}
 $ sudo apt install postgresql-10
 $ sudo apt install postgresql-server-dev-10
-$ sudo apt install python-pip
+{% endhighlight %}
 
+Install [Python pip](https://pypi.org/project/pip/), program ini untuk menginstall
+Aplikasi python lainnya:
+
+{% highlight text %}
+$ sudo apt install python-pip
 $ sudo pip install --upgrade pip
 $ pip2 --version
 pip 19.2.3 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
+{% endhighlight %}
 
+Install Django:
+
+{% highlight text %}
 $ sudo pip2 install Django==1.11.24
 $ django-admin --version
 1.11.24
+{% endhighlight %}
 
 buat ssh publik key, upload ke server cvs
 
