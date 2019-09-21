@@ -13,15 +13,21 @@ proses deploy aplikasi [OpenAset](https://github.com/muntaza/Open-Aset) di
 Mengapa memilih Linux ketika ini? Jawabannya adalah, agar bisa di lihat bahwa aplikasi
 ini tidak hanya bisa jalan di [OpenBSD](https://www.openbsd.org/) saja.
 
+Catatan ini saya buat lebih ringkas dari tulisan saya
+[sebelumnya](https://www.muntaza.id/openbsd/2019/03/17/deploy-openbsd1.html), yang mana
+di sini saya tidak menampilkan output dari perintah yang saya jalankan, kecuali
+sebagian kecilnya saja.
+
 {% highlight text %}
 {% endhighlight %}
 
+Versi Linux Mint yang di gunakan:
 
-Open Aset di linux mint
-
+{% highlight text %}
 $ cat /etc/linuxmint/info | grep Linux
 DESCRIPTION="Linux Mint 19 Tara"
 GRUB_TITLE=Linux Mint 19 MATE
+{% endhighlight %}
 
 $ sudo apt remove vim-tiny
 $ sudo apt install vim
