@@ -55,7 +55,7 @@ $ sudo apt install openssh-server
 $ sudo systemctl restart sshd
 {% endhighlight %}
 
-Install PostgreSQL versi 10:
+Install [PostgreSQL](https://www.postgresql.org/) versi 10:
 
 {% highlight text %}
 $ sudo apt install postgresql-10
@@ -72,7 +72,13 @@ $ pip2 --version
 pip 19.2.3 from /usr/local/lib/python2.7/dist-packages/pip (python 2.7)
 {% endhighlight %}
 
-Install Django:
+Python versi 2 akan [berakhir](https://www.python.org/doc/sunset-python-2/) masa aktif
+nya pada 1 Januari 2020, oleh karena ini, saya merencanakan menggunakan
+python versi 3 pada [OpenBSD 6.6](https://www.openbsd.org/66.html).
+
+
+
+Install [Django](https://www.djangoproject.com/):
 
 {% highlight text %}
 $ sudo pip2 install Django==1.11.24
