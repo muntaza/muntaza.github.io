@@ -80,11 +80,15 @@ $ django-admin --version
 1.11.24
 {% endhighlight %}
 
-buat ssh publik key, upload ke server cvs
 
-muntaza@muntaza-Satellite-C40-A:~$ ssh-keygen
+Buat ssh publik key, upload ke server cvs, untuk mengambil
+aplikasi OpenAset nantinya.
+
+{% highlight text %}
+$ ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/muntaza/.ssh/id_rsa):
+{% endhighlight %}
 
 
 $ sudo apt install apache2 libapache2-mod-wsgi
