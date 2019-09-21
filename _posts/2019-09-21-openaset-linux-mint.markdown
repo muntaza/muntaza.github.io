@@ -7,6 +7,11 @@ categories: linux
 
 # Bismillah,
 
+Ini adalah catatan ringkas, sebagai pengingat bagi diri saya pribadi khususnya,
+proses deploy aplikasi [OpenAset](https://github.com/muntaza/Open-Aset) di
+[Linux Mint](https://www.linuxmint.com/).
+Mengapa memilih Linux ketika ini? Jawabannya adalah, agar bisa di lihat bahwa aplikasi
+ini tidak hanya bisa jalan di [OpenBSD](https://www.openbsd.org/) saja.
 
 {% highlight text %}
 {% endhighlight %}
