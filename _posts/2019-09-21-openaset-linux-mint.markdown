@@ -141,15 +141,23 @@ sudo pip2 install setuptools
 sudo pip2 install psycopg2-binary
 {% endhighlight %}
 
+Buat direktori /home/django, untuk menempatkan aplikasi OpenAset:
 
-   64  sudo mkdir django
-   70  sudo chown muntaza:www-data django
+{% highlight text %}
+$ cd /home
+$ sudo mkdir django
+$ sudo chown muntaza:www-data django
+{% endhighlight %}
 
-sudo su - postgres
-createuser -U postgres kabupaten -P
-createdb -O kabupaten kabupaten
+Berpindah ke server cloud, saya membuat sertifikat ssl dari
+[Let’s Encrypt](https://letsencrypt.org/) menggunakan server
+cloud saya (dengan sistem operasi OpenBSD),
+sertifikat ini untuk domain openaset.muntaza.net
+sehingga aplikasi OpenAset ini juga disetting dengan perlindungan
+ssl.
 
-/etc/httpd.conf
+Adapun langkahnya, yaitu dengan menambahkan baris dibawah ini pada file
+[/etc/httpd.conf](https://man.openbsd.org/httpd.conf):
 
 server "openaset.muntaza.net" {
         listen on 103.56.207.72 port 80
@@ -208,6 +216,10 @@ muntaza@muntaza-Satellite-C40-A:/etc/apache2/sites-enabled$ cat default-ssl.conf
 restore global, restore kabupaten
 
 sebagai user postgres
+sudo su - postgres
+createuser -U postgres kabupaten -P
+createdb -O kabupaten kabupaten
+
 
 $ sudo su postgres
 postgres@muntaza-Satellite-C40-A:/home/muntaza/back_up$ id
