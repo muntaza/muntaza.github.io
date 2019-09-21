@@ -185,37 +185,61 @@ domain openaset.muntaza.net {
 }
 {% endhighlight %}
 
+OK, restart httpd service:
 
-muhammad$ doas acme-client -vAD openaset.muntaza.net
-
-
-disable port 80 pada httpd.conf untuk domain openaset.muntaza.net
-
-muhammad$ doas cp httpd.conf /etc/
-doas (muntaza@muhammad.muntaza.id) password:
+{% highlight text %}
 muhammad$ doas rcctl restart httpd
 httpd(ok)
 httpd(ok)
+{% endhighlight %}
+
+Kemudian, buat sertifikat tersebut:
+
+{% highlight text %}
+muhammad$ doas acme-client -vAD openaset.muntaza.net
+{% endhighlight %}
+
+Nah, sudah di dapat sertifikat nya, tinggal di copy aja sertifikat tadi
+ke server Linux Mint.
+Hal penting lain, sertifikat ini memiliki masa aktif 3 (tiga) bulan,
+sehingga untuk saat ini, saya nonaktifkan domain openaset.muntaza.net
+dan setting di file /etc/httpd.conf nya, kemudian pastikan restart lagi
+server httpd nya.
+
+{% highlight text %}
+muhammad$ doas rcctl restart httpd
+httpd(ok)
+httpd(ok)
+{% endhighlight %}
 
 
 
-local setting pada linux mint
+Setting Apache Web Server:
 
-
+{% highlight text %}
 $ ls -l ssl* sochache*
 lrwxrwxrwx 1 root root 36 Sep 21 14:23 sochache_shmcb.load -> ../mods-available/socache_shmcb.load
 lrwxrwxrwx 1 root root 26 Sep 21 14:20 ssl.conf -> ../mods-available/ssl.conf
 lrwxrwxrwx 1 root root 26 Sep 21 14:20 ssl.load -> ../mods-available/ssl.load
+{% endhighlight %}
 
-enable ssl config, isi sertifikat dengan sertifikat yang di dapat lewat let's encrypt tadi.
+aktifkan modul ssl dan modul shmcb, dengan membuat file soft link di folder
+mods-enabled ke folder mods-available seperti contoh di atas.
 
-muntaza@muntaza-Satellite-C40-A:/etc/apache2/sites-enabled$ ls -l
+Aktifkan konfigurasi ssl config, dengan membuat file soft link di folder
+sites-enabled ke folder sites-available seperti contoh di bawah, dan isi
+sertifikat ssl sesuai dengan file sertifikat yang kita buat dari Let'e Encrypt
+tadi.
+
+{% highlight text %}
+/etc/apache2/sites-enabled$ ls -l
 total 0
 lrwxrwxrwx 1 root root 35 Sep 20 22:08 000-default.conf -> ../sites-available/000-default.conf
 lrwxrwxrwx 1 root root 35 Sep 21 14:21 default-ssl.conf -> ../sites-available/default-ssl.conf
-muntaza@muntaza-Satellite-C40-A:/etc/apache2/sites-enabled$ cat default-ssl.conf | grep openaset
+/etc/apache2/sites-enabled$ cat default-ssl.conf | grep openaset
 		SSLCertificateFile	/etc/ssl/openaset.muntaza.net.fullchain.pem
 		SSLCertificateKeyFile /etc/ssl/private/openaset.muntaza.net.key
+{% endhighlight %}
 
 restore global, restore kabupaten
 
