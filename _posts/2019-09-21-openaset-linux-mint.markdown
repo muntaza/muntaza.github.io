@@ -241,7 +241,7 @@ lrwxrwxrwx 1 root root 35 Sep 21 14:21 default-ssl.conf -> ../sites-available/de
 		SSLCertificateKeyFile /etc/ssl/private/openaset.muntaza.net.key
 {% endhighlight %}
 
-Ini isi lengkap file [default-ssl.conf]()
+Ini isi lengkap file [default-ssl.conf](https://github.com/muntaza/Open-Aset/blob/master/default-ssl.conf)
 
 Setting Database PostgreSQL.
 
@@ -268,8 +268,6 @@ Restart Apache Web Server:
 {% highlight text %}
 $ sudo systemctl restart apache2
 {% endhighlight %}
-
-Nah, sampai di sini menu entry sudah bisa saya akses. Alhamdulillah
 
 Setting PHP
 
