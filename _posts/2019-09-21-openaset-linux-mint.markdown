@@ -111,7 +111,7 @@ dan menonaktifkan metode authentication lainnya.
 
 
 Install [apache-httpd2](https://httpd.apache.org/) dan
-[mod-wsqi](https://modwsgi.readthedocs.io/en/develop/):
+[mod-wsgi](https://modwsgi.readthedocs.io/en/develop/):
 
 
 {% highlight text %}
