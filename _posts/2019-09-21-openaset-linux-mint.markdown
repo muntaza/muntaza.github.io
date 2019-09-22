@@ -259,8 +259,8 @@ Restore global Database, yang meliputi pembuatan seluruh user,
 kemudian baru restore database kabupaten:
 
 {% highlight text %}
-psql -U postgres template1 < global_2019-09-21_13_12.sql
-psql -U postgres kabupaten < kabupaten_2019-09-21_00_10.sql
+$ psql -U postgres template1 < global_2019-09-21_13_12.sql
+$ psql -U postgres kabupaten < kabupaten_2019-09-21_00_10.sql
 {% endhighlight %}
 
 Restart Apache Web Server:
