@@ -248,11 +248,11 @@ Setting Database PostgreSQL.
 Pindah ke user postgres, buat user kabupaten, dan buat Database kabupaten:
 
 {% highlight text %}
-sudo su - postgres
+$ sudo su - postgres
 $ id
 uid=122(postgres) gid=130(postgres) groups=130(postgres),110(ssl-cert)
-createuser -U postgres kabupaten -P
-createdb -O kabupaten kabupaten
+$ createuser -U postgres kabupaten -P
+$ createdb -O kabupaten kabupaten
 {% endhighlight %}
 
 Restore global Database, yang meliputi pembuatan seluruh user,
