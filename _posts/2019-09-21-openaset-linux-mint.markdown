@@ -133,7 +133,7 @@ sudo apt install php7.2-gd
 Termasuk di dalamnya mod-php, yang merupakan driver yang
 menghubungkan PHP ke Apache Web server.
 
-Install [Psycopg2]()
+Install [Psycopg2](http://initd.org/psycopg/)
 yang merupakan driver penghubung Python ke Database PostgreSQL:
 
 {% highlight text %}
