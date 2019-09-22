@@ -137,8 +137,8 @@ Install [Psycopg2](http://initd.org/psycopg/)
 yang merupakan driver penghubung Python ke Database PostgreSQL:
 
 {% highlight text %}
-sudo pip2 install setuptools
-sudo pip2 install psycopg2-binary
+$ sudo pip2 install setuptools
+$ sudo pip2 install psycopg2-binary
 {% endhighlight %}
 
 Buat direktori /home/django, untuk menempatkan aplikasi OpenAset:
