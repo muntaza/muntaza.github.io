@@ -241,22 +241,37 @@ lrwxrwxrwx 1 root root 35 Sep 21 14:21 default-ssl.conf -> ../sites-available/de
 		SSLCertificateKeyFile /etc/ssl/private/openaset.muntaza.net.key
 {% endhighlight %}
 
-restore global, restore kabupaten
+Ini isi lengkap file [default-ssl.conf]()
 
-sebagai user postgres
+Setting Database PostgreSQL.
+
+Pindah ke user postgres, buat user kabupaten, dan buat Database kabupaten:
+
+{% highlight text %}
 sudo su - postgres
+$ id
+uid=122(postgres) gid=130(postgres) groups=130(postgres),110(ssl-cert)
 createuser -U postgres kabupaten -P
 createdb -O kabupaten kabupaten
+{% endhighlight %}
 
+Restore global Database, yang meliputi pembuatan seluruh user,
+kemudian baru restore database kabupaten:
 
-$ sudo su postgres
-postgres@muntaza-Satellite-C40-A:/home/muntaza/back_up$ id
-uid=122(postgres) gid=130(postgres) groups=130(postgres),110(ssl-cert)
-
+{% highlight text %}
 psql -U postgres template1 < global_2019-09-21_13_12.sql
 psql -U postgres kabupaten < kabupaten_2019-09-21_00_10.sql
+{% endhighlight %}
 
-sudo systemctl restart apache2
+Restart Apache Web Server:
+
+{% highlight text %}
+$ sudo systemctl restart apache2
+{% endhighlight %}
+
+Nah, sampai di sini menu entry sudah bisa saya akses. Alhamdulillah
+
+Setting PHP
 
 Saat instalasi PHP, modul mod-php sudah otomatis di aktifkan di
 Linux Mint ini, untuk melihatnya, bisa di cek yaitu:
