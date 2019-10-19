@@ -16,7 +16,7 @@ makna nya.
 Linux yang saya gunakan adalah Linux Mint 19. Berikut ini script
 IPTABLES nya:
 
-{% highlight iptables %}
+{% highlight bash %}
 #!/bin/bash
 echo "jalankan firewall"
 
