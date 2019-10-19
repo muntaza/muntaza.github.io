@@ -39,4 +39,36 @@ echo
 echo "iptables firewall is up `date`"
 {% endhighlight %}
 
+Berikut ini penjelasan ringkas nya:
+
+{% highlight bash %}
+$IPTABLES -F
+$IPTABLES -X
+{% endhighlight %}
+
+Membersihkan Perintah IPTABLES sebelumnya, jika ada.
+
+{% highlight bash %}
+$IPTABLES -P FORWARD DROP
+$IPTABLES -P OUTPUT ACCEPT
+$IPTABLES -P INPUT DROP
+{% endhighlight %}
+
+Koneksi Masuk dan Forward di Tolak, Koneksi Keluar di izinkan
+
+{% highlight bash %}
+$IPTABLES -A INPUT -i lo -j ACCEPT
+{% endhighlight %}
+
+Izinkan koneksi dari dan ke Localhost
+
+{% highlight bash %}
+{% endhighlight %}
+
+
+{% highlight bash %}
+{% endhighlight %}
+
+
+
 # Alhamdulillah
