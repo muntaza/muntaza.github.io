@@ -13,8 +13,11 @@ Laptop, dan mengizinkan akses dari Laptop ke Internet. Konfigurasi
 ini di tulis dengan script sederhana, yang akan saya jelaskan sedikit
 makna nya.
 
+Linux yang saya gunakan adalah Linux Mint 19. Berikut ini script
+IPTABLES nya:
+
 {% highlight iptables %}
-#! /bin/bash
+#!/bin/bash
 echo "jalankan firewall"
 
 IPTABLES=/sbin/iptables
