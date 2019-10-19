@@ -7,10 +7,13 @@ categories: linux
 
 # Bismillah,
 
-Catatan
+Firewall IPTABLES saat ini sudah jarang di pakai, namun disini
+saya menggunakan IPTABLES untuk memblokir akses dari luar ke
+Laptop, dan mengizinkan akses dari Laptop ke Internet. Konfigurasi
+ini di tulis dengan script sederhana, yang akan saya jelaskan sedikit
+makna nya.
 
-{% highlight text %}
-persediaan$ cd /etc/examples/
+{% highlight iptables %}
 
 
 
