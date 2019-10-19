@@ -63,12 +63,14 @@ $IPTABLES -A INPUT -i lo -j ACCEPT
 Izinkan koneksi dari dan ke Localhost
 
 {% highlight bash %}
+$IPTABLES -I INPUT 1 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 {% endhighlight %}
 
+Saat koneksi keluar, paket yang datang dari luar memiliki penanda
+ESTABLISHED, yang berarti paket tersebut adalah balasan dari server
+yang dituju, maka izin kan paket tersebut Masuk.
 
-{% highlight bash %}
-{% endhighlight %}
 
-
+Sekian penjelasan makna nya, semoga bermanfaat.
 
 # Alhamdulillah
