@@ -99,9 +99,7 @@ Lalu isi file tersebut adalah:
  Type=forking
  ExecStart=/etc/rc.local start
  TimeoutSec=0
- StandartOutput=tty
  RemainAfterExit=yes
- SysVStartPriority=99
 
 [Install]
  WantedBy=mutli-user.target
@@ -132,16 +130,15 @@ $ sudo systemctl status rc-local
    Loaded: loaded (/etc/systemd/system/rc-local.service; enabled; vendor preset: enabled)
   Drop-In: /lib/systemd/system/rc-local.service.d
            └─debian.conf
-   Active: active (exited) since Sun 2019-12-01 12:08:12 WITA; 10s ago
+   Active: active (exited) since Sun 2019-12-01 12:53:09 WITA; 20s ago
     Tasks: 0 (limit: 2127)
    CGroup: /system.slice/rc-local.service
 
-Dec 01 12:08:12 E202SA systemd[1]: Starting /etc/rc.local Compatibility...
-Dec 01 12:08:12 E202SA rc.local[7066]: jalankan firewall
-Dec 01 12:08:12 E202SA rc.local[7066]: iptables firewall is up Sun Dec  1 12:08:12 WITA 2019
-Dec 01 12:08:12 E202SA systemd[1]: Started /etc/rc.local Compatibility.
-Dec 01 12:08:16 E202SA systemd[1]: /etc/systemd/system/rc-local.service:9: Unknown lvalue 'StandartOutput' in section 'Service'
-Dec 01 12:08:16 E202SA systemd[1]: /etc/systemd/system/rc-local.service:11: Support for option SysVStartPriority= has been removed and
+Dec 01 12:53:09 E202SA systemd[1]: Starting /etc/rc.local Compatibility...
+Dec 01 12:53:09 E202SA rc.local[8568]: jalankan firewall
+Dec 01 12:53:09 E202SA rc.local[8568]: iptables firewall is up Sun Dec  1 12:53:09 WITA 2019
+Dec 01 12:53:09 E202SA systemd[1]: Started /etc/rc.local Compatibility.
+
 
 $ sudo iptables -L -v
 
