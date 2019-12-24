@@ -1,1 +1,1 @@
-jekyll build -d www.muntaza.id  --watch
+jekyll build -d www.muntaza.id
