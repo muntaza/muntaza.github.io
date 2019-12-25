@@ -1,0 +1,156 @@
+---
+layout: post
+title:  "Firewall dengan nftables bagian Pertama"
+date:   2019-12-15 12:26:56 +0800
+categories: nftables
+---
+
+# Bismillah,
+
+Setelah tulisan saya tentang [IPTables](https://www.muntaza.id/linux/2019/10/19/iptables.html) maka saya
+menuliskan kembali penerus dari IPTables ini,
+yaitu [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page).
+
+Pada bagian pertama ini, adalah pengelanan syntax nftables, dengan firewall sederhana yang ditujukan
+untuk melindungi Laptop/PC dari akses dari luar.
+
+Rincian definisi ruleset:
+- Blokir semua akses dari luar Laptop.
+- Izinkan akses dari localhost.
+- Izinkan akses keluar menuju Internet dari Laptop.
+- Izinkan paket balasan dari luar ([stateful firewall](https://en.wikipedia.org/wiki/Stateful_firewall)).
+
+Berikut isi file /etc/nftables.conf
+
+{% highlight text %}
+#!/usr/sbin/nft -f
+
+flush ruleset
+
+define lo_if  = "lo"
+
+table ip filter {
+	chain INPUT {
+		type filter hook input priority 0; policy drop;
+		ct state established,related accept
+		iifname $lo_if accept
+	}
+
+	chain FORWARD {
+		type filter hook forward priority 0; policy drop;
+	}
+
+	chain OUTPUT {
+		type filter hook output priority 0; policy accept;
+	}
+}
+{% endhighlight %}
+
+Penjelasan perbaris file nftables.conf
+
+{% highlight text %}
+#!/usr/sbin/nft -f
+{% endhighlight %}
+
+Baris pertama ini menunjukan kalau file ini adalah file configurasi nftables.
+
+{% highlight text %}
+flush ruleset
+{% endhighlight %}
+
+Reset semua ruleset yang telah ada sebelumnya.
+
+{% highlight text %}
+table ip filter {
+}
+{% endhighlight %}
+
+Pembuatan table filter
+
+{% highlight text %}
+	chain INPUT {
+	}
+{% endhighlight %}
+
+Pembuatan Chain INPUT
+
+{% highlight text %}
+		type filter hook input priority 0; policy drop;
+{% endhighlight %}
+
+Default Drop policy, sehingga semua paket secara default di blokir
+
+{% highlight text %}
+		ct state established,related accept
+{% endhighlight %}
+
+kecuali paket yang datang sebagai balasan dari paket yang berasal dari
+dalam (Laptop) yang mana hal ini biasa di sebut
+stateful firewall.
+
+{% highlight text %}
+		iifname $lo_if accept
+{% endhighlight %}
+
+Izinkan paket dari localhost
+
+{% highlight text %}
+	chain FORWARD {
+		type filter hook forward priority 0; policy drop;
+	}
+{% endhighlight %}
+
+Blokir perpindahan paket dari satu interface ke interface lainnya.
+
+{% highlight text %}
+	chain OUTPUT {
+		type filter hook output priority 0; policy accept;
+	}
+{% endhighlight %}
+
+Izinkan paket keluar menuju internet.
+
+Kemudian, pastikan bahwa nftables berjalan di sistem kita. kita
+mengeceknya dengan systemctl.
+
+{% highlight text %}
+$ sudo systemctl status nftables
+● nftables.service - nftables
+   Loaded: loaded (/lib/systemd/system/nftables.service; enabled; vendor preset: enabled)
+   Active: active (exited) since Wed 2019-12-25 08:50:56 WITA; 49min ago
+     Docs: man:nft(8)
+           http://wiki.nftables.org
+  Process: 416 ExecStart=/usr/sbin/nft -f /etc/nftables.conf (code=exited, status=0/SUCCESS)
+ Main PID: 416 (code=exited, status=0/SUCCESS)
+
+Dec 25 08:50:56 E202SA systemd[1]: Started nftables.
+Warning: Journal has been rotated since unit was started. Log output is incomplete or unavailable.
+{% endhighlight %}
+
+Terlihat kalau nftables telah berjalan dan aktif saat setiap booting.
+
+Terakhir, untuk mengecek ruleset yang sedang berjalan, kita menggunakan
+perintah nft:
+
+{% highlight text %}
+$ sudo nft list ruleset
+table ip filter {
+	chain INPUT {
+		type filter hook input priority 0; policy drop;
+		ct state established,related accept
+		iifname "lo" accept
+	}
+
+	chain FORWARD {
+		type filter hook forward priority 0; policy drop;
+	}
+
+	chain OUTPUT {
+		type filter hook output priority 0; policy accept;
+	}
+}
+{% endhighlight %}
+
+Demikian penjelasan sederhana tentang nftables ini, semoga bermanfaat.
+
+# Alhamdulillah
