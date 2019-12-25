@@ -109,7 +109,7 @@ echo "iptables firewall is up `date`"
 
 IPTables ini telah pernah saya jelaskan fungsi basic nya
 [disini](https://www.muntaza.id/linux/2019/10/19/iptables.html), kemudian
-baris-baris tambahan akan saya jelaskan di bawah ini
+baris-baris tambahan akan saya jelaskan di bawah ini:
 
 {% highlight text %}
 #Izin Packet Forwarding
@@ -137,7 +137,7 @@ Rules IPTables untuk mengizinkan perpindahan Paket antar interface.
 
 - Test Koneksi dari Virtual Mesin Operating System OpenBSD
 
-Saya malakukan ping ke 8.8.8.8 dari Virtual Mesin dan Alhamdulillah
+Saya melakukan ping ke 8.8.8.8 dari Virtual Mesin dan Alhamdulillah
 berhasil.
 
 ![Gambar3](/assets/virtualbox3.png)
