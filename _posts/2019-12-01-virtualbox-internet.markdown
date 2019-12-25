@@ -21,7 +21,7 @@ Hal penting yang harus ada di mesin virtual tersebut, adalah koneksi
 internet. Sehingga, seolah-olah Laptop saya berfungsi sebagai
 gateway ke internet bagi mesin virtual tadi.
 
-1. Buat interface [tuntap](https://en.wikipedia.org/wiki/TUN/TAP).
+- Buat interface [tuntap](https://en.wikipedia.org/wiki/TUN/TAP).
 
 Saya menggunakan script ip_tap11.sh yang saya letakkan di ~/bin, berikut
 isi script tersebut:
@@ -55,7 +55,7 @@ $ sudo sh ~/bin/ip_tap11.sh
 Terlihat bahwa interface tap11 yang akan digunakan untuk bridge ke Virtualbox
 sudah ready.
 
-2. Setting di Mesin Virtual
+- Setting di Mesin Virtual
 
 Klik "Settings" -> "Network" -> "Bridged Adapter", pilih interface tap11
 seperti gambar dibawah ini:
@@ -64,27 +64,60 @@ seperti gambar dibawah ini:
 
 ![Gambar2](/assets/virtualbox2.png)
 
+- Setting Gateway
 
-
-{% highlight text %}
-{% endhighlight %}
-
-{% highlight text %}
-{% endhighlight %}
+Kita bisa menggunakan IPTables agar packet bisa berpindah dari interface
+wireless LAN wlp1s0 ke interface tap11. Berikut isi script ~/bin/iptables_nat.sh
 
 {% highlight text %}
+#! /bin/bash
+echo "jalankan firewall"
+
+IPTABLES=/sbin/iptables
+INT_IF=tap11
+EXT_IF=wlp1s0
+
+$IPTABLES -F
+$IPTABLES -X
+
+#Aturan default
+$IPTABLES -P FORWARD DROP
+$IPTABLES -P OUTPUT ACCEPT
+$IPTABLES -P INPUT DROP
+
+#Izin localhost
+$IPTABLES -A INPUT -i lo -j ACCEPT
+$IPTABLES -A INPUT -i $INT_IF -j ACCEPT
+
+#Izin Packet dengan tanda ESTABLISHED
+$IPTABLES -I INPUT 1 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+
+
+#Izin Packet Forwarding
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+
+#Table NAT
+/sbin/iptables -t nat -A POSTROUTING -o $EXT_IF -j MASQUERADE
+/sbin/iptables -A FORWARD -i $EXT_IF -o $INT_IF -m conntrack \
+   --ctstate RELATED,ESTABLISHED -j ACCEPT
+/sbin/iptables -A FORWARD -i $INT_IF -o $EXT_IF -j ACCEPT
+
+echo
+echo "iptables firewall is up `date`"
 {% endhighlight %}
 
-{% highlight text %}
-{% endhighlight %}
+Penjelasan tentang script iptables_nat.sh ini, insyaAllah, akan
+saya tulis pada kesempatan yang akan datang.
 
-{% highlight text %}
-{% endhighlight %}
+- Test Koneksi dari Virtual Mesin Operating System OpenBSD
 
-{% highlight text %}
-{% endhighlight %}
+Saya malakukan ping ke 8.8.8.8 dari Virtual Mesin dan Alhamdulillah
+berhasil.
 
-{% highlight text %}
-{% endhighlight %}
+![Gambar3](/assets/virtualbox3.png)
+
+Demikian penjelasan terkait koneksi dari Virtualbox ke Internet ini,
+semoga bermanfaat.
 
 # Alhamdulillah
