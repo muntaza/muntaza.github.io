@@ -107,8 +107,33 @@ echo
 echo "iptables firewall is up `date`"
 {% endhighlight %}
 
-Penjelasan tentang script iptables_nat.sh ini, insyaAllah, akan
-saya tulis pada kesempatan yang akan datang.
+IPTables ini telah pernah saya jelaskan fungsi basic nya
+[disini](https://www.muntaza.id/linux/2019/10/19/iptables.html), kemudian
+baris-baris tambahan akan saya jelaskan di bawah ini
+
+{% highlight text %}
+#Izin Packet Forwarding
+echo 1 > /proc/sys/net/ipv4/ip_forward
+{% endhighlight %}
+
+Aktifkan perpindahan paket dari satu interface ke interface lainnya,
+pada contoh ini dari wlp1s0 ke tap11 dan sebaliknya di sisi kernel, hal
+ini wajib, karena walaupun packet forwarding aktif di level IPTables, namun
+belum aktif di kernel, maka paket tidak akan bisa berpindah antar interface.
+
+{% highlight text %}
+/sbin/iptables -t nat -A POSTROUTING -o $EXT_IF -j MASQUERADE
+{% endhighlight %}
+
+Aktifkan [NAT](https://en.wikipedia.org/wiki/Network_address_translation) pada interface wlp1s0.
+
+{% highlight text %}
+/sbin/iptables -A FORWARD -i $EXT_IF -o $INT_IF -m conntrack \
+   --ctstate RELATED,ESTABLISHED -j ACCEPT
+/sbin/iptables -A FORWARD -i $INT_IF -o $EXT_IF -j ACCEPT
+{% endhighlight %}
+
+Rules IPTables untuk mengizinkan perpindahan Paket antar interface.
 
 - Test Koneksi dari Virtual Mesin Operating System OpenBSD
 
