@@ -7,7 +7,7 @@ categories: virtualbox
 
 # Bismillah,
 
-[Virtualbox]() saya gunakan untuk menginstall Operating System saat
+[Virtualbox](https://www.virtualbox.org/) saya gunakan untuk menginstall Operating System saat
 saya mengembangkan aplikasi. Hal ini agar Laptop yang saya gunakan
 dapat tetap dapat melakukan hal lain di luar programming, misalnya
 mengetik surat dengan Libreoffice.
@@ -21,7 +21,7 @@ Hal penting yang harus ada di mesin virtual tersebut, adalah koneksi
 internet. Sehingga, seolah-olah Laptop saya berfungsi sebagai
 gateway ke internet bagi mesin virtual tadi.
 
-1. Buat interface bridge.
+1. Buat interface [tuntap](https://en.wikipedia.org/wiki/TUN/TAP).
 
 Saya menggunakan script ip_tap11.sh yang saya letakkan di ~/bin, berikut
 isi script tersebut:
