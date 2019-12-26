@@ -154,3 +154,11 @@ table ip filter {
 Demikian penjelasan sederhana tentang nftables ini, semoga bermanfaat.
 
 # Alhamdulillah
+
+
+Daftar Pustaka
+- [Debian Linux: nftables](https://wiki.debian.org/nftables)
+- [Moving from iptables to nftables](https://wiki.nftables.org/wiki-nftables/index.php/Moving_from_iptables_to_nftables)
+- [Using nftables in Red Hat Enterprise Linux 8](https://www.redhat.com/en/blog/using-nftables-red-hat-enterprise-linux-8)
+- [Redhat: Chapter 30. Getting started with nftables](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-nftables_configuring-and-managing-networking)
+- [Arch Linux: nftables](https://wiki.archlinux.org/index.php/Nftables)
