@@ -11,8 +11,10 @@ Ini adalah lanjutan dari tulisan saya yang
 [pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html)
 tentang [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page).
 Pada bagian kedua ini, akan
-saya contohkan penggunaan nftables sebagai firewall sekaligus
-gateway ke internet bagi localnet. Localnet di sini, masih menggunakan
+saya contohkan penggunaan nftables sebagai
+[firewall](https://en.wikipedia.org/wiki/Firewall_(computing)) sekaligus
+[gateway](https://en.wikipedia.org/wiki/Router_(computing))
+ke internet bagi localnet. Localnet di sini, masih menggunakan
 virtual mesin di
 [Virtualbox](https://www.muntaza.id/virtualbox/2019/12/01/virtualbox-internet.html).
 Berikut ini script
