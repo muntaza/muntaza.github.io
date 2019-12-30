@@ -62,10 +62,50 @@ Setting alias pada repository
 
 ![Gambar3](/assets/github2.png)
 
-
-
 # UPDATE 31 Maret 2019
 website pindah alamat ke [https://www.muntaza.id](https://www.muntaza.id)
+
+# Fitur lain Jekyll
+
+- Generate seluruh website untuk di letakkan di Apache Root Directory
+
+Kita bisa menggunakan perintah build, sehingga seluruh website
+di generate dan tinggal meletakkan folder tersebut di Apache Root Direktory.
+Contoh penggunaannya:
+
+{% highlight text %}
+$ ~/.gem/ruby/2.6.0/bin/jekyll build -d www.muntaza.id
+Configuration file: /home/muntaza/working/muntaza.github.io/_config.yml
+            Source: /home/muntaza/working/muntaza.github.io
+       Destination: /home/muntaza/working/muntaza.github.io/www.muntaza.id
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 3.921 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+{% endhighlight %}
+
+- Serve Jekyll dengan local webservice
+
+Jekyll datang dengan webserver bawaannya, yang bisa kita gunakan 
+untuk mengetest hasil editan/postingan kita, sebelum di publish
+di internet. Kita bisa mengakses ke http://localhost:4000
+
+Berikut ini contohnya:
+
+{% highlight text %}
+$ ~/.gem/ruby/2.6.0/bin/jekyll serve --trace
+Configuration file: /home/muntaza/working/muntaza.github.io/_config.yml
+            Source: /home/muntaza/working/muntaza.github.io
+       Destination: /home/muntaza/working/muntaza.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 4.333 seconds.
+ Auto-regeneration: enabled for '/home/muntaza/working/muntaza.github.io'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+{% endhighlight %}
+
+Sekian dan semoga bermanfaat.
 
 # Alhamdulillah
 
