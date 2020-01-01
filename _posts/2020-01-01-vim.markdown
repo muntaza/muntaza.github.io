@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "Vim sebagai Python IDE"
+date:   2020-01-01 10:26:56 +0800
+categories: vim
+---
+
+# Bismillah,
+
+Saya ingin memudahkan pengguna Vim dalam mengedit file Bahasa
+Pemprograman Python, sehingga saya mengupload ke github
+setting yang saya gunakan di
+[.vimrc](https://github.com/muntaza/Catatan-Muntaza/blob/master/_vimrc)
+dan plugin/syntax di
+direktori [.vim](https://github.com/muntaza/Catatan-Muntaza/tree/master/_vim)
+
+saya sudah sediakan pada link di atas, tinggal di clone dan di
+rename ke home direktori. contohnya:
+
+{% highlight text %}
+muntaza@E202SA:~$ cd /tmp/
+muntaza@E202SA:/tmp$ git clone https://github.com/muntaza/Catatan-Muntaza.git
+Cloning into 'Catatan-Muntaza'...
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 591 (delta 2), reused 22 (delta 2), pack-reused 568
+Receiving objects: 100% (591/591), 758.59 KiB | 403.00 KiB/s, done.
+Resolving deltas: 100% (177/177), done.
+muntaza@E202SA:/tmp$
+muntaza@E202SA:/tmp$ cp -r Catatan-Muntaza/_vim ~/.vim
+muntaza@E202SA:/tmp$ cp -r Catatan-Muntaza/_vimrc ~/.vimrc
+{% endhighlight %}
+
+Berikut tampilannya saat melakukan _autocomplete_:
+
+![gambar](/assets/vim.png)
+
+![gambar2](/assets/vim2.png)
+
+Ini tampilan dengan merubah warnanya menjadi _Chasing_Logic_
+dengan perintah:
+
+{% highlight text %}
+:colo Chasing_Logic
+{% endhighlight %}
+
+![gambar3](/assets/vim3.png)
+
+Semoga bermanfaat.
+
+# Alhamdulillah
