@@ -7,7 +7,9 @@ categories: jekyll
 
 # Bismillah,
 
-Catatan singkat instalasi jekyll pada Arch Linux. Pertama kita install dulu ruby
+Catatan singkat instalasi 
+[jekyll](https://www.muntaza.id/kisah/2018/12/04/github-pages-jekyll.html) 
+pada Arch Linux. Pertama kita install dulu ruby
 yang akan turut menginstall rubygem.
 
 {% highlight text %}
