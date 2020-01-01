@@ -9,10 +9,9 @@ categories: vim
 
 Saya ingin memudahkan pengguna Vim dalam mengedit file Bahasa
 Pemprograman Python, sehingga saya mengupload ke github
-setting yang saya gunakan di
-[.vimrc](https://github.com/muntaza/Catatan-Muntaza/blob/master/_vimrc)
-dan plugin/syntax di
-direktori [.vim](https://github.com/muntaza/Catatan-Muntaza/tree/master/_vim)
+setting yang saya gunakan di 
+[vim_python](https://github.com/muntaza/vim_python)
+
 
 Saya tegaskan di sini, bahwa file-file plugin, syntax, color dan lainnya di direktori
 .vim tersebut bukanlah buatan saya pribadi, melainkan saya
@@ -26,17 +25,19 @@ rename ke home direktori. contohnya:
 
 {% highlight text %}
 muntaza@E202SA:~$ cd /tmp/
-muntaza@E202SA:/tmp$ git clone https://github.com/muntaza/Catatan-Muntaza.git
-Cloning into 'Catatan-Muntaza'...
-remote: Enumerating objects: 23, done.
-remote: Counting objects: 100% (23/23), done.
-remote: Compressing objects: 100% (17/17), done.
-remote: Total 591 (delta 2), reused 22 (delta 2), pack-reused 568
-Receiving objects: 100% (591/591), 758.59 KiB | 403.00 KiB/s, done.
-Resolving deltas: 100% (177/177), done.
-muntaza@E202SA:/tmp$
-muntaza@E202SA:/tmp$ cp -r Catatan-Muntaza/_vim ~/.vim
-muntaza@E202SA:/tmp$ cp -r Catatan-Muntaza/_vimrc ~/.vimrc
+muntaza@E202SA:/tmp$ git clone git@github.com:muntaza/vim_python.git
+Cloning into 'vim_python'...
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 21 (delta 2), reused 17 (delta 0), pack-reused 0
+Receiving objects: 100% (21/21), 30.90 KiB | 120.00 KiB/s, done.
+Resolving deltas: 100% (2/2), done.
+muntaza@E202SA:/tmp$ 
+muntaza@E202SA:/tmp$ cd vim_python/
+muntaza@E202SA:/tmp/vim_python$ cp -r _vim ~/.vim
+muntaza@E202SA:/tmp/vim_python$ cp -r _vimrc ~/.vimrc
+muntaza@E202SA:/tmp/vim_python$ 
 {% endhighlight %}
 
 Berikut tampilannya saat melakukan _autocomplete_:
