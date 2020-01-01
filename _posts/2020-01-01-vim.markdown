@@ -14,7 +14,13 @@ setting yang saya gunakan di
 dan plugin/syntax di
 direktori [.vim](https://github.com/muntaza/Catatan-Muntaza/tree/master/_vim)
 
-saya sudah sediakan pada link di atas, tinggal di clone dan di
+Saya tegaskan di sini, bahwa file-file plugin, syntax, color dan lainnya di direktori
+.vim tersebut dan file .vimrc bukanlah buatan saya pribadi, melainkan saya
+hanya mendownload dari internet dan pada masing-masing file ada nama pembuatnya.
+
+Kemudian, file .vimrc saya edit untuk menyesuaikan dengan kebutuhan saya.
+
+Saya sudah sediakan pada link di atas, tinggal di clone dan di
 rename ke home direktori. contohnya:
 
 {% highlight text %}
