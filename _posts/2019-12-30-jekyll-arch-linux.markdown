@@ -25,8 +25,8 @@ OK, jekyll sudah terinstall, lalu disini saya tuliskan daftar referensi untuk
 menulis dengan _markdown_ yang digunakan untuk memformat tulisan di jekyll.
 1.  [Jekyllrb: Posts](https://jekyllrb.com/docs/posts/)
 2.  [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-3.  [Markdownguide: Basic Syntax](https://www.markdownguide.org/basic-syntax)
-4.  [Daringfireball: Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)
+3.  [Markdown Guide: Basic Syntax](https://www.markdownguide.org/basic-syntax)
+4.  [Daring Fireball: Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)
 
 Sekian, semoga bermanfaat.
 
