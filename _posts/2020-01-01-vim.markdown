@@ -15,10 +15,11 @@ dan plugin/syntax di
 direktori [.vim](https://github.com/muntaza/Catatan-Muntaza/tree/master/_vim)
 
 Saya tegaskan di sini, bahwa file-file plugin, syntax, color dan lainnya di direktori
-.vim tersebut dan file .vimrc bukanlah buatan saya pribadi, melainkan saya
+.vim tersebut bukanlah buatan saya pribadi, melainkan saya
 hanya mendownload dari internet dan pada masing-masing file ada nama pembuatnya.
 
-Kemudian, file .vimrc saya edit untuk menyesuaikan dengan kebutuhan saya.
+Kemudian, file .vimrc saya edit untuk menyesuaikan dengan kebutuhan saya. Pada
+bagian daftar pustaka, akan saya lampirkan daftar link sumber penulisan ini.
 
 Saya sudah sediakan pada link di atas, tinggal di clone dan di
 rename ke home direktori. contohnya:
@@ -56,3 +57,13 @@ dengan perintah:
 Semoga bermanfaat.
 
 # Alhamdulillah
+
+
+__Daftar Pustaka__
+1 [VIM as Python IDE](https://200ok.ch/posts/vim-as-python-ide.html)
+2 [pythoncomplete : Python Omni Completion](https://www.vim.org/scripts/script.php?script_id=1542)
+3 [SuperTab : Do all your insert-mode completion with Tab.](https://www.vim.org/scripts/script.php?script_id=1643)
+4 [VIM: Display line numbers](https://vim.fandom.com/wiki/Display_line_numbers)
+5 [ruler VIM Command](https://www.hscripts.com/tutorials/vim-commands/ruler.html)
+6 [AutoClose : Inserts matching bracket, paren, brace or quote](https://www.vim.org/scripts/script.php?script_id=1849)
+7 [Cobalt Color Scheme for Vim](https://github.com/gkjgh/cobalt)
