@@ -26,7 +26,7 @@ latter case the central directory and zipfile comment will be found on
 the last disk(s) of this archive.
 {% endhighlight %}
 
-note: contoh.zip may be a plain executable, not an archive
+note: contoh.zip may be a plain executable, not an archive  
 unzip: cannot find zipfile directory in one of contoh.zip or
 contoh.zip.zip, and cannot find contoh.zip.ZIP, period.
 
