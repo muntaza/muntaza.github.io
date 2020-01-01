@@ -68,3 +68,4 @@ __Daftar Pustaka__:
 - [ruler VIM Command](https://www.hscripts.com/tutorials/vim-commands/ruler.html)
 - [AutoClose : Inserts matching bracket, paren, brace or quote](https://www.vim.org/scripts/script.php?script_id=1849)
 - [Cobalt Color Scheme for Vim](https://github.com/gkjgh/cobalt)
+- [Chasing_Logic Color Scheme for Vim](https://github.com/flazz/vim-colorschemes/blob/master/colors/Chasing_Logic.vim)
