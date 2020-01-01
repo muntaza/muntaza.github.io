@@ -59,11 +59,12 @@ Semoga bermanfaat.
 # Alhamdulillah
 
 
-__Daftar Pustaka__
-1 [VIM as Python IDE](https://200ok.ch/posts/vim-as-python-ide.html)
-2 [pythoncomplete : Python Omni Completion](https://www.vim.org/scripts/script.php?script_id=1542)
-3 [SuperTab : Do all your insert-mode completion with Tab.](https://www.vim.org/scripts/script.php?script_id=1643)
-4 [VIM: Display line numbers](https://vim.fandom.com/wiki/Display_line_numbers)
-5 [ruler VIM Command](https://www.hscripts.com/tutorials/vim-commands/ruler.html)
-6 [AutoClose : Inserts matching bracket, paren, brace or quote](https://www.vim.org/scripts/script.php?script_id=1849)
-7 [Cobalt Color Scheme for Vim](https://github.com/gkjgh/cobalt)
+__Daftar Pustaka__:
+
+- [VIM as Python IDE](https://200ok.ch/posts/vim-as-python-ide.html)
+- [pythoncomplete : Python Omni Completion](https://www.vim.org/scripts/script.php?script_id=1542)
+- [SuperTab : Do all your insert-mode completion with Tab.](https://www.vim.org/scripts/script.php?script_id=1643)
+- [VIM: Display line numbers](https://vim.fandom.com/wiki/Display_line_numbers)
+- [ruler VIM Command](https://www.hscripts.com/tutorials/vim-commands/ruler.html)
+- [AutoClose : Inserts matching bracket, paren, brace or quote](https://www.vim.org/scripts/script.php?script_id=1849)
+- [Cobalt Color Scheme for Vim](https://github.com/gkjgh/cobalt)
