@@ -66,6 +66,10 @@ int main() {
 
 Pada kedua program ini, konstanta Harus di isi, bila fungsi itu adalah f(x)=X^3, berarti konstantanya bernilai 1.
 
+Contoh penggunaan program ini:
+
+![kalkulus](/assets/turunan.jpg)
+
 Semoga Allah Rabbuna Jalla Wa ‘Ala Mengkaruniakan kepada saya rezeki yang saya harapkan. Aamiin
 
 ditulis oleh: Al faqir ilaa maghfirati rabbihi Abu Muhammad Muhammad Muntaza bin Hatta
