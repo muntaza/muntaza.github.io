@@ -55,6 +55,21 @@ dengan perintah:
 
 ![gambar3](/assets/vim3.png)
 
+
+# Permindahan Mode Completion
+
+-   Perpindahan dari mode Any Word Completion ke Omni Completion:
+    ```text
+    Ctrl+x  Ctrl+o
+    ```
+
+-   Perpindahan dari mode Omni Completion ke Any Word Completion:
+    ```text
+    Ctrl+x  Ctrl+n
+    ```
+
+
+
 Semoga bermanfaat.
 
 # Alhamdulillah
@@ -70,3 +85,4 @@ __Daftar Pustaka__:
 - [AutoClose : Inserts matching bracket, paren, brace or quote](https://www.vim.org/scripts/script.php?script_id=1849)
 - [Cobalt Color Scheme for Vim](https://github.com/gkjgh/cobalt)
 - [Chasing_Logic Color Scheme for Vim](https://github.com/flazz/vim-colorschemes/blob/master/colors/Chasing_Logic.vim)
+- [Any word completion](https://vim.fandom.com/wiki/Any_word_completion)
