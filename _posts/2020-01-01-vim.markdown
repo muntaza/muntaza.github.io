@@ -56,7 +56,7 @@ dengan perintah:
 ![gambar3](/assets/vim3.png)
 
 
-# Permindahan Mode Completion
+__Permindahan Mode Completion__
 
 -   Perpindahan dari mode Any Word Completion ke Omni Completion:
     ```text
