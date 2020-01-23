@@ -51,14 +51,25 @@ dan [kedua](https://www.muntaza.id/nftables/2019/12/16/nftables-kedua.html).
 Pendefinisian IP yang berasal dari Indonesia
 
 {% highlight text %}
-	chain input {
+	chain INPUT {
 		type filter hook input priority 0; policy drop;
-		iifname "lo" accept
-		ct state { established, related } accept
+		ct state established,related accept
+		iifname $lo_if accept
+		ip saddr @ip_world drop
+		tcp dport { ssh, http } ct state new accept
 		ip saddr @ip_indonesia accept
-		ip protocol icmp accept
-		tcp dport { ssh, http, https } ct state new accept
-		drop
+	}
+
+	chain FORWARD {
+		type filter hook forward priority 0; policy drop;
+	}
+
+	chain OUTPUT {
+		type filter hook output priority 0; policy drop;
+		ct state established,related accept
+		iifname $lo_if accept
+		ip daddr @ip_world drop
+		ip daddr @ip_output accept
 	}
 {% endhighlight %}
 
