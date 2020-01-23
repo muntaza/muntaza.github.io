@@ -80,6 +80,7 @@ Izinkan localhost
 Semua IP secara default di tolak
 
 > tcp dport { ssh, http } ct state new accept
+
 > ip saddr @ip_indonesia accept
 
 Izinkan akses ke port 22 dan port 80 hanya dari IP
