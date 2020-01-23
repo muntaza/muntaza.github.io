@@ -59,11 +59,34 @@ Pendefinisian IP yang berasal dari Indonesia
 		tcp dport { ssh, http } ct state new accept
 		ip saddr @ip_indonesia accept
 	}
+{% endhighlight %}
 
-	chain FORWARD {
-		type filter hook forward priority 0; policy drop;
-	}
+Chain input, rinciannya sebagai berikut:
 
+> type filter hook input priority 0; policy drop;
+
+Default Deny, blok semua koneksi masuk secara default
+
+> ct state established,related accept
+
+Terima Koneksi balasan yang berasal dari dalam
+
+> iifname $lo_if accept
+
+Izinkan localhost
+
+> ip saddr @ip_world drop
+
+Semua IP secara default di tolak
+
+> tcp dport { ssh, http } ct state new accept
+> ip saddr @ip_indonesia accept
+
+Izinkan akses ke port 22 dan port 80 hanya dari IP
+yang berasal dari Indonesia.
+
+
+{% highlight text %}
 	chain OUTPUT {
 		type filter hook output priority 0; policy drop;
 		ct state established,related accept
@@ -73,36 +96,8 @@ Pendefinisian IP yang berasal dari Indonesia
 	}
 {% endhighlight %}
 
-Chain input, rinciannya sebagai berikut:
-
-
-> type filter hook input priority 0; policy drop;
-
-Default Deny, semua paket ditolak secara default
-
-> iifname "lo" accept
-
-Izinkan interface lo
-
-> ct state { established, related } accept
-
-Izinkan paket balasan
-
-> ip saddr @ip_indonesia accept
-
-Izinkan IP dari Indonesia
-
-> ip protocol icmp accept
-
-Izinkan ping masuk
-
-> tcp dport { ssh, http, https } ct state new accept
-
-Port yang di buka adalah port 22, 80, dan 443
-
-> drop
-
-selain dari itu, maka akses ditolak
+Untuk chain output, secara ringkas bahwa semua koneksi ke seluruh
+IP di tolak, kecuali IP yang di definisikan di kolom ip_output.
 
 Nah, sekian dulu dari saya, semoga bisa di lanjutkan ke tingkat
 yang lebih tinggi dan semoga bermanfaat, aamiin.
