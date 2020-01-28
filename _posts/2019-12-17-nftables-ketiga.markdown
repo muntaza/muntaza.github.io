@@ -55,9 +55,8 @@ Pendefinisian IP yang berasal dari Indonesia
 		type filter hook input priority 0; policy drop;
 		ct state established,related accept
 		iifname $lo_if accept
-		ip saddr @ip_world drop
-		tcp dport { ssh, http } ct state new accept
-		ip saddr @ip_indonesia accept
+		ip saddr @ip_indonesia tcp dport { ssh, http } ct state new accept
+		drop
 	}
 {% endhighlight %}
 
@@ -75,16 +74,30 @@ Terima Koneksi balasan yang berasal dari dalam
 
 Izinkan localhost
 
-> ip saddr @ip_world drop
-
-Semua IP secara default di tolak
-
-> tcp dport { ssh, http } ct state new accept
-
-> ip saddr @ip_indonesia accept
+> ip saddr @ip_indonesia tcp dport { ssh, http } ct state new accept
 
 Izinkan akses ke port 22 dan port 80 hanya dari IP
 yang berasal dari Indonesia.
+
+> drop
+
+Blok semua IP lainnya.
+
+NFTables ini memiliki prinsip __The first rule to match is the "winner"__, yaitu
+perintah pertama yang sesuai, itu yang akan langsung di jalankan, sehingga
+kita tempatkan perintah _drop_ pada bagian paling bawah, yang berarti
+semua yang tidak sesuai rule di atas nya akan di blok.
+
+Kalau kita tempatkan perintah _drop_ di atas, maka semua koneksi 
+di blok dan NFTables tidak membaca lagi rule di bawah nya.
+
+Dari Contoh Di atas, saat IP berasal dari Indonesia, maka akan sesuai
+dengan rule:
+
+> ip saddr @ip_indonesia tcp dport { ssh, http } ct state new accept
+
+maka IP Indonesia di izinkan, sedangkan seluruh IP lain, tidak _match_ dengan rule
+tersebut, sehingga  terkena rule __drop__.
 
 
 {% highlight text %}
@@ -92,13 +105,54 @@ yang berasal dari Indonesia.
 		type filter hook output priority 0; policy drop;
 		ct state established,related accept
 		iifname $lo_if accept
-		ip daddr @ip_world drop
 		ip daddr @ip_output accept
+		drop
 	}
 {% endhighlight %}
 
 Untuk chain output, secara ringkas bahwa semua koneksi ke seluruh
 IP di tolak, kecuali IP yang di definisikan di kolom ip_output.
+
+Untuk daftar IP yang masuk ke <@ip_output> maka di contoh ini
+saya masukkan IP DNS Google, IP localhost, IP deb.debian.org
+dan IP securty.debian.org
+
+Secara detailnya, sebagai berikut:
+
+> type filter hook output priority 0; policy drop;
+
+Default Deny, Blok semua koneksi keluar. Fitur ini untuk mencegah
+serangan reverse ssh.
+
+> ct state established,related accept
+
+Ini untuk koneksi dari luar, saat ada paket balasan dari dalam,
+maka paket balasan tersebut perlu izin keluar, padahal semua koneksi
+secara default kita blok, sehingga perlu rule ini. Dengan rule ini,
+paket balasan dari dalam untuk koneksi _awal_ dari luar bisa lewat.
+
+Ini lah bedanya dengan fitur __keep state__ pada OpenBSD PF, yang mana 
+pada fitur itu, koneksi balasan langsung bisa melewati firewall tanpa 
+mendefinisikan secara tersendiri di rule output.
+
+> iifname $lo_if accept
+
+Izinkan localhost. Saya masih heran dengan baris ini he..he.. karena
+saya masih saja perlu menuliskan IP 127.0.0.1 di ip_output, sehingga
+seakan-akan rule ini tidak diperlukan. Ada komentar?
+
+Beda dengan rule di OpenBSD PF __pass on lo__ yang secara meyakinkan 
+meloloskan semua paket di _lo_. Perkiraan saya adalah OpenBSD PF menterjemahkan
+__pass on lo__ itu sebagai "izinkan semua IP yang di letakkan di interface __lo__".
+
+> ip daddr @ip_output accept
+
+Izinkan koneksi keluar, dari dalam, menuju daftar IP di table ip_output.
+Hal ini akan saya coba jelaskan di tulisan berikutnya tentang NFTables, InsyaAllah.
+
+> drop
+
+Semua koneksi lain di blok.
 
 Nah, sekian dulu dari saya, semoga bisa di lanjutkan ke tingkat
 yang lebih tinggi dan semoga bermanfaat, aamiin.
