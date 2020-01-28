@@ -115,7 +115,7 @@ IP di tolak, kecuali IP yang di definisikan di kolom ip_output.
 
 Untuk daftar IP yang masuk ke <@ip_output> maka di contoh ini
 saya masukkan IP DNS Google, IP localhost, IP deb.debian.org
-dan IP
+dan IP securty.debian.org
 
 Nah, sekian dulu dari saya, semoga bisa di lanjutkan ke tingkat
 yang lebih tinggi dan semoga bermanfaat, aamiin.
