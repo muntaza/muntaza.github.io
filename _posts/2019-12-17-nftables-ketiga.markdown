@@ -55,9 +55,8 @@ Pendefinisian IP yang berasal dari Indonesia
 		type filter hook input priority 0; policy drop;
 		ct state established,related accept
 		iifname $lo_if accept
-		ip saddr @ip_world drop
-		tcp dport { ssh, http } ct state new accept
-		ip saddr @ip_indonesia accept
+		ip saddr @ip_indonesia tcp dport { ssh, http } ct state new accept
+		drop
 	}
 {% endhighlight %}
 
@@ -75,16 +74,30 @@ Terima Koneksi balasan yang berasal dari dalam
 
 Izinkan localhost
 
-> ip saddr @ip_world drop
-
-Semua IP secara default di tolak
-
-> tcp dport { ssh, http } ct state new accept
-
-> ip saddr @ip_indonesia accept
+> ip saddr @ip_indonesia tcp dport { ssh, http } ct state new accept
 
 Izinkan akses ke port 22 dan port 80 hanya dari IP
 yang berasal dari Indonesia.
+
+> drop
+
+Blok semua IP lainnya.
+
+NFTables ini memiliki prinsip __The first rule to match is the "winner"__, yaitu
+perintah pertama yang sesuai, itu yang akan langsung di jalankan, sehingga
+kita tempatkan perintah _drop_ pada bagian paling bawah, yang berarti
+semua yang tidak sesuai rule di atas nya akan di blok.
+
+Kalau kita tempatkan perintah _drop_ di atas, maka semua koneksi 
+di blok dan NFTables tidak membaca lagi rule di bawah nya.
+
+Dari Contoh Di atas, saat IP berasal dari Indonesia, maka akan sesuai
+dengan rule:
+
+> ip saddr @ip_indonesia tcp dport { ssh, http } ct state new accept
+
+maka IP Indonesia di izinkan, sedangkan seluruh IP lain, tidak _match_ dengan rule
+tersebut, sehingga  terkena rule __drop__.
 
 
 {% highlight text %}
@@ -92,13 +105,17 @@ yang berasal dari Indonesia.
 		type filter hook output priority 0; policy drop;
 		ct state established,related accept
 		iifname $lo_if accept
-		ip daddr @ip_world drop
 		ip daddr @ip_output accept
+		drop
 	}
 {% endhighlight %}
 
 Untuk chain output, secara ringkas bahwa semua koneksi ke seluruh
 IP di tolak, kecuali IP yang di definisikan di kolom ip_output.
+
+Untuk daftar IP yang masuk ke <@ip_output> maka di contoh ini
+saya masukkan IP DNS Google, IP localhost, IP deb.debian.org
+dan IP
 
 Nah, sekian dulu dari saya, semoga bisa di lanjutkan ke tingkat
 yang lebih tinggi dan semoga bermanfaat, aamiin.
