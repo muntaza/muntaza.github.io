@@ -117,6 +117,43 @@ Untuk daftar IP yang masuk ke <@ip_output> maka di contoh ini
 saya masukkan IP DNS Google, IP localhost, IP deb.debian.org
 dan IP securty.debian.org
 
+Secara detailnya, sebagai berikut:
+
+> type filter hook output priority 0; policy drop;
+
+Default Deny, Blok semua koneksi keluar. Fitur ini untuk mencegah
+serangan reverse ssh.
+
+> ct state established,related accept
+
+Ini untuk koneksi dari luar, saat ada paket balasan dari dalam,
+maka paket balasan tersebut perlu izin keluar, padahal semua koneksi
+secara default kita blok, sehingga perlu rule ini. Dengan rule ini,
+paket balasan dari dalam untuk koneksi _awal_ dari luar bisa lewat.
+
+Ini lah bedanya dengan fitur __keep state__ pada OpenBSD PF, yang mana 
+pada fitur itu, koneksi balasan langsung bisa melewati firewall tanpa 
+mendefinisikan secara tersendiri di rule output.
+
+> iifname $lo_if accept
+
+Izinkan localhost. Saya masih heran dengan baris ini he..he.. karena
+saya masih saja perlu menuliskan IP 127.0.0.1 di ip_output, sehingga
+seakan-akan rule ini tidak diperlukan. Ada komentar?
+
+Beda dengan rule di OpenBSD PF __pass on lo__ yang secara meyakinkan 
+meloloskan semua paket di _lo_. Perkiraan saya adalah OpenBSD PF menterjemahkan
+__pass on lo__ itu sebagai "izinkan semua IP yang di letakkan di interface __lo__".
+
+> ip daddr @ip_output accept
+
+Izinkan koneksi keluar, dari dalam, menuju daftar IP di table ip_output.
+Hal ini akan saya coba jelaskan di tulisan berikutnya tentang NFTables, InsyaAllah.
+
+> drop
+
+Semua koneksi lain di blok.
+
 Nah, sekian dulu dari saya, semoga bisa di lanjutkan ke tingkat
 yang lebih tinggi dan semoga bermanfaat, aamiin.
 
