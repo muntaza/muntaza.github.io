@@ -62,24 +62,34 @@ Pendefinisian IP yang berasal dari Indonesia
 
 Chain input, rinciannya sebagai berikut:
 
-> type filter hook input priority 0; policy drop;
+{% highlight text %}
+type filter hook input priority 0; policy drop;
+{% endhighlight %}
 
 Default Deny, blok semua koneksi masuk secara default
 
-> ct state established,related accept
+{% highlight text %}
+ct state established,related accept
+{% endhighlight %}
 
 Terima Koneksi balasan yang berasal dari dalam
 
-> iifname $lo_if accept
+{% highlight text %}
+iifname $lo_if accept
+{% endhighlight %}
 
 Izinkan localhost
 
-> ip saddr @ip_indonesia tcp dport { ssh, http } ct state new accept
+{% highlight text %}
+ip saddr @ip_indonesia tcp dport { ssh, http } ct state new accept
+{% endhighlight %}
 
 Izinkan akses ke port 22 dan port 80 hanya dari IP
 yang berasal dari Indonesia.
 
-> drop
+{% highlight text %}
+drop
+{% endhighlight %}
 
 Blok semua IP lainnya.
 
@@ -94,7 +104,9 @@ di blok dan NFTables tidak membaca lagi rule di bawah nya.
 Dari Contoh Di atas, saat IP berasal dari Indonesia, maka akan sesuai
 dengan rule:
 
-> ip saddr @ip_indonesia tcp dport { ssh, http } ct state new accept
+{% highlight text %}
+ip saddr @ip_indonesia tcp dport { ssh, http } ct state new accept
+{% endhighlight %}
 
 maka IP Indonesia di izinkan, sedangkan seluruh IP lain, tidak _match_ dengan rule
 tersebut, sehingga  terkena rule __drop__.
@@ -119,12 +131,16 @@ dan IP securty.debian.org
 
 Secara detailnya, sebagai berikut:
 
-> type filter hook output priority 0; policy drop;
+{% highlight text %}
+type filter hook output priority 0; policy drop;
+{% endhighlight %}
 
 Default Deny, Blok semua koneksi keluar. Fitur ini untuk mencegah
 serangan reverse ssh.
 
-> ct state established,related accept
+{% highlight text %}
+ct state established,related accept
+{% endhighlight %}
 
 Ini untuk koneksi dari luar, saat ada paket balasan dari dalam,
 maka paket balasan tersebut perlu izin keluar, padahal semua koneksi
@@ -135,16 +151,22 @@ Ini lah bedanya dengan fitur __keep state__ pada OpenBSD PF, yang mana
 pada fitur itu, koneksi balasan langsung bisa melewati firewall tanpa
 mendefinisikan secara tersendiri di rule output.
 
-> oifname $lo_if accept
+{% highlight text %}
+oifname $lo_if accept
+{% endhighlight %}
 
 Izinkan akses keluar menuju IP yang ada di interface __lo__.
 
-> ip daddr @ip_output accept
+{% highlight text %}
+ip daddr @ip_output accept
+{% endhighlight %}
 
 Izinkan koneksi keluar, dari dalam, menuju daftar IP di table ip_output.
 Hal ini akan saya coba jelaskan di tulisan berikutnya tentang NFTables, InsyaAllah.
 
-> drop
+{% highlight text %}
+drop
+{% endhighlight %}
 
 Semua koneksi lain di blok.
 
