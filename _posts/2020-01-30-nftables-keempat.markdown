@@ -256,7 +256,7 @@ IP yang anda perlukan sudah terdaftar, anda bisa tidur lebih nyenyak dan lebih
 tenang beristirahat, karena salah satu celah penting (reverse telnet) telah di tutup.
 
 Walaupun sudah level 3, masih ada beberapa kekurangan pada setting firewall nftables
-ini, yaitu:
+ini, yaitu tidak tersedianya fitur:
 
 - Synproxy
 - Anti DDOS
