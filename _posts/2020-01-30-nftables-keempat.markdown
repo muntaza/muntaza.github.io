@@ -7,14 +7,14 @@ categories: nftables
 
 # Bismillah,
 
-Saya telah menulis 
+Saya telah menulis
 tentang [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page)
-ini secara bertahap, yaitu bagian 
-[pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html), 
+ini secara bertahap, yaitu bagian
+[pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html),
 [kedua](https://www.muntaza.id/nftables/2019/12/16/nftables-kedua.html) dan
 [ketiga](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html).
 
-Terkadang, seorang admin tidak berani mengaktifkan firewall, alasannya? 
+Terkadang, seorang admin tidak berani mengaktifkan firewall, alasannya?
 Aplikasi saya kok jadi error kalau firewall aktif... Sebenarnya bukan error,
 tapi setting firewall nya yang belum tepat... he... he...
 
@@ -63,7 +63,7 @@ Ini level default menurut saya, yaitu izinkan masuk koneski ke tiga port penting
 - http
 - https
 
-Kemudian, mengizinkan semua akses keluar. 
+Kemudian, mengizinkan semua akses keluar.
 
 ```text
 #!/usr/sbin/nft -f
@@ -128,7 +128,7 @@ table ip filter {
 
 File [ip_indonesia.conf](https://www.muntaza.id/assets/ip_indonesia.conf) ini
 adalah daftar IP yang berasal dari Indonesia, sebagaimana yang sudah saya
-jelaskan pada tulisan bagian 
+jelaskan pada tulisan bagian
 [ketiga](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html).
 
 File ip_indonesia.conf ini di letakkan di direktor /etc.
@@ -149,7 +149,7 @@ membaypas firewall (firewalking) seperti contoh di
 dan di [sini](https://www.cyberciti.biz/tips/howto-linux-iptables-bypass-firewall-restriction.html)
 
 Sangat saya sarankan, untuk website yang memerlukan security tinggi, agar
-mengaplikasi level 3 ini. 
+mengaplikasikan level 3 ini.
 
 ```text
 #!/usr/sbin/nft -f
@@ -251,17 +251,20 @@ security.debian.org mail is handled by 10 muffat.debian.org.
 Ketika server anda (yang seyogyanya memakai level 3 ini), perlu untuk
 terhubung keluar, tinggal anda tambahkan IP server tujuan itu ke file
 ip_output.conf ini. Terlihat seperti memberatkan, kok saya harus sering
-mengedit file ipv4_addr.conf sih? Iya, itu hanya sementara saja, saat semua 
+mengedit file ip_output.conf sih? Iya, itu hanya sementara saja, saat semua
 IP yang anda perlukan sudah terdaftar, anda bisa tidur lebih nyenyak dan lebih
 tenang beristirahat, karena salah satu celah penting (reverse telnet) telah di tutup.
 
-# Penutup
-
 Walaupun sudah level 3, masih ada beberapa kekurangan pada setting firewall nftables
-ini. yaitu:
+ini, yaitu tidak tersedianya fitur:
 
 - Synproxy
 - Anti DDOS
+
+# Penutup
+
+File-file script nftables yang ada di tulisan ini, bisa di download di
+[sini](https://github.com/muntaza/Firewall/tree/master/nftables).
 
 Akhirnya, jangan lupa berdo'a, semoga Allah Ta'ala selalu menjaga kita. Semoga
 Allah Ta'ala menjaga server kita di dunia maya. Aamiin.
