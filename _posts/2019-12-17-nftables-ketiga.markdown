@@ -88,7 +88,7 @@ perintah pertama yang sesuai, itu yang akan langsung di jalankan, sehingga
 kita tempatkan perintah _drop_ pada bagian paling bawah, yang berarti
 semua yang tidak sesuai rule di atas nya akan di blok.
 
-Kalau kita tempatkan perintah _drop_ di atas, maka semua koneksi 
+Kalau kita tempatkan perintah _drop_ di atas, maka semua koneksi
 di blok dan NFTables tidak membaca lagi rule di bawah nya.
 
 Dari Contoh Di atas, saat IP berasal dari Indonesia, maka akan sesuai
@@ -104,7 +104,7 @@ tersebut, sehingga  terkena rule __drop__.
 	chain OUTPUT {
 		type filter hook output priority 0; policy drop;
 		ct state established,related accept
-		iifname $lo_if accept
+		oifname $lo_if accept
 		ip daddr @ip_output accept
 		drop
 	}
@@ -131,19 +131,13 @@ maka paket balasan tersebut perlu izin keluar, padahal semua koneksi
 secara default kita blok, sehingga perlu rule ini. Dengan rule ini,
 paket balasan dari dalam untuk koneksi _awal_ dari luar bisa lewat.
 
-Ini lah bedanya dengan fitur __keep state__ pada OpenBSD PF, yang mana 
-pada fitur itu, koneksi balasan langsung bisa melewati firewall tanpa 
+Ini lah bedanya dengan fitur __keep state__ pada OpenBSD PF, yang mana
+pada fitur itu, koneksi balasan langsung bisa melewati firewall tanpa
 mendefinisikan secara tersendiri di rule output.
 
-> iifname $lo_if accept
+> oifname $lo_if accept
 
-Izinkan localhost. Saya masih heran dengan baris ini he..he.. karena
-saya masih saja perlu menuliskan IP 127.0.0.1 di ip_output, sehingga
-seakan-akan rule ini tidak diperlukan. Ada komentar?
-
-Beda dengan rule di OpenBSD PF __pass on lo__ yang secara meyakinkan 
-meloloskan semua paket di _lo_. Perkiraan saya adalah OpenBSD PF menterjemahkan
-__pass on lo__ itu sebagai "izinkan semua IP yang di letakkan di interface __lo__".
+Izinkan akses keluar menuju IP yang ada di interface __lo__.
 
 > ip daddr @ip_output accept
 
