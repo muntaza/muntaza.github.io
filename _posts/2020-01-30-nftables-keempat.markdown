@@ -257,6 +257,9 @@ tenang beristirahat, karena salah satu celah penting (reverse telnet) telah di t
 
 # Penutup
 
+File-file script nftables yang ada di tulisan ini, bisa di download di
+[sini](https://github.com/muntaza/Firewall/tree/master/nftables).
+
 Walaupun sudah level 3, masih ada beberapa kekurangan pada setting firewall nftables
 ini. yaitu:
 
