@@ -276,6 +276,7 @@ ini, yaitu tidak tersedianya fitur:
       server, bila tidak, biarkan saja.
     - Menit ke-4, naik kan nftables ke level 3.
 
+
     Nah, dengan demikian, secara default, nftables berada di posisi level 3, hanya
     pada jam tertentu, misal jam 10 malam, selama 5 menit pertama, nftables turun
     ke 1, lalu kembali lagi ke level 3.
