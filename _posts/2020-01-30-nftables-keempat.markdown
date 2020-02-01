@@ -262,6 +262,42 @@ ini, yaitu tidak tersedianya fitur:
 
 # Tanya Jawab
 
+1.  Server kami perlu terkoneksi ke server lain, bagaimana caranya?
+
+    Jawab:
+
+    Kalau anda berada di level 3, maka tambahkan IP address server tujuan
+    ke file ip_output.conf.
+
+1.  Sesekali saya perlu mendownload file dengan __wget__ atau mengcopy file
+    dengan __scp__, namun saya merasa tidak perlu menambahkan IP address
+    tujuan ke file ip_output.conf, apa yang harus saya lakukan?
+
+    Jawab:
+
+    Turunkan ntftables ke level 2:
+    ```text
+    $ sudo nft -f /etc/nftables_level_2.conf
+    ```
+
+    Gunakan wget atau scp atau lainnya, bila anda telah selesai, naik kan
+    ke level 3 kembali:
+    ```text
+    $ sudo nft -f /etc/nftables_level_3.conf
+    ```
+
+1.  Server kami perlu membuka port khusus (misal: 4000) untuk IP address tertentu dalam
+    rangka back_up atau hal lainnya, bagaimana caranya?
+
+    Jawab:
+
+    Anda tinggal edit __chain input__, tambahkan dan sesuaikan, seperti:
+
+    ```text
+    ip saddr 103.56.207.72 tcp dport 4000 ct state new accept
+    ```
+
+
 1.  Kami menggunakan let's encrypt, bagaimana cara memperpanjang sertifikat
     dalam keadaan server let's encrypt perlu koneksi ke web server kami
     untuk validasi, sedangkan
