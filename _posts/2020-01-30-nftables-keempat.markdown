@@ -294,9 +294,24 @@ ini, yaitu tidak tersedianya fitur:
     Anda tinggal edit __chain input__, tambahkan dan sesuaikan, seperti:
 
     ```text
-    ip saddr 103.56.207.72 tcp dport 4000 ct state new accept
+    ip saddr 192.0.2.1 tcp dport 4000 ct state new accept
     ```
 
+    Di atas baris __drop__ sehingga menjadi:
+
+    ```text
+	chain INPUT {
+		type filter hook input priority 0; policy drop;
+		ct state established,related accept
+		iifname "lo" accept
+		ip saddr @ip_indonesia tcp dport { ssh, http, https } ct state new accept
+		ip saddr 192.0.2.1 tcp dport 4000 ct state new accept
+		drop
+	}
+    ```
+
+    Ingat, baris pertama yang sesuai, itu yang akan di jalankan, sebagaimana
+    saya jelaskan di [sini](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html).
 
 1.  Kami menggunakan let's encrypt, bagaimana cara memperpanjang sertifikat
     dalam keadaan server let's encrypt perlu koneksi ke web server kami
