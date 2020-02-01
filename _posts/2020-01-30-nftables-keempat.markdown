@@ -265,6 +265,13 @@ ini, yaitu tidak tersedianya fitur:
 File-file script nftables yang ada di tulisan ini, bisa di download di
 [sini](https://github.com/muntaza/Firewall/tree/master/nftables).
 
+Hal penting yang saya ingatkan, bahwa koneksi ssh ke server haruslah __hanya__
+dengan Public Key Authentication, disable Password Authentication, seperti saya tuliskan
+di [sini](https://www.muntaza.id/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html) serta
+private key __harus__ tetap dilindungi password. Hal ini untuk mencegah serangan
+[bruteforce](https://serverfault.com/questions/594746/how-to-stop-prevent-ssh-bruteforce#594750)
+pada OpenSSH.
+
 Akhirnya, jangan lupa berdo'a, semoga Allah Ta'ala selalu menjaga kita. Semoga
 Allah Ta'ala menjaga server kita di dunia maya. Aamiin.
 
