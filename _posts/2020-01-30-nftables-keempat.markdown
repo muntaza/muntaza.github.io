@@ -145,8 +145,7 @@ pada IP yang kita definisikan. Mengapa perlu melindungi dari serangan reverse
 telnet? Jawabannya adalah, kadang terdapat lubang keamanan (security hole) pada
 aplikasi, sehingga attacker dapat mengeksekusi tools seperti netcat untuk
 membaypas firewall (firewalking) seperti contoh di
-[sini](https://www.dummies.com/programming/networking/test-firewall-rules-to-prevent-network-hacks/)
-dan di [sini](https://www.cyberciti.biz/tips/howto-linux-iptables-bypass-firewall-restriction.html)
+[sini](https://www.hackingtutorials.org/networking/hacking-netcat-part-2-bind-reverse-shells/).
 
 Sangat saya sarankan, untuk website yang memerlukan security tinggi, agar
 mengaplikasikan level 3 ini.
