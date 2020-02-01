@@ -260,6 +260,27 @@ ini, yaitu tidak tersedianya fitur:
 - Synproxy
 - Anti DDOS
 
+# Tanya Jawab
+
+1.  Kami menggunakan let's encrypt, bagaimana cara memperpanjang sertifikat
+    dalam keadaan server let's encrypt perlu koneksi ke web server sedangkan
+    IP yang mereka gunakan tidak kita ketahui?
+
+    Jawab:
+
+    Gunakan Cron untuk memperpanjang let's encrypt, dengan urutan sebagai berikut
+    - Tentukan jam tertentu setiap hari untuk memperpanjang sertifikat.
+    - Menit ke-0, turunkan nftables ke level 1
+    - Menit ke-1, cek perpanjangan sertifikat, bila di perpanjang, restart web
+      server, bila tidak, biarkan saja.
+    - Menit ke-4, naik kan nftables ke level 3
+
+    Nah, dengan demikian, secara default, nftables berada di posisi level 3, hanya
+    pada jam tertentu, misal jam 10 malam, selama 5 menit pertama, nftables turun
+    ke 1, lalu kembali lagi ke level 3.
+
+
+
 # Penutup
 
 File-file script nftables yang ada di tulisan ini, bisa di download di
