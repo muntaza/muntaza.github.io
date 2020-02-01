@@ -262,6 +262,12 @@ ini, yaitu tidak tersedianya fitur:
 
 # Tanya Jawab
 
+1.  Apa sih pentingnya firewall?
+
+    Jawab:
+
+    Mohon maaf sekali, tulisan ini sepertinya bukan untuk anda, he... he...
+
 1.  Server kami perlu terkoneksi ke server lain, bagaimana caranya?
 
     Jawab:
@@ -311,7 +317,8 @@ ini, yaitu tidak tersedianya fitur:
     ```
 
     Ingat, baris pertama yang sesuai, itu yang akan di jalankan, sebagaimana
-    saya jelaskan di [sini](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html).
+    saya jelaskan di bagian [ketiga](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html)
+    seri toturial ini.
 
 1.  Kami menggunakan let's encrypt, bagaimana cara memperpanjang sertifikat
     dalam keadaan server let's encrypt perlu koneksi ke web server kami
@@ -332,7 +339,25 @@ ini, yaitu tidak tersedianya fitur:
     pada jam tertentu, misal jam 10 malam, selama 5 menit pertama, nftables turun
     ke level 1, lalu kembali lagi ke level 3.
 
+1.  Saya masih belum paham nftables ini, bisakah anda jelaskan dari awal?
 
+    Jawab:
+
+    Silahkan lihat bagian
+    [pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html),
+    [kedua](https://www.muntaza.id/nftables/2019/12/16/nftables-kedua.html) dan
+    [ketiga](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html) seri
+    tutorial ini. Kemudian, gunakan mesin pencari anda, semisal
+    [duckduckgo](https://duckduckgo.com/).
+
+1.  OK, saya tertarik dengan nftables ini, saya ingin mempelajari lebih lanjut,
+    ada links yang di sarankan?
+
+    Jawab:
+
+    Coba lihat di bagian Daftar Pustaka, dan jangan lupakan mesin pencari anda,
+    semisal [duckduckgo](https://duckduckgo.com/) atau lainnya, banyak tutorial yang
+    bagus di luar sana.
 
 # Penutup
 
