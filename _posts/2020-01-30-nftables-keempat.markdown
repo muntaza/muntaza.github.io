@@ -279,7 +279,7 @@ ini, yaitu tidak tersedianya fitur:
 
     Nah, dengan demikian, secara default, nftables berada di posisi level 3, hanya
     pada jam tertentu, misal jam 10 malam, selama 5 menit pertama, nftables turun
-    ke 1, lalu kembali lagi ke level 3.
+    ke level 1, lalu kembali lagi ke level 3.
 
 
 
