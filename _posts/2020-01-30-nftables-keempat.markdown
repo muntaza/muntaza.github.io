@@ -268,6 +268,17 @@ ini, yaitu tidak tersedianya fitur:
 
     Mohon maaf sekali, tulisan ini sepertinya bukan untuk anda, he... he...
 
+1.  Saya masih belum paham nftables ini, bisakah anda jelaskan dari awal?
+
+    Jawab:
+
+    Silahkan lihat bagian
+    [pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html),
+    [kedua](https://www.muntaza.id/nftables/2019/12/16/nftables-kedua.html) dan
+    [ketiga](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html) seri
+    tutorial ini. Kemudian, gunakan mesin pencari anda, semisal
+    [duckduckgo](https://duckduckgo.com/).
+
 1.  Server kami perlu terkoneksi ke server lain, bagaimana caranya?
 
     Jawab:
@@ -338,17 +349,6 @@ ini, yaitu tidak tersedianya fitur:
     Nah, dengan demikian, secara default, nftables berada di posisi level 3, hanya
     pada jam tertentu, misal jam 10 malam, selama 5 menit pertama, nftables turun
     ke level 1, lalu kembali lagi ke level 3.
-
-1.  Saya masih belum paham nftables ini, bisakah anda jelaskan dari awal?
-
-    Jawab:
-
-    Silahkan lihat bagian
-    [pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html),
-    [kedua](https://www.muntaza.id/nftables/2019/12/16/nftables-kedua.html) dan
-    [ketiga](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html) seri
-    tutorial ini. Kemudian, gunakan mesin pencari anda, semisal
-    [duckduckgo](https://duckduckgo.com/).
 
 1.  OK, saya tertarik dengan nftables ini, saya ingin mempelajari lebih lanjut,
     ada links yang di sarankan?
