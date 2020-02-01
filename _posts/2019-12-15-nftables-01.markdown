@@ -153,6 +153,36 @@ table ip filter {
 
 Demikian penjelasan sederhana tentang nftables ini, semoga bermanfaat.
 
+# Tanya Jawab
+
+1.  Apa sih pentingnya firewall?
+
+    Jawab:
+
+    Firewall seperti satpam di sebuah gedung perkantoran. Setiap
+    pengunjung masuk, di tanya apakah termasuk karyawan di gedung
+    tersebut? kalau karyawan, perlihatkan ID Card anda, kalau bukan
+    karyawan, di tanya apa keperluannya, surat tugas nya, dan lain
+    sebagainya.
+
+    Tanpa satpam, siapa saja bisa masuk dan keluar gedung tanpa
+    pengawasan, sehingga rawan terjadi pencurian, dan kejahatan
+    lainnya.
+
+    Demikian pula firewall, setiap paket datang, di cek IP Address
+    sumber, IP Address tujuan, port tujuan. Apabila sesuai dengan
+    setting firewall, diizinkan masuk, bila tidak, maka paket tersebut
+    di tolak.
+
+1.  Bagaimana cara reload konfigurasi nftables setelah saya mengedit
+    file /etc/nftables.conf?
+
+    Jawab:
+
+    ```text
+    $ sudo nft -f /etc/nftables.conf
+    ```
+
 # Alhamdulillah
 
 
