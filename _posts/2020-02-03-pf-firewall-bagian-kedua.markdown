@@ -53,7 +53,7 @@ adalah sebagai berikut:
     Database tidak perlu membuka/mengizinkan IP address dari luar Indonesia
     dalam rangka verifikasi Let's Encrypt.
 
-Gambar Design Firewall:
+Gambar Analis Design Firewall:
 
 ![network diagram](/assets/pf2.png)
     
