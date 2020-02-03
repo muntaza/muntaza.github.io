@@ -40,15 +40,18 @@ adalah sebagai berikut:
 1.  Local Client di belakang Firewall, tidak bisa mengakses internet 
 1.  Akses Local Client ke Server Database secara langsung, tanpa firewall.
 1.  Akses ssh oleh Admin dari Localnet ke Server Database secara langsung, tanpa
-    firewall.
+    firewall dengan Password Authentication.
 1.  Akses ssh oleh Admin ke Firewall dari Internet, khusus hanya dari IP
     address yang berasal dari Indonesia, Authentication yang digunakan
     hanya __public key__, tidak bisa dengan Password.
 1.  Setelah Admin login ssh ke Firewall, Admin bisa ssh ke Server Database
-    secara langsung. Akses ssh oleh Admin dengan Password, bukan __public
-    key__, karena di asumsikan tidak ada local user yang melakukan
+    secara langsung. Akses ssh oleh Admin dengan Password Authentication, bukan __public
+    key Authentication__, karena di asumsikan tidak ada local user yang melakukan
     __ssh bruteforce__ ke Server Database (analisa ini perlu di tinjau
     kembali).
+1.  SSL certificate yang digunakan bukan dari Let's Encrypt, sehingga Server
+    Database tidak perlu membuka/mengizinkan IP address dari luar Indonesia
+    dalam rangka verifikasi Let's Encrypt.
 
     
 
