@@ -27,6 +27,29 @@ Di sini, saya akan melanjutkan tulisan saya sebelumnya tentang
 walaupun pada tulisan kali ini, akan saya ulang kembali beberapa hal yang telah 
 saya sebutkan pada tulisan tersebut.
 
+# Firewall Design
+
+Saya awali dengan firewall design, ini pondasi awal system firewall ini. Setiap
+system tentu memiliki kehutuhan yang berbeda, sehingga menghasilkan design yang
+berbeda pula. Analis kebutuhan system firewall pada server yang saya contohkan
+adalah sebagai berikut:
+
+
+
+1.  Server Database berada di belakang Firewall.
+1.  Local Client di belakang Firewall, tidak bisa mengakses internet 
+1.  Akses Local Client ke Server Database secara langsung, tanpa firewall.
+1.  Akses ssh oleh Admin dari Localnet ke Server Database secara langsung, tanpa
+    firewall.
+1.  Akses ssh oleh Admin ke Firewall dari Internet, khusus hanya dari IP
+    address yang berasal dari Indonesia, Authentication yang digunakan
+    hanya __public key__, tidak bisa dengan Password.
+1.  Setelah Admin login ssh ke Firewall, Admin bisa ssh ke Server Database
+    secara langsung. Akses ssh oleh Admin dengan Password, bukan __public
+    key__, karena di asumsikan tidak ada local user yang melakukan
+    __ssh bruteforce__ ke Server Database (analisa ini perlu di tinjau
+    kembali).
+
     
 
 # Penutup
