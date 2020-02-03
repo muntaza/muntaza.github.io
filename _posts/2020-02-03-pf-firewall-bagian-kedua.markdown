@@ -52,6 +52,20 @@ adalah sebagai berikut:
 1.  SSL certificate yang digunakan bukan dari Let's Encrypt, sehingga Server
     Database tidak perlu membuka/mengizinkan IP address dari luar Indonesia
     dalam rangka verifikasi Let's Encrypt.
+1.  Port yang di buka di Server Database hanya port 22 dan port 443.
+1.  Fungsi NAT di aktifkan di Firewall, sehingga IP Public hanya ada di
+    Firewall sedangkan Server Database menggunakan IP Private.
+1.  Server Database menyediakan Name Server local dengan NSD.
+1.  System Firewall mempunyai fitur:
+    -   Anti DDOS
+    -   Anti Reverse Telnet
+    -   Anti SYN Flood
+    -   Blacklist IP Address
+    -   Whithlist IP Address 
+1.  Server Database bisa mengakses Github dan DNS Google.
+1.  Server Database bisa di scan oleh Qualys SSL Labs. 
+
+
 
 Gambar Analis Design Firewall:
 
