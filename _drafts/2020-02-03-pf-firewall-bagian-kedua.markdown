@@ -17,7 +17,7 @@ masih belum mampu melindungi server dari serangan:
     [apache benchmark](https://blog.getpolymorph.com/7-tips-for-heavy-load-testing-with-apache-bench-b1127916b7b6),
     sehingga sangat perlu sebuah firewall memiliki fitur anti DDOS.
 
--   [SYN Attack](https://en.wikipedia.org/wiki/SYN_flood)
+-   [SYN Flood](https://en.wikipedia.org/wiki/SYN_flood)
 
     SYN Attack ini termasuk kategori DDOS juga, sehingga sebuah firewall
     haruslah mampu menahan serangan jenis ini.
@@ -58,8 +58,10 @@ adalah sebagai berikut:
 1.  Server Database menyediakan Name Server local dengan NSD.
 1.  System Firewall mempunyai fitur:
     -   Anti DDOS
-    -   Anti Reverse Telnet
+    -   Anti [Reverse Telnet](https://www.hackingtutorials.org/networking/hacking-netcat-part-2-bind-reverse-shells/)
     -   Anti SYN Flood
+    -   Anti [URPF-Failed](https://www.juniper.net/documentation/en_US/junos/topics/concept/unicast-rpf-understanding.html)
+    -   Anti X11 Remote connections
     -   Blacklist IP Address
     -   Whithlist IP Address 
 1.  Server Database bisa mengakses Github dan DNS Google.
