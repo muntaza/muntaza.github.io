@@ -369,6 +369,14 @@ block return in on ! lo0 proto tcp to port 6000:6010
     sehingga lebih aman, bila menolak koneksi dari IP Address luar negeri.
     Mencegah lebih baik dari mengobati.
 
+1.  Bagaimana cara mengaktifkan packet forwarding?
+
+    Jawab:
+
+    ```text
+    # echo 'net.inet.ip.forwarding=1' >> /etc/sysctl.conf
+    ```
+
 1.  Mengapa login admin tidak di redirect ke Server Database.
 
     Jawab:
