@@ -163,8 +163,27 @@ Adapun isi file flush.sh adalah sebagai berikut:
 
 Maknanya, masukkan daftar yang ada saat ini di table abusive_hosts ke file /home/muntaza/daftar, lalu hapus isi daftar abusive_hosts.
 
+# Tanya Jawab
+
+1.  Bagaimana cara reload konfigurasi pf setelah saya mengedit
+    file /etc/pf.conf?
+
+    Jawab:
+
+    ```text
+    $ doas /sbin/pfctl -f /etc/pf.conf
+    ```
+
+
 # Alhamdulillah
 
 Sekian Penjelasan tentang contoh implementasi OpenBSD Packet Filter ini, semoga bermanfaat.
 
 Muhammad Muntaza
+
+
+
+
+Daftar Pustaka
+
+- [OpenBSD PF FAQ](https://www.openbsd.org/faq/pf/)

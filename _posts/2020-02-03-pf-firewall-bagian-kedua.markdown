@@ -352,6 +352,14 @@ block return in on ! lo0 proto tcp to port 6000:6010
     koneksi ke Server Database sampai di clear kan admin. Seandainya waktunya
     lama, maka ini juga disebut DOS (Denial of Service).
 
+1.  Bagaimana cara meng clear table abusive_hosts?
+
+    Jawab:
+
+    Saya menggunakan script flush.sh yang di jalankan dengan cron tiap menit
+    sebagaimana saya tulis di
+    [sini](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html).
+
 1.  Mengapa hanya menerima koneksi masuk dari IP Address yang berasal dari
     Indonesia?
 
