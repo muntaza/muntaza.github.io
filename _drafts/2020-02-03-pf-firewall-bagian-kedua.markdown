@@ -79,7 +79,7 @@ adalah sebagai berikut:
 ![network diagram](/assets/pf2.png)
     
 
-# Firewall OpenBSD PF
+# Penjelasan Firewall OpenBSD PF
 
 Baik lah, saya akan tampil kan secara perlahan dari file /etc/pf.conf dan
 akan saya coba jelaskan maknanya. Pada bagian akhir, akan saya tampilkan file
@@ -120,67 +120,141 @@ Localhost tidak di filter oleh pf.
 match out on $ext_if inet from $server to any nat-to $ext_if:0
 ```
 
-Fungsi NAT
+Fungsi NAT di Firewall. 
 
+```text
 # filter rules
 block return	# block stateless traffic
+```
 
+Secara default, semua koneksi di blok.
+
+
+```text
 # block ip attacker
 table <ip_attacker> persist file "/etc/ip_attacker"
 block in quick from <ip_attacker>
+```
 
+Ini table ip_attacker, berguna sebagai Blacklist IP Address. semua
+IP Address yang di masukkan ke file ip_attacker, akan di blok total
+
+```text
 table <abusive_hosts> persist
 block in quick from <abusive_hosts>
+```
 
+Ini table untuk menampung IP Address yang __diduga__ melakukan DDOS. Saat
+sebuah IP Address masuk ke table ini, IP Address tersebut akan tetep terblokir
+sampai di clear kan dari table ini. Table ini saya clear kan tiap 1 menit,
+sehingga seandainya terjadi kesalahan deteksi, IP tersebut akan bebas dalam
+1 menit.
+
+```text
 table <ip_indonesia> persist file "/etc/ip_indonesia"
+```
 
+Daftar IP yang berasal dari Indonesia, saya dapatkan dari website
+[https://www.ipdeny.com/](https://www.ipdeny.com/ipblocks/) yaitu file
+[id.zone](https://www.ipdeny.com/ipblocks/data/countries/id.zone)
+
+
+```text
 pass in on $ext_if inet proto tcp from <ip_indonesia> to $ext_if \
     port $tcp_services rdr-to $server port $tcp_services \
     flags S/SA synproxy state \
     (max-src-conn 100, max-src-conn-rate 15/5, overload <abusive_hosts> flush)
+```
 
+Izinkan koneksi masuk ke port 443 dari IP Address yang berasal dari Indonesia, redirect ke
+IP Localnet Server Database, __synproxy state__ untuk melindungi dari SYN
+Flood Attack, dan aktifkan anti DDOS, IP yang melanggar, masuk kan ke table
+abusive_hosts, blok semua koneksi  dari IP yang melanggar tersebut.
+
+Kreteria pelanggaran:
+-   Sebuah IP Address melakukan lebih dari 100 koneksi ke Server Database.
+-   Sebuah IP Address melakukan lebih dari 15 koneksi per 5 detik
+
+```text
 pass in on $ext_if inet proto tcp from <ip_indonesia> to $ext_if \
     port ssh \
     flags S/SA synproxy state \
     (max-src-conn 100, max-src-conn-rate 15/5, overload <abusive_hosts> flush)
+```
 
+Izin kan koneksi ke port 22 dari IP Address yang berasal dari Indonesia, menuju
+mesin Firewall. Disini tidak ada fungsi redirect. Jadi, admin login ke Firewall
+dulu, baru ke Server Database.
+
+
+```text
 # izinkan website Qualys melakukan scan kualitas SSL
 pass in on $ext_if inet proto tcp from 64.41.200.0/24 to $ext_if \
     port $tcp_services rdr-to $server port $tcp_services \
     flags S/SA synproxy state
+```
+
+Izin kan Scan Kualitas SSL di Server Database __hanya__ dari Qualys SSL Labs.
+Fitur anti DDOS di nonaktifkan disini, karena kalau aktif, maka Scan akan gagal
+disebabkan Server Qualys akan tertangkap anti DDOS. Server Qualys secara masif
+melakukan koneksi ke Server Database saat test berlangsung. Izin ini bisa di
+nonaktifkan dengan memberi tanda __#__ di baris ini, bila admin memandang 
+izin ini memberatkan Server Database.
 
 
+
+```text
 pass out on $int_if inet proto tcp to $server \
     port $tcp_services
+```
+
+Izinkan koneksi dari  luar __melanjutkan__ perjalanan nya menuju Server
+Database.
 
 
+```text
 # izinkan dari firewall ke server
 pass out on $int_if inet proto tcp to $server \
     port 22
+```
+
+Admin bisa login ssh dari Firewall ke Server Database.
 
 
+```text
 # izinkan akses ke luar dari server menuju IP External
 table <ip_safe> persist file "/etc/ip_safe"
 pass in on $int_if inet
 pass out on $ext_if inet to <ip_safe>
+```
+
+Table ip_safe menampung IP Address yang menjadi tujuan akses keluar 
+dari Server Database. Hal ini adalah Fitur Anti Reverse Telnet. Hanya IP
+Address yang masuk di file /etc/ip_safe yang bisa di hubungi. Pada contoh ini,
+saya menampilkan IP Address DNS Google dan Daftar IP Address
+[Github](https://help.github.com/en/github/authenticating-to-github/about-githubs-ip-addresses), 
+sehingga
+Server Database bila melakukan __git pull__ ke Server Github.
 
 
 
+```text
 block in quick from urpf-failed to any	# use with care
+```
 
+Fitur anti DDOS sekaligus anti [IP Address Spoofing](https://en.wikipedia.org/wiki/IP_address_spoofing)
+
+```text
 # By default, do not permit remote connections to X11
 block return in on ! lo0 proto tcp to port 6000:6010
+```
+
+Fitur Anti X11 Remote connections.
 
 
+# Firewall OpenBSD PF
 
-
-
-
-
-
-
-
-
+Nah, inilah file /etc/pf.conf secara keseluruhan:
 
 
 ```text
@@ -255,8 +329,55 @@ block return in on ! lo0 proto tcp to port 6000:6010
 
 
 
+# Tanya Jawab
+
+1.  Bisa Di jelaskan fungsi NAT?
+    
+    IP Address Server Database adalah IP Localnet, agar bisa menerima koneksi
+    dari luar, maka IP Address Server Database tersebut di terjemahkan ke IP
+    Public yang ada di Firewall, sehingga seolah-olah, koneksi dari luar
+    hanya berhubungan dengan Firewall.
+
+1.  Kenapa sebuah IP Address hanya bertahan 1 menit di table abusive_hosts?
+
+    Jawab:
+
+    Seandainya terjadi sebuah serangan IP Spoofing, sebuah IP terblokir padahal
+    bukan IP attacker, maka IP Address yang sah tersebut tidak akan bisa
+    koneksi ke Server Database sampai di clear kan admin. Seandainya waktunya
+    lama, maka ini juga disebut DOS (Denial of Service).
+
+1.  Mengapa hanya menerima koneksi masuk dari IP Address yang berasal dari
+    Indonesia?
+
+    Jawab:
+
+    Aplikasi yang ada di Server Database hanya untuk  pengguna dari Indonesia,
+    sehingga lebih aman, bila menolak koneksi dari IP Address luar negeri.
+    Mencegah lebih baik dari mengobati.
+
+1.  Mengapa login admin tidak di redirect ke Server Database.
+
+    Jawab:
+
+    Admin login __hanya__ dengan Authentication Public key, untuk keamanan
+    Firewall, adapun Server Database, masih mengizinkan Password
+    Authentication.
 
 # Penutup
+
+File-file script OpenBSD PF Firewall yang ada di tulisan ini, bisa di download di
+[sini](https://github.com/muntaza/Firewall/tree/master/pf).
+
+Hal penting yang kembali saya ingatkan, bahwa koneksi ssh ke Firewall haruslah __hanya__
+dengan Public Key Authentication, disable Password Authentication, seperti saya tuliskan
+di [sini](https://www.muntaza.id/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html) serta
+private key __harus__ tetap dilindungi password. Hal ini untuk mencegah serangan
+[bruteforce](https://serverfault.com/questions/594746/how-to-stop-prevent-ssh-bruteforce#594750)
+pada OpenSSH.
+
+Akhirnya, jangan lupa berdo'a, semoga Allah Ta'ala selalu menjaga kita. Semoga
+Allah Ta'ala menjaga server kita di dunia maya. Aamiin.
 
 
 # Alhamdulillah
