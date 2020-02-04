@@ -69,7 +69,7 @@ adalah sebagai berikut:
 
 
 
-Gambar Analis Design Firewall:
+# Gambar Analis Design Firewall
 
 ![network diagram](/assets/pf2.png)
     
