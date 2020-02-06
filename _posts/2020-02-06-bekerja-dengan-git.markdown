@@ -64,19 +64,19 @@ git push
 Push ke branch working
 
 ```text
- 2186  git checkout master
+git checkout master
 ```
 
 Pindah ke branch master
 
 ```text
- 2187  git branch -a
+git branch -a
 ```
 
 lihat branch apa yang aktif
 
 ```text
- 2188  git diff master working
+git diff master working
 ```
 
 Cek diff antar branch
@@ -87,38 +87,38 @@ Pada Pilihan ini, branch working akan kita hapus setelah merge. Semua commit-com
 di satukan hanya menjadi satu commit saja.
 
 ```text
- 2209  git merge --squash working
+git merge --squash working
 ```
 
 Merge squash
 
 ```text
- 2210  git commit .
+git commit .
 ```
 
 Commit Merge squash, jangan gunakan __-m__ disini, agar bisa mengedit
 pesan saat commit.
 
 ```text
- 2211  git push
+git push
 ```
 
 Push ke master
 
 ```text
- 2212  git push -d origin working
+git push -d origin working
 ```
 
 Delete branch working di Github.com
 
 ```text
- 2214  git branch -D working
+git branch -D working
 ```
 
 Delete branch working di local
 
 ```text
- 2215  git branch -a
+git branch -a
 ```
 
 lihat branch apa yang aktif.
