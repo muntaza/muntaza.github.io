@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Judul"
-date:   2019-12-09 12:26:56 +0800
-categories: ssh
+title:  "Bekerja dengan Git"
+date:   2020-02-06 12:26:56 +0800
+categories: git
 ---
 
 # Bismillah,
