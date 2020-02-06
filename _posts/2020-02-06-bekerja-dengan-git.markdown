@@ -207,7 +207,7 @@ Semoga bermanfaat
 # Alhamdulillah
 
 
-#Daftar Pustaka
+# Daftar Pustaka
 
 -   [Git: Workflow Basic](https://github.com/endymuhardin/belajarGit/blob/master/workflow-basic.md)
 -   [git - the simple guide](http://rogerdudler.github.io/git-guide/)
