@@ -210,5 +210,6 @@ Semoga bermanfaat
 # Daftar Pustaka
 
 -   [Git: Workflow Basic](https://github.com/endymuhardin/belajarGit/blob/master/workflow-basic.md)
+-   [Basic Git commands](https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration#basic-git-commands)
 -   [git - the simple guide](http://rogerdudler.github.io/git-guide/)
 -   [Git: Hello World](https://guides.github.com/activities/hello-world/)
