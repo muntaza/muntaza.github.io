@@ -120,7 +120,7 @@ Delete branch working di local
  2215  git branch -a
 ```
 
-lihat branch apa yang aktif
+lihat branch apa yang aktif.
 
 
 
