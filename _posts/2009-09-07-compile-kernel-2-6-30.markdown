@@ -102,7 +102,6 @@ root@pisang:/usr/src/linux-2.6.30.5# vi /media/disk-1/boot/grub/menu.lst
 ```
 
 tambahkan dua baris dibawah pada file menu.lst
-[sourcecode lenguage="bash"]
 ```text
 title linux_26_30_5
 kernel (hd0,9)/boot/linux_2.6.30.5
@@ -120,7 +119,6 @@ baca manual grub bila perlu, ketik "info grub".
 Selesai sudah mengganti kernel, lalu reboot......., pilih di menu grub "linux_26_30_5"
 
 setelah login, cek versi kernel
-[sourcecode lenguage="bash"]
 ```text
 muntaza@pisang:~/Download/misal$ uname -sr
 Linux 2.6.30.5
@@ -130,6 +128,10 @@ berarti sudah menggunakan kernel 2.6.30.5.
 
 Penutup:
 kalau bisa, lalukan update berkala setiap rilis kernel stabil. Mungkin Hal ini sama dengan yang disebut patch pada OS lain. update kernel linux adalah sebagian kecil cara untuk mempertahankan security sistem linux.
+
+# UPDATE 2020-02-09
+
+Versi kernel sampai hari ini adalah kernel linux 5.5.2, tutorial ini saya tulis sekitar 10 tahun yang lalu, menggunakan kernel terbaru saat itu. Untuk tutorial cara compile kernel versi 5.3, silahkan lihat di [sini](https://www.cyberciti.biz/linux-news/linux-kernel-5-3-released-and-here-is-how-to-install-it/).
 
 Wallahu Ta'ala A'lam
 
