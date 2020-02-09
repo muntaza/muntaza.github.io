@@ -157,7 +157,7 @@ exit
 muntaza@pisang:~$
 ```
 
-catatan: busybox dan patch nya bisa di download di http://kambing.ui.ac.id/slackware/slackware-12.2/source/a/mkinitrd/
+catatan: busybox dan patch nya bisa di download di [sini](http://kambing.ui.ac.id/slackware/slackware-12.2/source/a/mkinitrd/).
 
 
 
