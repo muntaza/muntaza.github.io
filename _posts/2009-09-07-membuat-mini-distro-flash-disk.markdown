@@ -294,7 +294,7 @@ Tutorial ini saya tulis sekitar 10 tahun yang lalu, disini saya tampilkan daftar
 yang menggunakan kernel dan tool yang lebih update, namun saya pribadi belum pernah mencoba
 mengikuti tutorial tersebut:
 
-- [Minimal Linux Live](https://github.com/ivandavidov/minimal)
+- [Minimal Linux Live](https://github.com/ivandavidov/minimal).
 - [Minimal Linux Script](https://github.com/ivandavidov/minimal-linux-script)
 - [Build Your Own Linux](http://www.buildyourownlinux.com/)
 - [DIY: Build a Custom Minimal Linux Distribution from Source](https://www.linuxjournal.com/content/diy-build-custom-minimal-linux-distribution-source)
