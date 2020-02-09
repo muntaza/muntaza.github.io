@@ -197,7 +197,9 @@ git checkout working
 Selanjutnya, pindah lagi ke branch working, karena semua pekerjaan
 dilakukan di branch working.
 
-# Merge --no-ff
+# Merge no fast forward
+
+Pada pilihan ini, ada tambahan sebuah commit merge.
 
 ```text
 git merge --no-ff working
