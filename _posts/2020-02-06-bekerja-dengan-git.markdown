@@ -197,6 +197,36 @@ git checkout working
 Selanjutnya, pindah lagi ke branch working, karena semua pekerjaan
 dilakukan di branch working.
 
+# Merge --no-ff
+
+```text
+git merge --no-ff working
+```
+
+Merge, semua commit dari branch working di gabungkan
+ke branch master, namun dengan tambahan sebuah merge commit, sehingga
+bisa di lihat diff dari seluruh commit yang baru di merge.
+
+```text
+git push
+```
+
+Push ke branch master di Github.com
+
+```text
+git checkout working
+```
+
+Selanjutnya, pindah lagi ke branch working.
+
+```text
+git merge master
+```
+
+Karena working ketinggalan 1 commit, yaitu merge commit dari master,
+maka kita update lagi branch working sehingga balance dengan master.
+
+
 # Penutup
 
 Saat pertama belajar git, lebih mudah hanya bekerja di branch master
@@ -213,3 +243,6 @@ Semoga bermanfaat
 -   [Basic Git commands](https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration#basic-git-commands)
 -   [git - the simple guide](http://rogerdudler.github.io/git-guide/)
 -   [Git: Hello World](https://guides.github.com/activities/hello-world/)
+-   [Git Branching - Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+-   [Git Merge](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
+-   [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
