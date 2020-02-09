@@ -10,9 +10,8 @@ categories: linux
 __PENTING__: ini hanya catatan, bukan toturial, tidak untuk pemula linux. Pastikan anda selalu mengerti makna command yang anda ketik!!!
 
 sumber penulisan:
-http://www.tldp.org/LDP/Pocket-Linux-Guide/html/Pocket-Linux-Guide.html
-DVD_Slackware_12_2  ./source/a/mkinitrd/
-http://www.google.co.id
+-   [Pocket Linux Guide](http://www.tldp.org/LDP/Pocket-Linux-Guide/html/Pocket-Linux-Guide.html)
+-   [Slackware_12_2  ./source/a/mkinitrd/](http://kambing.ui.ac.id/slackware/slackware-12.2/source/a/mkinitrd/)
 
 A. buat partisi pada flash disk.
 cek hardisk yang digunakan:
