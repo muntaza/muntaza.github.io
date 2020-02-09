@@ -300,6 +300,14 @@ mengikuti tutorial tersebut:
 - [DIY: Build a Custom Minimal Linux Distribution from Source](https://www.linuxjournal.com/content/diy-build-custom-minimal-linux-distribution-source)
 - [Build a Custom Minimal Linux Distribution from Source, Part II](https://www.linuxjournal.com/content/build-custom-minimal-linux-distribution-source-part-ii)
 
+# Tanya Jawab
+
+1.  Mengapa saya belajar membuat distro sendiri?
+
+    Jawab:
+
+    Membuat distro linux sendiri dari code sumber melatih skill command line anda,
+    sehingga, insyaAllah, anda akan mendapat pengalaman berharga dari latihan ini.
 
 Wallahu Ta'ala A'lam
 
