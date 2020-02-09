@@ -16,7 +16,7 @@ sumber penulisan:
 A. buat partisi pada flash disk.
 cek hardisk yang digunakan:
 
-[sourcecode lenguage="bash"]
+```text
 root@pisang:~# df
 Filesystem           1K-blocks      Used Available Use% Mounted on
 /dev/root              5826936   5434676     96264  99% /
@@ -25,10 +25,10 @@ Filesystem           1K-blocks      Used Available Use% Mounted on
 tmpfs                   511308         0    511308   0% /dev/shm
 /dev/sda9              8087616   7918228    169388  98% /media/disk
 /dev/sda6              8262036   7689412    152928  99% /mnt/sda6
-[/sourcecode]
+```
 
 pada hasil diatas, hardisk berada pada /dev/sda. tancapkan flash disk yang akan digunakan, cek posisi nya:
-[sourcecode lenguage="bash"]
+```text
 root@pisang:~# dmesg | tail -10
 [10004.529084] scsi 6:0:0:0: Direct-Access ************* PMAP PQ: 0 ANSI: 0 CCS
 [10004.529239] sd 6:0:0:0: Attached scsi generic sg2 type 0
@@ -40,13 +40,13 @@ root@pisang:~# dmesg | tail -10
 [10005.693652] sd 6:0:0:0: [sdb] Assuming drive cache: write through
 [10005.693659]  sdb: sdb1
 [10005.741702] sd 6:0:0:0: [sdb] Attached SCSI removable disk
-[/sourcecode]
+```
 
 terlihat bahwa flash disk dengan ukuran 4GB berada pada /dev/sdb. penentuan posisi device ini PENTING, karena kita akan menggunakan tool fdisk untuk mempartisi flash disk. bila salah menentukan dan yang kena adalah hard disk, maka dapat merusak semua data.
 
 buat partisi linux di flash disk
 
-[sourcecode lenguage="bash"]
+```text
 root@pisang:~# fdisk /dev/sdb
 
 Command (m for help): p
@@ -87,10 +87,10 @@ The partition table has been altered!
 Calling ioctl() to re-read partition table.
 Syncing disks.
 root@pisang:~#
-[/sourcecode]
+```
 
 format partisi tadi dengan filesystem ext3, buat mount point, lalu mount:
-[sourcecode lenguage="bash"]
+```text
 root@pisang:~# mkfs.ext3 /dev/sdb2
 mke2fs 1.41.3 (12-Oct-2008)
 Filesystem label=
@@ -104,10 +104,10 @@ root@pisang:~# mount /dev/sdb2 /mnt/distro
 root@pisang:~# df | grep distro
 /dev/sdb2               804740     17212    746648   3% /mnt/distro
 root@pisang:~#
-[/sourcecode]
+```
 
 install grub pada /mnt/distro
-[sourcecode lenguage="bash"]
+```text
 root@pisang:~# grub-install --root-directory=/mnt/distro /dev/sdb
 Probing devices to guess BIOS drives. This may take a long time.
 Installation finished. No error reported.
@@ -119,10 +119,10 @@ fix it and re-run the script `grub-install'.
 (hd0)   /dev/sda
 (hd1)   /dev/sdb
 root@pisang:~#
-[/sourcecode]
+```
 
 compile busybox
-[sourcecode lenguage="bash"]
+```text
 root@pisang:/usr/src/busybox# tar -xjf busybox-1.7.2.tar.bz2
 root@pisang:/usr/src/busybox# cd busybox-1.7.2
 root@pisang:/usr/src/busybox/busybox-1.7.2# patch -p1 < ../busybox-1.7.2.no-gc-sections.diff
@@ -155,7 +155,7 @@ root@pisang:/usr/src/busybox/busybox-1.7.2# make 1> /dev/null 2> /dev/null
 root@pisang:/usr/src/busybox/busybox-1.7.2# exit
 exit
 muntaza@pisang:~$
-[/sourcecode]
+```
 
 catatan: busybox dan patch nya bisa di download di http://kambing.ui.ac.id/slackware/slackware-12.2/source/a/mkinitrd/
 
@@ -163,7 +163,7 @@ catatan: busybox dan patch nya bisa di download di http://kambing.ui.ac.id/slack
 
 
 Buat ram file system
-[sourcecode lenguage="bash"]
+```text
 muntaza@pisang:~$ mkdir distro
 muntaza@pisang:~$ cd distro/
 muntaza@pisang:~/distro$ mkdir lampihong
@@ -227,18 +227,18 @@ muntaza@pisang:~/distro$ gzip lampihong.cpio
 muntaza@pisang:~/distro$ ls
 lampihong/  lampihong.cpio.gz
 muntaza@pisang:~/distro$
-[/sourcecode]
+```
 
 Ram file system sudah jadi, dengan nama lampihong.cpio.gz. selanjutnya adalah compile kernel linux, caranya bisa dilihat pada tulisan saya mengenai compile kernel. copy bzImage hasil compile kernel ke /mnt/distro,
 
-[sourcecode lenguage="bash"]
+```text
 misalnya:
 root@pisang:/usr/src/linux-2.6.30.5# cp arch/x86/boot/bzImage /mnt/distro/
-[/sourcecode]
+```
 
 copy juga ram file system tadi ke /mnt/distro
 
-[sourcecode lenguage="bash"]
+```text
 root@pisang:/mnt/distro# ls
 boot  bzImage
 root@pisang:/mnt/distro# cp /home/muntaza/distro/lampihong.cpio.gz /mnt/distro/
@@ -248,11 +248,11 @@ boot  bzImage  lampihong.cpio.gz
 root@pisang:/mnt/distro# df -h | grep sdb2
 /dev/sdb2             786M   22M  725M   3% /mnt/distro
 root@pisang:/mnt/distro#
-[/sourcecode]
+```
 
 buat file menu.lst di direktori boot/grub
 
-[sourcecode lenguage="bash"]
+```text
 root@pisang:/mnt/distro# vi boot/grub/menu.lst
 =============
 timeout 10
@@ -274,17 +274,17 @@ default        fat_stage1_5      jfs_stage1_5    reiserfs_stage1_5  ufs2_stage1_
 device.map     ffs_stage1_5      menu.lst        stage1             vstafs_stage1_5
 e2fs_stage1_5  iso9660_stage1_5  minix_stage1_5  stage2             xfs_stage1_5
 root@pisang:/mnt/distro#
-[/sourcecode]
+```
 
 Selesai, reboot........ pilih urutan booting dari flash disk, untuk mencoba linux mini.
 
 tampilannya adalah sbb:
 
-[sourcecode lenguage="bash"]
+```text
 selamat datang di distro mini Lampihong Linux
 #
 
-[/sourcecode]
+```
 
 untuk reboot, ketik /sbin/reboot.
 
