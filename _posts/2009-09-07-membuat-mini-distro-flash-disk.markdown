@@ -296,7 +296,7 @@ mengikuti tutorial tersebut:
 
 - [Minimal Linux Live](https://github.com/ivandavidov/minimal).
 - [Minimal Linux Script](https://github.com/ivandavidov/minimal-linux-script).
-- [Build Your Own Linux](http://www.buildyourownlinux.com/)
+- [Build Your Own Linux](http://www.buildyourownlinux.com/).
 - [DIY: Build a Custom Minimal Linux Distribution from Source](https://www.linuxjournal.com/content/diy-build-custom-minimal-linux-distribution-source)
 - [Build a Custom Minimal Linux Distribution from Source, Part II](https://www.linuxjournal.com/content/build-custom-minimal-linux-distribution-source-part-ii)
 
