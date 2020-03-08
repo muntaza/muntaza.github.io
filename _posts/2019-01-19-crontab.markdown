@@ -125,5 +125,12 @@ dan bulanan:
 22      0       *       *       *       /var/postgresql/back_up_persediaan_2020/back_up_persediaan_2020.sh
 ```
 
+Pada contoh di atas, backup dilakukan pada tengah malam jam 0, pada menit yang bervariasi, yaitu pada
+menit ke-10, menit ke-11 dan seterusnya, namun ada yang harian, mingguan dan bulanan. Terlihat sekali manfaat
+crontab ini, yang mana untuk database yang lama, tidak perlu backup harian, maka bisa backup bulanan. Bahkan,
+crontab bisa di setting untuk backup tahunan he...he... yaitu dengan mensetting bulan dan tanggal, misalnya
+bulan tanggal 1 bulan 1 (Januari).
+
+Semoga contoh yang sedikit ini bermanfaat. Aamiin.
 
 # Alhamdulillah
