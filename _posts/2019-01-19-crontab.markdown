@@ -92,3 +92,45 @@ muhammad$
 
 
 {% endhighlight %}
+
+
+Contoh lain, file crontab untuk backup database, di sini sudah saya beri komentar
+pada file tersebut, sehingga bisa di lihat, contoh backup harian, mingguan
+dan bulanan:
+
+```text
+# muhammad@muntaza.id
+# backup bulanan dan harian database postgresql
+
+# minute hour day-of-month month day-of-week command
+
+
+
+# Harian
+10      0       *       *       *       /var/postgresql/back_up_kabupaten/back_up_kabupaten.sh
+
+# Bulanan, tiap tanggal 1
+11      0       1       *       *       /var/postgresql/back_up_kabupaten_b/back_up_kabupaten_b.sh
+
+# Bulanan, tiap tanggal 2
+15      0       2       *       *       /var/postgresql/back_up_global/back_up_global.sh
+
+# Bulanan, tiap tanggal 3
+16      0       3       *       *       /var/postgresql/back_up_persediaan/back_up_persediaan.sh
+
+# Mingguan, tiap hari Ahad
+20      0       *       *       0       /var/postgresql/back_up_persediaan_2019/back_up_persediaan_2019.sh
+
+# Harian
+22      0       *       *       *       /var/postgresql/back_up_persediaan_2020/back_up_persediaan_2020.sh
+```
+
+Pada contoh di atas, backup dilakukan pada tengah malam jam 0, pada menit yang bervariasi, yaitu pada
+menit ke-10, menit ke-11 dan seterusnya, namun ada yang harian, mingguan dan bulanan. Terlihat sekali manfaat
+crontab ini, yang mana untuk database yang lama, tidak perlu backup harian, maka bisa backup bulanan. Bahkan,
+crontab bisa di setting untuk backup tahunan he...he... yaitu dengan mensetting bulan dan tanggal, misalnya
+bulan tanggal 1 bulan 1 (Januari).
+
+Semoga contoh yang sedikit ini bermanfaat. Aamiin.
+
+# Alhamdulillah
