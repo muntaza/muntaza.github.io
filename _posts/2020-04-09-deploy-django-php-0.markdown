@@ -80,10 +80,18 @@ Installing collected packages: pip
     Uninstalling pip-19.1.1:
       Successfully uninstalled pip-19.1.1
 Successfully installed pip-20.0.2
+```
 
+Saya upgrade pip ke versi terbaru.
+
+```text
 bphtb$ pip3 --version
 pip 20.0.2 from /usr/local/lib/python3.7/site-packages/pip (python 3.7)
+```
 
+Terlihat kalau pip sudah di versi terbaru
+
+```text
 bphtb$ doas pip install Django==2.2.12
 Collecting Django==2.2.12
   Downloading Django-2.2.12-py3-none-any.whl (7.5 MB)
@@ -96,7 +104,11 @@ Collecting pytz
      |--------------------------------| 509 kB 89 kB/s
 Installing collected packages: sqlparse, pytz, Django
 Successfully installed Django-2.2.12 pytz-2019.3 sqlparse-0.3.1
+```
 
+Instalasi Django, saya gunakan versi LTS 2.2
+
+```text
 bphtb$ doas /usr/sbin/pkg_add apache-httpd
 quirks-3.299 signed on 2020-04-02T19:59:42Z
 apache-httpd-2.4.43:jansson-2.12: ok
@@ -110,8 +122,11 @@ apache-httpd-2.4.43: ok
 Running tags: ok
 The following new rcscripts were installed: /etc/rc.d/apache2
 See rcctl(8) for details.
+```
 
+Instalasi Apache2, saat ini di versi 2.4.43
 
+```text
 bphtb$ doas /usr/sbin/pkg_add php-gd php-pdo_pgsql php-pgsql php-apache
 quirks-3.299 signed on 2020-04-02T19:59:42Z
 Ambiguous: choose package for php-gd
@@ -152,8 +167,12 @@ See rcctl(8) for details.
 New and changed readme(s):
 	/usr/local/share/doc/pkg-readmes/femail-chroot
 	/usr/local/share/doc/pkg-readmes/php-7.3
+```
+
+Instalasi PHP dan modul pendukungnya. Versi PHP 7.3
 
 
+```text
 bphtb$ doas /usr/sbin/pkg_add postgresql-server postgresql-contrib
 quirks-3.299 signed on 2020-04-02T19:59:42Z
 useradd: Warning: home directory `/var/postgresql' doesn't exist, and -m was not specified
@@ -163,7 +182,11 @@ The following new rcscripts were installed: /etc/rc.d/postgresql
 See rcctl(8) for details.
 New and changed readme(s):
 	/usr/local/share/doc/pkg-readmes/postgresql-server
+```
 
+Instalasi PostgreSQL versi 12.
+
+```text
 bphtb$ doas pip install mod-wsgi
 Collecting mod-wsgi
   Downloading mod_wsgi-4.7.1.tar.gz (498 kB)
@@ -171,7 +194,16 @@ Collecting mod-wsgi
 Installing collected packages: mod-wsgi
     Running setup.py install for mod-wsgi ... done
 Successfully installed mod-wsgi-4.7.1
+```
 
+Installasi mod_wsgi dengan pip, walaupun ada pula di repo OpenBSD,
+namun kalau menginstall dengan pkg_add, maka akan terinstall python2.7
+sebagai depedency dari mod_wsgi ini, jadi saya gunakan pip aja di sini.
+
+
+Nah, inilah daftar module python dari pip:
+
+```text
 bphtb$ pip3.7 list
 Package    Version
 ---------- -------
@@ -181,8 +213,12 @@ pip        20.0.2
 pytz       2019.3
 setuptools 41.6.0
 sqlparse   0.3.1
+```
+
+Daftar Paket penting beserta versinya:
 
 
+```text
 apache-httpd-2.4.43		apache HTTP server
 php-7.3.16			server-side HTML-embedded scripting language
 php-apache-7.3.16		php module for Apache httpd
@@ -196,8 +232,11 @@ py3-pip-19.1.1			tool for installing Python packages
 py3-setuptools-41.6.0v0		simplified packaging system for Python modules
 python-3.7.7			interpreted object-oriented programming language
 vim-8.2.356-no_x11-python3	vi clone, many additional features
+```
 
 
+Penutup, Alhamdulillah, catatan ini bisa saya selesaikan. Konfigurasi lebih
+lanjut akan saya tuliskan jika memungkinkan.
 
 
 # Alhamdulillah
