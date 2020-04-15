@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "pass: the standar unix password manager"
+date:   2020-04-15 11:26:56 +0800
+categories: security
+---
+
+# Bismillah,
+
+Catatan
+
+```text
+persediaan$ cd /etc/examples/
+```
+
+
+# Alhamdulillah
