@@ -12,6 +12,7 @@ Catatan
 ```text
 persediaan$ cd /etc/examples/
 ```
+OK
 
 
 # Alhamdulillah
