@@ -1,18 +1,252 @@
 ---
 layout: post
-title:  "pass: the standar unix password manager"
-date:   2020-04-15 11:26:56 +0800
+title:  "Amankan Password kita sekarang juga!"
+date:   2020-04-15 10:26:56 +0800
 categories: security
 ---
 
 # Bismillah,
 
-Catatan
+Perkembangan dunia Teknologi ini semakin pesat, tak luput pula menimbulkan
+kerentanan dan bahaya keamaanan di dunia maya. Telah banyak
+[tips](https://security.berkeley.edu/resources/best-practices-how-to-articles/top-10-secure-computing-tips)
+ dan trik
+yang di tulis bagaimana caranya agar bisa aman di internet. Namun, semua
+itu hanyalah ikhtiar kita saja, dengan tiada lupa kita selalu bertawakkal
+kepada Allah Ta'ala. Semoga Allah Ta'ala menjaga kita di manapun kita berada.
 
-```text
-persediaan$ cd /etc/examples/
-```
-OK
+## Pengantar
+
+Di sini saya ingin menuliskan, secara khusus kepada pengguna Linux dan OpenBSD,
+cara mengamankan password dengan password manager berbasis CLI yang bernama pass.
+Sebelum memulai, saya sajikan sedikit pengantar dahulu.
+
+Berawal dari maraknya email scam, yang mana mengklaim, bahwa si scammer ini mempunyai
+password dari pemilik email yang di tuju nya. Pemilik email pun kaget, bagaimana
+bisa mereka (crecker) dapat password saya? Huh...., ternyata si scammer ini dapat
+password dari kebocoran database yang terjadi pada beberapa perusahaan. Silahkan
+lihat di penjelasan dan contoh nya di
+[Beware of Extortion Scams](https://www.bleepingcomputer.com/news/security/beware-of-extortion-scams-stating-they-have-video-of-you-on-adult-sites/).
+
+Kemudian saya coba memasukkan salah satu email saya ke website
+[https://haveibeenpwned.com/](https://haveibeenpwned.com/) berikut:
+
+![gambar0](/assets/pass/pass0.png)
+
+Setelah subscribe, konfirmasi subscribe, ternyata email saya tersebut sudah pernah
+bocor data passwordnya sebagaimana terlihat di bawah:
+
+![gambar1](/assets/pass/pass1.png)
+
+Penjelasan terkait hal diatas, ada pada dua link di bawah ini:
+
+1. [Bukalapak Meningkatkan Keamanan Akun Pengguna](https://www.bukalapak.com/blog/feature-updates/petunjuk-teknis-105502)
+1. [Observations and thoughts on the LinkedIn data breach](https://www.troyhunt.com/observations-and-thoughts-on-the-linkedin-data-breach/)
+
+Langkah pengamanan yang saya lakukan, adalah segera mengganti kedua password
+saya di dua website dengan password generator untuk masing-masing website.
+
+## Gunakanlah Password Manager
+
+Salah satu (bukan satu-satunya) cara agar aman adalah penggunakan satu password
+untuk setiap website atau aplikasi yang kita gunakan. Sehingga, seandainya terjadi
+kebocoran database password pada sebuah website, akun kita pada website/aplikasi
+lain tetap aman. Karena kita akan kesulitan mengingat semua password-password
+tersebut, maka gunakan lah Aplikasi Password Manager untuk mencatat daftar
+password-password tersebut. Sebuah tulisan
+[5 Best Password Managers For Linux Desktop](https://itsfoss.com/password-managers-linux/)
+menampilkan sekian pilihan Password Manager yang bisa di gunakan di Linux.
+
+
+## pass
+
+Password Manager yang saya pilih adalah [pass](https://www.passwordstore.org/) sebuah
+program yang luar biasa sekali menurut saya, dengan beberapa fitur penting sebagai berikut:
+
+1. File password di enkripsi dengan GPG Public Key.
+1. Perubahan file password di catat dengan Git.
+1. Setelah dekripsi file, file plain text nya bisa di edit dengan editor biasa
+1. Folder password bisa di rsync ke VPS sebagai backup.
+
+![gambar3](/assets/pass/pass3.png)
+
+# Langkah-langkah penggunaan pass
+
+1. Instalasi pass
+    ```text
+    muntaza@E202SA$ sudo apt-get install pass
+    ```
+
+1. Instalasi xclip
+    ```text
+    muntaza@E202SA:~$ sudo apt install xclip
+    ```
+
+    xclip ini berfungsi untuk mengcopy password secara aman,
+    yang akan hilang dari memory (clipboard) setelah 45 detik.
+
+1. Kita telah memiliki GPG key
+    ```text
+    muntaza@E202SA:~$ gpg --list-key muhammad@muntaza.id
+
+    pub   rsa2048 2017-12-06 [SC]
+          10A4ACA63D918505D8547759C618BBE52188BDF7
+    uid           [ultimate] Muhammad Muntaza <muhammad@muntaza.id>
+    sub   rsa2048 2017-12-06 [E]
+    ```
+    Disini saya tampilkan contoh GPG key saya.
+
+
+1. Pembuatan folder awal
+    ```text
+    muntaza@E202SA:~$ pass init "Muhammad Muntaza"
+
+    mkdir: created directory '/home/muntaza/.password-store/'
+    Password store initialized for Muhammad Muntaza
+    ```
+    ```text
+    muntaza@E202SA:~$ pass git init
+
+    Initialized empty Git repository in /home/muntaza/.password-store/.git/
+    [master (root-commit) a03c5ac] Add current contents of password store.
+     1 file changed, 1 insertion(+)
+     create mode 100644 .gpg-id
+    [master 4e56a43] Configure git repository for gpg file diff.
+     1 file changed, 1 insertion(+)
+     create mode 100644 .gitattributes
+    muntaza@E202SA:~$
+    ```
+    Folder .password-store sebagai tempat penyimpanan password
+
+1. Cara menggenerate password
+    ```text
+    muntaza@E202SA:~$ pass generate Website/bpbtb.paringin.com
+
+    mkdir: created directory '/home/muntaza/.password-store/Website'
+    [master af18038] Add generated password for Website/bpbtb.paringin.com.
+     1 file changed, 0 insertions(+), 0 deletions(-)
+     create mode 100644 Website/bpbtb.paringin.com.gpg
+    The generated password for Website/bpbtb.paringin.com is:
+    5v(MNrrx0az9xG+Q!N3Uzrq60
+    ```
+
+1. Cara menambahkan password dengan insert
+
+    ```text
+    muntaza@E202SA:~$ pass insert Website/mint.paringin.com
+
+    Enter password for Website/mint.paringin.com:
+    Retype password for Website/mint.paringin.com:
+    [master 7cba441] Add given password for Website/mint.paringin.com to store.
+     1 file changed, 0 insertions(+), 0 deletions(-)
+     create mode 100644 Website/mint.paringin.com.gpg
+    ```
+
+1. Menampilkan salah satu password
+
+    ```text
+    muntaza@E202SA:~$ pass Website/bpbtb.paringin.com
+
+    5v(MNrrx0az9xG+Q!N3Uzrq60
+    ```
+
+    Disini, kita akan di minta kan password private key GPG kita,
+    untuk melihat password, karena file password di enkripsi
+    dengan public key kita.
+
+1. Melihat daftar password yang ada
+    ```text
+    muntaza@E202SA:~$ pass
+
+    Password Store
+    └── Website
+        ├── bpbtb.paringin.com
+        └── mint.paringin.com
+    ```
+
+1. Cara mengcopy password, agar bisa di paste saat kita mau login
+    ```text
+    muntaza@E202SA:~$ pass -c Website/bpbtb.paringin.com
+
+    Copied Website/bpbtb.paringin.com to clipboard. Will clear in 45 seconds.
+    ```
+
+1. Cara menghapus password
+
+    ```text
+    muntaza@E202SA:~$ pass rm Website/mint.paringin.com
+
+    Are you sure you would like to delete Website/mint.paringin.com? [y/N] y
+    removed '/home/muntaza/.password-store/Website/mint.paringin.com.gpg'
+    [master 063c70e] Remove Website/mint.paringin.com from store.
+     1 file changed, 0 insertions(+), 0 deletions(-)
+     delete mode 100644 Website/mint.paringin.com.gpg
+    ```
+
+1. Mengedit password
+    ```text
+    muntaza@E202SA:~$ pass Website/bpbtb.paringin.com
+
+    5v(MNrrx0az9xG+Q!N3Uzrq60
+    ```
+    Tampilan password sebelum di edit.
+
+    ```text
+    muntaza@E202SA:~$ pass edit Website/bpbtb.paringin.com
+
+    [master f409efd] Edit password for Website/bpbtb.paringin.com using vim.
+     1 file changed, 0 insertions(+), 0 deletions(-)
+     rewrite Website/bpbtb.paringin.com.gpg (100%)
+    ```
+
+    Kita edit password dengan perintah __edit__, maka akan tampil
+    file text biasa (plain text), yang bisa kita edit dengan
+    $EDITOR yang kita set, bisa vim atau yang lain.
+
+    ```text
+    muntaza@E202SA:~$ pass Website/bpbtb.paringin.com
+
+    5v(MNrrx0az9xG+Q!N3Uzrq60
+    user: ahmad@paringin.com
+    ```
+
+    Tampilan password setelah di edit.
+
+1. Log git di folder .password-store
+
+    ```text
+    muntaza@E202SA:~/.password-store$ git log
+
+    commit f409efd49fd14e4c5c3f351887aa39e65a999208 (HEAD -> master)
+    Author: Muhammad Muntaza <muhammad@muntaza.id>
+    Date:   Wed Apr 15 12:40:15 2020 +0800
+
+        Edit password for Website/bpbtb.paringin.com using vim.
+
+    commit 063c70ed66c33437c1a6a0fb9450eaa48925495f
+    Author: Muhammad Muntaza <muhammad@muntaza.id>
+    Date:   Wed Apr 15 12:38:22 2020 +0800
+
+        Remove Website/mint.paringin.com from store.
+
+    commit 7cba441e8a28a2f5e020fb675f463a9648785e37
+    Author: Muhammad Muntaza <muhammad@muntaza.id>
+    Date:   Wed Apr 15 12:23:03 2020 +0800
+
+        Add given password for Website/mint.paringin.com to store.
+
+    commit 52082677eb5367b2e403b8529da727dca196c3c7
+    Author: Muhammad Muntaza <muhammad@muntaza.id>
+    Date:   Wed Apr 15 12:22:50 2020 +0800
+    ```
+    Semua proses tercatat di repositori git local.
+
+
+## Penutup
+
+Sebuah password seharusnya memiliki panjang sekitar 15 karakter atau lebih, dan
+setiap aplikasi/website, masing-masingnya kita gunakan password khusus. Semoga tulisan
+ini bermanfaat.
 
 
 # Alhamdulillah
