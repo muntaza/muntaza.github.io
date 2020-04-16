@@ -293,6 +293,16 @@ program yang luar biasa sekali menurut saya, dengan beberapa fitur penting sebag
     -	Gunakan Firefox di OpenBSD tadi hanya untuk mengakses website tersebut.
     -	Password di simpan di pass.
 
+1.  Hey, password saya terlihat di terminal setelah menjalankan pass, bagaimana menghapusnya?
+
+    Jawab:
+
+    ```text
+    muntaza@E202SA:~$ history -c
+    muntaza@E202SA:~$ clear && clear
+    ```
+
+    Perintah di atas menghapus history dan membersihkan layar sehingga tidak bisa di scroll lagi.
 
 
 ## Penutup
