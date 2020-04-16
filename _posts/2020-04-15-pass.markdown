@@ -266,12 +266,13 @@ program yang luar biasa sekali menurut saya, dengan beberapa fitur penting sebag
     -	Jangan sembarangan mengklik links yang tidak di kenal.
     -	Selalu aktifkan _Two-step Login Verification_ bila tersedia pada website atau aplikasi yang kita gunakan.
 
+
 1.  Kantor kami menyediakan Laptop dengan OS Windows, bagaimana saya mengakses
     daftar password untuk aplikasi kantor tanpa membawa Laptop Pribadi dengan OS Linux?
 
     Jawab:
 
-    Saya sarankan untuk menggunakan Password Manager [bitwarden](https://vault.bitwarden.com/#/) untuk
+    Saya sarankan untuk menggunakan Password Manager [bitwarden](https://bitwarden.com/) untuk
     mengelola password aplikasi perkantoran. Namun, beberapa hal yang perlu di perhatikan:
 
     -	Master password bitwarden di simpan di pass.
@@ -279,6 +280,8 @@ program yang luar biasa sekali menurut saya, dengan beberapa fitur penting sebag
     -	Pada Firefox, install [bitwarden addon](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
     -	Setting Firefox _bitwarden addon_ agar logout saat restart Firefox, sehingga saat laptop kantor anda matikan
 	maka perlu login ulang untuk mengakses bitwarden.
+    -	Jangan gunakan password manager bawaan Firefox.
+
 
 1.  Bagaimana cara aman mengakses website khusus semisal Internet Banking?
 
