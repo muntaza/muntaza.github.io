@@ -242,10 +242,60 @@ program yang luar biasa sekali menurut saya, dengan beberapa fitur penting sebag
     Semua proses tercatat di repositori git local.
 
 
+## Tanya Jawab
+
+
+1.  Seberapa karakter kah panjang sebuah password yang baik?
+
+    Jawab:
+
+    Menurut saya, sebaiknya, tidak kurang dari 15 karakter. INGAT: bagi setiap
+    website harus menggunakan password tersendiri.
+
+1.  Apa yang di maksud Keylogger Trojan?
+
+    Jawab:
+
+    Ini adalah _virus_ yang berbahaya, karena secara sembunyi
+    mencatat semua yang kita ketik di keyboard. Jadi, kalau
+    kita mengetik password atau apapun, dia ini mencatatnya
+    dan bisa jadi mengirimkan ke si pembuat _virus_. Cara agar
+    selamat diantaranya:
+    -	Jangan sembarangan menginstall aplikasi apapun, baik di Windows, Linux, Android, terutama yang gratisan.
+    -	Gunakan Password Manager, sehingga password itu kita copy paste, bukan di ketik.
+    -	Jangan sembarangan mengklik links yang tidak di kenal.
+    -	Selalu aktifkan _Two-step Login Verification_ bila tersedia pada website atau aplikasi yang kita gunakan.
+
+1.  Kantor kami menyediakan Laptop dengan OS Windows, bagaimana saya mengakses
+    daftar password untuk aplikasi kantor tanpa membawa Laptop Pribadi dengan OS Linux?
+
+    Jawab:
+
+    Saya sarankan untuk menggunakan Password Manager [bitwarden](https://vault.bitwarden.com/#/) untuk
+    mengelola password aplikasi perkantoran. Namun, beberapa hal yang perlu di perhatikan:
+
+    -	Master password bitwarden di simpan di pass.
+    -	Aktifkan _Two-step Login Verification Code_ pada bitwarden lewat email.
+    -	Pada Firefox, install [bitwarden addon](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
+    -	Setting Firefox _bitwarden addon_ agar logout saat restart Firefox, sehingga saat laptop kantor anda matikan
+	maka perlu login ulang untuk mengakses bitwarden.
+
+1.  Bagaimana cara aman mengakses website khusus semisal Internet Banking?
+
+    Jawab:
+
+    Terkait web aplikasi yang perlu tingkat keamanan tinggi, saya sarankan:
+
+    -	Install OpenBSD dengan Full Disk Encryption pada Partisi lain kalau dual booting atau pada laptop khusus.
+    -	Gunakan Firefox di OpenBSD tadi hanya untuk mengakses website tersebut.
+    -	Password di simpan di pass.
+
+
+
 ## Penutup
 
-Sebuah password seharusnya memiliki panjang sekitar 15 karakter atau lebih, dan
-setiap aplikasi/website, masing-masingnya kita gunakan password khusus. Ini adalah
+
+Sekali lagi, setiap aplikasi/website, masing-masingnya kita gunakan password khusus. Ini adalah
 ikhtiar kita, semoga Allah Ta'ala selalu menjaga kita di manapun berada dan semoga tulisan
 ini bermanfaat. Aamiin.
 
