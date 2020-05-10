@@ -115,6 +115,8 @@ Sehingga harus di edit manual mirror nya sebagai berikut:
 
 ![centos1_b](/assets/centos/centos1_b.png)
 
+Sejumlah mirror dari Indonesia, bisa di lihat di [sini](https://www.centos.org/download/mirrors/)
+
 # Pilihan Software
 
 Baiklah, setelah network dan mirror, tinggal pilihan software yang akan saya install saja lagi yang belum di setting:
@@ -158,6 +160,12 @@ Saya booting ke hardisk, dan bisa login dengan user __muntaza__:
 Kemudian, cek file /etc/release_centos, ternyata sudah berada di versi 8.1, lalu test ping ke internet, dan berhasil:
 
 ![centos16](/assets/centos/centos16.png)
+
+# Selesai
+
+Demikian tutorial ini, saya menggunakan gambar yang cukup banyak kali ini, he...he..., walaupun demikian, ini sudah saya usahakan seminimal mungkin gambarnya, karena ada beberapa langkah yang tidak saya screenshoot.
+
+Semoga tulisan ini bermanfaat. Hal yang saya kritik dari CentOS ini adalah proses instalasinya yang harus dengan GUI, dan saat ini penyedia VPS masih belum banyak yang menyediaan pilihan deploy CentOS 8.
 
 
 ## Alhamdulillah
