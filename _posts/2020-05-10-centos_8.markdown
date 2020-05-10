@@ -5,13 +5,83 @@ date:   2020-05-10 11:26:56 +0800
 categories: centos
 ---
 
-# Bismillah,
+## Bismillah,
 
-Catatan
+Ini adalah catatan saya pada proses instalasi CentOS 8.0 pada VirtualBox. Tulisan ini saya buat sederhana dan ringkas, serta menyertakan gambar screenshoot yang saya anggap perlu di tampilkan. Juga beberapa script untuk setting koneksi ke internet dari Virtualbox.
+
+# Koneksi Virtualbox ke Internet
+
+Saya sudah pernah menulis tentang koneksi Virtualbox ke internet di [sini](https://www.muntaza.id/virtualbox/2019/12/01/virtualbox-internet.html), namun saya kembali menuliskan cara koneksi ke internet dengan konfigurasi NAT dari [nftables](https://www.muntaza.id/nftables/2020/01/30/nftables-keempat.html). Ini adalah file script untuk mengaktifkan interface tuntap:
 
 ```text
-persediaan$ cd /etc/examples/
+#!/bin/bash
+
+dev=tap1
+
+
+ip tuntap del $dev mode tap
+sudo ip tuntap add $dev mode tap user root
+sudo ip link set $dev up
+sudo ip address add 172.16.1.1/24 broadcast 172.16.1.255 dev $dev
+ip address show $dev
 ```
 
+Terkait penggunaan perintah __ip__ silahkan lihat di [sini](https://access.redhat.com/articles/ip-command-cheat-sheet).
 
-# Alhamdulillah
+Kemudian, ini adalah script nftables.conf pada laptop saya:
+
+```text
+#!/usr/sbin/nft -f
+
+flush ruleset
+
+define lo_if  = "lo"
+define int_if = "tap1"
+define ext_if = "wlp1s0"
+
+table ip nat {
+	chain PREROUTING {
+		type nat hook prerouting priority 0; policy accept;
+	}
+
+	chain POSTROUTING {
+		type nat hook postrouting priority 0; policy accept;
+		oifname $ext_if masquerade
+	}
+}
+table ip filter {
+	chain INPUT {
+		type filter hook input priority 0; policy drop;
+		ct state established,related accept
+		iifname $lo_if accept
+		iifname $int_if accept
+	}
+
+	chain FORWARD {
+		type filter hook forward priority 0; policy drop;
+		iifname $ext_if oifname $int_if ct state established,related accept
+		iifname $int_if oifname $ext_if accept
+	}
+
+	chain OUTPUT {
+		type filter hook output priority 0; policy accept;
+	}
+}
+```
+
+Penjelasan tentang nftables.conf diatas, silahkan lihat di [sini](https://www.muntaza.id/nftables/2019/12/16/nftables-kedua.html). Jangan lupa juga mengaktifkan ip_forward:
+
+```text
+$ cat /etc/sysctl.conf | grep ipv4.ip_forward
+net.ipv4.ip_forward=1
+```
+
+# VirtualBox
+
+Setting VirtualBox seperti biasa, atur agar file iso CentOS 8.0 sudah di mount di cdrom VirtualBox.
+
+![centos0_a](/asset/centos/centos0_a.png)
+
+
+
+## Alhamdulillah
