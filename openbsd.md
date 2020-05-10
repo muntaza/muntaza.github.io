@@ -11,6 +11,9 @@ OpenBSD [Consulting](https://www.openbsd.org/support.html#Indonesia), Training, 
 WhatsApp : +62 816 20 6441
 
 List of my OpenBSD tutorials:
+- [OpenBSD: sysupgrade](https://www.muntaza.id/openbsd/2020/04/09/sysupgrade.html)
+- [Deploy Django dan PHP](https://www.muntaza.id/openbsd/2020/04/09/deploy-django-php-0.html)
+- [Firewall dengan OpenBSD PF bagian Kedua](https://www.muntaza.id/pf/2020/02/03/pf-firewall-bagian-kedua.html)
 - [PF Firewall : Contoh implementasi](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html)
 - [OpenBSD-httpd Web Server dan PHP](https://www.muntaza.id/openbsd/2019/08/31/openbsd-httpd.html)
 - [Reportico 4.6 dengan PHP 7.2](https://www.muntaza.id/php7/2019/07/07/reportico-php72.html)
