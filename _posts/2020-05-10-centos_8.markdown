@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Instalasi CentOS 8 pada Virtualbox"
+date:   2020-05-10 11:26:56 +0800
+categories: centos
+---
+
+# Bismillah,
+
+Catatan
+
+```text
+persediaan$ cd /etc/examples/
+```
+
+
+# Alhamdulillah
