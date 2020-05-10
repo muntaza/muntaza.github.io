@@ -78,10 +78,86 @@ net.ipv4.ip_forward=1
 
 # VirtualBox
 
-Setting VirtualBox seperti biasa, atur agar file iso CentOS 8.0 sudah di mount di cdrom VirtualBox.
+Setting VirtualBox seperti biasa, sesuaikan kapasitas memory mesin virtual dengan memory laptop anda. Pada laptop saya, kebetulan hanya punya 2 GB memory, sehingga untuk mesin virtual ini hanya menggunakan memory 768 MB, he...he..., berikut tampilannya:
 
-![centos0_a](/asset/centos/centos0_a.png)
+![centos0_a](/assets/centos/centos0_a.png)
 
+Arahkan cdrom mesin virtual ke file iso CentOS 8.0:
+
+![centos0_c](/assets/centos/centos0_c.png)
+
+Pada setting network, pilih brigded Adapter, pilih interface tap1:
+
+![centos0_b](/assets/centos/centos0_b.png)
+
+# Proses Instalasi CentOS 8
+
+Pada tahap awal, kita memilih bahasa dan setting keyboard, saya pilih _english_. Untuk hardisk, saya pilih hardisk yang tersedia, dengan __automatic__ partition. Kemudian, setting zona waktu, saya pilih Asia/Makassar, karena saya tinggal di Banjarbaru, he...he...
+
+
+![centos2](/assets/centos/centos2.png)
+
+# Network
+
+Setting network dilakukan secara manual, karena interface tap1 dengan IP 172.16.1.1 berfungsi sebagai gateway, maka IP mesin virtual adalah 172.16.1.2, berikut tampilan settingnya:
+
+![centos6](/assets/centos/centos6.png)
+
+![centos4](/assets/centos/centos4.png)
+
+# Mirror
+
+Pada saat memilih mirror untuk instalasi, terjadi error, rupanya ISO CentOS 8.0 ini terdapat bug yang menjadikan installer tidak bisa langsung memilih mirror terdekat. Setelah saya coba browsing, ternyata ketemu solusi nya di sini [https://bugs.centos.org/view.php?id=16456](https://bugs.centos.org/view.php?id=16456):
+
+![centos1_a](/assets/centos/centos1_a.png)
+
+Sehingga harus di edit manual mirror nya sebagai berikut:
+
+![centos1_b](/assets/centos/centos1_b.png)
+
+# Pilihan Software
+
+Baiklah, setelah network dan mirror, tinggal pilihan software yang akan saya install saja lagi yang belum di setting:
+
+![centos8](/assets/centos/centos8.png)
+
+Saya melilih __server__ sebagai pilihan:
+
+![centos9](/assets/centos/centos9.png)
+
+OK, siap install, klik __begin installation__:
+
+![centos10](/assets/centos/centos10.png)
+
+# Password Root dan Pembuatan User Admin
+
+Pada saat proses instalasi, terdapat pilihan untuk mensetting Password Root dan membuat user Admin:
+
+![centos11](/assets/centos/centos11.png)
+
+![centos12](/assets/centos/centos12.png)
+
+Setelah instalasi selesai, klik __Reboot__:
+
+![centos13](/assets/centos/centos13.png)
+
+# Lepaskan file ISO dari Mesin Virtual
+
+Karena saat ini file ISO masih di mount di cdrom mesin virtual, kita mesti melepaskan nya agar bisa booting ke hardisk:
+
+![centos14](/assets/centos/centos14.png)
+
+lalu reboot ulang mesin virtual dengan perintah reset di VirtualBox.
+
+# CentOS 8 telah terinstall
+
+Saya booting ke hardisk, dan bisa login dengan user __muntaza__:
+
+![centos15](/assets/centos/centos15.png)
+
+Kemudian, cek file /etc/release_centos, ternyata sudah berada di versi 8.1, lalu test ping ke internet, dan berhasil:
+
+![centos16](/assets/centos/centos16.png)
 
 
 ## Alhamdulillah
