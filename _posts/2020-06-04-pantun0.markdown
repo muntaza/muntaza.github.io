@@ -21,10 +21,8 @@ GnuPG
   
 Security Patches and OS Updates  
 Syspatch and Sysupgrade  
-  
 Store Password Database Locally with pass  
-Passphares that you can memorize  
-A four-word plus an eight-character  
+A 4-word plus 8-character, Passphares that you can memorize  
   
 Configure Email and DNS on Different Host from the website  
 Use a paid SSL Certificate  
