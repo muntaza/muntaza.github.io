@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "Security Recommendations for Server Deployment"
+date:   2020-06-04 11:26:56 +0800
+categories: openbsd
+---
+
+# Bismillah,    
+    
+Security Recommendations for Server Deployment  
+In XOR Out Connection  
+  
+Block return, Pass in  
+Combating Reverse Telnet using OpenBSD Packet Filter  
+Force OpenSSH to only allow users with a key to log in  
+Separate ssh-key per host and user  
+  
+Allow Access Based on Country with IPdeny  
+Pass out proto icmp  
+GnuPG  
+  
+Store Password Database Locally with pass  
+Security Patches and OS Updates  
+Passphares that you can memorize (4 random words)  
+  
+Configure Email and DNS on Different Host from the website  
+Use a paid SSL Certificate  
+Apache or OpenHTTPD in a Chroot Jail  
+/sbin/nologin is set as the shell  
+  
+<br>   
+<br>   
+  
+Muhammad Muntaza bin Hatta    
+Syawal 1441 H, Banjarbaru - Indonesia    
