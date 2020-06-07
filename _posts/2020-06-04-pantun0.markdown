@@ -28,14 +28,14 @@ Use a paid SSL Certificate
 OpenHTTPD in a Chroot Jail  
 /sbin/nologin is set as the shell  
   
-Protect login page from Bruteforce with 2FA  
 All root scripts should be in the /root directory  
-Database backups are encrypted by GnuPG  
-  
-REVOKE insert, update, delete ON table FROM reporting_tool   
-Full Disk Encryption is active on the developer's laptop    
 Doas, sudo and setuid can be a problem, so be careful   
 The find command is powerful   
+
+Database backups are encrypted by GnuPG  
+Full Disk Encryption is active on the developer's laptop    
+Protect login page from Bruteforce with 2FA  
+REVOKE insert, update, delete ON table FROM reporting_tool   
   
 OpenBSD firewall can block DDOS  
 Table abusive_hosts, persist  
