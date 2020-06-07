@@ -34,9 +34,9 @@ Database backups are encrypted by GnuPG
   
 REVOKE insert, update, delete ON table FROM reporting_tool  
 Full Disk Encryption is active on the developer's laptop  
-The find command is more powerful than we think  
+The find command is powerful   
   
-Can our Firewall block DDOS?  
+OpenBSD firewall can block DDOS  
 Table abusive_hosts, persist  
 Block in quick from abusive_hosts  
 Overload, abusive_hosts, flush  
