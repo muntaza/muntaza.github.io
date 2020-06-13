@@ -25,7 +25,7 @@ Passphrase that you can memorize
   
 Configure Email and DNS on Different Host from the website  
 Use a paid SSL Certificate  
-OpenHTTPD in a Chroot Jail  
+OpenBSD httpd in a Chroot Jail  
 /sbin/nologin is set as the shell  
   
 All root scripts should be in the /root directory  
