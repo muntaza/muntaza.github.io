@@ -260,6 +260,77 @@ ini, yaitu tidak tersedianya fitur:
 - Synproxy
 - Anti DDOS
 
+# Level 4
+
+Pada level 4, kita tambahkan filter untuk IPv6, sehingga pada server
+yang sudah di setting IPv6 pada interface internetnya, akan terlindungi
+dari reverse telnet juga seperti setting pada level 3 diatas. Berikut
+ini file configurasi level 4:
+
+```text
+#!/usr/sbin/nft -f
+
+flush ruleset
+
+define lo_if  = "lo"
+
+table ip filter {
+	include "/etc/ip_indonesia.conf"
+	include "/etc/ip_output.conf"
+
+	chain INPUT {
+		type filter hook input priority 0; policy drop;
+		ct state established,related accept
+		iifname $lo_if accept
+		ip saddr @ip_indonesia tcp dport { ssh, http, https } ct state new accept
+		drop
+	}
+
+	chain FORWARD {
+		type filter hook forward priority 0; policy drop;
+	}
+
+	chain OUTPUT {
+		type filter hook output priority 0; policy drop;
+		ct state established,related accept
+		oifname $lo_if accept
+		ip daddr @ip_output accept
+		drop
+	}
+}
+
+
+table ip6 filter {
+	include "/etc/ip6_indonesia.conf"
+	include "/etc/ip6_output.conf"
+
+	chain INPUT {
+		type filter hook input priority 0; policy drop;
+		ct state established,related accept
+		iifname $lo_if accept
+		ip6 saddr @ip6_indonesia tcp dport { ssh, http, https } ct state new accept
+		drop
+	}
+
+	chain FORWARD {
+		type filter hook forward priority 0; policy drop;
+	}
+
+	chain OUTPUT {
+		type filter hook output priority 0; policy drop;
+		ct state established,related accept
+		oifname $lo_if accept
+		ip6 daddr @ip6_output accept
+		drop
+	}
+}
+```
+
+File [daftar](https://www.ipdeny.com/ipv6/ipaddresses/aggregated/id-aggregated.zone)
+IPv6 saya dapatkan dari
+[https://www.ipdeny.com/](https://www.ipdeny.com/).
+
+
 # Tanya Jawab
 
 1.  Saya masih belum paham nftables ini, bisakah anda jelaskan dari awal?
