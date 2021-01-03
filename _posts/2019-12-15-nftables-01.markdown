@@ -34,10 +34,12 @@ table ip filter {
 		type filter hook input priority 0; policy drop;
 		ct state established,related accept
 		iifname $lo_if accept
+		drop
 	}
 
 	chain FORWARD {
 		type filter hook forward priority 0; policy drop;
+		drop
 	}
 
 	chain OUTPUT {
@@ -95,8 +97,16 @@ stateful firewall.
 Izinkan paket dari localhost
 
 {% highlight text %}
+		drop
+{% endhighlight %}
+
+Block semua paket yang masuk bilamana tidak sesuai kriteria penerimaan paket
+sebagaimana dijelaskan diatas.
+
+{% highlight text %}
 	chain FORWARD {
 		type filter hook forward priority 0; policy drop;
+		drop
 	}
 {% endhighlight %}
 
