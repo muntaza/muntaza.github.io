@@ -45,12 +45,14 @@ table ip filter {
 		ct state established,related accept
 		iifname $lo_if accept
 		iifname $int_if accept
+		drop
 	}
 
 	chain FORWARD {
 		type filter hook forward priority 0; policy drop;
 		iifname $ext_if oifname $int_if ct state established,related accept
 		iifname $int_if oifname $ext_if accept
+		drop
 	}
 
 	chain OUTPUT {
@@ -91,6 +93,7 @@ di nftables.
 		type filter hook forward priority 0; policy drop;
 		iifname $ext_if oifname $int_if ct state established,related accept
 		iifname $int_if oifname $ext_if accept
+		drop
 	}
 {% endhighlight %}
 
