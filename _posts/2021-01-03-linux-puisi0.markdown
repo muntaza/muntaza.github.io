@@ -14,7 +14,6 @@ Digabung dengan perangkat GNU sehingga berguna
    
 Namun kami hanya sebut Linux saja disini   
 Karena itulah yang banyak dipahami   
-   
 Linux banyak digunakan sebagai server jaringan   
 Jarang di pakai di desktop walaupun ringan   
    
@@ -58,6 +57,7 @@ cron sebagai pengatur jadwal kerja
 sudo memakai hak root   
 Restart dengan reboot   
 Matikan gunakan shutdown   
+
 Demikian sedikit kami sampaikan   
 Semoga bermanfaat sebagai perkenalan   
 Ditulis oleh hamba Allah dari Banjarbaru kota idaman   
