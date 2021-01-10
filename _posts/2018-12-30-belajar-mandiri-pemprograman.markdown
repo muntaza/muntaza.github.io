@@ -31,8 +31,8 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    kita untuk compile kernel, compile ini dan itu sampai bisa booting linux mini nya.
 	    Toturial ini sangat berkesan bagi saya. Bahkan saking senang nya membuat distro
 	    mini ini, saya menulis kan catatan nya di
-	    [sini](https://muntaza.wordpress.com/2009/09/07/compile-kernel-linux-2-6-30/) dan di
-	    [sini](https://muntaza.wordpress.com/2009/09/07/membuat-distro-mini-pada-flash-disk/).
+	    [sini](https://www.muntaza.id/kernel/2009/09/07/compile-kernel-2-6-30.html) dan di
+	    [sini](https://www.muntaza.id/linux/2009/09/07/membuat-mini-distro-flash-disk.html).
 
     -	[Belajar Vim](http://www2.geog.ucl.ac.uk/~plewis/teaching/unix/vimtutor)
 
@@ -42,6 +42,13 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    untuk menggunakan "vimtutor" yang tersedia di distro-distro Linux yang ada, karena
 	    itu yang paling mudah menurut saya. Kuasai dulu Vim, sebelum belajar Bahasa
 	    Pemprograman.
+
+    -	[Sed](http://www.grymoire.com/Unix/Sed.html) dan
+    	[Awk](https://www.tutorialspoint.com/awk/index.htm)
+
+	    Powerfull sekali untuk mengedit file text. Tambahan untuk cut dan paste di
+	    [sini](https://www.ibm.com/developerworks/community/blogs/d8afe7b8-2725-4205-ae02-d5bf2da88fe1/entry/Cutting_and_Pasting_in_the_Unix_and_Linux_shells?lang=en).
+
 
 2.  Bahasa C
     -	[C Programming Tutorial](http://markburgess.org/CTutorial/CTutorial.html)
@@ -77,11 +84,10 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Kekuatan Utama OpenBSD adalah sebagai Firewall. Fitur penting yang tersedia
 	    di OpenBSD PF, kalau di setting dengan baik, diantaranya; mampu membendung Reverse
 	    telnet, anti DDOS, anti Sync attack. Saya menulis tentang PF ini di
-	    [sini](https://muntaza.wordpress.com/2011/04/28/openbsd-pf-sebagai-firewall-oleh-muhammad-muntaza-bin-hatta/),
-	    di [sini](https://muntaza.wordpress.com/2011/10/11/pantau-log-ip-yang-melakukan-abuse-di-pf-openbsd/),
-	    di [sini](https://muntaza.wordpress.com/2014/12/20/openbsd-pf-firewall-for-small-office-web-server/),
-            dan di
-	    [sini](https://muntaza.wordpress.com/2016/08/17/openbsd-pf-firewall-untuk-terima-koneksi-hanya-dari-ip-indonesia/).
+	    [sini](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html)
+	    dan di [sini](https://www.muntaza.id/pf/2020/02/03/pf-firewall-bagian-kedua.html). Adapun untuk PF versi 
+	    OpenBSD 4.6 yang saat ini syntax nya sudah tidak berlaku lagi di OpenBSD terbaru bisa di lihat
+	    di [sini](https://www.muntaza.id/openbsd/2011/04/28/pf-openbsd-46.html).
 
 6.  SQL
     -	[Postgresql SQL Tutorial](https://www.postgresql.org/docs/11/tutorial.html)
@@ -100,9 +106,8 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    dan di
 	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_persediaan.md).
 
-    -	[Database Best Practices](http://wiki.c2.com/?DatabaseBestPractices),
-    	[Database Design Tips](http://www.wisecoders.com/wisecoders_tips.html) dan
-    	[20 Database Design Best Practices](http://codebalance.blogspot.com/2011/07/20-database-design-best-practices.html)
+    -	[Database Best Practices](https://wiki.c2.com/?DatabaseBestPractices), dan
+    	[20 Database Design Best Practices](https://codebalance.blogspot.com/2011/07/20-database-design-best-practices.html)
 
 	    Design Database dengan benar, agar menghasilkan aplikasi / Software yang handal
 
@@ -124,17 +129,32 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Latihan algoritma, mengasah skill dan mental problem solving, sangat bermanfaat.
 	    Bermanfaat untuk mengasah, sejauh mana pengetahuan kita terhadap suatu bahasa pemprograman.
 	    Saya biasa menyelesaikan nya
-	    dengan Bahasa Python. Coba selesaikan beberapa soal yang dianggap mudah antara nomor 1 sampai nomor 120.
-	    Kalau bisa menjawab 20 soal saja sudah bagus menurut saya.
+	    dengan Bahasa Python. Coba selesaikan beberapa soal yang dianggap mudah antara nomor 1 sampai nomor 100.
+	    Kalau bisa menjawab 40 soal saja sudah bagus menurut saya.
 
 
-    -	[Django Tutorial](https://docs.djangoproject.com/en/2.1/intro/tutorial01/)
+    -	[Django Tutorial](https://docs.djangoproject.com/en/2.2/intro/tutorial01/)
 
 	    Framework yang saya gunakan untuk membangun aplikasi-aplikasi berbasis Web. Silahkan
 	    di ikuti tutorialnya, mudah dan menarik. Pakai SQLite aja untuk latihan.
 
 
-9. Tambahan
+8.  Rekayasa Perangkat Lunak
+    -	[Principles of user interface design](https://en.wikipedia.org/wiki/Principles_of_user_interface_design)
+	dan [Principles of User Interface Design](http://bokardo.com/principles-of-user-interface-design/)
+
+	    User Interface atau Interaksi Manusia Komputer harus di perhatikan dengan seksama
+	    Sehingga aplikasi yang baik adalah yang paling mudah di gunakan.
+
+    -	[Unix Design Philosophy](https://wiki.c2.com/?UnixDesignPhilosophy) dan
+	[The Joel Test](https://www.rwaconsultants.com/news/joel-test-20-years)
+
+	    Prinsip-prinsip dalam pembuatan software.
+
+    -	[UML Tutorial](https://www.tutorialspoint.com/uml/index.htm)
+
+
+9.  Version Control System
     -	CVS
 
 	    cukup ketik "info cvs" di terminal, ikuti tutorialnya di situ. Saya menggunakan cvs
@@ -145,15 +165,11 @@ menghasilkan Software Developer (Programmer) yang handal.
     -	[Github](https://guides.github.com/)
 
 	    Software Developer sebaiknya kenal juga dengan git dan github. Saya menyimpan data-data
-	    yang tidak sensitif di Github.
-
-    -	[Sed](http://www.grymoire.com/Unix/Sed.html) dan
-    	[Awk](https://www.tutorialspoint.com/awk/index.htm)
-
-	    Powerfull sekali untuk mengedit file text. Tambahan untuk cut dan paste di
-	    [sini](https://www.ibm.com/developerworks/community/blogs/d8afe7b8-2725-4205-ae02-d5bf2da88fe1/entry/Cutting_and_Pasting_in_the_Unix_and_Linux_shells?lang=en).
+	    yang tidak sensitif di Github. Tulisan saya tentang github bisa di lihat di
+	    [sini](https://www.muntaza.id/git/2020/02/06/bekerja-dengan-git.html).
 
 
+10. Networking
     -   [Understanding IP Addressing](http://pages.di.unipi.it/ricci/501302.pdf)
 	dan
     	[Linux Network Administrators Guide](https://www.tldp.org/LDP/nag2/index.html)
@@ -161,15 +177,6 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Software Developer seyogyanya paham Subnetting, Routing, dan hal lainnya
 	    terkait TCP/IP
 
-    -	[Principles of user interface design](https://en.wikipedia.org/wiki/Principles_of_user_interface_design)
-	dan [Principles of User Interface Design](http://bokardo.com/principles-of-user-interface-design/)
-
-	    User Interface atau Interaksi Manusia Komputer harus di perhatikan dengan seksama
-	    Sehingga aplikasi yang baik adalah yang paling mudah di gunakan.
-
-    -	[Unix Design Philosophy](http://wiki.c2.com/?UnixDesignPhilosophy)
-
-	    Prinsip-prinsip dalam pembuatan software.
 
 Sekian dari saya, link-link yang saya anggap bermanfaat untuk di pelajari bila berminat
 menjadi seorang Software Developer. Mungkin ada yang berbeda pendapat, bahwa list yang saya
