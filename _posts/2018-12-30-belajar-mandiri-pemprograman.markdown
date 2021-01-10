@@ -46,8 +46,10 @@ menghasilkan Software Developer (Programmer) yang handal.
     -	[Sed](http://www.grymoire.com/Unix/Sed.html) dan
     	[Awk](https://www.tutorialspoint.com/awk/index.htm)
 
-	    Powerfull sekali untuk mengedit file text. Tambahan untuk cut dan paste di
-	    [sini](https://www.ibm.com/developerworks/community/blogs/d8afe7b8-2725-4205-ae02-d5bf2da88fe1/entry/Cutting_and_Pasting_in_the_Unix_and_Linux_shells?lang=en).
+	    Powerfull sekali untuk mengedit file text.  Tuturial tambahan tentang linux
+	    command line bisa di lihat di 
+	    [sini](https://learnbyexample.gitbooks.io/linux-command-line/content/index.html)
+
 
 
 2.  Bahasa C
@@ -106,7 +108,7 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    dan di
 	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_persediaan.md).
 
-    -	[Database Best Practices](https://wiki.c2.com/?DatabaseBestPractices), dan
+    -	[Database Best Practices](https://wiki.c2.com/?DatabaseBestPractices) dan
     	[20 Database Design Best Practices](https://codebalance.blogspot.com/2011/07/20-database-design-best-practices.html)
 
 	    Design Database dengan benar, agar menghasilkan aplikasi / Software yang handal
