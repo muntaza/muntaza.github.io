@@ -47,7 +47,7 @@ menghasilkan Software Developer (Programmer) yang handal.
     	[Awk](https://www.tutorialspoint.com/awk/index.htm)
 
 	    Powerfull sekali untuk mengedit file text.  Tuturial tambahan tentang linux
-	    command line bisa di lihat di 
+	    command line bisa di lihat di
 	    [sini](https://learnbyexample.gitbooks.io/linux-command-line/content/index.html)
 
 
