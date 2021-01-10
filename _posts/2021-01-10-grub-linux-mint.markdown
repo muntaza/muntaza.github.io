@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Judul"
+title:  "Grub2 Recovery"
 date:   2021-01-10 09:14:56 +0800
-categories: judul
+categories: linux
 ---
 
 # Bismillah,
