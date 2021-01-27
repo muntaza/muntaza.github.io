@@ -36,7 +36,7 @@ sangat urgent, saya balas keesokan harinya...
 
 Sekali lagi, kebahagiaan besar saat terbebas dari belenggu online,
 perasaan kecanduaan online. Alhamdulillah, saya bertekad tidak menoleh kebelakang
-lagi, semua Allah Ta'ala mudahkan saya menjalani nya.
+lagi, semoga Allah Ta'ala mudahkan saya menjalani nya.
 
 Paket nelpon ke nomor Indosat? Iya, saya punya nomor IM3, ada paket khusus sesama
 IM3 sebulan hanya Rp10.000, cukup untuk menelpon ke keluarga saya yang pakai IM3.
