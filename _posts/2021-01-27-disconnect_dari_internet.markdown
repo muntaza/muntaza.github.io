@@ -29,11 +29,6 @@ aktif jam 0-7, maka saya rencanakan bekerja di sekitar jam 04.00 dinihari sampai
 shalat Shubuh, ba'da Shubuh kerja lagi sampai jam 7. Paket nya pun murah, saat
 ini harganya Rp22.000 saja.
 
-IM3 punya paket bulanan Rp7.000 khusus aplikasi, diantaranya WhatsApp, dengan kouta
-1 GB. Saya masih mempertimbangkan hal ini, bila memang berat karena WA saya offline
-terus, bisa jadi saya pilih paket ini aja. Namun, saya lebih bahagia dengan kondisi 
-online hanya jam 0-7.
-
 Di kantor bagaimana? di kantor ada WIFI kantor, saya hanya memanfaatkan bila
 ada pesan penting yang harus saya cek, misal dokumen yang harus saya print kan
 yang mana dokumen tersebut di kirim via WhatsApp. Pesan-pesan masuk, kecuali 
