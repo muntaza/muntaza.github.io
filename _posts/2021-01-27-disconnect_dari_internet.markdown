@@ -12,7 +12,7 @@ telah menyita banyak waktu saya, sehingga saya memutuskan untuk tidak punya pake
 internet lagi di siang hari. Paket yang masih saya gunakan adalah paket dinihari, dari
 jam 0 s.d. jam 7 pagi.
 
-Pesan WA akan masuk setelah internet aktif , sekitar jam 6 pagi. Kadang tidak semua
+Pesan WA akan masuk setelah internet aktif, sekitar jam 6 pagi. Kadang tidak semua
 pesan saya baca, karena terlalu banyaknya, he...he... pesan penting saya balas pagi itu,
 jadi yang mengirim pesan siang kemarin jam 11, baru saya jawab pagi keesokan hari nya...
 
