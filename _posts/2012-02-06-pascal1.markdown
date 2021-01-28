@@ -23,8 +23,7 @@ sendiri ke buku-buku yang memang mengajarkan Bahasa Pascal.
 
 Saat saya kuliah dulu, di ajarkan mata kuliah Matematika Teknik dan Pemprograman I,
 nah, ketika belajar matriks di Matematika Teknik, saya coba terapkan ilmu yang
-saya dapat dari maka kuliah Pemprograman I, sehingga, saat ada tugas Matematika Teknik,
-langsung dapat jawaban seketika, he...he...
+saya dapat dari maka kuliah Pemprograman I.
 
 Kepada para adik-adik mahasiswa jurusan IT, tetap jawab soal matriks secara manual
 ya, jangan pakai program ini, karena itu melatih kejujuran kalian, he...he...

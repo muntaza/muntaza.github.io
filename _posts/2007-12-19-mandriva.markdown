@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Instal Mandriva 2008.0"
+title:  "Install Mandriva 2008.0"
 date:   2007-12-19 12:26:56 +0800
 categories: linux
 ---
