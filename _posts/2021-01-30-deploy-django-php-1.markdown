@@ -7,7 +7,12 @@ categories: openbsd
 
 # Bismillah,
 
+Ini adalah catatan saya saat melakukan instalasi aplikasi-aplikasi
+untuk deploy OpenAset dan OpenPersediaan di OpenBSD. Versi OpenBSD
+yang saya gunakan kali ini adalah versi 6.8. OK, langsung saya
+jelaskan langkah-langkahnya:
 
+Instalasi pip3, hal ini karena Python yang akan di gunakan adalah Python3:
 
 ```
 pisang$ doas /usr/sbin/pkg_add py3-pip
@@ -36,6 +41,8 @@ pisang$ pip --version
 pip 20.3.3 from /usr/local/lib/python3.8/site-packages/pip (python 3.8)
 ```
 
+
+Instalasi Apache2, PHP dan modul pendukungnya:
 ```
 pisang$ doas /usr/sbin/pkg_add apache-httpd php-gd php-pdo_pgsql php-pgsql
 quirks-3.440 signed on 2020-12-23T21:18:09Z
@@ -93,6 +100,8 @@ New and changed readme(s):
 	/usr/local/share/doc/pkg-readmes/php-7.4
 ```
 
+
+Instalasi mod-wsqi dengan pip3:
 ```
 pisang$ doas pip install mod-wsgi
 doas (muntaza@pisang.muntaza.id) password:
@@ -106,7 +115,7 @@ pisang$
 ```
 
 
-
+Pengecekan aplikasi apa saja yang telah terinstall:
 ```
 pisang$ pkg_info
 apache-httpd-2.4.46p0 apache HTTP server
@@ -154,7 +163,9 @@ zstd-1.4.5p0        zstandard fast real-time compression algorithm
 pisang$
 ```
 
-
+Instalasi Psycopg2, kemudian tampilkan paket python3 apa aja yang
+sudah terinstall, terlihat bahwa Django sudah terinstall, namun saya lupa
+mengcapture proses instalasi Django tersebut:
 ```
 pisang$ doas pip install psycopg2
 Collecting psycopg2
@@ -178,6 +189,15 @@ sqlparse   0.4.1
 pisang$
 ```
 
+Cek versi Django:
+```
+pisang$ django-admin --version
+2.2.17
+pisang$
+```
+
+
+Instalasi Rsync untuk fasilitas backup:
 ```
 pisang$ doas /usr/sbin/pkg_add rsync
 doas (muntaza@pisang.muntaza.id) password:
@@ -192,13 +212,8 @@ The following new rcscripts were installed: /etc/rc.d/rsyncd
 See rcctl(8) for details.
 ```
 
-```
-pisang$ django-admin --version
-2.2.17
-pisang$
-```
 
-
+Konfigurasi awal PostgreSQL:
 ```
 pisang$ ls
 pisang$ cat /etc/passwd | grep postgres
@@ -243,6 +258,8 @@ Success. You can now start the database server using:
 pisang$
 ```
 
+Demikian sedikit catatan ini, semoga bermanfaat, terkhusus diri saya
+sendiri. Aamiin.
 
 
 # Alhamdulillah
