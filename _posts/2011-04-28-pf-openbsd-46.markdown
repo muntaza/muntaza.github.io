@@ -522,4 +522,12 @@ pembatasan IP yang bisa melakukan koneksi ssh ini (dalam macro $ip_allow_ssh) sa
 
 Izin akses ssh ini diberikan HANYA kepada pengembang aplikasi WEB, karena pengembang aplikasi WEB perlu login ke web server untuk update aplikasi WEB dan hal lain yang berkaitan dengan aplikasi WEB.
 
+
+# UPDATE: 30 Januari 2021
+
+Saat ini, sudah versi OpenBSD 6.8, syntax terbaru silahkan lihat tulisan saya
+[Firewall dengan OpenBSD PF bagian Kedua](https://www.muntaza.id/pf/2020/02/03/pf-firewall-bagian-kedua.html)
+ini.
+
+
 # Alhamdulillah
