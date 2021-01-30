@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Deploy Django dan PHP pada OpenBSD 6.8"
-date:   2020-04-09 11:26:56 +0800
+date:   2021-01-30 08:20:56 +0800
 categories: openbsd
 ---
 
