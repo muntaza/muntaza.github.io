@@ -1,98 +1,71 @@
 ---
 layout: post
-title:  "Mutt dan GnuPG"
+title:  "Mutt, GnuPG dan Msmtp dengan TLS pada OpenBSD 3.6"
 date:   2005-07-23 12:26:56 +0800
 categories: mutt
 ---
 
 # Bismillah,
 
-Posting kembali tutorial yang aku tulis pada tahun 2005 yang lalu,
-ketika itu pada OpenBSD 3.6
-
-Secara teknis, saat ini tidak di coba lagi dan postingan ini
-hanya sebagai kenang-kenangan.
-
-Terdapat beberapa tutorial lain yang membahas tentang email client
-bernama Mutt ini, tentunya lebih detail dan up to date, diantaranya:
-
-1. [Using gmail with mutt](https://smalldata.tech/blog/2016/09/10/gmail-with-mutt)
-2. [The Homely Mutt](http://stevelosh.com/blog/2012/10/the-homely-mutt/)
-
-Mungkin di masa yang akan datang, aku mempertimbangkan lagi email
-client yang satu ini, he...he...
-
-{% highlight text %}
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
-
-Mutt+GnuPG+Msmtp dengan TLS pada OpenBSD
-
-Copyright (C) 2005 muhammad muntaza bin hatta
-license: BSD
-vers.  : 1.0.3
-date   : 23 juli 2005
-
-update : 07 agustus 2005
-Pemeriksaan kembali penulisan untuk mencari salah ketik :)
-
-update : 16 September 2019
-Perubahaan Alamat dan Alamat Email
-
-e-mail : muhammad <at> muntaza (dot) id
-address: Banjarbaru city, prov. KAL-SEL, Indonesia
-===============================================================================
-
 Dokumen ini secara sederhana membahas konfigurasi Mutt dengan GnuPG dan
 Msmtp. Konfigurasi ini penulis jalankan pada OpenBSD dan berfungsi dengan
 baik. Pada Operating System Gnu/Linux tentunya dapat juga dijalankan.
 
 Kalau server email anda tidak mendukung tls, anda dapat menonaktifkannya
-pada setting di ~/.msmtprc. Sebagai tambahan, penggunaan encryption memper-
-lambat proses kirim dan download email sampai 4x daripada tanpa encryption.
-Tapi saya adalah pecinta encryption :)
+pada setting di ~/.msmtprc. Sebagai tambahan, penggunaan encryption memperlambat
+proses kirim dan download email sampai 4x daripada tanpa encryption.
+Tapi saya adalah pecinta encryption he..he..
 
-mohon maaf kalau dokomennya kurang teratur, pada edisi yang akan datang
+Mohon maaf kalau dokomennya kurang teratur, pada edisi yang akan datang
 akan penulis usahakan lebih baik lagi.
 
-Langsung aja yah :)
+Langsung aja yah he..he..
 
 Hal pertama yang harus di pastikan adalah GnuPG telah terinstall dan
 anda telah memiliki sepasang kunci, publik key dan private key. Sebagai
 tambahan, penulis menggunakan Openbsd 3.6
 
-0. KONFIGURASI MUTT
+# KONFIGURASI MUTT
 
-Mutt yang ada pada penulis adalah versi 1.5.6i. pada configurasi mutt, secara
-default tls untuk POP3 sudah diaktifkan. Jadi kita hanya mengedit file konfi-
-gurasi mutt pada bagian yang diperlukan saja.
+Mutt yang ada pada penulis adalah versi 1.5.6i. Pada configurasi mutt, secara
+default tls untuk POP3 sudah diaktifkan. Jadi kita hanya mengedit file 
+konfigurasi mutt pada bagian yang diperlukan saja.
 
 A. Buat direktori .mutt pada homedir anda
+```text
 $ mkdir ~/.mutt
+```
 
 Direktori ini akan menanpung file configurasi.
 
 B. copy kan file configurasi gnupg yang ada didirektori
 /usr/local/example/mutt/gpg.rc ke direktori .mutt pada homedir anda
+```text
 $ cp /usr/local/example/mutt/gpg.rc ~/.mutt/
 $ cd ~/.mutt
+```
 
 edit file tersebut dengan "sed" agar sesuai dengan letak gpg pada OpenBSD
+```text
 $ sed -e "/\/usr\/bin/s/\/usr\/bin/\/usr\/local\/bin/g" gpg.rc > ls-1
 $ cp ls-1 gpg.rc
+```
 
 pada GNU/Linux tidak perlu melakukan perintah diatas, karena gpg sudah
 berada pada /usr/bin/gpg.
 
 C. Buat file ~/.muttrc
+```text
 $ grep -v "^#" /etc/mutt/Muttrc >> ~/.muttrc
+```
 
-edit file tersebut dengan menambahkan configurasi dibawah ini dan
+Edit file tersebut dengan menambahkan configurasi dibawah ini dan
 rubah sesuai dengan account email dan domain anda.
 
 
 file: ~/.muttrc
-- --------------------------------------------------------------------------------
+
+```text
 ignore "from " received content- mime-version status x-status message-id
 ignore sender references return-path lines
 
@@ -118,37 +91,40 @@ set pop_user="saya"
 set realname="nama saya sebenarnya"
 
 set sendmail="/usr/local/bin/msmtp"
-#http://www.google.co.id/search?q=msmtp
 
 set sort=threads
 set crypt_autosign=yes
-- -------------------------------------------------------------------------------
+```
 
 
 
-1. KONFIGURASI MSMTP
+# KONFIGURASI MSMTP
 
 A. Cari msmtp pada www.google.co.id, download, dan extract. Versi yang ada
 pada penulis adalah 1.4.1. Konfigurasi dengan menyertakan dukungan openssl.
 
 tidak lupa, baca file INSTALL dan doc/*
 
+```text
 $ tar -xjvf msmtp-1.4.1.tar.bz
 $ cd msmtp-1.4.1
 $ ./configure --with-ssl=openssl
 $ make
 $ sudo make install
+```
 
 B. Buat file .msmtprc pada homedir anda, set permisi 0600.
+```text
 $ touch ~/.msmtprc
 $ chmod 0600 ~/.msmtprc
+```
 
 Edit file tersebut dengan configurasi dibawah ini, sesuaikan dengan account
 anda.
 
 
 file: ~/.msmtprc
-- ------------------------------------
+```text
 port 25
 protocol smtp
 
@@ -158,7 +134,7 @@ tls on
 tls_starttls on
 tls_certcheck on
 domain domain.com
-- ------------------------------------
+```
 
 
 Penutup
@@ -171,17 +147,19 @@ kritik dan saran dialamatkan ke e-mail penulis.
 
 
 
------BEGIN PGP SIGNATURE-----
+# UPDATE: 30 Januari 2021
 
-iQEzBAEBCgAdFiEEEKSspj2RhQXYVHdZxhi75SGIvfcFAl1/gxMACgkQxhi75SGI
-vfcLOgf9E9qzlNw+Jucu5HTBkLbZRzVS0gazgcRh/aqmIAydt1LgY9bheMIg58/4
-d7lu/NSHbV0DBhh13phSGCrLoJGFI8FIEw43Mq+NAWqAog2Js0Rpm6qYXf5esQYE
-wXgDLwHY/0drZ+QNC17IIFepyc/Y1qTtmqDCxZqV7ms0FTjAElYcS2lpjvcSmb0x
-hNVw+70KDE2MM4Q/m7szJCcuVDuSdprYE/0pOuXFSrJUlGKvboGKOFWnCdQ8LO8l
-cn21pe0sFKdSpBhQGJf+XhhRweYCIvE/1B11twp+3voJ5rNCU/m6oO1gTrxIDikq
-sdo5nXz74IB5C6u0RKjGT5HqihR8pg==
-=58SB
------END PGP SIGNATURE-----
-{% endhighlight %}
+Secara teknis, saat ini tidak di coba lagi dan postingan ini
+hanya sebagai kenang-kenangan.
+
+Terdapat beberapa tutorial lain yang membahas tentang email client
+bernama Mutt ini, tentunya lebih detail dan up to date, diantaranya:
+
+1. [Using gmail with mutt](https://smalldata.tech/blog/2016/09/10/gmail-with-mutt)
+2. [The Homely Mutt](http://stevelosh.com/blog/2012/10/the-homely-mutt/)
+
+Mungkin di masa yang akan datang, aku mempertimbangkan lagi email
+client yang satu ini, he...he...
+
 
 # Alhamdulillah
