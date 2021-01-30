@@ -20,3 +20,4 @@ List of my OpenBSD tutorials:
 - [Reportico 4.6 dengan PHP 7.2](https://www.muntaza.id/php7/2019/07/07/reportico-php72.html)
 - [Deploy OpenPersediaan pada OpenBSD di Cloud](https://www.muntaza.id/openbsd/2019/03/17/deploy-openbsd1.html)
 - [Langkah Penting Setelah Instalasi OpenBSD](https://www.muntaza.id/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html)
+- [Konfigurasi PF Firewall pada OpenBSD 4.6](http://www.muntaza.id/openbsd/2011/04/28/pf-openbsd-46.html)
