@@ -258,7 +258,7 @@ Success. You can now start the database server using:
 pisang$
 ```
 
-Demikian sedikit catatan ini, semoga bermanfaat, terkhusus diri saya
+Demikian sedikit catatan ini, semoga bermanfaat, terkhusus bagi diri saya
 sendiri. Aamiin.
 
 
