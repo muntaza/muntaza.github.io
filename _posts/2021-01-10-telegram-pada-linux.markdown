@@ -22,5 +22,8 @@ sudo apt install telegram-desktop
 Ketiga, jalankan aplikasi Telegram, lakukan pendaftaran dengan kode
 verifikasi yang kita terima dari versi mobile yang ada di handphone kita.
 
+UPDATE tanggal 26 Mei 2021
+
+Saya sarankan agar download langsung dari [https://desktop.telegram.org/](https://desktop.telegram.org/) karena lebih update dari pada install via apt.
 
 # Alhamdulillah

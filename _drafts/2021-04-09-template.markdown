@@ -13,5 +13,10 @@ Catatan
 persediaan$ cd /etc/examples/
 ```
 
+[alamat](https://alamat.example.com)
+
+![iphone1](/assets/iphone/iphone_1.jpeg)
+
+<img src="/assets/iphone/iphone_1.jpeg" alt="iphone1" width="300"/>
 
 # Alhamdulillah
