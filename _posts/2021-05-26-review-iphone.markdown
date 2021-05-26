@@ -7,7 +7,7 @@ categories: iPhone
 
 # Bismillah,
 
-Android versi lama yang tidak lagi mendapat security patch memeliki resiko terkena malware seperti dalam tulisan [Buying a used phone? That old version of Android might not be safe](https://www.cnet.com/news/save-15-on-the-coolest-fathers-day-gift-ive-seen-this-year-framed-disassembled-iphones/) ini. 
+Android versi lama yang tidak lagi mendapat security patch memiliki resiko terkena malware seperti dalam tulisan [Buying a used phone? That old version of Android might not be safe](https://www.cnet.com/news/save-15-on-the-coolest-fathers-day-gift-ive-seen-this-year-framed-disassembled-iphones/) ini. 
 
 Saya pribadi pada tahun 2021 ini mencoba beralih ke iPhone 5s. HP ini [rilis](https://www.gsmarena.com/apple_iphone_5s-5685.php) sekitar tahun 2013, lebih dari 7 tahun yang lalu he...he...
 
