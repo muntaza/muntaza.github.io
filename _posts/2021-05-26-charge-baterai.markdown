@@ -7,7 +7,7 @@ categories: Baterai
 
 # Bismillah,
 
-Telah beradar sekian tulisan yang menyarankan agar baterai Gadget sebaiknya di charge pada rentang 20-80% saja agak baterai tersebut lebih awet. Silahkan cek di [google](https://www.google.com/search?q=charge+between+20+and+80).
+Telah beredar sekian tulisan yang menyarankan agar baterai Gadget sebaiknya di charge pada rentang 20-80% saja agak baterai tersebut lebih awet. Silahkan cek di [google](https://www.google.com/search?q=charge+between+20+and+80).
 
 Maka disini saya ingin menyampaikan pendapat saya pribadi tentang hal ini. Saya berpendapat:
 
