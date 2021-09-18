@@ -9,8 +9,7 @@ Bismillah, saya tinggal di Provinsi Kalimantan Selatan, bekerja sebagai Pegawai 
 
 Alamat: Jalan Kawamara, Komplek Citra Pesona Mandiri Asri, Kecamatan Landasan Ulin, Kota Banjarbaru, Provinsi Kalimantan Selatan, Indonesia, Kodepos 70724
 
-
-WhatsApp: +62 816 20 6441
+WhatsApp: +62 853 4603 4273
 
 Twitter: [muntaza_id](https://twitter.com/muntaza_id)
 
@@ -30,9 +29,5 @@ Resume: [Muhammad Muntaza](/assets/Muhammad_Muntaza.pdf) dan [Muhammad Muntaza](
 
 CV: [Muhammad Muntaza](https://stackoverflow.com/cv/muhammad_muntaza)
 
-List of my application:
-- <a href="https://aset.balangankab.go.id/aset.html">OpenAset Balangan</a><br>
-- <a href="https://aset.balangankab.go.id/persediaan.html">OpenPersediaan Balangan</a><br>
+Daftar aplikasi:
 - <a href="https://persediaan.banjarbarukota.go.id/">OpenPersediaan Banjarbaru</a><br>
-- <a href="https://sipandagerak.balangankab.go.id/">Sipanda Gerak Balangan</a><br>
-

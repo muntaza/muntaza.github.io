@@ -4,13 +4,9 @@ title: OpenBSD
 permalink: /openbsd/
 ---
 
+Jasa [Konsultan](https://www.openbsd.org/support.html#Indonesia), Pelatihan, dan Instalasi Sistem Operasi OpenBSD sebagai Firewall dan Server. Berpengalaman lebih dari 10 tahun mengelola PF Firewall di OpenBSD.
 
-
-OpenBSD [Consulting](https://www.openbsd.org/support.html#Indonesia), Training, Installation, Maintenance and Support for mid-size business. Over 10 years of experience with OpenBSD and PF firewall.
-
-WhatsApp : +62 816 20 6441
-
-List of my OpenBSD tutorials:
+Daftar tutorial OpenBSD:
 - [OpenBSD: sysupgrade](https://www.muntaza.id/openbsd/2020/04/09/sysupgrade.html)
 - [Deploy Django dan PHP](https://www.muntaza.id/openbsd/2020/04/09/deploy-django-php-0.html)
 - [NSD Sebagai DNS Server](http://www.muntaza.id/dns/2020/01/04/nsd-openbsd.html)
