@@ -33,13 +33,6 @@ Sehingga saya rasa cukup hemat karena jarang saja di perlukan paket warnet ini.
 Kalaupun perlu paket harian untuk 24 jam pada hari tertentu, tersedia paket harian
 pada Axis mulai harga sekitar Rp4.000.
 
-Paket nelpon ke nomor Telkomsel? Iya, Kartu Halo saya dengan Halo Hybrid sehingga
-terdapat paket nelpon 300 menit sesama Telkomsel dan 300 SMS sesama Telkomsel. Cukup
-pemakaian saya dan isteri saya selama sebulan. 
-
-Sedangkan nelpon ke operator lain, Kartu Halo saya, saya tambahkan paket nelpon 
-operator lain bulanan selama 50 menit.
-
 Kesimpulan tulisan ini, adalah usaha agar waktu bisa dimanfaatkan untuk hal-hal yang lebih
 bermanfaat daripada hanya terbuang percuma browsing berita internet atau hal yang kurang bermanfaat
 lainnya. Waktu sangat berharga
