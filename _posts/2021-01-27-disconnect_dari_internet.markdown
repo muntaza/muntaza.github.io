@@ -20,7 +20,6 @@ pulsa hanya untuk daftar paket internet. Saya menggunakan
 kartu Axis yang ada ini, menyediakan paket data harian untuk chat sekitar 100MB, sehingga tidak
 perlu beli paket khusus chat WhatsApp.
 
-
 Pekerjaan terkait IT bagaimana? nah, karena saya punya paket 5 GB Axis yang aktif
 jam 1-7 WITA, saya berkesempatan pada sekitar jam 4.00 selama -+ 30 menit untuk:
 - Mendownload hasil backup dari server-server yang saya kelola
