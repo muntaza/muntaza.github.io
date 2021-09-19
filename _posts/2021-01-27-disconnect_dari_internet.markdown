@@ -13,13 +13,13 @@ internet di siang hari. Paket yang saya pilih untuk Tablet Advan saya yang berfu
 sebagai Wifi Hotspot adalah Paket Obor dari Axis untuk -+ 30 hari sebesar 5 GB yang
 aktif jam 1-7 WITA seharga sekitar Rp19.900.
 
-Di era WhatsApp sudah menggantikan SMS dan telpon biasa, yang adanya pesan WA dan 
+Di era WhatsApp sudah menggantikan SMS dan telpon biasa, yang adanya hanya pesan WA dan 
 telpon WA, bahkan banyak orang yang sudah tidak punya paket nelpon/SMS, karena beli
-pulsa hanya untuk daftar paket internet, maka saya putuskan akan beli paket internet
-2 GB per bulan seharga Rp15.000 dari IM3 untuk 
-[iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html) sebagai 
-cadangan kalau saya jauh dari Wifi Hotspot saya atau sedang ada kebutuhan darurat
-diluar jam dinihari.
+pulsa hanya untuk daftar paket internet. Saya sedang pertimbangkan paket bulanan 
+khusus chat 24 jam dari Axis seharga sekitar Rp15.000 pada Tablet Advan agar
+[iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html) saya
+bisa menerima pesan WA diluar jam dinihari...he..he.. Namun saya belum beli paket ini,
+masih mencoba putus hubungan dari internet diluar jam dinihari...
 
 Pekerjaan terkait IT bagaimana? nah, karena saya punya paket 5 GB Axis yang aktif
 jam 1-7 WITA, saya berkesempatan pada sekitar jam 4.00 selama -+ 30 menit untuk:
@@ -28,15 +28,11 @@ jam 1-7 WITA, saya berkesempatan pada sekitar jam 4.00 selama -+ 30 menit untuk:
 - dan hal lainnya pada waktu yang terbatas tersebut.
 
 Bagaimana kalau ada perlu paket besar dalam waktu singkat? Nah, pada kartu Axis, ada
-pilihan paket warnet, dengan pilihan harga:
-- Rp590 untuk 1 jam
-- Rp1.390 untuk 2 jam
-- Rp2.190 untuk 3 jam
-- Rp2.990 untuk 6 jam
+pilihan paket warnet, dengan pilihan 1 jam s.d 6 jam.
+Sehingga saya rasa cukup hemat karena jarang saja di perlukan paket warnet ini. 
 
-Sehingga saya rasa cukup hemat karena jarang saja di perlukan paket warnet ini. Cara belinya
-adalah mejadikan iPhone 5s sebagai hotspot sementara hanya untuk beli paket ini...he..he..
-Soalnya di luar jam dinihari, Tablet Advan offline.
+Kalaupun perlu paket harian untuk 24 jam pada hari tertentu, tersedia paket harian
+pada Axis mulai harga sekitar Rp4.000.
 
 Bagaimana di kantor? Kantor kami menyediakan Wifi untuk kebutuhan kerja, sehingga cukup
 bermanfaat dan bisa di gunakan seperlunya.
