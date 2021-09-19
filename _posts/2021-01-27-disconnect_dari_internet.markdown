@@ -18,8 +18,7 @@ telpon WA, bahkan banyak orang yang sudah tidak punya paket nelpon/SMS, karena b
 pulsa hanya untuk daftar paket internet. Saya sedang pertimbangkan paket bulanan 
 khusus chat 24 jam dari Axis seharga sekitar Rp15.000 pada Tablet Advan agar
 [iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html) saya
-bisa menerima pesan WA diluar jam dinihari...he..he.. Namun saya belum beli paket ini,
-masih mencoba putus hubungan dari internet diluar jam dinihari...
+bisa menerima pesan WA diluar jam dinihari.
 
 Pekerjaan terkait IT bagaimana? nah, karena saya punya paket 5 GB Axis yang aktif
 jam 1-7 WITA, saya berkesempatan pada sekitar jam 4.00 selama -+ 30 menit untuk:
