@@ -33,9 +33,6 @@ Sehingga saya rasa cukup hemat karena jarang saja di perlukan paket warnet ini.
 Kalaupun perlu paket harian untuk 24 jam pada hari tertentu, tersedia paket harian
 pada Axis mulai harga sekitar Rp4.000.
 
-Bagaimana di kantor? Kantor kami menyediakan Wifi untuk kebutuhan kerja, sehingga cukup
-bermanfaat dan bisa di gunakan seperlunya.
-
 Paket nelpon ke nomor Telkomsel? Iya, Kartu Halo saya dengan Halo Hybrid sehingga
 terdapat paket nelpon 300 menit sesama Telkomsel dan 300 SMS sesama Telkomsel. Cukup
 pemakaian saya dan isteri saya selama sebulan. 
