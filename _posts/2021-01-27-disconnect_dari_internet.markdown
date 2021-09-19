@@ -8,47 +8,47 @@ categories: internet
 # Bismillah,
 
 Hal yang penting yang saya rindukan saat ini adalah disconnect dari internet. Internet
-telah menyita banyak waktu saya, sehingga saya memutuskan untuk tidak punya paket
-internet lagi di siang hari. Paket yang masih saya gunakan adalah paket dinihari, dari
-jam 0 s.d. jam 7 pagi.
-
-Pesan WA akan masuk setelah internet aktif, sekitar jam 6 pagi. Kadang tidak semua
-pesan saya baca, karena terlalu banyaknya, he...he... pesan penting saya balas pagi itu,
-jadi yang mengirim pesan siang kemarin jam 11, baru saya jawab pagi keesokan hari nya...
-
-Bagaimana kalau penting? di profile WA akan saya tulis "Jarang online, kalau penting
-telpon/SMS saja" he...he...
+telah menyita banyak waktu saya, sehingga saya memutuskan untuk mengurangi paket
+internet di siang hari. Paket yang saya pilih untuk Tablet Advan saya yang berfungsi
+sebagai Wifi Hotspot adalah Paket suka-suka dari Axis untuk 30 hari dengan rincian:
+- Internet 1,5 GB
+- Paket Malam 5 GB
+- Paket Whatsapp 3 GB
 
 Di era WhatsApp sudah menggantikan SMS dan telpon biasa, yang adanya pesan WA dan 
 telpon WA, bahkan banyak orang yang sudah tidak punya paket nelpon/SMS, karena beli
-pulsa hanya untuk daftar paket internet, akan terasa janggal bila sering offline,
-namun, itulah pilihan saya.
+pulsa hanya untuk daftar paket internet, maka saya putuskan untuk beli paket internet
+2 GB per bulan seharga Rp15.000 dari IM3 untuk 
+[iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html) sebagai backup
+atau cadangan kalau saya jauh dari Wifi Hotspot saya.
 
-Pekerjaan terkait IT bagaimana? nah, karena saya punya paket 15 GB Telkomsel yang
-aktif jam 0-7, maka saya rencanakan bekerja di sekitar jam 04.00 dinihari sampai waktu
-shalat Shubuh, ba'da Shubuh kerja lagi sampai jam 7. Paket nya pun murah, saat
-ini harganya Rp22.000 saja.
+Pekerjaan terkait IT bagaimana? nah, karena saya punya paket 5 GB Axis yang aktif
+jam 1-7 WITA, saya berkesempatan pada sekitar jam 4.00 selama -+ 30 menit untuk:
+- Mendownload hasil backup dari server-server yang saya kelola
+- git push ke github
+- dan hal lainnya pada waktu yang terbatas tersebut.
 
-Di kantor bagaimana? di kantor ada WIFI kantor, saya hanya memanfaatkan bila
-ada pesan penting yang harus saya cek, misal dokumen yang harus saya print kan
-yang mana dokumen tersebut di kirim via WhatsApp. Pesan-pesan masuk, kecuali 
-sangat urgent, saya balas keesokan harinya...
+Bagaimana kalau ada perlu paket besar dalam waktu singkat? Nah, pada kartu Axis, ada
+pilihan paket warnet, dengan pilihan harga:
+- Rp590 untuk 1 jam
+- Rp1.390 untuk 2 jam
+- Rp2.190 untuk 3 jam
+- Rp2.990 untuk 6 jam
 
-Sekali lagi, kebahagiaan besar saat terbebas dari belenggu online,
-perasaan kecanduaan online. Alhamdulillah, saya bertekad tidak menoleh kebelakang
-lagi, semoga Allah Ta'ala mudahkan saya menjalani nya.
-
-Paket nelpon ke nomor Indosat? Iya, saya punya nomor IM3, ada paket khusus sesama
-IM3 sebulan hanya Rp10.000, cukup untuk menelpon ke keluarga saya yang pakai IM3.
+Sehingga saya rasa cukup hemat karena jarang saja di perlukan paket warnet ini.
 
 Paket nelpon ke nomor Telkomsel? Iya, Kartu Halo saya dengan Halo Hybrid sehingga
 terdapat paket nelpon 300 menit sesama Telkomsel dan 300 SMS sesama Telkomsel. Cukup
 pemakaian saya dan isteri saya selama sebulan.
 
-Laptop offline? Iya, pakai thathering hanya saat jam 0-7. Saya bisa download hasil backup 
-server yang saya kelola, lalu download hal yang perlu di download untuk bahan pekerjaan
-saya saat offline. Lakukan git push ke github. Cek log/invoice kalau ada dan lain-lain.
+Kesimpulan tulisan ini, adalah usaha agar waktu bisa dimanfaatkan untuk hal-hal yang lebih
+bermanfaat daripada hanya terbuang percuma browsing berita internet atau hal yang kurang bermanfaat
+lainnya. Saya usahakan pemilihan paket internet paling hemat, dan waktu lebih mahal dari uang
+sehingga saya berusaha untuk tidak melakukan koneksi internet kecuali penting.
 
 Demikian dari saya, siapa tahu ada yang tertarik, semoga bermanfaat.
 
 # Alhamdulillah
+
+UPDATE:
+- update 19 September 2021: Penyesuaian dengan paket data saat ini dan perubahan lainnya
