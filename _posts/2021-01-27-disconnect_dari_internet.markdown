@@ -10,17 +10,16 @@ categories: internet
 Hal yang penting yang saya rindukan saat ini adalah disconnect dari internet. Internet
 telah menyita banyak waktu saya, sehingga saya memutuskan untuk mengurangi paket
 internet di siang hari. Paket yang saya pilih untuk Tablet Advan saya yang berfungsi
-sebagai Wifi Hotspot adalah Paket suka-suka dari Axis untuk 30 hari dengan rincian:
-- Internet 1,5 GB
-- Paket Malam 5 GB
-- Paket Whatsapp 3 GB
+sebagai Wifi Hotspot adalah Paket Obor dari Axis untuk -+ 30 hari sebesar 5 GB yang
+aktif jam 1-7 WITA.
 
 Di era WhatsApp sudah menggantikan SMS dan telpon biasa, yang adanya pesan WA dan 
 telpon WA, bahkan banyak orang yang sudah tidak punya paket nelpon/SMS, karena beli
-pulsa hanya untuk daftar paket internet, maka saya putuskan untuk beli paket internet
+pulsa hanya untuk daftar paket internet, maka saya putuskan akan beli paket internet
 2 GB per bulan seharga Rp15.000 dari IM3 untuk 
-[iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html) sebagai backup
-atau cadangan kalau saya jauh dari Wifi Hotspot saya.
+[iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html) sebagai 
+cadangan kalau saya jauh dari Wifi Hotspot saya atau sedang ada kebutuhan darurat
+diluar jam dinihari.
 
 Pekerjaan terkait IT bagaimana? nah, karena saya punya paket 5 GB Axis yang aktif
 jam 1-7 WITA, saya berkesempatan pada sekitar jam 4.00 selama -+ 30 menit untuk:
@@ -35,7 +34,12 @@ pilihan paket warnet, dengan pilihan harga:
 - Rp2.190 untuk 3 jam
 - Rp2.990 untuk 6 jam
 
-Sehingga saya rasa cukup hemat karena jarang saja di perlukan paket warnet ini.
+Sehingga saya rasa cukup hemat karena jarang saja di perlukan paket warnet ini. Cara belinya
+adalah mejadikan iPhone 5s sebagai hotspot sementara hanya untuk beli paket ini...he..he..
+Soalnya di luar jam dinihari, Tablet Advan offline.
+
+Bagaimana di kantor? Kantor kami menyediakan Wifi untuk kebutuhan kerja, sehingga cukup
+bermanfaat dan bisa di gunakan seperlunya.
 
 Paket nelpon ke nomor Telkomsel? Iya, Kartu Halo saya dengan Halo Hybrid sehingga
 terdapat paket nelpon 300 menit sesama Telkomsel dan 300 SMS sesama Telkomsel. Cukup
