@@ -45,7 +45,7 @@ operator lain bulanan selama 50 menit.
 
 Kesimpulan tulisan ini, adalah usaha agar waktu bisa dimanfaatkan untuk hal-hal yang lebih
 bermanfaat daripada hanya terbuang percuma browsing berita internet atau hal yang kurang bermanfaat
-lainnya. Waktu sangat berharga  
+lainnya. Waktu sangat berharga
 sehingga saya berusaha untuk tidak melakukan koneksi internet kecuali penting.
 
 Demikian dari saya, siapa tahu ada yang tertarik, semoga bermanfaat.
