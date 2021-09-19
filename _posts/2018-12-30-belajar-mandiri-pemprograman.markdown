@@ -186,9 +186,7 @@ buat ini terlalu condong ke Unix-like Operating System. Namun, daftar ini adalah
 
 Kemudian, sebagai refensi tambahan, berikut links Lainnya:
 
-1.  [Teach Yourself Programming in Ten Years](http://norvig.com/21-days.html)
-2.  [Teach Yourself Computer Science](https://teachyourselfcs.com/)
-3.  [OpenBSD Books](https://www.openbsd.org/books.html)
+1.  [OpenBSD Books](https://www.openbsd.org/books.html)
 
 
 # Alhamdulillah
