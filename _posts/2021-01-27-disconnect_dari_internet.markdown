@@ -11,7 +11,7 @@ Hal yang penting yang saya rindukan saat ini adalah disconnect dari internet. In
 telah menyita banyak waktu saya, sehingga saya memutuskan untuk mengurangi paket
 internet di siang hari. Paket yang saya pilih untuk Tablet Advan saya yang berfungsi
 sebagai Wifi Hotspot adalah Paket Obor dari Axis untuk -+ 30 hari sebesar 5 GB yang
-aktif jam 1-7 WITA.
+aktif jam 1-7 WITA seharga sekitar Rp19.900.
 
 Di era WhatsApp sudah menggantikan SMS dan telpon biasa, yang adanya pesan WA dan 
 telpon WA, bahkan banyak orang yang sudah tidak punya paket nelpon/SMS, karena beli
@@ -54,5 +54,6 @@ Demikian dari saya, siapa tahu ada yang tertarik, semoga bermanfaat.
 
 # Alhamdulillah
 
-UPDATE:
-- update 19 September 2021: Penyesuaian dengan paket data saat ini dan perubahan lainnya
+Catatan:
+- Update 19 September 2021: Penyesuaian dengan paket data saat ini dan perubahan lainnya.
+- Harga paket data dan paket nelpon mungkin bisa berubah sewaktu-waktu.
