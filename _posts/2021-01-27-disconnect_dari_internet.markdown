@@ -17,7 +17,7 @@ Di era WhatsApp sudah menggantikan SMS dan telpon biasa, yang adanya hanya pesan
 telpon WA, bahkan banyak orang yang sudah tidak punya paket nelpon/SMS, karena beli
 pulsa hanya untuk daftar paket internet. Saya menggunakan 
 [iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html) untuk WhatsApp, dan
-kartu Axis yang ada ini, menyediakan paket data harian untuk chat sekitar 100MB, sehingga tidak
+kartu Axis yang ada ini, menyediakan paket data harian untuk chat, sehingga tidak
 perlu beli paket khusus chat WhatsApp.
 
 Pekerjaan terkait IT bagaimana? nah, karena saya punya paket 5 GB Axis yang aktif
