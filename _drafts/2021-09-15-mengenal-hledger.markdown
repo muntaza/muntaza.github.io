@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "hledger"
-date:   2021-04-09 11:26:56 +0800
-categories: judul
+title:  "Mengenal hledger"
+date:   2021-09-15 11:26:56 +0800
+categories: hledger
 ---
 
 # Bismillah,
