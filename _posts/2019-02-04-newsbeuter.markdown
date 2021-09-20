@@ -24,15 +24,12 @@ file ~/.newsbeuter/urls. Ini contoh isi file urls saya.
 {% highlight bash %}
 muntaza@E202SA:~$ cat ~/.newsbeuter/urls
 https://www.muntaza.net/feed.xml
-http://undeadly.org/cgi?action=rss
 muntaza@E202SA:~$
 
 {% endhighlight %}
 
 Setelah file urls terisi, tinggal buka aplikasinya. perintah "R" untuk reload dari website,
 untuk membaca tinggal "Enter" dan untuk keluar "q". Berikut ini contoh tampilannya:
-
-![Gambar1](/assets/newsbeuter1.png)
 
 ![Gambar2](/assets/newsbeuter2.png)
 
