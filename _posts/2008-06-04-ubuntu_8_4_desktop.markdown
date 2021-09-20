@@ -53,6 +53,6 @@ Tinggal di kota Paringin, Kab. Balangan, Prov. Kalimantan Selatan
 
 # Alhamdulillah
 
-Catatan:
-- Update 21 September 2021: Perubahan beberapa kalimat dan perubahan susunan penulisan.
-- Alhamdulillah, Saya sekarang tinggal di Kota Banjarbaru
+Update 21 September 2021:
+- Perubahan beberapa kalimat dan susunan penulisan.
+- Alhamdulillah, Saya sekarang tinggal di Kota Banjarbaru.
