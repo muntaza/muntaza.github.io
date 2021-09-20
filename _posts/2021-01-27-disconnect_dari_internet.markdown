@@ -26,12 +26,19 @@ jam 1-7 WITA, saya berkesempatan pada sekitar jam 4.00 selama -+ 30 menit untuk:
 - git push ke github
 - dan hal lainnya pada waktu yang terbatas tersebut.
 
-Bagaimana kalau ada perlu paket besar dalam waktu singkat? Nah, pada kartu Axis, ada
-pilihan paket warnet, dengan pilihan 1 jam s.d 6 jam.
-Sehingga saya rasa cukup hemat karena jarang saja di perlukan paket warnet ini. 
-
 Kalaupun perlu paket harian untuk 24 jam pada hari tertentu, tersedia paket harian
 pada Axis mulai harga sekitar Rp4.000.
+Sehingga saya rasa cukup hemat karena jarang saja di perlukan paket harian ini.
+
+Bagaimana cara beli paket data dari Axis? Bisa dari \*123\# yang mana tersedia pilihan
+paket dinihari bulanan dan paket harian, adapun paket chat bulanan saya beli dari
+Bukalapak.
+
+Paket nelpon ke nomor Telkomsel? Iya, Kartu Halo saya dengan Halo Hybrid sehingga
+terdapat paket nelpon 300 menit sesama Telkomsel dan 300 SMS sesama Telkomsel. Untuk
+telpon ke Operator lain, saya berlangganan paket nelpon 50 menit perbulan pada kartu
+Halo Hybrid ini. Cukup
+pemakaian saya dan isteri saya selama sebulan.
 
 Kesimpulan tulisan ini, adalah usaha agar waktu bisa dimanfaatkan untuk hal-hal yang lebih
 bermanfaat daripada hanya terbuang percuma browsing berita internet atau hal yang kurang bermanfaat
