@@ -34,12 +34,6 @@ Bagaimana cara beli paket data dari Axis? Bisa dari \*123\# yang mana tersedia p
 paket dinihari bulanan dan paket harian, adapun paket chat bulanan saya beli dari
 Bukalapak.
 
-Paket nelpon ke nomor Telkomsel? Iya, Kartu Halo saya dengan Halo Hybrid sehingga
-terdapat paket nelpon 300 menit sesama Telkomsel dan 300 SMS sesama Telkomsel. Untuk
-telpon ke Operator lain, saya berlangganan paket nelpon 50 menit perbulan pada kartu
-Halo Hybrid ini. Cukup
-pemakaian saya dan isteri saya selama sebulan.
-
 Kesimpulan tulisan ini, adalah usaha agar waktu bisa dimanfaatkan untuk hal-hal yang lebih
 bermanfaat daripada hanya terbuang percuma browsing berita internet atau hal yang kurang bermanfaat
 lainnya. Waktu sangat berharga
