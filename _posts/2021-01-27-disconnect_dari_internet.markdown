@@ -45,4 +45,3 @@ Demikian dari saya, siapa tahu ada yang tertarik, semoga bermanfaat.
 
 Catatan:
 - Update 19 September 2021: Penyesuaian dengan paket data saat ini dan perubahan lainnya.
-- Harga paket data dan paket nelpon mungkin bisa berubah sewaktu-waktu.
