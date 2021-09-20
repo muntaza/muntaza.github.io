@@ -18,7 +18,7 @@ Cara lain, adalah dengan burning file iso ke CD-R, lalu masukkan CD-R nya ke dri
 Kembali ke pembicaraan tadi, setelah dimount, aku masuk ke drive tempat me mount, 
 lalu klik file "wubi", tampil menu instalasi, klik Install inside Windows, 
 lalu tampil menu pilihan drive yang akan diinstall, 
-pilih drive hardisknyanya (yang ada ruang kosong 10GB, misal drive C), 
+pilih drive hardisknya (yang ada ruang kosong 10GB, misal drive C), 
 masukkan username, masukkan password, lalu install.
 
 Setelah file image nya tercopy ke disk, lalu reboot.
