@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Judul"
-date:   2021-04-09 11:26:56 +0800
-categories: judul
+title:  "Instalasi Ubuntu 8.04"
+date:   2008-06-04 11:26:56 +0800
+categories: linux
 ---
 
 # Bismillah,
@@ -26,7 +26,7 @@ setelah selesai, reboot, boot lagi ke Ubuntu, cek sound ternyata OK he..he..
 
 Kesimpulan:
 
-Sangat ku sarankan bagi pemula-pemula yang bingung cara mempartisi dilinux untuk menginstall Ubuntu dari Windows seperti ini, karena tidak perlu takut kehilangan data karena salah mempartisi. ***
+Sangat ku sarankan bagi pemula-pemula yang bingung cara mempartisi dilinux untuk menginstall Ubuntu dari Windows seperti ini, karena tidak perlu takut kehilangan data karena salah mempartisi. 
 
 Salam, Muhammad Muntaza bin Hatta
 
@@ -34,9 +34,9 @@ tinggal di kota Paringin, Kab. Balangan, Prov. Kalimantan Selatan
 
 —————————————————————————
 
-*(proses instalasi ini sama sekali tidak berhubungan dengan partisi disk yang agak menyulitkan pemula linux)
+(proses instalasi ini sama sekali tidak berhubungan dengan partisi disk yang agak menyulitkan pemula linux)
 
-**(Ubuntu ini, menggunakan NT loader untuk booting, jadi mengedit file boot.ini di drive C, file boot.ini ku isinya menjadi seperti ini:
+(Ubuntu ini, menggunakan NT loader untuk booting, jadi mengedit file boot.ini di drive C, file boot.ini ku isinya menjadi seperti ini:
 
 [boot loader]
 timeout=15
@@ -45,7 +45,7 @@ default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
 multi(0)disk(0)rdisk(0)partition(1)\WINDOWS=”Microsoft Windows XP Home Edition” /noexecute=optin /fastdetect
 c:\wubildr.mbr=”Ubuntu”
 
-***(Salam untuk temanku Hendra Wirawan di Bati-bati. Hen, Use your real name if you in the Internet ….he.. he.., and coba pakai Ubuntu ini untuk Komputer mu. Thanks)
+(Salam untuk temanku Hendra Wirawan di Bati-bati. Hen, Use your real name if you in the Internet ….he.. he.., and coba pakai Ubuntu ini untuk Komputer mu. Thanks)
 
 
 # Alhamdulillah
