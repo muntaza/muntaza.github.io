@@ -9,7 +9,6 @@ Bismillah, saya tinggal di Provinsi Kalimantan Selatan, bekerja sebagai Pegawai 
 
 Alamat: Jalan Kawamara, Komplek Citra Pesona Mandiri Asri, Kecamatan Landasan Ulin, Kota Banjarbaru, Provinsi Kalimantan Selatan, Indonesia, Kodepos 70724
 
-WhatsApp: +62 853 4603 4273
 
 Twitter: [muntaza_id](https://twitter.com/muntaza_id)
 
