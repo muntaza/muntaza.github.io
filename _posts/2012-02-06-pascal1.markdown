@@ -28,7 +28,7 @@ saya dapat dari maka kuliah Pemprograman I.
 Kepada para adik-adik mahasiswa jurusan IT, tetap jawab soal matriks secara manual
 ya, jangan pakai program ini, karena itu melatih kejujuran kalian, he...he...
 
-Perkalian 2 buah matriks menggunakan bahasa Pascal
+# Perkalian 2 buah matriks menggunakan bahasa Pascal
 
 {% highlight pascal %}
 
@@ -129,7 +129,11 @@ end.
 
 {% endhighlight %}
 
-perkalian matriks dengan skalar menggunakan bahasa pascal
+Contoh:
+
+![pascal1](/assets/pascal/pascal1.png)
+
+# Perkalian matriks dengan skalar menggunakan bahasa pascal
 
 {% highlight pascal %}
 program perkalian_matriks_dg_skalar;
@@ -187,7 +191,11 @@ end.
 
 {% endhighlight %}
 
-Penjumlahan 2 buah matriks dengan bahasa pascal
+Contoh:
+
+![pascal2](/assets/pascal/pascal2.png)
+
+# Penjumlahan 2 buah matriks dengan bahasa pascal
 
 {% highlight pascal %}
 program penjumlahan_matriks2;
@@ -254,7 +262,11 @@ readln;
 end.
 {% endhighlight %}
 
-Pengurangan 2 buah matriks dengan bahasa pascal
+Contoh:
+
+![pascal3](/assets/pascal/pascal3.png)
+
+# Pengurangan 2 buah matriks dengan bahasa pascal
 
 {% highlight pascal %}
 program pengurangan_matriks2;
@@ -321,6 +333,11 @@ readln;
 end.
 {% endhighlight %}
 
+Contoh:
+
+![pascal4](/assets/pascal/pascal4.png)
+
+# Penyelesaian persamaan linear dengan metode crammer
 
 Dibawah ini adalah contoh penyelesaain persamaan menggunakan metode crammer,
 saya tulis dalam pascal, walaupun saya dalam hati lebih cinta Bahasa C, he.. hee
@@ -336,8 +353,6 @@ jadi masih tampil dengan indah di terminal saya. Adapun kalau di compile dengan
 turbo pascal atau compiler lain, maka tampilan hasilnya akan berantakan, he.. hee..
 akhirnya, saran saya, gunakan fpc under linux!
 
-Walhamdulillah
-
 
 {% highlight pascal %}
 {
@@ -348,7 +363,7 @@ algoritma:
 3. Xn = Dn / D
 
 ditulis oleh: Muhamamd Muntaza
-email : m.muntaza@gmail.com
+email : muhammad@muntaza.id
 lisensi : GPL v3
 }
 
@@ -630,10 +645,19 @@ end.
 
 {% endhighlight %}
 
+Contoh:
+
+![pascal5](/assets/pascal/pascal5.png)
+
+
+![pascal6](/assets/pascal/pascal6.png)
 
 
 # Alhamdulillah
 
+Update 21 September 2021:
+- Penambahan gambar contoh program saat di jalankan.
+- Penggunaan Sub Judul dengan huruf yang lebih besar.
 
 Daftar Pustaka:
 - Utami, Ema, Dan kawan-kawan. 2007. <em>Struktur Data Konsep & Implementasinya dalam Bahasa C & Free Pascal di GNU/LINUX</em>. Jogjakarta: Graha Ilmu.
