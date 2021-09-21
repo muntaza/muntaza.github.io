@@ -28,6 +28,12 @@ saya dapat dari maka kuliah Pemprograman I.
 Kepada para adik-adik mahasiswa jurusan IT, tetap jawab soal matriks secara manual
 ya, jangan pakai program ini, karena itu melatih kejujuran kalian, he...he...
 
+# Cara compile program pascal di Linux
+
+Disini saya contohkan penggunaan Free Pascal Compiler:
+
+![pascal0](/assets/pascal/pascal0.png)
+
 # Perkalian 2 buah matriks menggunakan bahasa Pascal
 
 {% highlight pascal %}
@@ -180,7 +186,7 @@ begin
 	end;
 
 	writeln;
-	writeln('Penjumlahan Matriks : ');
+	writeln('Perkalian Matriks dan Skalar: ');
 	for i := 1 to m do begin
 		for j := 1 to n do
 			write(M2[i,j]:8);
