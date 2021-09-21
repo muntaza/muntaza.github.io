@@ -15,7 +15,8 @@ kartu Halo Hybrid ini. Cukup pemakaian saya dan isteri saya selama sebulan.
 Kenapa tidak telpon Whatsapp saja? Saya pribadi lebih suka menelpon dengan HP Biasa, yaitu HP Nokia yang hanya 
 bisa telpon dan SMS, karena menurut saya suara lebih jernih daripada lewat Whatsapp.
 
-Apakah masih mengirim SMS? Saya sangat jarang mengirim SMS saat ini, bahkan selama
-2021 ini saya kira, kurang dari 20 SMS yang saya kirim, he...he...
+Apakah masih mengirim SMS? Saya sangat jarang mengirim SMS saat ini, bahkan sejak
+Januari 2021 sampai September 2021 ini, saya kira, 
+kurang dari 50 SMS yang saya kirim ke orang lain.
 
 # Alhamdulillah
