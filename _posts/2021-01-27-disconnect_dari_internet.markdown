@@ -10,7 +10,7 @@ categories: internet
 Hal yang penting yang saya rindukan saat ini adalah disconnect dari internet. Internet
 telah menyita banyak waktu saya, sehingga saya memutuskan untuk mengurangi paket
 internet di siang hari. Paket yang saya pilih untuk Tablet Advan saya yang berfungsi
-sebagai Wifi Hotspot adalah Paket Obor dari Axis untuk -+ 30 hari sebesar 5 GB yang
+sebagai Wifi Hotspot adalah Paket dinihari dari Axis untuk sebulan sebesar 5 GB yang
 aktif jam 1-7 WITA seharga sekitar Rp19.900.
 
 Di era WhatsApp sudah menggantikan SMS dan telpon biasa, sehingga kebanyakan orang sudah
@@ -20,7 +20,7 @@ Saat ini saya menggunakan
 sebagai Smartphone utama untuk pemakaian WhatsApp.
 
 Sementara ini, saat di rumah, saya usahakan hanya online WhatsApp sebelum jam 7 pagi,
-yaitu saat masih aktif nya paket khusus dinihari. Kemungkinan, ada pesan WhatsApp yang masuk 
+yaitu saat masih aktif nya paket khusus dinihari. Kemungkinan, ada pesan WhatsApp masuk 
 baru saya baca keesokan harinya.
 
 Pekerjaan terkait IT bagaimana? nah, karena saya punya paket 5 GB Axis yang aktif
