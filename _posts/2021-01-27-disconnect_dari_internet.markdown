@@ -13,12 +13,15 @@ internet di siang hari. Paket yang saya pilih untuk Tablet Advan saya yang berfu
 sebagai Wifi Hotspot adalah Paket Obor dari Axis untuk -+ 30 hari sebesar 5 GB yang
 aktif jam 1-7 WITA seharga sekitar Rp19.900.
 
-Di era WhatsApp sudah menggantikan SMS dan telpon biasa, yang adanya hanya pesan WA dan 
-telpon WA, bahkan banyak orang yang sudah tidak punya paket nelpon/SMS, karena beli
-pulsa hanya untuk daftar paket internet. Saya menggunakan 
-[iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html) untuk WhatsApp, dan
-pada kartu Axis yang ada ini, saya beli paket khusus chat bulanan seharga Rp14.900 dengan
-kouta 1,5 GB. 
+Di era WhatsApp sudah menggantikan SMS dan telpon biasa, sehingga kebanyakan orang sudah
+menggunakan pesan WhatsApp dan telpon WhatsApp sebagai media komunikasi utama.
+Saat ini saya menggunakan 
+[iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html)
+sebagai Smartphone utama untuk pemakaian WhatsApp.
+
+Sementara ini, saat di rumah, saya usahakan hanya online WhatsApp sebelum jam 7 pagi,
+yaitu saat masih aktif nya paket khusus dinihari. Kemungkinan, ada pesan WhatsApp yang masuk 
+baru saya baca keesokan harinya.
 
 Pekerjaan terkait IT bagaimana? nah, karena saya punya paket 5 GB Axis yang aktif
 jam 1-7 WITA, saya berkesempatan pada sekitar jam 4.00 selama -+ 30 menit untuk:
@@ -27,12 +30,11 @@ jam 1-7 WITA, saya berkesempatan pada sekitar jam 4.00 selama -+ 30 menit untuk:
 - dan hal lainnya pada waktu yang terbatas tersebut.
 
 Kalaupun perlu paket harian untuk 24 jam pada hari tertentu, tersedia paket harian
-pada Axis mulai harga sekitar Rp4.000.
+pada kartu Axis.
 Sehingga saya rasa cukup hemat karena jarang saja di perlukan paket harian ini.
 
 Bagaimana cara beli paket data dari Axis? Bisa dari \*123\# yang mana tersedia pilihan
-paket dinihari bulanan dan paket harian, adapun paket chat bulanan saya beli dari
-Bukalapak.
+paket dinihari bulanan dan paket harian.
 
 Kesimpulan tulisan ini, adalah usaha agar waktu bisa dimanfaatkan untuk hal-hal yang lebih
 bermanfaat daripada hanya terbuang percuma browsing berita internet atau hal yang kurang bermanfaat
@@ -45,3 +47,4 @@ Demikian dari saya, siapa tahu ada yang tertarik, semoga bermanfaat.
 
 Catatan:
 - Update 19 September 2021: Penyesuaian dengan paket data saat ini dan perubahan lainnya.
+- Update 23 September 2021: Penyesuaian dan perubahan lainnya.
