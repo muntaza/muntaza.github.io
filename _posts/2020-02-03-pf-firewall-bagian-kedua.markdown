@@ -239,7 +239,7 @@ Address yang masuk di file /etc/ip_safe yang bisa di hubungi. Pada contoh ini,
 saya menampilkan IP Address DNS Google dan Daftar IP Address
 [Github](https://help.github.com/en/github/authenticating-to-github/about-githubs-ip-addresses),
 sehingga
-Server Database bila melakukan __git pull__ ke Server Github.
+Server Database bisa melakukan __git pull__ ke Server Github.
 
 
 
