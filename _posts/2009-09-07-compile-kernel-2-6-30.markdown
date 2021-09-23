@@ -131,7 +131,8 @@ kalau bisa, lalukan update berkala setiap rilis kernel stabil. Mungkin Hal ini s
 
 # UPDATE 2020-02-09
 
-Versi kernel sampai hari ini adalah kernel linux 5.5.2, tutorial ini saya tulis sekitar 10 tahun yang lalu, menggunakan kernel terbaru saat itu. Untuk tutorial cara compile kernel versi 5.3, silahkan lihat di [sini](https://www.cyberciti.biz/linux-news/linux-kernel-5-3-released-and-here-is-how-to-install-it/).
+Versi kernel sampai hari ini adalah kernel linux 5.5.2, tutorial ini saya tulis sekitar 10 tahun yang lalu, menggunakan kernel terbaru saat itu. Untuk tutorial cara compile kernel 
+versi terbaru, silahkan coba search di Google.
 
 Wallahu Ta'ala A'lam
 
