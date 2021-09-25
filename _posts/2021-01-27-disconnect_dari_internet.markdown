@@ -19,9 +19,10 @@ Saya menggunakan
 [iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html)
 sebagai Smartphone utama untuk pemakaian WhatsApp.
 
-Sementara ini, saat di rumah, saya usahakan hanya online WhatsApp sebelum jam 7 pagi,
-yaitu saat masih aktif nya paket khusus dinihari. Kemungkinan, ada pesan WhatsApp masuk 
-baru saya baca keesokan harinya.
+Sebelumnya, saya berencana untuk tidak mengaktifkan WhatsApp kecuali di bawah jam 7 pagi
+saat masih aktifnya paket dinihari, namun ternyata ada info penting yang terluput dari 
+saya, yang mana infonya tentunya di kirim lewat WhatsApp. 
+Oleh karena itu, saya memutuskan menggunakan paket khusus chat bulanan dari Axis untuk akses WhatsApp.
 
 Pekerjaan terkait IT bagaimana? nah, karena saya punya paket 5 GB Axis yang aktif
 jam 1-7 WITA, saya berkesempatan pada sekitar jam 4.00 selama -+ 30 menit untuk:
@@ -48,3 +49,4 @@ Demikian dari saya, siapa tahu ada yang tertarik, semoga bermanfaat.
 Catatan:
 - Update 19 September 2021: Penyesuaian dengan paket data saat ini dan perubahan lainnya.
 - Update 23 September 2021: Penyesuaian dan perubahan lainnya.
+- Update 25 September 2021: Penyesuaian dan perubahan lainnya.
