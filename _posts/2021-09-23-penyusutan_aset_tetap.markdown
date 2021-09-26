@@ -145,6 +145,65 @@ GRANT ALL PRIVILEGES ON view_penyusutan_108_gb_2021_r2_a1 TO user_laporan;
 REVOKE INSERT, UPDATE, DELETE ON view_penyusutan_108_gb_2021_r2_a1 FROM user_laporan;
 ```
 
+Ini adalah algoritma pertama, yaitu penggabungan table-table dasar menjadi query laporan
+kartu inventaris barang (KIB) C Gedung dan Bangunan. 
+
+Beberapa bagian query saya jelaskan sebagai berikut:
+
+```sql
+DROP VIEW IF EXISTS view_penyusutan_108_gb_2021_r2_a1 CASCADE;
+```
+
+Perintah ini agar mudah melakukan reload sebuah view, baik ketika view
+itu telah ada, atau pun belum ada. Kalau view sudah ada, maka view tersebut
+di delete dulu, baru di buat view baru dengan nama yang sama.
+
+
+```sql
+LEFT(kode_barang_108.kode_barang_108, 18) kode_barang_108,
+```
+
+Perintah Left, mengambil 18 buah karakter dari kode barang Permendagri 108 agar masuk
+ke kolom kode_barang_108.
+
+```sql
+CONCAT(SUM(harga_gedung_bangunan.luas_lantai), ' m2') as ukuran_barang,
+```
+
+Setiap rehab aset tetap, kalau ada yang menambah luas lantai, maka luas lantai keseluruhan
+adalah total luas lantai. 
+
+```sql
+SUM(harga_gedung_bangunan.harga_bertambah) - SUM(harga_gedung_bangunan.harga_berkurang) harga,
+```
+
+Perhitungan ini berguna agar kalau ada koreksi berkurang terhadap aset tetap, bisa di input 
+ke kolom harga_berkurang, sehingga total harga nya akan mengikuti sesuai data entry nya.
+
+```sql
+harga_gedung_bangunan.tahun <= 2021 AND
+```
+
+Pembatasan ini, agar perhitungan hanya memasukkan semua pengadaan sampai dengan tahun 2021.
+
+```sql
+golongan_barang.id = 3 AND
+```
+
+Filter golongan barang hanya gedung dan bangunan, karena dalam table gedung_bangunan, terdapat pula
+golongan Konstruksi dalam Pengerjaan.
+
+```sql
+GRANT ALL PRIVILEGES ON view_penyusutan_108_gb_2021_r2_a1 TO user_laporan;
+REVOKE INSERT, UPDATE, DELETE ON view_penyusutan_108_gb_2021_r2_a1 FROM user_laporan;
+```
+
+Berikan hak akses kepada user user_laporan, dan cabut akses user_laporan untuk
+melakukan INSERT. UPDATE dan DELETE data di dalam database.
+
+
+
+
 # Kedua
 
 ```sql
