@@ -13,8 +13,10 @@ tersebut. Saya menuliskan algoritma nya dengan berurutan. Tulisan ini minim kete
 saya belum punya waktu yang cukup untuk memberikan keterangan-keterangan penting,
 sehingga mungkin sulit dipahami.
 
-Inti yang ingin saya sampaikan, silahkan dipelajari lebih dalam window fungtions pada
-PostgreSQL, karena algoritma ini menggunakan banyak fitur pada window fungtions tersebut.
+Inti yang ingin saya sampaikan, silahkan dipelajari lebih dalam 
+[window functions](https://www.postgresql.org/docs/13/tutorial-window.html) pada
+PostgreSQL, karena algoritma ini menggunakan banyak
+[fitur](https://www.postgresql.org/docs/12/functions-window.html) pada window functions tersebut.
 
 # Pertama
 
