@@ -167,6 +167,13 @@ Perintah Left, mengambil 18 buah karakter dari kode barang Permendagri 108 agar 
 ke kolom kode_barang_108.
 
 ```sql
+harga_gedung_bangunan.tahun,
+```
+
+Tahun disini adalah tahun pada table harga_gedung_bangunan.
+
+
+```sql
 CONCAT(SUM(harga_gedung_bangunan.luas_lantai), ' m2') as ukuran_barang,
 ```
 
