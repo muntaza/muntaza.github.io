@@ -147,10 +147,10 @@ block return out log proto {tcp udp} user _pbuild
 User _pbuild tidak perlu koneksi internet. Baris ini sebenarnya tidak diperlukan, karena firewall ini sudah di setting untuk default deny, yaitu semua di block kecuali yang di izinkan.
 
 
-Kemudian, table abusive_hosts diatas perlu di clear setiap 1 (satu) jam sekali, yang mana saya menggunakan cron untuk keperluan itu.
+Kemudian, table abusive_hosts diatas perlu di clear setiap 3 (tiga) menit sekali, yang mana saya menggunakan root cron untuk keperluan itu.
 
 {% highlight text %}
-0       *       *       *       *       /bin/sh /home/muntaza/bin/flush.sh
+*/3      *       *       *       *       /bin/sh /root/flush.sh
 {% endhighlight %}
 
 Adapun isi file flush.sh adalah sebagai berikut:
