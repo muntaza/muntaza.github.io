@@ -10,7 +10,7 @@ categories: telpon
 Paket nelpon ke nomor Telkomsel? Iya, Kartu Halo saya dengan Halo Hybrid 
 sehingga terdapat paket nelpon 300 menit sesama Telkomsel dan 300 SMS sesama Telkomsel. 
 Untuk telpon ke Operator lain, saya berlangganan paket nelpon 50 menit perbulan pada 
-kartu Halo Hybrid ini. Cukup pemakaian saya dan isteri saya selama sebulan.
+kartu Halo Hybrid ini. Cukup pemakaian saya selama sebulan.
 
 Kenapa tidak telpon Whatsapp saja? Saya pribadi lebih suka menelpon dengan HP Biasa, yaitu HP Nokia yang hanya 
 bisa telpon dan SMS, karena menurut saya suara lebih jernih daripada lewat Whatsapp.
