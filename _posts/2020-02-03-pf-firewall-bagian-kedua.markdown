@@ -51,11 +51,10 @@ adalah sebagai berikut:
     [Authentication](https://www.muntaza.id/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html)
     yang digunakan
     hanya __public key__, tidak bisa dengan Password.
-1.  Setelah Admin login ssh ke Firewall, Admin bisa ssh ke Server Database
-    secara langsung. Akses ssh oleh Admin dengan Password Authentication, bukan __public
-    key Authentication__, karena di asumsikan tidak ada local user yang melakukan
-    __ssh bruteforce__ ke Server Database (analisa ini perlu di tinjau
-    kembali).
+1.  Setelah Admin login ssh ke Firewall, Admin tidak bisa akses ke Server Database
+    secara langsung dengan Password Authentication. Akses ssh oleh Admin 
+    ke Server Database hanya bisa dengan __public
+    key Authentication__.
 1.  SSL certificate yang digunakan bukan dari
     [Let's Encrypt](https://letsencrypt.org/),
     sehingga Server
