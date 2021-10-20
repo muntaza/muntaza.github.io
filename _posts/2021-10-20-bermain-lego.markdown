@@ -42,6 +42,23 @@ Gabungan:
 
 <img src="/assets/lego1/lego7.jpeg" alt="lego7" width="450"/>
 
+Kemudian, ini adalah mainan lego mesin untuk menambang minyak, di design
+oleh Ahmad Hasan:
+
+<img src="/assets/lego1/lego8.jpeg" alt="lego8" width="450"/>
+
+Sisi kanan:
+
+<img src="/assets/lego1/lego9.jpeg" alt="lego9" width="450"/>
+
+Sisi kiri:
+
+<img src="/assets/lego1/lego10.jpeg" alt="lego10" width="450"/>
+
+Kiri arah depan:
+
+<img src="/assets/lego1/lego11.jpeg" alt="lego11" width="450"/>
+
 Penutup, saya akan mencoba meluangkan waktu untuk bermain dengan anak-anak kami,
 berbicara, agar akrab hubungan anak dan orang tua. Semoga mereka menjadi Anak yang shaleh. Aamiin
 
