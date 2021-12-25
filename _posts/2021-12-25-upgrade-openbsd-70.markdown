@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Upgrade OpenBSD 7.0 dengan sysupgrade"
-date:   2021-12-25 1:26:56 +0800
+date:   2021-12-25 10:26:56 +0800
 categories: openbsd
 ---
 
