@@ -63,7 +63,7 @@ Connection to aset.muntaza.id closed by remote host.
 Connection to aset.muntaza.id closed.
 ```
 
-Perhatikan, gunakan mirror terdekat agar proses download lebih cepat. file SHA256.sig di verifikasi dengan public key yang ada di bsd.rd. Kemudian, file set lainnya di verifikasi dengan SHA256.sig
+Perhatikan, gunakan mirror terdekat agar proses download lebih cepat. File SHA256.sig di verifikasi dengan public key yang ada di bsd.rd. Kemudian, file set lainnya di verifikasi dengan SHA256.sig
 
 Setelah semua file terdownload, mesin melakukan reboot dan melakukan proses upgrade tanpa perintah (otomatis).
 
