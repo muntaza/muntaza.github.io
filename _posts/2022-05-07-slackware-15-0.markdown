@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Slackware 15.0"
+date:   2022-05-07 11:27:56 +0800
+categories: linux
+---
+
+# Bismillah,
+
+Hari ini saya teringat salah satu distro linux yang dulu pernah saya pakai, yaitu
+distro Slackware. Saya coba browse di google, ternyata ada rilis terbaru versi 15.0
+yang terbit tanggal 22 Pebruari 2022 tadi.
+
+Ini [Release Announcement](http://www.slackware.com/announce/15.0.php)nya dan ini link kalau mau download File
+[ISO Image](https://mirrors.slackware.com/slackware/slackware-iso/slackware64-15.0-iso/)nya.
+
+Slackware ini tetap tidak menyertakan PostgreSQL, lalu saya coba mencari scriptnya di website
+Slackbuilds.org, ternyata ada siap di download, link nya di 
+[sini](https://slackbuilds.org/repository/15.0/system/postgresql/).
+
+Saya coba cek file Slackware-HOWTO, ternyata folder L berisi sejumlah 2,5GB paket. Ini adalah
+salah satu kekurangan Slackware, yaitu user harus menginstall semua paket di folder L agar
+semua Library tersedia di system, sehingga paket lain bisa berjalan lancar tanpa error. 
+
+Saya kira memang Slackware tidak di design untuk mendukung proses instal dependency paket secara otomatis.
+Bagi sebagian pengguna, hal itu tidak terlalu bermasalah.
+
+Saat ini saya belum memungkinkan untuk mencoba Slackware 15.0 ini, mungkin di masa yang akan datang,
+kalau ada laptop khusus, saya akan coba. Saat usia menuju tua, sudah susah untuk gonta-ganti OS. Masih setia dengan
+Linux Mint 19.3 di Laptop Asus E202S.
+
+Demikian catatan kecil dari saya, semoga bermanfaat.
+
+# Alhamdulillah
