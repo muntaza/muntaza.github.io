@@ -23,13 +23,17 @@ salah satu kekurangan Slackware, yaitu user harus menginstall semua paket di fol
 semua Library tersedia di system, sehingga paket lain bisa berjalan lancar tanpa error. 
 
 Saya kira memang Slackware tidak di design untuk mendukung proses instal dependency paket secara otomatis.
-Bagi sebagian pengguna, hal itu tidak terlalu bermasalah.
+Bagi sebagian pengguna Slackware, hal itu tidak terlalu bermasalah.
 
-Pada masa yang lalu, saya pernah menggunakan Slackware sejak Slackware 10.0 yaitu sekitar tahun 2004, sampai
-versi terakhir sebelum saya pindah ke Linux Mint yaitu Slackware 14.2 sekitar tahun 2016. 
+Pada masa yang lalu, saya pernah menggunakan Slackware sejak Slackware 10.0 yaitu sekitar tahun 2004, walaupun 
+sering berpindah-pindah distro linux sebagaimana saya 
+[kisahkan](https://www.muntaza.id/linux/2010/01/13/pengalaman-linux.html) sampai
+versi terakhir sebelum saya pindah ke Linux Mint yaitu Slackware 14.2 sekitar tahun 2016. Waktu itu kalau tidak salah
+pindah ke Linux Mint 18.0. 
 
 Saat ini saya belum memungkinkan untuk mencoba Slackware 15.0 ini, mungkin di masa yang akan datang,
-kalau ada laptop khusus, saya akan coba. Saat usia menuju tua, sudah susah untuk gonta-ganti OS. Masih setia dengan
+kalau ada laptop khusus, insyaAllah, saya akan coba. Saat usia menuju tua, sudah susah untuk gonta-ganti OS. 
+Masih setia dengan
 Linux Mint 19.3 di Laptop Asus E202S.
 
 Demikian catatan kecil dari saya, semoga bermanfaat.
