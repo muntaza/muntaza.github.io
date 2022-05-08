@@ -17,4 +17,4 @@ categories: catatan
 <br>
 
 sumber: 
-[https://www.google.com/search?q=busy+and+productive](https://www.google.com/search?q=busy+and+productive)
+[https://www.google.com](https://www.google.com)
