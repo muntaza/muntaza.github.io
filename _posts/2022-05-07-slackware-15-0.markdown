@@ -25,7 +25,7 @@ semua Library tersedia di system, sehingga paket lain bisa berjalan lancar tanpa
 Saya kira memang Slackware tidak di design untuk mendukung proses instal dependency paket secara otomatis.
 Bagi sebagian pengguna Slackware, hal itu tidak terlalu bermasalah.
 
-Pada masa yang lalu, saya pernah menggunakan Slackware sejak Slackware 10.0 yaitu sekitar tahun 2004, walaupun 
+Pada masa yang lalu, saya pernah menggunakan Slackware sejak Slackware 10.0 yaitu sekitar tahun 2004. Walaupun 
 sering berpindah-pindah distro linux sebagaimana saya 
 [kisahkan](https://www.muntaza.id/linux/2010/01/13/pengalaman-linux.html) sampai
 versi terakhir sebelum saya pindah ke Linux Mint yaitu Slackware 14.2 sekitar tahun 2016. Waktu itu kalau tidak salah
