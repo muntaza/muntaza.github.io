@@ -37,7 +37,7 @@ Distro Debian 2 juga ku coba pada saat itu, multi boot dengan lorma linux. tapi 
 
 Berikutnya aku meng install SuSE 9.0 dan menjadikannya Distro Utama menggantikan Lorma Linux, aku menggunakan nya cukup lama sekitar 6 bulan
 
-Berikutnya aku mengganti SuSE 9.0 dengan Slackware 9.1 lalu di update ke Slackware 10.0 sebagai distro Utama. Aku menggunakan Slackware 10.0 sangat lama mungkin 18 bulan lebih.
+Berikutnya aku mengganti SuSE 9.0 dengan Slackware 10.0 sebagai distro Utama. Aku menggunakan Slackware 10.0 sangat lama mungkin 18 bulan lebih.
 
 Disamping Slackware 10.0 sebagai distro Utama, aku juga mencoba menginstall distro-distro lain dengan multi boot. Tapi sebagian distro itu tidak stabil sehingga sekedar mencoba saja.
 
