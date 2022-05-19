@@ -1,0 +1,965 @@
+---
+layout: post
+title:  "Deploy OpenPersediaan pada OpenBSD 7.0"
+date:   2022-05-19 11:26:56 +0800
+categories: openbsd
+---
+
+# Bismillah,
+
+Ini adalah catatan instalasi OpenPersediaan pada OpenBSD 7.0. Beberapa
+catatan penting pada instalasi ini:
+
+- Python yang digunakan adalah versi 2.7 yang nama sudah tidak di support 
+lagi, sehingga menimbulkan beberapa kendala saat instalasi ini.
+- PHP yang di gunakan di sini adalah versi 7.3 yang saat proses instalasi ini sudah
+cukup tua dan hampir out of support.
+
+Proses instalasi tidak terstruktur dengan benar, hanya berupa hasil copy
+paste command line yang saya beri komentar. 
+
+Setting Alias email, kemudian restart smtpd
+
+```text
+alias:
+
+example$ cat /etc/mail/aliases | grep muntaza 
+root: muntaza
+```
+
+
+```text
+example$ doas rcctl restart smtpd
+smtpd(ok)
+smtpd(ok)
+example$ 
+example$ 
+example$ 
+example$ 
+```
+
+Tes kirim email di local untuk memastikan alias berfungsi
+
+```text
+example$ mail
+No mail for muntaza
+example$ mail root
+Subject: test
+ini
+.
+EOT
+example$ mail
+Mail version 8.1.2 01/15/2001.  Type ? for help.
+"/var/mail/muntaza": 1 message 1 new
+>N  1 muntaza@example  Thu Jan 20 06:37   15/544   test
+& 
+Message 1:
+From muntaza@example.muntaza.id Thu Jan 20 06:37:00 2022
+Delivered-To: root@example.muntaza.id
+From: Muhammad Muntaza <muntaza@example.muntaza.id>
+To: root@example.muntaza.id
+Subject: test
+
+ini
+
+& q
+Saved 1 message in mbox
+example$
+```
+
+Cek lokasi mirror
+
+```text
+example$ cat /etc/installurl                                                                                            
+https://mirror.labkom.id/pub/OpenBSD
+```
+Tampilkan patch yang sudah di install
+
+```text
+example$ syspatch -l                                                                                                    
+001_nsd
+002_bpf
+003_uipc
+004_rpki
+005_unpcon
+006_x509
+007_xserver
+008_mrt
+009_expat
+010_vmm
+example$
+```
+
+Cek konfigurasi ntpd
+
+
+```text
+example$ cat /etc/ntpd.conf                                                                                             
+# $OpenBSD: ntpd.conf,v 1.16 2019/11/06 19:04:12 deraadt Exp $
+#
+# See ntpd.conf(5) and /etc/examples/ntpd.conf
+
+servers 2.id.pool.ntp.org
+sensor *
+
+constraint from "9.9.9.9"              # quad9 v4 without DNS
+example$
+```
+
+Instalasi python 2.7
+
+
+```text
+example$ doas /usr/sbin/pkg_add python 
+quirks-4.54 signed on 2022-01-09T19:08:35Z
+Ambiguous: choose package for python
+a	0: <None>
+	1: python-2.7.18p3
+	2: python-3.8.12
+	3: python-3.9.7
+Your choice: 1
+python-2.7.18p3:bzip2-1.0.8p0: ok
+python-2.7.18p3:sqlite3-3.35.5p0: ok
+python-2.7.18p3:libiconv-1.16p0: ok
+python-2.7.18p3:gettext-runtime-0.21p1: ok
+python-2.7.18p3:libffi-3.3p1: ok
+python-2.7.18p3: ok
+example$
+```
+
+
+
+Lihat [cara menggunakan pip yang support versi python 2.7](https://stackoverflow.com/questions/26266437/how-to-use-python2-7-pip-instead-of-default-pip) ini, agar bisa menginstall django dan paket lain dengan pip.
+
+Install wget
+
+```text
+example$ doas /usr/sbin/pkg_add wget                                                                                    
+quirks-4.54 signed on 2022-01-09T19:08:35Z
+wget-1.21.2:libunistring-0.9.7: ok
+wget-1.21.2:libidn2-2.3.0p0: ok
+wget-1.21.2:pcre2-10.36: ok
+wget-1.21.2:libpsl-0.21.1: ok
+wget-1.21.2: ok
+```
+
+Setelah wget terinstall, kita download script get-pip.py dengan wget
+
+```text
+example$ wget https://bootstrap.pypa.io/pip/2.7/get-pip.py 
+--2022-01-20 14:01:07--  https://bootstrap.pypa.io/pip/2.7/get-pip.py
+Resolving bootstrap.pypa.io (bootstrap.pypa.io)... 151.101.0.175, 151.101.64.175, 151.101.128.175, ...
+Connecting to bootstrap.pypa.io (bootstrap.pypa.io)|151.101.0.175|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1908226 (1.8M) [text/x-python]
+Saving to: 'get-pip.py'
+
+get-pip.py                     100%[====================================================>]   1.82M  1.88MB/s    in 1.0s    
+
+2022-01-20 14:01:08 (1.88 MB/s) - 'get-pip.py' saved [1908226/1908226]
+```
+
+Script get-pip.py digunakan untuk mendownload pip yang support python 2.7
+
+```text
+example$ doas python2 get-pip.py                                                                                        
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+Collecting pip<21.0
+  Downloading pip-20.3.4-py2.py3-none-any.whl (1.5 MB)
+     |################################| 1.5 MB 1.1 MB/s 
+Collecting setuptools<45
+  Downloading setuptools-44.1.1-py2.py3-none-any.whl (583 kB)
+     |################################| 583 kB 3.8 MB/s 
+Collecting wheel
+  Downloading wheel-0.37.1-py2.py3-none-any.whl (35 kB)
+Installing collected packages: pip, setuptools, wheel
+Successfully installed pip-20.3.4 setuptools-44.1.1 wheel-0.37.1
+example$ 
+```
+
+Install vim
+
+
+```text
+example$ doas /usr/sbin/pkg_add vim                                                                                     
+quirks-4.54 signed on 2022-01-09T19:08:35Z
+Ambiguous: choose package for vim
+a	0: <None>
+	1: vim-8.2.3456-gtk3
+	2: vim-8.2.3456-gtk3-lua
+	3: vim-8.2.3456-gtk3-perl-python3-ruby
+	4: vim-8.2.3456-no_x11-lua
+	5: vim-8.2.3456-no_x11
+	6: vim-8.2.3456-no_x11-perl-python3-ruby
+	7: vim-8.2.3456-no_x11-python3
+	8: vim-8.2.3456-no_x11-ruby
+Your choice: 5
+vim-8.2.3456-no_x11:libsodium-1.0.18p1: ok
+vim-8.2.3456-no_x11: ok
+example$ 
+```
+
+Cek versi pip
+
+```text
+example$ which pip                                                                                                      
+/usr/local/bin/pip
+example$ pip --version
+pip 20.3.4 from /usr/local/lib/python2.7/site-packages/pip (python 2.7)
+example$ 
+```
+
+Install Django versi 1.11.29 dengan pip. Terlihat pesan error bahwa python 2.7 sudah tidak di support lagi sejak 1 Januari 2020.
+
+```text
+example$ doas pip install Django==1.11.29
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+Collecting Django==1.11.29
+  Downloading Django-1.11.29-py2.py3-none-any.whl (6.9 MB)
+     |################################| 6.9 MB 3.1 MB/s 
+Collecting pytz
+  Downloading pytz-2021.3-py2.py3-none-any.whl (503 kB)
+     |################################| 503 kB 6.8 MB/s 
+Installing collected packages: pytz, Django
+Successfully installed Django-1.11.29 pytz-2021.3
+example$
+```
+
+Cek versi Django Web Framework
+
+```text
+example$ django-admin --version                                                                                         
+1.11.29
+```
+
+Instalasi apache-httpd
+
+```text
+example$ doas /usr/sbin/pkg_add apache-httpd
+quirks-4.54 signed on 2022-01-09T19:08:35Z
+apache-httpd-2.4.52:brotli-1.0.9p0: ok
+apache-httpd-2.4.52:nghttp2-1.44.0: ok
+apache-httpd-2.4.52:curl-7.79.0: ok
+apache-httpd-2.4.52:xz-5.2.5: ok
+apache-httpd-2.4.52:libxml-2.9.12: ok
+apache-httpd-2.4.52:db-4.6.21p7v0: ok
+apache-httpd-2.4.52:apr-1.6.5p0: ok
+apache-httpd-2.4.52:apr-util-1.6.1p2: ok
+apache-httpd-2.4.52:jansson-2.13.1: ok
+apache-httpd-2.4.52:pcre-8.44: ok
+apache-httpd-2.4.52: ok
+Running tags: ok
+The following new rcscripts were installed: /etc/rc.d/apache2
+See rcctl(8) for details.
+```
+
+Instalasi php dan beberapa add-on nya
+
+```text
+example$ doas /usr/sbin/pkg_add php-gd php-pdo_pgsql php-pgsql php-apache php
+quirks-4.54 signed on 2022-01-09T19:08:35Z
+Ambiguous: choose package for php-gd
+a	0: <None>
+	1: php-gd-7.3.33
+	2: php-gd-7.4.27
+	3: php-gd-8.0.14
+Your choice: 1
+php-gd-7.3.33:femail-1.0p1: ok
+php-gd-7.3.33:femail-chroot-1.0p3: ok
+php-gd-7.3.33:argon2-20190702: ok
+php-gd-7.3.33:oniguruma-6.9.7.1: ok
+php-gd-7.3.33:php-7.3.33: ok
+php-gd-7.3.33:png-1.6.37: ok
+php-gd-7.3.33:giflib-5.1.6: ok
+php-gd-7.3.33:jpeg-2.1.1v0: ok
+php-gd-7.3.33:lz4-1.9.3p0: ok
+php-gd-7.3.33:zstd-1.5.0: ok
+php-gd-7.3.33:tiff-4.3.0: ok
+php-gd-7.3.33:libwebp-1.2.1: ok
+php-gd-7.3.33: ok
+Ambiguous: choose package for php-pdo_pgsql
+a	0: <None>
+	1: php-pdo_pgsql-7.3.33
+	2: php-pdo_pgsql-7.4.27
+	3: php-pdo_pgsql-8.0.14
+Your choice: 1
+php-pdo_pgsql-7.3.33:postgresql-client-13.5: ok
+php-pdo_pgsql-7.3.33: ok
+Ambiguous: choose package for php-pgsql
+a	0: <None>
+	1: php-pgsql-7.3.33
+	2: php-pgsql-7.4.27
+	3: php-pgsql-8.0.14
+Your choice: 1
+php-pgsql-7.3.33: ok
+Ambiguous: choose package for php-apache
+a	0: <None>
+	1: php-apache-7.3.33
+	2: php-apache-7.4.27
+	3: php-apache-8.0.14
+Your choice: 1
+php-apache-7.3.33: ok
+Ambiguous: choose package for php
+a	0: <None>
+	1: php-7.3.33
+	2: php-7.4.27
+	3: php-8.0.14
+Your choice: 1
+The following new rcscripts were installed: /etc/rc.d/php73_fpm
+See rcctl(8) for details.
+New and changed readme(s):
+	/usr/local/share/doc/pkg-readmes/femail-chroot
+	/usr/local/share/doc/pkg-readmes/php-7.3
+example$ 
+```
+
+Instalasi PostgreSQL server
+
+
+```text
+example$ doas /usr/sbin/pkg_add postgresql-server postgresql-contrib
+doas (muntaza@example.muntaza.id) password: 
+quirks-4.54 signed on 2022-01-09T19:08:35Z
+useradd: Warning: home directory `/var/postgresql' doesn't exist, and -m was not specified
+postgresql-server-13.5: ok
+postgresql-contrib-13.5: ok
+The following new rcscripts were installed: /etc/rc.d/postgresql
+See rcctl(8) for details.
+New and changed readme(s):
+	/usr/local/share/doc/pkg-readmes/postgresql-server
+example$ 
+```
+
+
+```text
+example$ head -23 /usr/local/share/doc/pkg-readmes/postgresql-server | tail 
+
+If you are installing PostgreSQL for the first time, you have to create
+a default database first.  In the following example we install a database
+in /var/postgresql/data with a dba account 'postgres' and scram-sha-256
+authentication. We will be prompted for a password to protect the dba account:
+
+       # su - _postgresql
+       $ mkdir /var/postgresql/data
+       $ initdb -D /var/postgresql/data -U postgres -A scram-sha-256 -E UTF8 -W
+
+example$ 
+```
+
+
+```text
+example$ doas su - _postgresql
+example$ pwd
+/var/postgresql
+example$ mkdir /var/postgresql/data
+example$ initdb -D /var/postgresql/data -U postgres -A scram-sha-256 -E UTF8 -W
+The files belonging to this database system will be owned by user "_postgresql".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+Enter new superuser password: 
+Enter it again: 
+
+fixing permissions on existing directory /var/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 20
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Asia/Makassar
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/postgresql/data -l logfile start
+
+example$ 
+```
+
+
+```text
+example$ doas rcctl restart postgresql
+postgresql(ok)
+```
+
+
+```text
+example$ ps ax | grep postgres
+50640 ??  S        0:00.03 /usr/local/bin/postgres -D /var/postgresql/data
+31931 ??  S        0:00.00 postgres: checkpointer  (postgres)
+32286 ??  S        0:00.02 postgres: background writer  (postgres)
+56685 ??  S        0:00.01 postgres: walwriter  (postgres)
+15876 ??  S        0:00.01 postgres: autovacuum launcher  (postgres)
+35602 ??  S        0:00.02 postgres: stats collector  (postgres)
+23739 ??  S        0:00.00 postgres: logical replication launcher  (postgres)
+40480 p0  S+p      0:00.00 grep postgres
+example$ 
+```
+
+```text
+example$ doas pip install psycopg2
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+Collecting psycopg2
+  Downloading psycopg2-2.8.6.tar.gz (383 kB)
+     |################################| 383 kB 1.1 MB/s 
+Building wheels for collected packages: psycopg2
+  Building wheel for psycopg2 (setup.py) ... done
+  Created wheel for psycopg2: filename=psycopg2-2.8.6-cp27-cp27m-openbsd_7_0_amd64.whl size=291816 sha256=ef8bc8721661105ffe9a70688d76c6717036e4c2027876d0505e808218786eae
+  Stored in directory: /root/.cache/pip/wheels/85/34/73/e3871d18b1d4f076b12aa8bb57dec5d2fd472a7e44a3aa22d6
+Successfully built psycopg2
+Installing collected packages: psycopg2
+Successfully installed psycopg2-2.8.6
+example$ 
+```
+
+
+```text
+example$ doas pip install mod_wsgi 
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+Collecting mod_wsgi
+  Downloading mod_wsgi-4.9.0.tar.gz (497 kB)
+     |################################| 497 kB 1.3 MB/s 
+Building wheels for collected packages: mod-wsgi
+  Building wheel for mod-wsgi (setup.py) ... done
+  Created wheel for mod-wsgi: filename=mod_wsgi-4.9.0-cp27-cp27m-openbsd_7_0_amd64.whl size=580301 sha256=7ba30c5645e6af9e78f1ef28e5ad5b2a6ac2889a5828580360017a6292c8bc69
+  Stored in directory: /root/.cache/pip/wheels/20/79/07/81406b402d0fecbaa61e0045e071391e99ea958588f6afebda
+Successfully built mod-wsgi
+Installing collected packages: mod-wsgi
+Successfully installed mod-wsgi-4.9.0
+example$ 
+```
+
+```text
+example$ pip list
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+Package    Version
+---------- -------
+Django     1.11.29
+mod-wsgi   4.9.0
+pip        20.3.4
+psycopg2   2.8.6
+pytz       2021.3
+setuptools 44.1.1
+wheel      0.37.1
+```
+
+
+
+
+```text
+example$ cat /etc/httpd.conf | grep -v \# 
+
+server "example.muntaza.id" {
+	listen on * port 80
+	location "/.well-known/acme-challenge/*" {
+		root "/acme"
+		request strip 2
+	}
+}
+
+example$ 
+```
+
+
+```text
+example$ cat /etc/acme-client.conf        
+#
+# $OpenBSD: acme-client.conf,v 1.4 2020/09/17 09:13:06 florian Exp $
+#
+authority letsencrypt {
+	api url "https://acme-v02.api.letsencrypt.org/directory"
+	account key "/etc/acme/letsencrypt-privkey.pem"
+}
+
+authority letsencrypt-staging {
+	api url "https://acme-staging-v02.api.letsencrypt.org/directory"
+	account key "/etc/acme/letsencrypt-staging-privkey.pem"
+}
+
+authority buypass {
+	api url "https://api.buypass.com/acme/directory"
+	account key "/etc/acme/buypass-privkey.pem"
+	contact "mailto:me@example.com"
+}
+
+authority buypass-test {
+	api url "https://api.test4.buypass.no/acme/directory"
+	account key "/etc/acme/buypass-test-privkey.pem"
+	contact "mailto:me@example.com"
+}
+
+domain example.muntaza.id {
+	domain key "/etc/ssl/private/example.muntaza.id.key"
+	domain full chain certificate "/etc/ssl/example.muntaza.id.fullchain.pem"
+	sign with letsencrypt
+}
+example$ 
+```
+
+
+```text
+example$ doas /sbin/pfctl -f /etc/pf.conf_pass_acme  
+example$ doas /sbin/pfctl -sr                        
+block return all
+pass out all flags S/SA
+pass in on vio0 inet proto tcp from any to 192.0.2.42 port = 22 flags S/SA synproxy state (source-track rule, max-src-conn 100, max-src-conn-rate 15/5, overload <abusive_hosts> flush, src.track 5)
+pass in on vio0 inet proto tcp from any to 192.0.2.42 port = 80 flags S/SA synproxy state (source-track rule, max-src-conn 100, max-src-conn-rate 15/5, overload <abusive_hosts> flush, src.track 5)
+pass in on vio0 inet proto tcp from any to 192.0.2.42 port = 443 flags S/SA synproxy state (source-track rule, max-src-conn 100, max-src-conn-rate 15/5, overload <abusive_hosts> flush, src.track 5)
+pass in on vio0 inet proto tcp from 64.41.200.0/24 to 192.0.2.42 port = 443 flags S/SA
+block return in on ! lo0 proto tcp from any to any port 6000:6010
+block return out log proto tcp all user = 55
+block return out log proto udp all user = 55
+example$ 
+```
+
+
+```text
+example$ 
+example$ doas rcctl -f restart httpd                 
+httpd(ok)
+httpd(ok)
+```
+
+
+```text
+example$ doas acme-client -v example.muntaza.id   
+acme-client: https://acme-v02.api.letsencrypt.org/directory: directories
+acme-client: acme-v02.api.letsencrypt.org: DNS: 172.65.32.248
+acme-client: dochngreq: https://acme-v02.api.letsencrypt.org/acme/authz-v3/70075626200
+acme-client: challenge, token: L5UJH-1tAMGuXuAMM9FPw5fBOYgtO-s1FmtIatxYBmk, uri: https://acme-v02.api.letsencrypt.org/acme/chall-v3/70075626200/z1T6VA, status: 0
+acme-client: /var/www/acme/L5UJH-1tAMGuXuAMM9FPw5fBOYgtO-s1FmtIatxYBmk: created
+acme-client: https://acme-v02.api.letsencrypt.org/acme/chall-v3/70075626200/z1T6VA: challenge
+acme-client: order.status 0
+acme-client: dochngreq: https://acme-v02.api.letsencrypt.org/acme/authz-v3/70075626200
+acme-client: challenge, token: L5UJH-1tAMGuXuAMM9FPw5fBOYgtO-s1FmtIatxYBmk, uri: https://acme-v02.api.letsencrypt.org/acme/chall-v3/70075626200/z1T6VA, status: 2
+acme-client: order.status 1
+acme-client: https://acme-v02.api.letsencrypt.org/acme/finalize/372238700/56895705330: certificate
+acme-client: order.status 3
+acme-client: https://acme-v02.api.letsencrypt.org/acme/cert/03d55808b7695ca0ab42aebfee7a7acff4c1: certificate
+acme-client: /etc/ssl/example.muntaza.id.fullchain.pem: created
+example$ 
+```
+
+
+IP public for example
+https://tools.ietf.org/search/rfc5737
+
+
+```text
+example$ doas cat /etc/pf.conf                                                                                          
+#	$OpenBSD: pf.conf,v 1.55 2017/12/03 20:40:04 sthen Exp $
+#
+# See pf.conf(5) and /etc/examples/pf.conf
+
+ext_if=vio0
+services = "{ 22, 443 }"
+
+set skip on lo
+block return    # block stateless traffic
+
+table <ip_safe> persist file "/etc/ip_safe"
+pass out to <ip_safe>
+
+
+table <abusive_hosts> persist
+block in quick from <abusive_hosts>
+
+table <ip_indonesia> persist file "/etc/id.zone"
+
+pass in on $ext_if inet proto tcp from <ip_indonesia> to $ext_if \
+    port $services  \
+    flags S/SA synproxy state \
+    (max-src-conn 100, max-src-conn-rate 15/5, overload <abusive_hosts> flush)
+
+
+
+#Pass SSL Labs
+pass in on $ext_if inet proto tcp from 64.41.200.0/24 to $ext_if \
+    port 443
+
+# By default, do not permit remote connections to X11
+block return in on ! lo0 proto tcp to port 6000:6010
+
+# Port build user does not need network
+block return out log proto {tcp udp} user _pbuild
+example$ 
+```
+
+
+
+example$ doas rcctl set postgresql status on
+example$ doas rcctl set apache2 status on    
+example$ doas rcctl set httpd status off  
+example$ cat /etc/rc                                                                                                    
+rc             rc.conf        rc.conf.local  rc.d/          
+example$ cat /etc/rc.conf.local                                                                                         
+pkg_scripts=postgresql apache2
+example$ 
+
+
+
+
+
+example$ diff httpd2.conf httpd2.conf_asli  
+52c52
+< #Listen 80
+---
+> Listen 80
+92c92
+< LoadModule socache_shmcb_module /usr/local/lib/apache2/mod_socache_shmcb.so
+---
+> #LoadModule socache_shmcb_module /usr/local/lib/apache2/mod_socache_shmcb.so
+150c150
+< LoadModule ssl_module /usr/local/lib/apache2/mod_ssl.so
+---
+> #LoadModule ssl_module /usr/local/lib/apache2/mod_ssl.so
+516c516
+< Include /etc/apache2/extra/httpd-default.conf
+---
+> #Include /etc/apache2/extra/httpd-default.conf
+524c524
+< Include /etc/apache2/extra/httpd-ssl.conf
+---
+> #Include /etc/apache2/extra/httpd-ssl.conf
+example$ 
+
+
+
+
+example$ diff httpd-default.conf httpd-default.conf_asli                                                       
+16c16
+< KeepAlive Off
+---
+> KeepAlive On
+55c55
+< ServerTokens Prod
+---
+> ServerTokens Full
+example$ 
+
+
+
+example$ diff httpd-ssl.conf httpd-ssl.conf_asli                                                               
+52,53c52,53
+< #SSLCipherSuite HIGH:MEDIUM:!MD5:!RC4:!3DES
+< #SSLProxyCipherSuite HIGH:MEDIUM:!MD5:!RC4:!3DES
+---
+> SSLCipherSuite HIGH:MEDIUM:!MD5:!RC4:!3DES
+> SSLProxyCipherSuite HIGH:MEDIUM:!MD5:!RC4:!3DES
+65,66c65,66
+< SSLCipherSuite HIGH:MEDIUM:!SSLv3:!kRSA
+< SSLProxyCipherSuite HIGH:MEDIUM:!SSLv3:!kRSA
+---
+> # SSLCipherSuite HIGH:MEDIUM:!SSLv3:!kRSA
+> # SSLProxyCipherSuite HIGH:MEDIUM:!SSLv3:!kRSA
+79,80c79,80
+< SSLProtocol TLSv1.3
+< SSLProxyProtocol TLSv1.3
+---
+> SSLProtocol all -SSLv3
+> SSLProxyProtocol all -SSLv3
+125,126c125,126
+< ServerName example.muntaza.id:443
+< ServerAdmin muhammad@muntaza.id
+---
+> ServerName www.example.com:443
+> ServerAdmin you@example.com
+144c144
+< SSLCertificateFile  "/etc/ssl/example.muntaza.id.fullchain.pem" 
+---
+> SSLCertificateFile "/etc/apache2/server.crt"
+154c154
+< SSLCertificateKeyFile  "/etc/ssl/private/example.muntaza.id.key"
+---
+> SSLCertificateKeyFile "/etc/apache2/server.key"
+example$ 
+
+hanya TLSv1.3 yang di aktifkan
+
+
+example$ cd /etc/php-7.3.sample/                                                                               
+example$ ls
+gd.ini        opcache.ini   pdo_pgsql.ini pgsql.ini
+example$ doas cp *.ini /etc/php-7.3/
+example$ 
+
+example$ cd /var/www/conf/ 
+example$ doas cp modules.sample/php-7.3.conf modules/                                                          
+example$ 
+
+example$ doas rcctl restart apache2
+apache2(ok)
+apache2(ok)
+example$
+
+
+Backup otomatis perlu user local tanpa password
+
+example$ diff pg_hba.conf pg_hba.conf_asli                                                                     
+84c84
+< local   all             all                                     peer
+---
+> local   all             all                                     scram-sha-256
+example$ ^D
+example$ doas rcctl restart postgresql
+postgresql(ok)
+postgresql(ok)
+example$
+
+
+Restore global database
+
+
+example$ mkdir data
+example$ ls -l
+total 12
+drwxr-xr-x  2 _postgresql  _postgresql   512 Jan 20 17:21 data
+-rw-------  1 _postgresql  _postgresql  2942 Jan 20 17:20 logfile
+example$ chmod -R og-rwx data
+example$ ls -l                
+total 12
+drwx------  2 _postgresql  _postgresql   512 Jan 20 17:21 data
+-rw-------  1 _postgresql  _postgresql  2942 Jan 20 17:20 logfile
+example$ 
+
+example$ initdb -D /var/postgresql/data -U _postgresql -A md5 -W
+The files belonging to this database system will be owned by user "_postgresql".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default database encoding has accordingly been set to "SQL_ASCII".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+Enter new superuser password: 
+Enter it again: 
+
+fixing permissions on existing directory /var/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 20
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Asia/Makassar
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/postgresql/data -l logfile start
+
+example$ id                                                      
+uid=503(_postgresql) gid=503(_postgresql) groups=503(_postgresql)
+example$ exit
+example$ doas rcctl restart postgresql
+postgresql(ok)
+example$ doas su - _postgresql         
+example$ psql
+Password for user _postgresql: 
+example$ cd data/                                                                                              
+
+
+example$ vim pg_hba.conf                                                                                       
+
+example$ diff data/pg_hba.conf data/pg_hba.conf_asli                                                           
+84c84
+< local   all             all                                     peer
+---
+> local   all             all                                     md5
+
+
+example$ id
+uid=503(_postgresql) gid=503(_postgresql) groups=503(_postgresql)
+example$ exit
+example$ doas rcctl restart postgresql 
+postgresql(ok)
+postgresql(ok)
+example$ doas su - _postgresql         
+example$ psql template1
+psql (13.5)
+Type "help" for help.
+
+template1=# \q
+example$ 
+
+
+example$ diff httpd-ssl.conf httpd-ssl.conf_v2                                                                              
+134,179d133
+< Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+< 
+< LoadModule wsgi_module /usr/local/lib/python2.7/site-packages/mod_wsgi/server/mod_wsgi-py27.so
+< 
+< # 2021
+< 
+< WSGIDaemonProcess persediaan_example_2021 python-path=/home/django/persediaan_example_2021:/usr/local/lib/python2.7/site-packages
+< WSGIProcessGroup persediaan_example_2021
+< 
+< WSGIScriptAlias /persediaan_example_2021 /home/django/persediaan_example_2021/persediaan_example_2021/wsgi.py process-group=persediaan_example_2021
+< 
+< 
+< <Directory /home/django/persediaan_example_2021/persediaan_example_2021>
+< <Files wsgi.py>
+< Require all granted
+< </Files>
+< </Directory>
+< 
+< 
+< Alias /robots.txt /home/django/persediaan_example_2021/static/robots.txt
+< Alias /favicon.ico /home/django/persediaan_example_2021/static/favicon.ico
+< 
+< 
+< #static pada https
+< Alias /static_persediaan_example_2021 /home/django/persediaan_example_2021/static/
+< 
+< <Directory /home/django/persediaan_example_2021/static>
+< Require all granted
+< </Directory>
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+< 
+example$ 
+
+
+
+example$ cat .cvsrc                                                                                             
+# $OpenBSD: dot.cvsrc,v 1.3 2016/10/31 20:50:11 tb Exp $
+#
+cvs -d muntaza@openbsd.muntaza.id:/home/muntaza/data/cvsroot
+diff -uNp
+update -Pd
+checkout -P
+rdiff -u
+example$ 
+
+example$ cd /home/                                                                                              
+example$ doas mkdir django
+doas (muntaza@example.muntaza.id) password: 
+example$ doas chown -R muntaza:www /home/django                                                                 
+example$ ls -ld django                                                                                          
+drwxr-xr-x  2 muntaza  www  512 Jan 20 17:40 django
+example$ 
+
+
+example$ doas su - _postgresql
+example$ psql template1 < global_2022-01-13_00_15.sql
+
+
+
+example$ doas /sbin/pfctl -f /etc/pf.conf                                                                                         
+example$ doas /sbin/pfctl -sr             
+
+block return all
+pass out from any to <ip_safe> flags S/SA
+block drop in quick from <abusive_hosts> to any
+pass in on vio0 inet proto tcp from <ip_indonesia> to 103.161.185.42 port = 22 flags S/SA synproxy state (source-track rule, max-src-conn 100, max-src-conn-rate 15/5, overload <abusive_hosts> flush, src.track 5)
+pass in on vio0 inet proto tcp from <ip_indonesia> to 103.161.185.42 port = 443 flags S/SA synproxy state (source-track rule, max-src-conn 100, max-src-conn-rate 15/5, overload <abusive_hosts> flush, src.track 5)
+pass in on vio0 inet proto tcp from 64.41.200.0/24 to 103.161.185.42 port = 443 flags S/SA
+block return in on ! lo0 proto tcp from any to any port 6000:6010
+block return out log proto tcp all user = 55
+block return out log proto udp all user = 55
+
+
+
+
+
+
+
+
+
+
+
+example$ doas cat /etc/pf.conf                                                                                                    
+#	$OpenBSD: pf.conf,v 1.55 2017/12/03 20:40:04 sthen Exp $
+#
+# See pf.conf(5) and /etc/examples/pf.conf
+
+ext_if=vio0
+services = "{ 22, 443 }"
+
+set skip on lo
+block return    # block stateless traffic
+
+table <ip_safe> persist file "/etc/ip_safe"
+pass out to <ip_safe>
+
+
+table <abusive_hosts> persist
+block in quick from <abusive_hosts>
+
+table <ip_indonesia> persist file "/etc/id.zone"
+
+pass in on $ext_if inet proto tcp from <ip_indonesia> to $ext_if \
+    port $services  \
+    flags S/SA synproxy state \
+    (max-src-conn 100, max-src-conn-rate 15/5, overload <abusive_hosts> flush)
+
+
+
+#Pass SSL Labs
+pass in on $ext_if inet proto tcp from 64.41.200.0/24 to $ext_if \
+    port 443
+
+# By default, do not permit remote connections to X11
+block return in on ! lo0 proto tcp to port 6000:6010
+
+# Port build user does not need network
+block return out log proto {tcp udp} user _pbuild
+example$ 
+
+
+copy folder
+
+persediaan$ doas tar czvpf laporan_persediaan_example_2019.tgz /var/www/htdocs/php5_laporan_persediaan_example_2019      
+
+
+extract
+
+example$ cd /                                                                                                
+example$ doas tar -xzpvf /home/muntaza/laporan_persediaan_example_2019.tgz
+
+chmod_min
+
+crontab utama
+
+crontab postgresql
+
+scrip backup postgresql
+
+restore db tahun lama
+example$ createdb persediaan_example_2020 -O persediaan_example_2020
+example$ createdb persediaan_example_2019 -O persediaan_example_2019 
+example$ createdb persediaan_example -O persediaan_example
+
+example$ psql persediaan_example_2020 < persediaan_example_2020_2022-01-14_00_25.sql 
+example$ psql persediaan_example_2019 < persediaan_example_2019_2022-01-14_00_20.sql
+example$ psql persediaan_example < persediaan_example_2022-01-12_00_10.sql
+
+
+doas cp php5_laporan_persediaan_example_2021/reportico_report_html.php php5_laporan_persediaan_example_2020/
+doas cp php5_laporan_persediaan_example_2021/reportico.php php5_laporan_persediaan_example_2020/
+
+
+
+# Alhamdulillah
