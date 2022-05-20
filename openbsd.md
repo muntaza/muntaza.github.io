@@ -7,6 +7,7 @@ permalink: /openbsd/
 Jasa [Konsultan](https://www.openbsd.org/support.html#Indonesia), Pelatihan, dan Instalasi Sistem Operasi OpenBSD sebagai Firewall dan Server. Berpengalaman lebih dari 10 tahun mengelola PF Firewall di OpenBSD.
 
 Daftar tutorial OpenBSD:
+- [Deploy OpenPersediaan pada OpenBSD 7.0](https://www.muntaza.id/openbsd/2022/05/19/openbsd-70.html)
 - [Upgrade OpenBSD 7.0 dengan sysupgrade](https://www.muntaza.id/openbsd/2021/12/25/upgrade-openbsd-70.html)
 - [Deploy Django dan PHP pada OpenBSD 6.8](https://www.muntaza.id/openbsd/2021/01/30/deploy-django-php-1.html)
 - [OpenBSD: sysupgrade](https://www.muntaza.id/openbsd/2020/04/09/sysupgrade.html)
