@@ -13,6 +13,7 @@ categories: catatan
 | Working Smarter | <> | Working Harder |
 | Making time for what matters the most | <> | Everything is urgent |
 | Productive recognizes the value of rest | <> | Busy leads to burnout |  
+{: .tablelines}
 
 <br>
 
