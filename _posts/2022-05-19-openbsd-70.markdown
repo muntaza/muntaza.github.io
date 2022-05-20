@@ -593,6 +593,7 @@ example$
 
 
 
+```text
 example$ doas rcctl set postgresql status on
 example$ doas rcctl set apache2 status on    
 example$ doas rcctl set httpd status off  
@@ -927,6 +928,7 @@ block return in on ! lo0 proto tcp to port 6000:6010
 # Port build user does not need network
 block return out log proto {tcp udp} user _pbuild
 example$ 
+```
 
 
 copy folder
