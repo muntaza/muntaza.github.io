@@ -76,6 +76,10 @@ For a software to be classified as good, it must possess some key features:
 5. __Security__: A good software must be secure. It should not cause physical or economic damage in the event of a system failure. Unauthorized users must not be allowed access to the system.
 6. __Reliability__: A reliable system will rarely fail, and even when it does fail, there are recovery mechanisms in the software to recover from the failure with minimal losses.
 
+Keenam kriteria diatas harus lah terpenuhi, agar sebuah software layak digunakan. 
+
+Demikian sedikit dari saya, teori tentang Rekayasa Perangkat Lunak, semoga bermanfaat.
+
 <br>
 
 # Alhamdulillah
