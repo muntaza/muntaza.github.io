@@ -78,7 +78,7 @@ For a software to be classified as good, it must possess some key features:
 
 Keenam kriteria diatas harus lah terpenuhi, agar sebuah software layak digunakan. 
 
-Demikian dari saya, sedikit teori tentang Rekayasa Perangkat Lunak, semoga bermanfaat.
+Demikian tulisan ini, sedikit teori tentang Rekayasa Perangkat Lunak, semoga bermanfaat.
 
 <br>
 
