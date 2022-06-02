@@ -80,11 +80,9 @@ Keenam kriteria diatas harus lah terpenuhi, agar sebuah software layak digunakan
 
 Demikian tulisan ini, sedikit teori tentang Rekayasa Perangkat Lunak, semoga bermanfaat.
 
-<br>
-
 # Alhamdulillah
 
 Daftar Pustaka: 
-1. [Chaos Report 1994](https://www.standishgroup.com/sample_research_files/chaos_report_1994.pdf).
+1. [Chaos Report 1994](https://www.standishgroup.com/sample_research_files/chaos_report_1994.pdf)
 2. [The Tree or Tire Swing - Funny Diagrams](https://www.businessballs.com/amusement-stress-relief/tree-swing-cartoon-pictures-early-versions/)
 3. [List and explain the essential attributes of a good software](https://cpentalk.com/1369/list-and-explain-the-essential-attributes-of-good-software) 
