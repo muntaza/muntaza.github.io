@@ -14,7 +14,7 @@ ke [sumber ini](https://learnbyexample.gitbooks.io/linux-command-line/content/Te
 Pada contoh ini, kita memiliki sebuah file dengan nama latihan. Untuk menampilkan isi file, kita 
 menggunakan perintah cat.
 
-```text
+{% highlight text %}
 $ cat latihan 
 ini latihan
 itu percobaan
@@ -40,7 +40,7 @@ ini coba
 ini latihan
 ini coba
 itu percobaan
-```
+{% endhighlight %}
 
 Saya melakukan pengurutan berdasarkan kalimat dengan perintah sort. Agar output dari
 perintah cat menjadi input bagi sort, kita menggunkan simbol | (pipe).
