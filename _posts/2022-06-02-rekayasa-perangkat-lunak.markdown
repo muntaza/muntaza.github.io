@@ -51,7 +51,7 @@ Pada bagian akhir laporan Chaos Report 1994 tersebut, di sebutkan kesimpulan seb
 > expectations are realistically set. In addition, each software component has a clear
 > and precise statement and set of objectives. Software components and small
 > projects tend to be less complex. Making the projects simpler is a worthwhile
-> endeavour because complexity causes only confusion and increased cost.!
+> endeavour because complexity causes only confusion and increased cost.
 
 Hal yang terlihat jelas, bahasa lain dari __Smaller Project Milestones__, yaitu software 
 harus sering di rilis, sehingga bisa di kontrol arah pengembangannya.
