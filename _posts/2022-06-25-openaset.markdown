@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Judul"
+title:  "OpenAset"
 date:   2022-06-25 11:26:56 +0800
 categories: software
 ---
@@ -10,14 +10,14 @@ categories: software
 List fitur OpenAset:
 
 0. Log User.
-1. System register unique per barang.
+1. System register unique per barang dalam Golongan Barang.
 2. Kompilasi data Se-Pemda.
 3. Backup laporan auditied tahun sebelumnya.
 4. Multi user Multi Role (dengan pengaturan hak akses).
 5. Secure Socket Layer.
 6. Firewall.
 7. Export to CSV.
-8. Penyusutan menambah umur.
+8. [Penyusutan menambah umur](https://www.muntaza.id/sql/2021/09/23/penyusutan_aset_tetap.html).
 9. Penghapusan parsial (contoh hibah sebagian tanah SKPD untuk instansi vertikal).
 10. Pengurangan parsial (contoh Koreksi karena temuan BPK).
 11. Tahun usul hapus pada SK Penghapusan.
@@ -30,6 +30,6 @@ Kekurangan OpenAset:
 2. Belum ada Laporan format Permendagri 47 
 3. Belum ada fitur BAST
 4. Belum ada fitur RKBMD
-5. Belum ada RKPBMD
+5. Belum ada fitur RKPBMD
 
 # Alhamdulillah
