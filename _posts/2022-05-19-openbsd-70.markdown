@@ -330,6 +330,7 @@ New and changed readme(s):
 example$ 
 ```
 
+Cek file readme PostgreSQL
 
 ```text
 example$ head -23 /usr/local/share/doc/pkg-readmes/postgresql-server | tail 
@@ -346,6 +347,7 @@ authentication. We will be prompted for a password to protect the dba account:
 example$ 
 ```
 
+Pembuatan cluster PostgreSQL
 
 ```text
 example$ doas su - _postgresql
@@ -382,12 +384,14 @@ Success. You can now start the database server using:
 example$ 
 ```
 
+Jalankan server PostgreSQL
 
 ```text
 example$ doas rcctl restart postgresql
 postgresql(ok)
 ```
 
+Cek apakah PostgreSQL server sudah berjalan
 
 ```text
 example$ ps ax | grep postgres
@@ -401,6 +405,8 @@ example$ ps ax | grep postgres
 40480 p0  S+p      0:00.00 grep postgres
 example$ 
 ```
+
+Instalasi psycopg2
 
 ```text
 example$ doas pip install psycopg2
@@ -418,6 +424,7 @@ Successfully installed psycopg2-2.8.6
 example$ 
 ```
 
+Instalasi mod_wsgi
 
 ```text
 example$ doas pip install mod_wsgi 
@@ -435,6 +442,8 @@ Successfully installed mod-wsgi-4.9.0
 example$ 
 ```
 
+Tampilkan paket python2.7 yang terinstall di sistem.
+
 ```text
 example$ pip list
 DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
@@ -450,6 +459,8 @@ wheel      0.37.1
 ```
 
 
+Dibawah ini adalah konfigurasi untuk mendapatkan sertifikat SSL gratis dari 
+Let's Encrypt. Di bawah ini isi file konfigurasi httpd
 
 
 ```text
@@ -465,6 +476,8 @@ server "example.muntaza.id" {
 
 example$ 
 ```
+
+Ini file konfigurasi acme-client
 
 
 ```text
@@ -502,6 +515,9 @@ domain example.muntaza.id {
 example$ 
 ```
 
+Jalankan setting khusus pf.conf untuk mengizinkan akses keluar, sementara
+proses pembuatan sertifikat SSL.
+
 
 ```text
 example$ doas /sbin/pfctl -f /etc/pf.conf_pass_acme  
@@ -518,6 +534,7 @@ block return out log proto udp all user = 55
 example$ 
 ```
 
+Restart httpd
 
 ```text
 example$ 
@@ -526,6 +543,7 @@ httpd(ok)
 httpd(ok)
 ```
 
+Proses pembuatan free SSL sertifikat.
 
 ```text
 example$ doas acme-client -v example.muntaza.id   
@@ -547,8 +565,6 @@ example$
 ```
 
 
-IP public for example
-https://tools.ietf.org/search/rfc5737
 
 
 ```text
