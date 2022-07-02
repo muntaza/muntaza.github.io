@@ -25,3 +25,5 @@ Linkedin: [muhammad-muntaza](https://www.linkedin.com/in/muhammad-muntaza/)
 Wordpress.com Blog: [muntaza](https://muntaza.wordpress.com)
 
 Resume: [Muhammad Muntaza](/assets/Muhammad_Muntaza.pdf) dan [Muhammad Muntaza](/assets/Profile.pdf)
+
+Telegram: [muntaza_id](https://t.me/muntaza_id)
