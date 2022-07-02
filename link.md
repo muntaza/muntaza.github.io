@@ -18,7 +18,7 @@ Ini adalah diantara channel telegram Salafy:
 - [Forum Salafy](https://t.me/forumsalafy)
 - [Salafy Cirebon](https://t.me/salafy_cirebon)
 - [Ahlussunnah Malang](https://t.me/ahlussunnahmalang)
-- [annajiahdesign Malang](https://t.me/annajiyahdesign)
+- [annajiahdesign](https://t.me/annajiyahdesign)
 - [Galeri Faidah](https://t.me/GaleriFaedah)
 
 Ini adalah diantara toko buku Salafy:
