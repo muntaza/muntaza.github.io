@@ -15,10 +15,11 @@ Bismillah, ini adalah diantara link website Salafy Indonesia:
 - [Salafy Cirebon](https://www.salafycirebon.com/)
 
 Ini adalah diantara channel telegram Salafy:
-- [Forum Salafy]()
-- [Salafy Cirebon]()
-- [Ahlussunnah Malang]()
-- [Al Manshurah Banjar]()
+- [Forum Salafy](https://t.me/forumsalafy)
+- [Salafy Cirebon](https://t.me/salafy_cirebon)
+- [Ahlussunnah Malang](https://t.me/ahlussunnahmalang)
+- [annajiahdesign Malang](https://t.me/annajiyahdesign)
+- [Galeri Faidah](https://t.me/GaleriFaedah)
 
 Ini adalah diantara toko buku Salafy:
 - [Attuqa](https://tokoattuqa.com/)
