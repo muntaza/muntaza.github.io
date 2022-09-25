@@ -817,7 +817,11 @@ Password for user _postgresql:
 example$ cd data/                                                                                              
 ```
 
+Edit file pg_hba.conf agar untuk akses local dari user linux postgres,
+bisa melakukan akses ke database tanpa password. Hal ini dilakukan
+untuk bisa menjalankan script backup database otomatis tiap malam.
 
+```text
 example$ vim pg_hba.conf                                                                                       
 
 example$ diff data/pg_hba.conf data/pg_hba.conf_asli                                                           
@@ -825,8 +829,11 @@ example$ diff data/pg_hba.conf data/pg_hba.conf_asli
 < local   all             all                                     peer
 ---
 > local   all             all                                     md5
+```
 
+Jalankan server PostgreSQL dan lakukan test koneksi dengan psql.
 
+```text
 example$ id
 uid=503(_postgresql) gid=503(_postgresql) groups=503(_postgresql)
 example$ exit
@@ -840,8 +847,12 @@ Type "help" for help.
 
 template1=# \q
 example$ 
+```
+
+Setting file httpd-ssl.conf untuk mengaktifkan aplikasi OpenPersediaan.
 
 
+```text
 example$ diff httpd-ssl.conf httpd-ssl.conf_v2                                                                              
 134,179d133
 < Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
@@ -876,24 +887,14 @@ example$ diff httpd-ssl.conf httpd-ssl.conf_v2
 < 
 < 
 < 
-< 
-< 
-< 
-< 
-< 
-< 
-< 
-< 
-< 
-< 
-< 
-< 
-< 
-< 
 example$ 
+```
+
+Isi file .cvsrc yang merupakan file setting CVS client untuk
+koneksi ke server CVS.
 
 
-
+```text
 example$ cat .cvsrc                                                                                             
 # $OpenBSD: dot.cvsrc,v 1.3 2016/10/31 20:50:11 tb Exp $
 #
@@ -903,7 +904,11 @@ update -Pd
 checkout -P
 rdiff -u
 example$ 
+```
 
+Siapkan folder untuk menampung menu entry aplikasi OpenPersediaan.
+
+```text
 example$ cd /home/                                                                                              
 example$ doas mkdir django
 doas (muntaza@example.muntaza.id) password: 
@@ -911,13 +916,20 @@ example$ doas chown -R muntaza:www /home/django
 example$ ls -ld django                                                                                          
 drwxr-xr-x  2 muntaza  www  512 Jan 20 17:40 django
 example$ 
+```
 
+Restore file Global, yang mana berisi daftar user dan password
+pada database PostgreSQL. 
 
+```text
 example$ doas su - _postgresql
 example$ psql template1 < global_2022-01-13_00_15.sql
+```
+
+Load file konfigurasi PF Firewall dan cek rules yang aktif saat ini.
 
 
-
+```text
 example$ doas /sbin/pfctl -f /etc/pf.conf                                                                                         
 example$ doas /sbin/pfctl -sr             
 
@@ -930,16 +942,9 @@ pass in on vio0 inet proto tcp from 64.41.200.0/24 to 103.161.185.42 port = 443 
 block return in on ! lo0 proto tcp from any to any port 6000:6010
 block return out log proto tcp all user = 55
 block return out log proto udp all user = 55
+```
 
-
-
-
-
-
-
-
-
-
+Isi lengkap file pf.conf yang merupakan file konfigurasi PF Firewall.
 
 ```text
 example$ doas cat /etc/pf.conf                                                                                                    
@@ -982,25 +987,16 @@ example$
 ```
 
 
-copy folder
+Copy file untuk laporan OpenPersediaan.
 
+```text
 persediaan$ doas tar czvpf laporan_persediaan_example_2019.tgz /var/www/htdocs/php5_laporan_persediaan_example_2019      
-
-
-extract
-
 example$ cd /                                                                                                
 example$ doas tar -xzpvf /home/muntaza/laporan_persediaan_example_2019.tgz
+```
 
-chmod_min
-
-crontab utama
-
-crontab postgresql
-
-scrip backup postgresql
-
-restore db tahun lama
+Restore Database tahun-tahun sebelumnya.
+```text
 example$ createdb persediaan_example_2020 -O persediaan_example_2020
 example$ createdb persediaan_example_2019 -O persediaan_example_2019 
 example$ createdb persediaan_example -O persediaan_example
@@ -1008,11 +1004,21 @@ example$ createdb persediaan_example -O persediaan_example
 example$ psql persediaan_example_2020 < persediaan_example_2020_2022-01-14_00_25.sql 
 example$ psql persediaan_example_2019 < persediaan_example_2019_2022-01-14_00_20.sql
 example$ psql persediaan_example < persediaan_example_2022-01-12_00_10.sql
+```
 
 
+Copy laporan tahun sebelumnya:
+```text
 doas cp php5_laporan_persediaan_example_2021/reportico_report_html.php php5_laporan_persediaan_example_2020/
 doas cp php5_laporan_persediaan_example_2021/reportico.php php5_laporan_persediaan_example_2020/
+```
 
+Beberapa hal yang belum di sampaikan:
+-  chmod_min
+-  crontab utama
+-  crontab postgresql
+-  scrip backup postgresql
 
+Akan di sampaikan di masa yang akan datang bila ada waktu dan kesempatan, insyaAllah.
 
 # Alhamdulillah
