@@ -564,7 +564,8 @@ acme-client: /etc/ssl/example.muntaza.id.fullchain.pem: created
 example$ 
 ```
 
-
+Ini adalah file konfigurasi pf.conf, lebih jelasnya silahkan cek tutorial 
+[ini](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html).
 
 
 ```text
@@ -607,22 +608,32 @@ block return out log proto {tcp udp} user _pbuild
 example$ 
 ```
 
+Gunakan rcctl untuk mengaktifkan __postgresql__ dan __apache2__, kemudian
+nonaktifkan httpd karena httpd hanya di pakai untuk mendapatkan sertifikat SSL. 
+Kita bisa lihat isi file _rc.conf.local_ untuk memastikan
+apa yang akan di jalankan saat server di nyalakan.
 
 
 ```text
 example$ doas rcctl set postgresql status on
 example$ doas rcctl set apache2 status on    
 example$ doas rcctl set httpd status off  
-example$ cat /etc/rc                                                                                                    
-rc             rc.conf        rc.conf.local  rc.d/          
 example$ cat /etc/rc.conf.local                                                                                         
 pkg_scripts=postgresql apache2
 example$ 
+```
+
+Ini adalah setting pada file httpd2.conf, ada beberapa hal yang
+dilakukan di sini, yaitu:
+- Nonaktifkan port 80
+- Aktifkan modul mod_socache_shmcb.so
+- Aktifkan modul mod_ssl.so
+- Aktifkan file konfigurasi extra httpd-default.conf
+- Aktifkan file httpd-ssl.conf
 
 
 
-
-
+```text
 example$ diff httpd2.conf httpd2.conf_asli  
 52c52
 < #Listen 80
@@ -645,10 +656,20 @@ example$ diff httpd2.conf httpd2.conf_asli
 ---
 > #Include /etc/apache2/extra/httpd-ssl.conf
 example$ 
+```
 
 
+Pada file httpd-default.conf, terdapat beberapa konfigurasi
+yang kita rubah, yaitu:
+- Matikan KeepAlive, sehingga koneksi TCP akan di putus tiap kali
+  client selesai dari koneksi ke server. Ini meningkatkan kinerja
+  server, karena memori tidak terbebani untuk menjaga data TCP.
+- ServerTokens di setting sebagai Prod, sehingga tidak ada informasi
+  penting yang di tampilkan ke client, dalam rangka meningkatkan keamanan.
+  
 
 
+```text
 example$ diff httpd-default.conf httpd-default.conf_asli                                                       
 16c16
 < KeepAlive Off
@@ -659,9 +680,16 @@ example$ diff httpd-default.conf httpd-default.conf_asli
 ---
 > ServerTokens Full
 example$ 
+```
+
+Setting pada file httpd-ssl.conf, di sini ada beberapa hal yang dilakukan, yaitu:
+- Pemilihan SSLCipherSuite dan SSLProxyCipherSuite yang tertinggi.
+- Aktifkan hanya TLSv1.3.
+- Setting Email admin dan ServerName.
+- Sesuaikan nama file sertifikat SSL.
 
 
-
+```text
 example$ diff httpd-ssl.conf httpd-ssl.conf_asli                                                               
 52,53c52,53
 < #SSLCipherSuite HIGH:MEDIUM:!MD5:!RC4:!3DES
@@ -696,10 +724,11 @@ example$ diff httpd-ssl.conf httpd-ssl.conf_asli
 ---
 > SSLCertificateKeyFile "/etc/apache2/server.key"
 example$ 
+```
 
-hanya TLSv1.3 yang di aktifkan
 
 
+```text
 example$ cd /etc/php-7.3.sample/                                                                               
 example$ ls
 gd.ini        opcache.ini   pdo_pgsql.ini pgsql.ini
@@ -714,10 +743,12 @@ example$ doas rcctl restart apache2
 apache2(ok)
 apache2(ok)
 example$
+```
 
 
 Backup otomatis perlu user local tanpa password
 
+```text
 example$ diff pg_hba.conf pg_hba.conf_asli                                                                     
 84c84
 < local   all             all                                     peer
@@ -728,11 +759,13 @@ example$ doas rcctl restart postgresql
 postgresql(ok)
 postgresql(ok)
 example$
+```
 
 
 Restore global database
 
 
+```text
 example$ mkdir data
 example$ ls -l
 total 12
@@ -782,6 +815,7 @@ example$ doas su - _postgresql
 example$ psql
 Password for user _postgresql: 
 example$ cd data/                                                                                              
+```
 
 
 example$ vim pg_hba.conf                                                                                       
@@ -907,6 +941,7 @@ block return out log proto udp all user = 55
 
 
 
+```text
 example$ doas cat /etc/pf.conf                                                                                                    
 #	$OpenBSD: pf.conf,v 1.55 2017/12/03 20:40:04 sthen Exp $
 #
