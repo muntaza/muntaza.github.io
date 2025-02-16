@@ -1,0 +1,7 @@
+https://muntaza.github.io/salafy/
+https://muntaza.github.io/about/
+https://muntaza.github.io/security/2022/06/25/bahaya-ransomware.html
+https://muntaza.github.io/software/2022/06/25/openaset.html
+https://muntaza.github.io/software/2022/06/02/rekayasa-perangkat-lunak.html
+https://muntaza.github.io/linux/2022/06/02/text-processing.html
+https://muntaza.github.io/openbsd/2022/06/01/openbsd-71-asus.html
