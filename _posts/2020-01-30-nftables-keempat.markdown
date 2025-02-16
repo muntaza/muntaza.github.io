@@ -10,9 +10,9 @@ categories: nftables
 Saya telah menulis
 tentang [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page)
 ini secara bertahap, yaitu bagian
-[pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html),
-[kedua](https://www.muntaza.id/nftables/2019/12/16/nftables-kedua.html) dan
-[ketiga](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html).
+[pertama](https://muntaza.github.io/nftables/2019/12/15/nftables-01.html),
+[kedua](https://muntaza.github.io/nftables/2019/12/16/nftables-kedua.html) dan
+[ketiga](https://muntaza.github.io/nftables/2019/12/17/nftables-ketiga.html).
 
 Terkadang, seorang admin tidak berani mengaktifkan firewall, alasannya?
 Aplikasi saya kok jadi error kalau firewall aktif... Sebenarnya bukan error,
@@ -126,10 +126,10 @@ table ip filter {
 }
 ```
 
-File [ip_indonesia.conf](https://www.muntaza.id/assets/ip_indonesia.conf) ini
+File [ip_indonesia.conf](https://muntaza.github.io/assets/ip_indonesia.conf) ini
 adalah daftar IP yang berasal dari Indonesia, sebagaimana yang sudah saya
 jelaskan pada tulisan bagian
-[ketiga](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html).
+[ketiga](https://muntaza.github.io/nftables/2019/12/17/nftables-ketiga.html).
 
 File ip_indonesia.conf ini di letakkan di direktor /etc.
 
@@ -338,9 +338,9 @@ IPv6 saya dapatkan dari
     Jawab:
 
     Silahkan lihat bagian
-    [pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html),
-    [kedua](https://www.muntaza.id/nftables/2019/12/16/nftables-kedua.html) dan
-    [ketiga](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html) seri
+    [pertama](https://muntaza.github.io/nftables/2019/12/15/nftables-01.html),
+    [kedua](https://muntaza.github.io/nftables/2019/12/16/nftables-kedua.html) dan
+    [ketiga](https://muntaza.github.io/nftables/2019/12/17/nftables-ketiga.html) seri
     tutorial ini. Kemudian, gunakan mesin pencari anda, semisal
     [duckduckgo](https://duckduckgo.com/).
 
@@ -393,7 +393,7 @@ IPv6 saya dapatkan dari
     ```
 
     Ingat, baris pertama yang sesuai, itu yang akan di jalankan, sebagaimana
-    saya jelaskan di bagian [ketiga](https://www.muntaza.id/nftables/2019/12/17/nftables-ketiga.html)
+    saya jelaskan di bagian [ketiga](https://muntaza.github.io/nftables/2019/12/17/nftables-ketiga.html)
     seri toturial ini.
 
 1.  Kami menggunakan let's encrypt, bagaimana cara memperpanjang sertifikat
@@ -486,7 +486,7 @@ File-file script nftables yang ada di tulisan ini, bisa di download di
 
 Hal penting yang saya ingatkan, bahwa koneksi ssh ke server haruslah __hanya__
 dengan Public Key Authentication, disable Password Authentication, seperti saya tuliskan
-di [sini](https://www.muntaza.id/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html) serta
+di [sini](https://muntaza.github.io/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html) serta
 private key __harus__ tetap dilindungi password. Hal ini untuk mencegah serangan
 [bruteforce](https://serverfault.com/questions/594746/how-to-stop-prevent-ssh-bruteforce#594750)
 pada OpenSSH.

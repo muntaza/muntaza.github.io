@@ -8,10 +8,10 @@ categories: nftables
 # Bismillah,
 
 Ini adalah lanjutan dari tulisan saya yang
-[kedua](https://www.muntaza.id/nftables/2019/12/16/nftables-kedua.html)
+[kedua](https://muntaza.github.io/nftables/2019/12/16/nftables-kedua.html)
 tentang [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page).
 
-Sebuah [Firewall](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html)
+Sebuah [Firewall](https://muntaza.github.io/openbsd/2019/08/31/openbsd-pf-cloud.html)
 yang baik, memiliki 3 (tiga) kriteria utama, yaitu:
 - Koneksi dibatasi hanya dari negara tertentu
 - Mampu mencegah [reverse telnet](https://toic.org/blog/2009/reverse-ssh-port-forwarding/index.html)
@@ -36,8 +36,8 @@ karena file ini menampung hasil data IP dari file
 Saya akan menjelaskan beberapa baris perintah yang saya anggap penting
 untuk di jelaskan, dan kalau di perlukan, silahkan merujuk pada tulisan saya
 bagian
-[pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html)
-dan [kedua](https://www.muntaza.id/nftables/2019/12/16/nftables-kedua.html).
+[pertama](https://muntaza.github.io/nftables/2019/12/15/nftables-01.html)
+dan [kedua](https://muntaza.github.io/nftables/2019/12/16/nftables-kedua.html).
 
 
 {% highlight text %}
