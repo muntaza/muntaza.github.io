@@ -63,7 +63,7 @@ Setting alias pada repository
 ![Gambar3](/assets/github2.png)
 
 # UPDATE 31 Maret 2019
-website pindah alamat ke [https://www.muntaza.id](https://www.muntaza.id)
+website pindah alamat ke [https://muntaza.github.io](https://muntaza.github.io)
 
 # Fitur lain Jekyll
 
@@ -74,10 +74,10 @@ di generate dan tinggal meletakkan folder tersebut di Apache Root Direktory.
 Contoh penggunaannya:
 
 {% highlight text %}
-$ ~/.gem/ruby/2.6.0/bin/jekyll build -d www.muntaza.id
+$ ~/.gem/ruby/2.6.0/bin/jekyll build -d muntaza.github.io
 Configuration file: /home/muntaza/working/muntaza.github.io/_config.yml
             Source: /home/muntaza/working/muntaza.github.io
-       Destination: /home/muntaza/working/muntaza.github.io/www.muntaza.id
+       Destination: /home/muntaza/working/muntaza.github.io/muntaza.github.io
  Incremental build: disabled. Enable with --incremental
       Generating... 
                     done in 3.921 seconds.

@@ -8,7 +8,7 @@ categories: nftables
 # Bismillah,
 
 Ini adalah lanjutan dari tulisan saya yang
-[pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html)
+[pertama](https://muntaza.github.io/nftables/2019/12/15/nftables-01.html)
 tentang [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page).
 Pada bagian kedua ini, akan
 saya contohkan penggunaan nftables sebagai
@@ -16,7 +16,7 @@ saya contohkan penggunaan nftables sebagai
 [gateway](https://en.wikipedia.org/wiki/Router_(computing))
 ke internet bagi localnet. Localnet di sini, masih menggunakan
 virtual mesin di
-[Virtualbox](https://www.muntaza.id/virtualbox/2019/12/01/virtualbox-internet.html).
+[Virtualbox](https://muntaza.github.io/virtualbox/2019/12/01/virtualbox-internet.html).
 Berikut ini script
 /etc/nftables.conf
 
@@ -62,7 +62,7 @@ table ip filter {
 {% endhighlight %}
 
 Baiklah, di sini akan saya jelaskan beberapa hal baru sebagai lanjutan
-tulisan saya yang [pertama](https://www.muntaza.id/nftables/2019/12/15/nftables-01.html).
+tulisan saya yang [pertama](https://muntaza.github.io/nftables/2019/12/15/nftables-01.html).
 
 {% highlight text %}
 define int_if = "tap11"
@@ -99,7 +99,7 @@ di nftables.
 
 Ini fungsi packet forwarding di nftables, sama seperti yang pernah
 saya sampaikan tentang IPTables di
-[sini](https://www.muntaza.id/virtualbox/2019/12/01/virtualbox-internet.html),
+[sini](https://muntaza.github.io/virtualbox/2019/12/01/virtualbox-internet.html),
 yaitu mengizinkan paket berpindah antar interface, yaitu dari
 interface local ke interface internet dan sebaliknya.
 

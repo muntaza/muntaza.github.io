@@ -8,7 +8,7 @@ categories: postgresql
 # Bismillah,
 
 
-Melanjutkan tulisan saya di [sini](https://www.muntaza.id/postgresql/2017/07/31/perhitungan-saldo.html) mengenai window Functions, pada kesempatan ini
+Melanjutkan tulisan saya di [sini](https://muntaza.github.io/postgresql/2017/07/31/perhitungan-saldo.html) mengenai window Functions, pada kesempatan ini
 akan saya bahas tentang Algoritma Persediaan dengan Metode FIFO. Lebih jauh
 tentang Teori FIFO bisa di lihat pada tulisan
 [ini](https://www.postgresql.org/docs/9.3/static/tutorial-window.html)

@@ -108,7 +108,7 @@ echo "iptables firewall is up `date`"
 {% endhighlight %}
 
 IPTables ini telah pernah saya jelaskan fungsi basic nya
-[disini](https://www.muntaza.id/linux/2019/10/19/iptables.html), kemudian
+[disini](https://muntaza.github.io/linux/2019/10/19/iptables.html), kemudian
 baris-baris tambahan akan saya jelaskan di bawah ini:
 
 {% highlight text %}

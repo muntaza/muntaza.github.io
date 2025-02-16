@@ -16,7 +16,7 @@ Mengapa memilih Linux ketika ini? Jawabannya adalah, agar bisa di lihat bahwa ap
 ini tidak hanya bisa jalan di [OpenBSD](https://www.openbsd.org/) saja.
 
 Catatan ini saya buat lebih ringkas dari tulisan saya
-[sebelumnya](https://www.muntaza.id/openbsd/2019/03/17/deploy-openbsd1.html), yang mana
+[sebelumnya](https://muntaza.github.io/openbsd/2019/03/17/deploy-openbsd1.html), yang mana
 di sini saya tidak menampilkan output dari perintah yang saya jalankan, kecuali
 sebagian kecilnya saja.
 
@@ -46,7 +46,7 @@ Saya mengenal
 Git juga, blog saya ini di bangun dengan
 [jekyll](https://jekyllrb.com/) yang di hosting di
 [Github Pages](https://pages.github.com/) sebagaimana saya
-[kisahkan](https://www.muntaza.id/kisah/2018/12/04/github-pages-jekyll.html),
+[kisahkan](https://muntaza.github.io/kisah/2018/12/04/github-pages-jekyll.html),
 yang mana tentunya menggunakan git untuk menampilkan postingan blog,
 namun karena CVS adalah pengelola source code yang pertama saya kenal,
 jadi sulit berpindah dari cinta pertama, he...he...
@@ -105,7 +105,7 @@ Enter file in which to save the key (/home/muntaza/.ssh/id_rsa):
 {% endhighlight %}
 
 Bahkan pernah saya
-[tegaskan](https://www.muntaza.id/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html) bahwa
+[tegaskan](https://muntaza.github.io/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html) bahwa
 seharusnya, koneksi ke ssh hanya bisa dengan publik key saja,
 dan menonaktifkan metode authentication lainnya.
 

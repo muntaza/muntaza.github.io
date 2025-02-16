@@ -31,8 +31,8 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    kita untuk compile kernel, compile ini dan itu sampai bisa booting linux mini nya.
 	    Toturial ini sangat berkesan bagi saya. Bahkan saking senang nya membuat distro
 	    mini ini, saya menulis kan catatan nya di
-	    [sini](https://www.muntaza.id/kernel/2009/09/07/compile-kernel-2-6-30.html) dan di
-	    [sini](https://www.muntaza.id/linux/2009/09/07/membuat-mini-distro-flash-disk.html).
+	    [sini](https://muntaza.github.io/kernel/2009/09/07/compile-kernel-2-6-30.html) dan di
+	    [sini](https://muntaza.github.io/linux/2009/09/07/membuat-mini-distro-flash-disk.html).
 
     -	[Belajar Vim](http://www2.geog.ucl.ac.uk/~plewis/teaching/unix/vimtutor)
 
@@ -86,10 +86,10 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    Kekuatan Utama OpenBSD adalah sebagai Firewall. Fitur penting yang tersedia
 	    di OpenBSD PF, kalau di setting dengan baik, diantaranya; mampu membendung Reverse
 	    telnet, anti DDOS, anti Sync attack. Saya menulis tentang PF ini di
-	    [sini](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html)
-	    dan di [sini](https://www.muntaza.id/pf/2020/02/03/pf-firewall-bagian-kedua.html). Adapun untuk PF versi 
+	    [sini](https://muntaza.github.io/openbsd/2019/08/31/openbsd-pf-cloud.html)
+	    dan di [sini](https://muntaza.github.io/pf/2020/02/03/pf-firewall-bagian-kedua.html). Adapun untuk PF versi 
 	    OpenBSD 4.6 yang saat ini syntax nya sudah tidak berlaku lagi di OpenBSD terbaru bisa di lihat
-	    di [sini](https://www.muntaza.id/openbsd/2011/04/28/pf-openbsd-46.html).
+	    di [sini](https://muntaza.github.io/openbsd/2011/04/28/pf-openbsd-46.html).
 
 6.  SQL
     -	[Postgresql SQL Tutorial](https://www.postgresql.org/docs/11/tutorial.html)
@@ -168,7 +168,7 @@ menghasilkan Software Developer (Programmer) yang handal.
 
 	    Software Developer sebaiknya kenal juga dengan git dan github. Saya menyimpan data-data
 	    yang tidak sensitif di Github. Tulisan saya tentang github bisa di lihat di
-	    [sini](https://www.muntaza.id/git/2020/02/06/bekerja-dengan-git.html).
+	    [sini](https://muntaza.github.io/git/2020/02/06/bekerja-dengan-git.html).
 
 
 10. Networking

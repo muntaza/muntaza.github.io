@@ -7,7 +7,7 @@ categories: nftables
 
 # Bismillah,
 
-Setelah tulisan saya tentang [IPTables](https://www.muntaza.id/linux/2019/10/19/iptables.html) maka saya
+Setelah tulisan saya tentang [IPTables](https://muntaza.github.io/linux/2019/10/19/iptables.html) maka saya
 menuliskan kembali penerus dari IPTables ini,
 yaitu [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page).
 
