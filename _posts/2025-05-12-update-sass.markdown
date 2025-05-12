@@ -8,7 +8,11 @@ categories: jekyll
 # Bismillah,
 
 Terdapat update file scss pada [jekyll](https://github.com/jekyll/jekyll/issues/9686) diantaranya 
-penggunaan fungsi calc dan penggunaan fungsi color. Di bawah ini tampilan diff setelah perubahan:
+penggunaan fungsi calc dan penggunaan fungsi color. Update ini hanya untuk pengguna jekyll di server mandiri.
+Adapun kalau seseorang menggunakan Github Page seperti saya pribadi, maka tidak perlu melakukan update ini, karena tidak
+di support oleh Github Page pada saat tulisan ini saya buat.
+
+Di bawah ini tampilan diff setelah perubahan:
 
 ```text
 diff --git a/_sass/_base.scss b/_sass/_base.scss

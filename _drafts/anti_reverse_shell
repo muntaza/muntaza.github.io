@@ -1,5 +1,10 @@
 Cegah Serangan Reverse Shell
 
-Saya sudah menulis terkait pencegahan reverse telnet ini di blog lama saya 
+Saya sudah menulis terkait pencegahan 
+(reverse telnet)[https://www.checkpoint.com/cyber-hub/cyber-security/what-is-cyber-attack/what-is-a-reverse-shell-attack/]
+ini sejak tahun 20.. kemudian saya update lagi di tahun 20.. pada tulisan tentang nftables dan pf firewall.
 
-https://www.imperva.com/learn/application-security/reverse-shell/
+Apa solusi nya? Saya hanya punya satu solusi untuk mencegah jenis serangan ini, yaitu setting lah firewall, baik itu
+software firewall atau hardware firewall agar mencegah koneksi keluar kecuali hanya pada alamat IP yang sudah di definisikan.
+
+Demikian tulisan singkat ini, semoga bermanfaat.
