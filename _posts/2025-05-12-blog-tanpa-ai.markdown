@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Artikel di Blog ini dibuat tanpa bantuan AI"
-date:   2025-05-12 02:26:56 +0800
+date:   2025-05-12 12:26:56 +0800
 categories: blog
 ---
 

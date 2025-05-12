@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Contoh Penggunaan fitur MERGE di PostgreSQL"
-date:   2025-05-12 01:26:56 +0800
+date:   2025-05-12 11:26:56 +0800
 categories: postgresql
 ---
 
