@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Update file scss di jekyll"
-date:   2025-05-12 03:26:56 +0800
+date:   2025-05-12 10:26:56 +0800
 categories: jekyll
 ---
 
