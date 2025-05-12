@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Artiket di Blog ini dibuat tanpa bantuan AI"
-date:   2025-05-12 10:26:56 +0800
-categories: ai
+title:  "Artikel di Blog ini dibuat tanpa bantuan AI"
+date:   2025-05-12 02:26:56 +0800
+categories: blog
 ---
 
 # Bismillah,
@@ -14,7 +14,7 @@ Artikel yang saya tulis adalah pengalaman pribadi saya, baik terkait teknis atau
 non teknis lainnya. 
 
 Telah banyak yang berbicara terkait dampat negatif AI bagi kehidupan, sehingga tidak terbayangkan
-kalau seseorang membaca artikel, ternyata artikel yang dia baca adalah karangan AI, dalam keadaan si pambaca
+kalau seseorang membaca artikel, ternyata artikel yang dia baca adalah karangan AI, dalam keadaan si pembaca
 menyangka kalau artikel yang ia baca adalah tulisan manusia.
 
 Saya pribadi bertekad, insyaAllah, tidak akan menggunakan AI untuk membuat artikel, atau bahkan merapikan artikel
