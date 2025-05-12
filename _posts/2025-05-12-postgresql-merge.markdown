@@ -44,12 +44,6 @@ latihan1=> \d
  public | recent_transactions_id_seq | sequence | latihan1
 (4 rows)
 
-latihan1=> \dt customer_account 
-              List of relations
- Schema |       Name       | Type  |  Owner   
---------+------------------+-------+----------
- public | customer_account | table | latihan1
-(1 row)
 
 latihan1=> \dt customer_account 
               List of relations
