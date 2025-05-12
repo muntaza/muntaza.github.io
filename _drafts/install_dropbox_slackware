@@ -1,0 +1,326 @@
+
+
+
+
+bash-5.1$ wget -c https://slackbuilds.org/slackbuilds/15.0/network/dropbox.tar.gz
+--2025-05-11 14:12:35--  https://slackbuilds.org/slackbuilds/15.0/network/dropbox.tar.gz
+Resolving slackbuilds.org (slackbuilds.org)... 66.85.79.67, 2604:5800:0:90::67
+Connecting to slackbuilds.org (slackbuilds.org)|66.85.79.67|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 37248 (36K) [application/x-gzip]
+Saving to: ‘dropbox.tar.gz’
+
+dropbox.tar.gz      100%[===================>]  36.38K   155KB/s    in 0.2s    
+
+2025-05-11 14:12:36 (155 KB/s) - ‘dropbox.tar.gz’ saved [37248/37248]
+
+bash-5.1$ tar -xzvf dropbox.tar.gz 
+dropbox/
+dropbox/policies
+dropbox/doinst.sh
+dropbox/slack-desc
+dropbox/folders
+dropbox/README
+dropbox/dropbox.png
+dropbox/dropbox.info
+dropbox/dropbox.SlackBuild
+dropbox/dropbox.desktop
+bash-5.1$ 
+bash-5.1$ cd dropbox
+bash-5.1$ 
+bash-5.1$ ls
+README	   dropbox.SlackBuild  dropbox.info  folders   slack-desc
+doinst.sh  dropbox.desktop     dropbox.png   policies
+bash-5.1$ 
+bash-5.1$ wget -c https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-223.4.4909.tar.gz
+--2025-05-11 14:13:12--  https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-223.4.4909.tar.gz
+Resolving clientupdates.dropboxstatic.com (clientupdates.dropboxstatic.com)... 52.222.194.32
+Connecting to clientupdates.dropboxstatic.com (clientupdates.dropboxstatic.com)|52.222.194.32|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 112292043 (107M) [binary/octet-stream]
+Saving to: ‘dropbox-lnx.x86_64-223.4.4909.tar.gz’
+
+dropbox-lnx.x86_64- 100%[===================>] 107.09M  1.05MB/s    in 1m 46s  
+
+2025-05-11 14:14:59 (1.01 MB/s) - ‘dropbox-lnx.x86_64-223.4.4909.tar.gz’ saved [112292043/112292043]
+
+bash-5.1$ 
+bash-5.1$ ls
+README				      dropbox.desktop  policies
+doinst.sh			      dropbox.info     slack-desc
+dropbox-lnx.x86_64-223.4.4909.tar.gz  dropbox.png
+dropbox.SlackBuild		      folders
+bash-5.1$ sudo sh dropbox.SlackBuild 
+Password: 
+.dropbox-dist/
+.dropbox-dist/VERSION
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5DBus.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/allocator_metrics.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/PyQt5.sip.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libicudata.so.42
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/cryptography.hazmat.bindings._padding.abi3.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5Network.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtDBus.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/python-packages.zip
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/README
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/_yappi.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/posixffi_libc_native.abi3.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/VERSION
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/cryptography.hazmat.bindings._openssl.abi3.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtQml.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libdropbox_sqlite_ext.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/cpuid_native.abi3.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/linuxffi_sys_native.abi3.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5Widgets.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libatomic.so.1
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/fastpath.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/linuxinfinite_native.abi3.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libpython3.8.so.1.0
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/tprt.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libffi.so.7
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5XcbQpa.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/dropboxd
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5Gui.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/ACKNOWLEDGEMENTS
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/_cffi_backend.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/linuxffi_pthread_native.abi3.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5WebKitWidgets.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-infinite.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-uptodate.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-syncing.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-uptodate.icon
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-app.icon
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-unsyncable.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-selsync.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-mixedstate.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-app.svg
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-selsync.icon
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-infinite.icon
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-syncing.icon
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-mixedstate.icon
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-unsyncable.icon
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/hicolor/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-busy.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-logo.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-x.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-idle.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-blank.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-busy2.png
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/resources/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/resources/resources_qml.rcc
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/resources/resources_images.rcc
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5Quick.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5Qml.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/fs_api_python.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/dropbox
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/linuxffi_gnu_native.abi3.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5Sql.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/psutil._psutil_linux.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/tornado.speedups.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtGui.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libicui18n.so.42
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/qt.conf
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtQuick.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/nucleus_python.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5OpenGL.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libdropbox_core.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtPrintSupport.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/wrapt._wrappers.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libffi.so.7.1.0
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/google._upb._message.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtWidgets.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/psutil._psutil_posix.cpython-38-x86_64-linux-gnu.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/apex._apex.abi3.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/wmctrl
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5PrintSupport.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/plugins/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/plugins/platforms/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/plugins/platforms/libqxcb.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtCore.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/helpers/
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtNetwork.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libicuuc.so.42
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5WebKit.so.5
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libdropbox_tprt.so
+.dropbox-dist/dropbox-lnx.x86_64-223.4.4909/libQt5Core.so.5
+.dropbox-dist/dropboxd
+
+Slackware package maker, version 3.14159265.
+
+Searching for symbolic links:
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libffi.so.7	libffi.so.7.1.0
+usr/bin/dropboxd	/opt/dropbox/dropboxd
+
+Making symbolic link creation script:
+( cd opt/dropbox/dropbox-lnx.x86_64-223.4.4909 ; rm -rf libffi.so.7 )
+( cd opt/dropbox/dropbox-lnx.x86_64-223.4.4909 ; ln -sf libffi.so.7.1.0 libffi.so.7 )
+( cd usr/bin ; rm -rf dropboxd )
+( cd usr/bin ; ln -sf /opt/dropbox/dropboxd dropboxd )
+
+Unless your existing installation script already contains the code
+to create these links, you should append these lines to your existing
+install script. Now's your chance. :^)
+
+Would you like to add this stuff to the existing install script and
+remove the symbolic links ([y]es, [n]o)? y
+
+
+Removing symbolic links:
+removed './opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libffi.so.7'
+removed './usr/bin/dropboxd'
+
+Updating your ./install/doinst.sh...
+
+This next step is optional - you can set the directories in your package
+to some sane permissions. If any of the directories in your package have
+special permissions, then DO NOT reset them here!
+
+Would you like to reset all directory permissions to 755 (drwxr-xr-x) and
+directory ownerships to root.root ([y]es, [n]o)? n
+
+Creating Slackware package:  /tmp/dropbox-223.4.4909-x86_64-1_SBo.tgz
+
+./
+install/
+install/doinst.sh
+install/slack-desc
+opt/
+opt/dropbox/
+opt/dropbox/VERSION
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/ACKNOWLEDGEMENTS
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtCore.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtDBus.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtGui.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtNetwork.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtPrintSupport.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtQml.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtQuick.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/PyQt5.QtWidgets.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/PyQt5.sip.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/README
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/VERSION
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/_cffi_backend.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/_yappi.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/allocator_metrics.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/apex._apex.abi3.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/cpuid_native.abi3.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/cryptography.hazmat.bindings._openssl.abi3.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/cryptography.hazmat.bindings._padding.abi3.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/dropbox
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/dropboxd
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/fastpath.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/fs_api_python.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/google._upb._message.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/helpers/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-app.icon
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-app.svg
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-infinite.icon
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-infinite.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-mixedstate.icon
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-mixedstate.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-selsync.icon
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-selsync.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-syncing.icon
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-syncing.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-unsyncable.icon
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-unsyncable.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-uptodate.icon
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/emblems/hicolor/64x64/emblems/emblem-dropbox-uptodate.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/hicolor/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-blank.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-busy.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-busy2.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-idle.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-logo.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/images/hicolor/16x16/status/dropboxstatus-x.png
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5Core.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5DBus.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5Gui.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5Network.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5OpenGL.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5PrintSupport.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5Qml.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5Quick.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5Sql.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5WebKit.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5WebKitWidgets.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5Widgets.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libQt5XcbQpa.so.5
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libatomic.so.1
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libdropbox_core.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libdropbox_sqlite_ext.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libdropbox_tprt.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libffi.so.7.1.0
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libicudata.so.42
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libicui18n.so.42
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libicuuc.so.42
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/libpython3.8.so.1.0
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/linuxffi_gnu_native.abi3.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/linuxffi_pthread_native.abi3.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/linuxffi_sys_native.abi3.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/linuxinfinite_native.abi3.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/nucleus_python.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/plugins/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/plugins/platforms/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/plugins/platforms/libqxcb.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/posixffi_libc_native.abi3.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/psutil._psutil_linux.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/psutil._psutil_posix.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/python-packages.zip
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/qt.conf
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/resources/
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/resources/resources_images.rcc
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/resources/resources_qml.rcc
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/tornado.speedups.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/tprt.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/wmctrl
+opt/dropbox/dropbox-lnx.x86_64-223.4.4909/wrapt._wrappers.cpython-38-x86_64-linux-gnu.so
+opt/dropbox/dropboxd
+usr/
+usr/bin/
+usr/doc/
+usr/doc/dropbox-223.4.4909/
+usr/doc/dropbox-223.4.4909/dropbox.SlackBuild
+usr/doc/dropbox-223.4.4909/folders
+usr/doc/dropbox-223.4.4909/policies
+usr/share/
+usr/share/applications/
+usr/share/applications/dropbox.desktop
+usr/share/pixmaps/
+usr/share/pixmaps/dropbox.png
+
+Slackware package /tmp/dropbox-223.4.4909-x86_64-1_SBo.tgz created.
+
+bash-5.1$ 
+bash-5.1$ sudo /sbin/installpkg /tmp/dropbox-223.4.4909-x86_64-1_SBo.tgz 
+Verifying package dropbox-223.4.4909-x86_64-1_SBo.tgz.
+Installing package dropbox-223.4.4909-x86_64-1_SBo.tgz:
+PACKAGE DESCRIPTION:
+# dropbox (store, sync and share files online)
+#
+# Dropbox is a free service that lets you bring all your photos, docs,
+# and videos anywhere. This means that any file you save to your
+# Dropbox folder will be automatically shared with all your computers,
+# phones and the Dropbox website.
+#
+Executing install script for dropbox-223.4.4909-x86_64-1_SBo.tgz.
+Package dropbox-223.4.4909-x86_64-1_SBo.tgz installed.
+
+bash-5.1$ 
+

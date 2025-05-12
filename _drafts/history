@@ -1,0 +1,500 @@
+    5  ls
+    6  cd ..
+    7  ls
+    8  ls
+    9  cd Do
+   10  cd Downloads/
+   11  ls
+   12  cd ..
+   13  cd Documents/
+   14  ls
+   15  cd
+   16  ls
+   17  cat catatan
+   18  cat catatan1 
+   19  startx
+   20  soffice
+   21  sudo /sbin/halt -p
+   22  startx
+   23  man slackpkg
+   24  man slackpkg
+   25  cat /etc/
+   26  cat /etc/slackpkg/mirrors 
+   27  vi /etc/slackpkg/mirrors 
+   28  cat /etc/slackpkg/mirrors 
+   29  cat /etc/slackpkg/mirrors | grep -v #
+   30  cat /etc/slackpkg/mirrors | grep -v \#
+   31  sudo vi /etc/slackpkg/mirrors 
+   32  cat /etc/slackpkg/mirrors | grep -v \#
+   33  sudo /usr/sbin/slackpkg update
+   34  sudo /usr/sbin/slackpkg update
+   35  sudo vi /etc/slackpkg/mirrors 
+   36  sudo /usr/sbin/slackpkg update
+   37  sudo /usr/sbin/slackpkg --help
+   38  sudo /usr/sbin/slackpkg show-changelog
+   39  sudo /usr/sbin/slackpkg show-changelog
+   40  sudo /usr/sbin/slackpkg show-changelog
+   41  sudo /usr/sbin/slackpkg --help
+   42  man slackpkg
+   43  sudo /usr/sbin/slackpkg check-updates
+   44  sudo /usr/sbin/slackpkg check-updates
+   45  man slackpkg
+   46  sudo /usr/sbin/slackpkg check-updat
+   47  sudo /usr/sbin/slackpkg check-updates
+   48  sudo /usr/sbin/slackpkg show-changelog
+   49  sudo /usr/sbin/slackpkg check-update
+   50  sudo /usr/sbin/slackpkg install mozilla-firefox
+   51  sudo /usr/sbin/slackpkg upgrade mozilla-firefox
+   52  sudo /usr/sbin/slackpkg upgrade mozilla-firefox
+   53  sudo /usr/sbin/slackpkg upgrade mozilla-firefox
+   54  sudo vi /etc/slackpkg/mirrors 
+   55  cat /etc/slackpkg/mirrors | grep -v \#
+   56  sudo /usr/sbin/slackpkg upgrade mozilla-firefox
+   57  sudo /usr/sbin/slackpkg upgrade mozilla-firefox
+   58  sudo /usr/sbin/slackpkg upgrade-all
+   59  libreoffice
+   60  libreoffice
+   61  libreoffice
+   62  soffice
+   63  pass
+   64  sudo /usr/sbin/slackpkg upgrade-all
+   65  sudo /usr/sbin/slackpkg install-new
+   66  sudo /usr/sbin/slackpkg install-new
+   67  sudo /usr/sbin/slackpkg upgrade-all
+   68  uname -a
+   69  date
+   70  firefox --version
+   71  /sbin/iwconfig 
+   72  ping 8.8.8.8
+   73  sudo dhclient -v wlan0
+   74  sudo /sbin/dhclient -v wlan0
+   75  ping 8.8.8.8
+   76  /sbin/iwconfig 
+   77  /sbin/ifconfig 
+   78  /sbin/route -n
+   79  sudo /sbin/route add default gw 192.168.43.1
+   80  /sbin/route -n
+   81  ping 8.8.8.8
+   82  ping 8.8.8.8
+   83  /sbin/route -n
+   84  sudo /sbin/route add default gw 192.168.43.1
+   85  ping 8.8.8.8
+   86  ping -i 3 8.8.8.8
+   87  ping -i 10 8.8.8.8
+   88  /sbin/route -n
+   89  top
+   90  df -h
+   91  uname -a
+   92  sudo /sbin/reboot 
+   93  cd /etc/slackpkg/
+   94  ls
+   95  cat slackpkg.conf 
+   96  cd /var/cache/packages/
+   97  ls
+   98  find .
+   99  startx
+  100  pass
+  101  ls
+  102  ssh-add
+  103  ls
+  104  cd .ssh/
+  105  ls
+  106  ls -la
+  107  ssh-add -l
+  108  rm id_rsa
+  109  rm id_rsa.pub 
+  110  ssh-add
+  111  ls -l
+  112  ssh-add 
+  113  ls -l
+  114  ssh-add -l
+  115  ls
+  116  ls -l
+  117  ls -la
+  118  cd
+  119  ls
+  120  cd .ssh/
+  121  ls
+  122  ls -l
+  123  ssh-add -l
+  124  df
+  125  df
+  126  sudo /sbin/mount /dev/sda7 /mnt/sda7
+  127  sudo mkdir /mnt/sda7
+  128  sudo /sbin/mount /dev/sda7 /mnt/sda7
+  129  cd /mnt/sda7/
+  130  ls
+  131  cd home/abdullah/
+  132  ls
+  133  sudo su
+  134  cd
+  135  ls
+  136  ls
+  137  pass
+  138  ls
+  139  pass
+  140  ls
+  141  ssh-add ~/.ssh/id_rsa
+  142  ssh-add ~/.ssh/id_rsa
+  143  ssh-add ~/.ssh/id_rsa
+  144  ssh-add ~/.ssh/id_rsa
+  145  ssh-add
+  146  ssh-add -l
+  147  ssh-add --help
+  148  man ssh-add 
+  149  ssh-add -D
+  150  man ssh-add 
+  151  ssh-add -l
+  152  ssh-add -l
+  153  ssh-add 
+  154  pass
+  155  cd
+  156  mkdir slackbuilds
+  157  cd slackbuilds/
+  158  ls
+  159  wget -c https://slackbuilds.org/slackbuilds/15.0/misc/xclip.tar.gz
+  160  ls
+  161  tar -xzvf xclip.tar.gz 
+  162  ls
+  163  cd xclip
+  164  ls
+  165   wget -c https://github.com/astrand/xclip/archive/0.13/xclip-0.13.tar.gz
+  166  ls
+  167  sh xclip.SlackBuild 
+  168  ls
+  169  sudo sh xclip.SlackBuild 
+  170  ls -l
+  171  sudo /sbin/add_pkg
+  172  which installpkg
+  173  sudo /sbin/installpkg /tmp/xclip-0.13-x86_64-1_SBo.tgz 
+  174  ls
+  175  cd ..
+  176  ls
+  177  wget -c https://slackbuilds.org/slackbuilds/15.0/system/password-store.tar.gz
+  178  tar -xzvf password-store.tar.gz 
+  179  cd password-store
+  180  ls
+  181  wget -c https://sbo-source.s3.ap-southeast-1.amazonaws.com/password-store-1.7.4.tar.xz
+  182  ls
+  183  sh password-store.SlackBuild 
+  184  sudo sh password-store.SlackBuild 
+  185  sudo /sbin/installpkg /tmp/password-store-1.7.4-noarch-1_SBo.tgz 
+  186  pass
+  187  pass 
+  188  pass vps
+  189  pass ssh
+  190  pass ssh/muntaza_github_id_rsa
+  191  ssh-add
+  192  sudo /sbin/reboot 
+  193  ls
+  194  startx
+  195  ls
+  196  cd working/git/deploy_jekyll/
+  197  ls
+  198  cat serve.sh 
+  199  sh serve.sh 
+  200  sh serve.sh 
+  201  ls
+  202  sh serve.sh 
+  203  ls
+  204  eval $(ssh-agent)
+  205  id
+  206  ssh-add ~/.ssh/muntaza_github_id_rsa
+  207  ssh-add -l
+  208  cd
+  209  ls
+  210  mkdir working
+  211  cd w
+  212  cd working/
+  213  ls
+  214  mkdir git
+  215  cd git/
+  216  ls
+  217  git clone git@github.com:muntaza/muntaza.github.io.git
+  218  ls
+  219  cd muntaza.github.io/
+  220  ls
+  221  cp rsync_local_jekyll* ..
+  222  ls
+  223  cd ..
+  224  ls
+  225  sh rsync_local_jekyll.sh 
+  226  ls
+  227  cd muntaza.github.io/
+  228  ls
+  229  git branch
+  230  git checkout -b working
+  231  git branch
+  232  git push
+  233  git push --set-upstream origin working
+  234  git branch
+  235  ls
+  236  git diff working master
+  237  git branch
+  238  git diff
+  239  ls
+  240  ls
+  241  cd
+  242  ls
+  243  echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+  244  echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+  245  echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+  246  source ~/.bashrc
+  247  gem install jekyll bundler
+  248  ls
+  249  cd working/git/
+  250  ls
+  251  cd deploy_jekyll/
+  252  ls
+  253  cd css/
+  254  ls
+  255  vim main.scss 
+  256  ls
+  257  pwd
+  258  cd ..
+  259  ls
+  260  cd css/
+  261  ls
+  262  cat main.scss 
+  263  cd ..
+  264  ls
+  265  find .
+  266  find .
+  267  find .| grep css
+  268  cd _site/css/
+  269  vim main.css
+  270  vim main.css
+  271  ls
+  272  cd ..
+  273  ls
+  274  pwd
+  275  cd ..
+  276  ls
+  277  cd _site/
+  278  s
+  279  ls
+  280  ls
+  281  cd ..
+  282  ls
+  283  pwd
+  284  ls
+  285  pwd
+  286  ssh-add -l
+  287  ls
+  288  cd ..
+  289  ls
+  290  cd muntaza.github.io/
+  291  ls
+  292  git push
+  293  git push
+  294  ls
+  295  ls
+  296  cd ..
+  297  ls
+  298  du -h
+  299  ls
+  300  du -h deploy_jekyll/
+  301  ls
+  302  ls
+  303  top
+  304  ls
+  305  ls
+  306  cd muntaza.github.io/
+  307  ls
+  308  git push
+  309  id
+  310  ls
+  311  cat build.sh 
+  312  ls
+  313  _drafts/
+  314  ls
+  315  cd _drafts/
+  316  ls
+  317  sudo /sbin/halt -p
+  318  startx
+  319  ls
+  320  pass
+  321  pass ssh
+  322  pass ssh/muntaza_github_id_rsa
+  323  eval $(ssha-agent)
+  324  eval $(ssh-agent)
+  325  pass ssh/muntaza_github_id_rsa
+  326  ssh-add ~/.ssh/id_rsa
+  327  ssh-keygen 
+  328  ssh-add ~/.ssh/id_rsa
+  329  ssh-keygen 
+  330  ssh-keygen --help
+  331  ls
+  332  ls
+  333  cd ..
+  334  ls
+  335  cd 
+  336  cd .ssh/
+  337  ls
+  338  vim known_hosts
+  339  ls
+  340  mkdir backup
+  341  mv id_rsa* backup/
+  342  cd
+  343  ssh-keygen 
+  344  ssh-add -l
+  345  eval $(ssh-agent)
+  346  ssh-add -l
+  347  ssh-add ~/.ssh/id_rsa
+  348  ssh-add -l
+  349  ls
+  350  ssh-add -l
+  351  sudo /sbin/halt -p
+  352  ls
+  353  pass init Muhammad Muntaza
+  354  pass git init
+  355  l
+  356  pass 
+  357  pass ssh
+  358  pass ssh/muntaza_github_id_rsa
+  359  ls
+  360  ssh-add
+  361  ls
+  362  pass ssh/muntaza_github_id_rsa
+  363  ls
+  364  cd .ssh/
+  365  ls
+  366  cd ..
+  367  ls
+  368  cd .password-store/
+  369  ls
+  370  ls -la
+  371  cat .gpg-id 
+  372  ls
+  373  cd ..
+  374  ls
+  375  gpg
+  376  ls
+  377  gpg --list-key
+  378  sudo /sbin/mount /dev/sda7 /mnt/sda7/
+  379  sudo su
+  380  gpg --list-key
+  381  cd .gnupg/
+  382  ls
+  383  pass
+  384  pass ssh/muntaza_github_id_rsa
+  385  pass ssh/muntaza_github_id_rsa
+  386  pass 
+  387  gpg --list-key
+  388  gpg
+  389  gpg --list-key abdullah
+  390  pwd
+  391  ls -l
+  392  pass
+  393  pass
+  394  pass| less
+  395  pass
+  396  pass vps/10.0.0.3/abdullah
+  397  pass ssh/muntaza_github_id_rsa
+  398  pass ssh/muntaza_github_id_rsa
+  399  cd slackbuilds/
+  400  ls
+  401  wget -c [200~https://slackbuilds.org/slackbuilds/15.0/network/telegram.tar.gz~
+  402  wget -c https://slackbuilds.org/slackbuilds/15.0/network/telegram.tar.gz~
+  403  wget -c https://slackbuilds.org/slackbuilds/15.0/network/telegram.tar.gz
+  404  tar -xzvf telegram.tar.gz 
+  405  cd telegram
+  406  ls
+  407  wget -c https://updates.tdesktop.com/tlinux/tsetup.5.14.0.tar.xz
+  408  ls
+  409  vim telegram.SlackBuild 
+  410  sudo sh telegram.SlackBuild 
+  411  sudo /sbin/installpkg /tmp/telegram-5.14.0-x86_64-1_SBo.tgz 
+  412  which Telegram 
+  413  pass
+  414  pass ssh/
+  415  pass ssh/muntaza_github_id_rsa
+  416  startx
+  417  whois muntaza.com
+  418  whois muntaza.id
+  419  startx
+  420  echo $PATH
+  421  cat ~/.bashrc 
+  422  cat ~/.bashrc 
+  423  echo $PATH
+  424  login
+  425  echo $PATH
+  426  sudo login
+  427  ls
+  428  mkdir hledger
+  429  cd hledger/
+  430  ls
+  431  wget -c https://github.com/simonmichael/hledger/releases/download/1.42.1/hledger-linux-x64.tar.gz
+  432  echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+  433  mkdir ~/bin
+  434  echo $PATH
+  435  source ~/.bashrc
+  436  echo $PATH
+  437  vim ~/.bashrc 
+  438  ls
+  439  ls
+  440  tar -xzvf hledger-linux-x64.tar.gz 
+  441  hledger
+  442  ls
+  443  mv hledger hledger-ui hledger-web ~/bin
+  444  hledger
+  445  hledger --version
+  446  ls
+  447  cd
+  448  cd Dropbox/Muntaza_Bakeuda2/journal/
+  449  ls
+  450  ./neraca.sh 
+  451  65;70;10M
+  452  ./neraca.sh 
+  453  ./neraca.sh 
+  454  id
+  455  ls
+  456  cd
+  457  ls
+  458  mkdir blog
+  459  cd blog/
+  460  ls
+  461  vim install_dropbox_slackware
+  462  vi install_dropbox_slackware
+  463  ls
+  464  ls
+  465  vim install_hledger_slackware_15
+  466  vi install_hledger_slackware_15
+  467  ls
+  468  ls
+  469  less install_dropbox_slackware 
+  470  dropboxd --help
+  471  man dropboxd 
+  472  ls
+  473  cat README 
+  474  ls
+  475  vim policies 
+  476  ls
+  477  vim slack-desc 
+  478  ls
+  479  sudo su
+  480  dropboxd 
+  481  bg
+  482  cd /etc/rc.d/
+  483  ls
+  484  ls| grep dr
+  485  ls| grep d
+  486  ls| grep dr
+  487  which dropboxd
+  488  head /usr/bin/dropboxd 
+  489  head /usr/bin/dropboxd 
+  490  ls
+  491  cd Sla
+  492  cd slackbuilds/
+  493  wget -c https://slackbuilds.org/slackbuilds/15.0/network/dropbox.tar.gz
+  494  tar -xzvf dropbox.tar.gz 
+  495  cd dropbox
+  496  ls
+  497  wget -c https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-223.4.4909.tar.gz
+  498  ls
+  499  sudo sh dropbox.SlackBuild 
+  500  sudo /sbin/installpkg /tmp/dropbox-223.4.4909-x86_64-1_SBo.tgz 
+  501  cd 
+  502  cd blog/
+  503  history | grep slack
+  504  history > history

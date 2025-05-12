@@ -1,0 +1,84 @@
+site download
+https://github.com/simonmichael/hledger/releases/tag/1.42.1
+
+
+bash-5.1$ wget -c https://github.com/simonmichael/hledger/releases/download/1.42.1/hledger-linux-x64.tar.gz
+--2025-05-11 14:49:23--  https://github.com/simonmichael/hledger/releases/download/1.42.1/hledger-linux-x64.tar.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/9301414/dfb09d25-706b-4b5b-b73b-e4259d42b8c6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250511%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250511T064924Z&X-Amz-Expires=300&X-Amz-Signature=38239e258f72d212ea5896899865ee780a6952ccb56af6961de69a2d225a5ee8&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dhledger-linux-x64.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2025-05-11 14:49:24--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/9301414/dfb09d25-706b-4b5b-b73b-e4259d42b8c6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250511%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250511T064924Z&X-Amz-Expires=300&X-Amz-Signature=38239e258f72d212ea5896899865ee780a6952ccb56af6961de69a2d225a5ee8&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dhledger-linux-x64.tar.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.110.133, 185.199.109.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 44865962 (43M) [application/octet-stream]
+Saving to: ‘hledger-linux-x64.tar.gz’
+
+hledger-linux-x64.tar.gz          100%[===========================================================>]  42.79M  2.30MB/s    in 17s     
+
+2025-05-11 14:49:43 (2.48 MB/s) - ‘hledger-linux-x64.tar.gz’ saved [44865962/44865962]
+
+bash-5.1$
+
+
+
+bash-5.1$ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+bash-5.1$ mkdir ~/bin
+bash-5.1$ echo $PATH
+/home/muntaza/gems/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/lib64/qt5/bin
+bash-5.1$ source ~/.bashrc
+
+
+bash-5.1$ tar -xzvf hledger-linux-x64.tar.gz 
+hledger
+hledger-ui
+hledger-web
+hledger-ui.1
+hledger-web.1
+hledger.1
+hledger-ui.info
+hledger-web.info
+hledger.info
+hledger-completion.bash
+
+
+bash-5.1$ mv hledger hledger-ui hledger-web ~/bin
+bash-5.1$ hledger
+   __   __       __            
+  / /  / /__ ___/ /__ ____ ____
+ / _ \/ / -_) _  / _ `/ -_) __/
+/_//_/_/\__/\_,_/\_, /\__/_/   
+                /___/          
+-------------------------------------------------------------------------------
+hledger 1.42.1, linux-x86_64
+Usage: hledger COMMAND [OPTIONS] [-- ADDONOPTIONS]
+Commands:
+ 
+HELP (docs, demos..)
+ commands                 show the commands list (default)
+ demo [DEMO]              show brief demos in the terminal
+ help [-i|-m|-p] [TOPIC]  show the hledger manual with info/man/pager
+ --tldr    [COMMAND]      show command examples   [for command] with tldr
+ --help/-h [COMMAND]      show command line help  [for command]
+ --info    [COMMAND]      show the hledger manual [for command] with info
+ --man     [COMMAND]      show the hledger manual [for command] with man
+                          more help: https://hledger.org
+ 
+USER INTERFACES (alternate UIs)
+ repl                     run commands from an interactive prompt
+ run                      run command scripts from files or arguments
+ ui                       run a terminal UI (hledger-ui)
+ web                      run a web UI (hledger-web)
+ 
+ENTERING DATA (add or edit transactions)
+ add                      add transactions using interactive prompts
+ import                   add new transactions from other files, eg CSV files
+ 
+BASIC REPORTS (simple lists)
+ accounts                 show account names
+ codes                    show transaction codes
+bash-5.1$ hledger --version
+hledger 1.42.1, linux-x86_64
+bash-5.1$ 
+
