@@ -1,0 +1,22 @@
+1. Sorting dengan match
+   bergambar, libreoffice
+
+2. CTE PostgreSQL
+
+3. Slackware
+	milis mysql slackware 20 tahun lalu
+
+4. Porting beberapa post dari muntaza.wordpress.com
+
+5. Cek kekuatan password, situs password monster.
+	ash-5.1$ echo "pergi_ke_amuntai" | sha1sum | cut -b 1-20
+	f36fc24285262d1be1a1
+	
+	https://www.google.com/search?q=online+md5sum
+
+	
+
+	
+
+6. Bahasa Assembly 64bit di Linux
+   https://github.com/yds12/x64-roadmap
