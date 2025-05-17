@@ -4,7 +4,16 @@
 2. CTE PostgreSQL
 
 3. Slackware
-	milis mysql slackware 20 tahun lalu
+	Tampilkan foto hugesmp.s
+
+	Tampilkan foto cfdisk
+
+	Tampilkan beberapa foto proses sebelum instalasi.
+
+	perbaiki script wireless
+	tampilkan foto wireless
+
+	Tampilkan isi rc.conf.local
 
 4. Porting beberapa post dari muntaza.wordpress.com
 
@@ -20,5 +29,14 @@
 
 6. Bahasa Assembly 64bit di Linux
    https://github.com/yds12/x64-roadmap
+	echo $?
+
+	Makefile
+
+	penjumlahan
+	
+	Pengurangan
+
+	Penulisan kata ""
 
 7. Rujuk dari tulisan terkait hacking
