@@ -7,7 +7,7 @@ categories: slackware
 
 # Bismillah,
 
-Setelah tulisan saya sebelum nya tentang [Slackware 15](http://127.0.0.1:4000/linux/2022/05/07/slackware-15-0.html) yang mana
+Setelah tulisan saya sebelum nya tentang [Slackware 15](http://muntaza.github.io/linux/2022/05/07/slackware-15-0.html) yang mana
 saya ketika itu belum sempat menginstall nya berhubung kesibukan saya saat itu. Kemudian, saya berkesempatan menginstall
 Slackware 15.0, namun belum sempat menuliskan blog catatan tentang proses instalsi tersebut. Nah, pada kesempatan ini, saya 
 menampilkan apa yang sempat saya catat, semoga catatan ini bermanfaat.
@@ -143,7 +143,7 @@ Demikian contoh penggunaan slackbuilds untuk instalasi paket-paket yang tidak te
 
 # Firewall
 
-Tentu tidak lupa setting firewall [sederhana](http://127.0.0.1:4000/nftables/2019/12/15/nftables-01.html) dengan nftables. 
+Tentu tidak lupa setting firewall [sederhana](http://muntaza.github.io/nftables/2019/12/15/nftables-01.html) dengan nftables. 
 Contoh script nftables sebagai berikut:
 
 ```text
