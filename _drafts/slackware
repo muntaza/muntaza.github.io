@@ -1,0 +1,39 @@
+
+
+
+
+
+muntaza@E203MAH:~/Downloads$ gpg --import ec5649da401e22abfa6736ef6a4463c040102233.asc 
+gpg: key 6A4463C040102233: 2 duplicate signatures removed
+gpg: key 6A4463C040102233: 160 signatures not checked due to missing keys
+gpg: key 6A4463C040102233: public key "Slackware Linux Project <security@slackware.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: next trustdb check due at 2025-09-23
+muntaza@E203MAH:~/Downloads$ 
+muntaza@E203MAH:~/Downloads$ 
+muntaza@E203MAH:~/Downloads$ gpg --verify slackware64-15.0-install-dvd.iso.asc 
+gpg: assuming signed data in 'slackware64-15.0-install-dvd.iso'
+gpg: Signature made Fri 04 Feb 2022 03:48:57 AM WITA
+gpg:                using DSA key 6A4463C040102233
+gpg: Good signature from "Slackware Linux Project <security@slackware.com>" [unknown]
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: EC56 49DA 401E 22AB FA67  36EF 6A44 63C0 4010 2233
+
+
+copy ke USB
+
+root@E203MAH:/home/muntaza/Downloads# dd if=slackware64-15.0-install-dvd.iso of=/dev/sdb status=progress
+3779744256 bytes (3,8 GB, 3,5 GiB) copied, 604 s, 6,3 MB/s 
+7383872+0 records in
+7383872+0 records out
+3780542464 bytes (3,8 GB, 3,5 GiB) copied, 604,334 s, 6,3 MB/s
+root@E203MAH:/home/muntaza/Downloads# exit
+
+
+
+
+https://www.mail-archive.com/tanya-jawab@linux.or.id/msg24560.html
