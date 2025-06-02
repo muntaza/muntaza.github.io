@@ -76,8 +76,8 @@ $ startx
 Selanjutnya mengconfigurasi wireless, yaitu untuk menampilkan icon jaringan:
 
 ```text
-$ sudo chmod +x /etc/rc.d/rc.networkd
-$ sudo /etc/rc.d/rc.networkd start 
+$ sudo chmod +x /etc/rc.d/rc.networkmanager
+$ sudo /etc/rc.d/rc.networkmanager start 
 ```
 
 # Slackpkg
