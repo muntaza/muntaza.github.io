@@ -71,7 +71,7 @@ kemudian masuk ke menu desktop xfce dengan mengetik:
 $ startx 
 ```
 
-# Wireless ....
+# Wireless
 
 Selanjutnya mengconfigurasi wireless, yaitu untuk menampilkan icon jaringan:
 
