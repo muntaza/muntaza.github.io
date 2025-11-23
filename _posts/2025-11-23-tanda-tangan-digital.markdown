@@ -94,7 +94,8 @@ gpg:                using RSA key 10A4ACA63D918505D8547759C618BBE52188BDF7
 gpg: Can't check signature: No public key
 ```
 
-Baik, Khalid akan mendownload public key dari keyserver.ubuntu.com
+Baik, Khalid akan [mendownload](https://askubuntu.com/questions/36507/how-do-i-import-a-public-key)
+ public key dari keyserver.ubuntu.com
 
 ```text
 $ gpg --keyserver keyserver.ubuntu.com --recv C618BBE52188BDF7
