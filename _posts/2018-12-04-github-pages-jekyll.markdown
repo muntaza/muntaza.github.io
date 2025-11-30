@@ -63,7 +63,7 @@ Setting alias pada repository
 ![Gambar3](/assets/github2.png)
 
 # UPDATE 31 Maret 2019
-website pindah alamat ke [https://muntaza.github.io](https://muntaza.github.io)
+website pindah alamat ke [www.muntaza.id](https://www.muntaza.id)
 
 # Fitur lain Jekyll
 
