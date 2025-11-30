@@ -8,7 +8,7 @@ categories: openbsd
 # Bismillah,
 
 Setelah sekian lama Apache httpd saya gunakan bersama PHP sebagaimana
-saya tulis pada tutorial saya di [sini](https://muntaza.github.io/openbsd/2019/03/17/deploy-openbsd1.html), maka saya melihat bahwa server sangat terbenani dengan konfigurasi ini, sehingga saya memutuskan, untuk menjadikan OpenBSD-httpd Web Server untuk menjalankan program PHP. Hasilnya adalah peningkatan kinerja server, karena OpenBSD-httpd lebih ringan dan tidak banyak memakan sumber daya sistem.
+saya tulis pada tutorial saya di [sini](https://www.muntaza.id/openbsd/2019/03/17/deploy-openbsd1.html), maka saya melihat bahwa server sangat terbenani dengan konfigurasi ini, sehingga saya memutuskan, untuk menjadikan OpenBSD-httpd Web Server untuk menjalankan program PHP. Hasilnya adalah peningkatan kinerja server, karena OpenBSD-httpd lebih ringan dan tidak banyak memakan sumber daya sistem.
 
 Untuk membedakan dengan direktori 'htdocs' yang dilayani Apache httpd, saya membuat direktori baru yaitu direktori 'pub' di bawah /var/www.
 
