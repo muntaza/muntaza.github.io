@@ -8,7 +8,7 @@ categories: pf
 # Bismillah,
 
 Sebagaimana yang saya tulis pada tutorial nftables bagian
-[keempat](https://muntaza.github.io/nftables/2020/01/30/nftables-keempat.html),
+[keempat](https://www.muntaza.id/nftables/2020/01/30/nftables-keempat.html),
 bahwa, walaupun sudah level 3, namun settings nftables tersebut
 masih belum mampu melindungi server dari serangan:
 -   [DDOS](https://en.wikipedia.org/wiki/Denial-of-service_attack#Distributed_DoS_attack)
@@ -28,7 +28,7 @@ masih belum mampu melindungi server dari serangan:
     haruslah mampu menahan serangan jenis ini.
 
 Di sini, saya akan melanjutkan tulisan saya sebelumnya tentang
-[pf firewall](https://muntaza.github.io/openbsd/2019/08/31/openbsd-pf-cloud.html),
+[pf firewall](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html),
 walaupun pada tulisan kali ini, akan saya ulang kembali beberapa hal yang telah
 saya sebutkan pada tulisan tersebut.
 
@@ -48,7 +48,7 @@ adalah sebagai berikut:
     firewall dengan Password Authentication.
 1.  Akses ssh oleh Admin ke Firewall dari Internet, khusus hanya dari IP
     address yang berasal dari Indonesia,
-    [Authentication](https://muntaza.github.io/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html)
+    [Authentication](https://www.muntaza.id/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html)
     yang digunakan
     hanya __public key__, tidak bisa dengan Password.
 1.  Setelah Admin login ssh ke Firewall, Admin tidak bisa akses ke Server Database
@@ -357,7 +357,7 @@ block return in on ! lo0 proto tcp to port 6000:6010
 
     Saya menggunakan script flush.sh yang di jalankan dengan cron tiap menit
     sebagaimana saya tulis di
-    [sini](https://muntaza.github.io/openbsd/2019/08/31/openbsd-pf-cloud.html).
+    [sini](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html).
 
 1.  Mengapa hanya menerima koneksi masuk dari IP Address yang berasal dari
     Indonesia?
@@ -391,7 +391,7 @@ File-file script OpenBSD PF Firewall yang ada di tulisan ini, bisa di download d
 
 Hal penting yang kembali saya ingatkan, bahwa koneksi ssh ke Firewall haruslah __hanya__
 dengan Public Key Authentication, disable Password Authentication, seperti saya tuliskan
-di [sini](https://muntaza.github.io/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html) serta
+di [sini](https://www.muntaza.id/openbsd/ssh/2018/12/09/public-key-only-ssh-openbsd.html) serta
 private key __harus__ tetap dilindungi password. Hal ini untuk mencegah serangan
 [bruteforce](https://serverfault.com/questions/594746/how-to-stop-prevent-ssh-bruteforce#594750)
 pada OpenSSH.

@@ -91,7 +91,7 @@ NSD ini, silahkan merujuk ke Daftar Pustaka.
     
 -   Setting pf.conf
 
-    [PF Firewall](https://muntaza.github.io/openbsd/2019/08/31/openbsd-pf-cloud.html) perlu
+    [PF Firewall](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html) perlu
     kita sesuaikan dengan membuka port 53 agar bisa menerima query Name Server.
 
     ```text

@@ -526,7 +526,7 @@ Izin akses ssh ini diberikan HANYA kepada pengembang aplikasi WEB, karena pengem
 # UPDATE: 30 Januari 2021
 
 Saat ini, sudah versi OpenBSD 6.8, syntax terbaru silahkan lihat tulisan saya
-[Firewall dengan OpenBSD PF bagian Kedua](https://muntaza.github.io/pf/2020/02/03/pf-firewall-bagian-kedua.html)
+[Firewall dengan OpenBSD PF bagian Kedua](https://www.muntaza.id/pf/2020/02/03/pf-firewall-bagian-kedua.html)
 ini.
 
 

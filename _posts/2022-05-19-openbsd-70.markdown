@@ -565,7 +565,7 @@ example$
 ```
 
 Ini adalah file konfigurasi pf.conf, lebih jelasnya silahkan cek tutorial 
-[ini](https://muntaza.github.io/openbsd/2019/08/31/openbsd-pf-cloud.html).
+[ini](https://www.muntaza.id/openbsd/2019/08/31/openbsd-pf-cloud.html).
 
 
 ```text
