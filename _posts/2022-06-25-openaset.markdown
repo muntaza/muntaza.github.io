@@ -17,7 +17,7 @@ List fitur OpenAset:
 5. Secure Socket Layer.
 6. Firewall.
 7. Export to CSV.
-8. [Penyusutan menambah umur](https://muntaza.github.io/sql/2021/09/23/penyusutan_aset_tetap.html).
+8. [Penyusutan menambah umur](https://www.muntaza.id/sql/2021/09/23/penyusutan_aset_tetap.html).
 9. Penghapusan parsial (contoh hibah sebagian tanah SKPD untuk instansi vertikal).
 10. Pengurangan parsial (contoh Koreksi karena temuan BPK).
 11. Tahun usul hapus pada SK Penghapusan.

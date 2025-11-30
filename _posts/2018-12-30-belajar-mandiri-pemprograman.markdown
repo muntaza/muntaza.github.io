@@ -92,7 +92,7 @@ menghasilkan Software Developer (Programmer) yang handal.
 	    di [sini](https://www.muntaza.id/openbsd/2011/04/28/pf-openbsd-46.html).
 
 6.  SQL
-    -	[Postgresql SQL Tutorial](https://www.postgresql.org/docs/11/tutorial.html)
+    -	[Postgresql SQL Tutorial](https://www.postgresql.org/docs/current/tutorial.html)
 
 	    Postgresql adalah Database server yang saya pilih untuk Development dan Deployment Aplikasi
 	    yang saya bangun. Ini adalah Tutorial Dasar SQL. Saya belajar SQL dari sini.
@@ -104,9 +104,9 @@ menghasilkan Software Developer (Programmer) yang handal.
     -	[SQL Window Functions](https://blog.jooq.org/2013/11/03/probably-the-coolest-sql-feature-window-functions/)
 
 	    Fitur Window Functions ini sangat luar biasa. Saya menuliskan catatan saya di
-	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_saldo.md)
+	    [sini](https://www.muntaza.id/postgresql/2017/07/31/perhitungan-saldo.html)
 	    dan di
-	    [sini](https://github.com/muntaza/Open_Persediaan/blob/master/perhitungan_persediaan.md).
+	    [sini](https://www.muntaza.id/postgresql/2017/08/01/perhitungan-persediaan.html).
 
     -	[Database Best Practices](https://wiki.c2.com/?DatabaseBestPractices) dan
     	[20 Database Design Best Practices](https://codebalance.blogspot.com/2011/07/20-database-design-best-practices.html)
