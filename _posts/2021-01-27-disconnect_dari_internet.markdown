@@ -16,7 +16,7 @@ aktif jam 1-7 WITA seharga sekitar Rp19.900.
 Di era WhatsApp sudah menggantikan SMS dan telpon biasa, sehingga kebanyakan orang sudah
 menggunakan pesan WhatsApp dan telpon WhatsApp sebagai media komunikasi utama.
 Saya menggunakan 
-[iPhone 5s](https://muntaza.github.io/iphone/2021/05/26/review-iphone.html)
+[iPhone 5s](https://www.muntaza.id/iphone/2021/05/26/review-iphone.html)
 sebagai Smartphone utama untuk pemakaian WhatsApp.
 
 Sebelumnya, saya berencana untuk tidak mengaktifkan WhatsApp kecuali di bawah jam 7 pagi
