@@ -12,7 +12,7 @@ benar sesuai dengan yang di tulis oleh pengirim pesan. Disini saya mencontohkan
 pengiriman pesan dari user muntaza ke user khalid, kemudian user khalid memverifikasi
 pesan tersebut.
 
-Proses validasi pesan menggunakan software yang bernama [GnuPG](https://www.gnupg.org/). Baik, disini kita mulai proses nya. Gunakan perintah _id_ untuk menampilkan user yang aktif:
+Proses validasi pesan menggunakan software yang bernama [GnuPG](https://www.gnupg.org/gph/en/manual/book1.html). Baik, disini kita mulai proses nya. Gunakan perintah _id_ untuk menampilkan user yang aktif:
 
 ```text
 $ id
