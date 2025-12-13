@@ -52,6 +52,17 @@ Saran untuk meningkatkan rangkin hasil pencarian di Google.
 
 9. Share
 
-	Bagikan link blog ke group telegram yang sesuai. Misalnya tulisan terkait PostgreSQL masuk kan ke group PostgreSQL.
+	Bagikan link blog ke group telegram yang sesuai. 
+	Misalnya tulisan terkait [PostgreSQL](https://www.muntaza.id/postgresql/2017/07/31/perhitungan-saldo.html) 
+	masuk kan ke group [PostgreSQL Indonesia](https://t.me/postgresql_id),
+	tulisan terkait [PF Firewall](https://www.muntaza.id/pf/2020/02/03/pf-firewall-bagian-kedua.html) 
+	ke group [IT Networking](https://t.me/IT_Networking)
+
+10. Penutup
+
+	Tulis artikel dengan harapan bermanfaat bagi diri sendiri dan orang lain. Artikel lama sebaiknya
+	(kalau memungkinkan) di update agar sesuai dengan kondisi terkini.
+
+Sekian, semoga bermanfaat.
 
 # Alhamdulillah
