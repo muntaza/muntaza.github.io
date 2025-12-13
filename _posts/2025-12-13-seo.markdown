@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "Search Engine Optimization"
+date:   2025-12-13 12:00:00 +0800
+categories: seo
+---
+
+# Bismillah,
+
+Saran untuk meningkatkan rangkin hasil pencarian di Google.
+
+1. Artikel yang berkualitas
+
+	Artikel hasil penelitian pada bidang yang diminati akan mendapat rangking yang bagus. Judul artikel 
+	sebaiknya pendek saja, namun saya pribadi kadang menulis artikel dengan judul yang panjang, he...
+
+	Kemudian, tulis artikel [secara mandiri](https://www.muntaza.id/blog/2025/05/12/blog-tanpa-ai.html), jangan 
+	memposting artikel buatan AI.
+
+2. Domain sendiri
+
+	Meningkatkan rangking di Google, di bandingkan dengan free domain.
+
+3. Jekyll
+
+	Saya memilih jekyll sebagai generator situs statis. Halaman html statis yang ditampilkan dengan cepat lebih di
+	sukai oleh pembaca.
+
+4. Github Page
+
+	Kali ini agar hemat biaya alis free, saya hosting website saya 
+	di [github page](https://www.muntaza.id/kisah/2018/12/04/github-pages-jekyll.html).
+
+5. Keyword pilihan
+
+	Saya tidak tahu cara meletakkan keyword, duh, he..., tapi saya tulis aja di artikel kata-kata
+	secara mengalir...
+
+6. Rangking di Bing
+
+	Penting juga untuk melihat rangking website atau blog kita di [bing.com](https://www.bing.com) 
+	karena banyak juga pengguna nya.
+
+7. Google Search Console
+
+	Saya pribadi tidak menggunakan nya saat ini, namun bagi yang ingin melihat statistik website pribadi nya,
+	bisa menggunakan tool ini.
+
+8. Ukuran font
+
+	Ukuran font atau huruf yang agak besar akan bermanfaat bagi pembaca saat membuka website dari handphone.
+
+9. Share
+
+	Bagikan link blog ke group telegram yang sesuai. Misalnya tulisan terkait PostgreSQL masuk kan ke group PostgreSQL.
+
+# Alhamdulillah
