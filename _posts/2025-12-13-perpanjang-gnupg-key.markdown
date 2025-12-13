@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Perpanjang Masa Aktif GnuPG Key"
-date:   2025-12-07 11:26:56 +0800
+date:   2025-12-13 11:00:00 +0800
 categories: gnupg
 ---
 
@@ -26,7 +26,7 @@ pub   rsa3072 2020-08-16 [SC] [expired: 2025-09-23]
 uid           [ expired] Abdullah <abdullah@muntaza.id>
 ```
 
-Iya, ternyata memang expired, Kemudian, saya akan memperpanjang nya 1 tahun, dengan perintah "--edit-key" seperti ini
+Iya, ternyata memang expired, Kemudian, saya akan memperpanjang nya 1 tahun, dengan perintah _"edit-key"_ seperti ini
 
 ```text
 abdullah@E202SA:~$ 
