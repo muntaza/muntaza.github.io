@@ -1,0 +1,149 @@
+Pelajaran SQL WITH Queries (Common Table Expressions)
+
+
+
+CREATE TABLE penjualan (
+     wilayah    varchar(60),
+     produk     varchar(60),
+     jumlah     integer,
+     harga      integer
+);
+
+INSERT INTO penjualan VALUES ('Barabai', 'A', 5, 1000);
+INSERT INTO penjualan VALUES ('Barabai', 'B', 6, 1000);
+INSERT INTO penjualan VALUES ('Barabai', 'C', 7, 1000);
+INSERT INTO penjualan VALUES ('Barabai', 'D', 8, 1000);
+INSERT INTO penjualan VALUES ('Barabai', 'E', 5, 1000);
+INSERT INTO penjualan VALUES ('Amuntai', 'A', 5, 1000);
+INSERT INTO penjualan VALUES ('Amuntai', 'B', 6, 1000);
+INSERT INTO penjualan VALUES ('Amuntai', 'C', 7, 1000);
+INSERT INTO penjualan VALUES ('Amuntai', 'D', 8, 1000);
+INSERT INTO penjualan VALUES ('Amuntai', 'E', 5, 1000);
+INSERT INTO penjualan VALUES ('Amuntai', 'A', 5, 1000);
+INSERT INTO penjualan VALUES ('Amuntai', 'A', 5, 1000);
+INSERT INTO penjualan VALUES ('Tanjung', 'A', 5, 1000);
+INSERT INTO penjualan VALUES ('Tanjung', 'B', 6, 1000);
+INSERT INTO penjualan VALUES ('Tanjung', 'C', 7, 1000);
+INSERT INTO penjualan VALUES ('Tanjung', 'A', 3, 1000);
+INSERT INTO penjualan VALUES ('Tanjung', 'A', 5, 1000);
+
+
+---
+SELECT * FROM penjualan;
+
+ wilayah | produk | jumlah | harga
+---------+--------+--------+-------
+ Barabai | A      |      5 |  1000
+ Barabai | B      |      6 |  1000
+ Barabai | C      |      7 |  1000
+ Barabai | D      |      8 |  1000
+ Barabai | E      |      5 |  1000
+ Amuntai | A      |      5 |  1000
+ Amuntai | B      |      6 |  1000
+ Amuntai | C      |      7 |  1000
+ Amuntai | D      |      8 |  1000
+ Amuntai | E      |      5 |  1000
+ Amuntai | A      |      5 |  1000
+ Amuntai | A      |      5 |  1000
+ Tanjung | A      |      5 |  1000
+ Tanjung | B      |      6 |  1000
+ Tanjung | C      |      7 |  1000
+ Tanjung | A      |      3 |  1000
+ Tanjung | A      |      5 |  1000
+(17 rows)
+
+
+---
+
+SELECT wilayah,
+       produk,
+       SUM(harga*jumlah) AS total_penjualan
+FROM penjualan
+GROUP BY wilayah, produk
+ORDER BY wilayah, total_penjualan DESC;
+
+ wilayah | produk | total_penjualan
+---------+--------+-----------------
+ Amuntai | A      |           15000
+ Amuntai | D      |            8000
+ Amuntai | C      |            7000
+ Amuntai | B      |            6000
+ Amuntai | E      |            5000
+ Barabai | D      |            8000
+ Barabai | C      |            7000
+ Barabai | B      |            6000
+ Barabai | A      |            5000
+ Barabai | E      |            5000
+ Tanjung | A      |           13000
+ Tanjung | C      |            7000
+ Tanjung | B      |            6000
+(13 rows)
+
+
+---
+SELECT wilayah,
+       SUM(harga*jumlah) AS total_penjualan
+FROM penjualan
+GROUP BY wilayah
+ORDER BY wilayah, total_penjualan DESC;
+
+
+ wilayah | total_penjualan
+---------+-----------------
+ Amuntai |           41000
+ Barabai |           31000
+ Tanjung |           26000
+(3 rows)
+
+
+---
+WITH penjualan_wilayah AS (
+    SELECT wilayah, SUM(harga*jumlah) AS total_penjualan
+    FROM penjualan
+    GROUP BY wilayah
+) 
+    SELECT wilayah
+    FROM penjualan_wilayah
+    WHERE total_penjualan > (SELECT SUM(total_penjualan)/3 FROM penjualan_wilayah);
+
+ wilayah
+---------
+ Amuntai
+(1 row)
+
+
+---
+
+WITH penjualan_wilayah AS (
+    SELECT wilayah, SUM(harga*jumlah) AS total_penjualan
+    FROM penjualan
+    GROUP BY wilayah
+), wilayah_teratas AS (
+    SELECT wilayah
+    FROM penjualan_wilayah
+    WHERE total_penjualan > (SELECT SUM(total_penjualan)/3 FROM penjualan_wilayah)
+)
+SELECT wilayah,
+       produk,
+       SUM(harga*jumlah) AS total_penjualan
+FROM penjualan
+WHERE wilayah IN (SELECT wilayah FROM wilayah_teratas)
+GROUP BY wilayah, produk
+ORDER BY total_penjualan DESC;
+
+ wilayah | produk | total_penjualan
+---------+--------+-----------------
+ Amuntai | A      |           15000
+ Amuntai | D      |            8000
+ Amuntai | C      |            7000
+ Amuntai | B      |            6000
+ Amuntai | E      |            5000
+(5 rows)
+
+
+Daftar Pustaka
+https://www.postgresql.org/docs/current/queries-with.html
+
+
+
+
