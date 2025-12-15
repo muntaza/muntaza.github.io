@@ -17,6 +17,7 @@ CREATE TABLE penjualan (
 );
 ```
 
+```text
 INSERT INTO penjualan VALUES ('Barabai', 'A', 5, 1000);
 INSERT INTO penjualan VALUES ('Barabai', 'B', 6, 1000);
 INSERT INTO penjualan VALUES ('Barabai', 'C', 7, 1000);
@@ -34,9 +35,10 @@ INSERT INTO penjualan VALUES ('Tanjung', 'B', 6, 1000);
 INSERT INTO penjualan VALUES ('Tanjung', 'C', 7, 1000);
 INSERT INTO penjualan VALUES ('Tanjung', 'A', 3, 1000);
 INSERT INTO penjualan VALUES ('Tanjung', 'A', 5, 1000);
+```
 
 
----
+```text
 SELECT * FROM penjualan;
 
  wilayah | produk | jumlah | harga
@@ -61,8 +63,11 @@ SELECT * FROM penjualan;
 (17 rows)
 
 
----
+```
 
+
+
+```text
 SELECT wilayah,
        produk,
        SUM(harga*jumlah) AS total_penjualan
@@ -86,9 +91,10 @@ ORDER BY wilayah, total_penjualan DESC;
  Tanjung | C      |            7000
  Tanjung | B      |            6000
 (13 rows)
+```
 
 
----
+```text
 SELECT wilayah,
        SUM(harga*jumlah) AS total_penjualan
 FROM penjualan
@@ -102,9 +108,10 @@ ORDER BY wilayah, total_penjualan DESC;
  Barabai |           31000
  Tanjung |           26000
 (3 rows)
+```
 
 
----
+```text
 WITH penjualan_wilayah AS (
     SELECT wilayah, SUM(harga*jumlah) AS total_penjualan
     FROM penjualan
@@ -118,10 +125,11 @@ WITH penjualan_wilayah AS (
 ---------
  Amuntai
 (1 row)
+```
 
 
----
 
+```text
 WITH penjualan_wilayah AS (
     SELECT wilayah, SUM(harga*jumlah) AS total_penjualan
     FROM penjualan
@@ -147,10 +155,12 @@ ORDER BY total_penjualan DESC;
  Amuntai | B      |            6000
  Amuntai | E      |            5000
 (5 rows)
+```
 
 
 Daftar Pustaka
-https://www.postgresql.org/docs/current/queries-with.html
+
+1. [queries-with](https://www.postgresql.org/docs/current/queries-with.html)
 
 
 # Alhamdulillah
